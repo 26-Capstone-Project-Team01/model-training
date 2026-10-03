@@ -1,0 +1,10 @@
+{
+  "repo": "26-Capstone-Project-Team01/npm-malware-package-pairs",
+  "commit": "4ee5c7357f888e8c07343d96995e1a5fc8b412fc",
+  "fetched_at": "2026-10-03T16:41:30Z",
+  "files": {
+    "train.csv": "derived/splits/train.csv",
+    "test.csv": "derived/splits/test.csv",
+    "split_assignment.csv": "derived/splits/split_assignment.csv"
+  }
+}
