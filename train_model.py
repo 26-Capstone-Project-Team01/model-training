@@ -15,7 +15,10 @@ RAW_DATA_DIR = BASE_DIR / "data" / "raw"
 # npm-malware-package-pairs commit); not committed to this repo (see .gitignore).
 TRAIN_PATH = RAW_DATA_DIR / "train.csv"
 TEST_PATH = RAW_DATA_DIR / "test.csv"
-MODEL_PATH = "lightgbm_model.txt"
+
+# Anchored to this file's location (not cwd) so it always lands in the same place
+# regardless of where train_model.py is invoked from.
+MODEL_PATH = BASE_DIR / "models" / "lightgbm_model.txt"
 
 # Upstream split metadata: carries class + splitGroup for every pair, keyed by ID_COLS.
 UPSTREAM_SPLIT_ASSIGNMENT_PATH = RAW_DATA_DIR / "split_assignment.csv"
@@ -226,6 +229,7 @@ def main() -> None:
     print(f"F1:        {f1:.4f}")
     print(f"PR-AUC:    {pr_auc:.4f}")
 
+    MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     booster.save_model(MODEL_PATH)
     print(f"Model saved to {MODEL_PATH}")
 

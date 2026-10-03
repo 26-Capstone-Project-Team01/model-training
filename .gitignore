@@ -220,3 +220,7 @@ __marimo__/
 # Fetched upstream data snapshot (see data/SOURCE.json + scripts/fetch_data.py).
 # data/SOURCE.json itself (the pinned commit + file manifest) stays tracked.
 /data/raw/
+
+# Baseline-experiment model artifact (train_model.py MODEL_PATH). Not tracked until
+# a final model is chosen; splits/train_val_split_assignment.csv stays tracked.
+/models/lightgbm_model.txt
