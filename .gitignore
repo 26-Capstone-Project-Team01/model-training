@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Fetched upstream data snapshot (see data/SOURCE.json + scripts/fetch_data.py).
+# data/SOURCE.json itself (the pinned commit + file manifest) stays tracked.
+/data/raw/
