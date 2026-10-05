@@ -1,5 +1,6 @@
 """Train a LightGBM classifier to detect malicious npm package updates."""
 
+import json
 import random
 from pathlib import Path
 from typing import Dict, List, Sequence, Set, Tuple
@@ -10,12 +11,12 @@ from sklearn.metrics import average_precision_score, f1_score, precision_score, 
 
 BASE_DIR = Path(__file__).resolve().parent
 RAW_DATA_DIR = BASE_DIR / "data" / "raw"
+DATA_SOURCE_PATH = BASE_DIR / "data" / "SOURCE.json"
 
 # Fetched into place by scripts/fetch_data.py (see data/SOURCE.json for the pinned
 # npm-malware-package-pairs commit); not committed to this repo (see .gitignore).
 TRAIN_PATH = RAW_DATA_DIR / "train.csv"
 TEST_PATH = RAW_DATA_DIR / "test.csv"
-MODEL_PATH = "lightgbm_model.txt"
 
 # Upstream split metadata: carries class + splitGroup for every pair, keyed by ID_COLS.
 UPSTREAM_SPLIT_ASSIGNMENT_PATH = RAW_DATA_DIR / "split_assignment.csv"
@@ -23,6 +24,26 @@ UPSTREAM_SPLIT_ASSIGNMENT_PATH = RAW_DATA_DIR / "split_assignment.csv"
 # Model-training's own artifact, anchored to this file's location (not cwd) so it always
 # lands in the same place regardless of where train_model.py is invoked from.
 SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
+
+# Experiment identity: DATA_VERSION tracks which upstream data snapshot is reflected
+# (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
+# data version. Bump these by hand before each new run (see results/experiments.csv).
+DATA_VERSION = "D04"
+EXPERIMENT_ID = "E00"
+EXPERIMENT_NAME = "baseline"
+EXPERIMENT_NOTES = "29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정"
+# Feature columns to drop in addition to DROP_COLS, for ablation experiments
+# (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
+EXCLUDED_FEATURES: List[str] = []
+
+EXPERIMENT_KEY = f"{DATA_VERSION}-{EXPERIMENT_ID}"
+EXPERIMENT_TAG = f"{DATA_VERSION}_{EXPERIMENT_ID}_{EXPERIMENT_NAME}"
+
+# All three anchored to this file's location (not cwd) so they always land in the same
+# place regardless of where train_model.py is invoked from.
+MODEL_PATH = BASE_DIR / "models" / f"{EXPERIMENT_TAG}.txt"
+FEATURE_IMPORTANCE_PATH = BASE_DIR / "results" / "feature_importance" / f"{EXPERIMENT_TAG}.csv"
+EXPERIMENTS_LOG_PATH = BASE_DIR / "results" / "experiments.csv"
 
 TARGET_COL = "label"
 ID_COLS = ["package", "old_version", "new_version"]
@@ -148,9 +169,10 @@ def save_split_assignment(merged: pd.DataFrame, val_components: Set[str]) -> Non
 
 def build_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series, List[str]]:
     y = df[TARGET_COL]
-    X = df.drop(columns=DROP_COLS)
+    X = df.drop(columns=DROP_COLS + EXCLUDED_FEATURES)
     for col in CATEGORICAL_COLS:
-        X[col] = X[col].astype("category")
+        if col in X.columns:
+            X[col] = X[col].astype("category")
     return X, y, list(X.columns)
 
 
@@ -212,6 +234,19 @@ def main() -> None:
         callbacks=[lgb.early_stopping(stopping_rounds=50), lgb.log_evaluation(50)],
     )
 
+    # val metrics (same booster/iteration the training used for early stopping).
+    val_pred_proba = booster.predict(X_val, num_iteration=booster.best_iteration)
+    val_pred = (val_pred_proba >= 0.5).astype(int)
+    val_recall = recall_score(y_val, val_pred)
+    val_precision = precision_score(y_val, val_pred)
+    val_f1 = f1_score(y_val, val_pred)
+    val_pr_auc = average_precision_score(y_val, val_pred_proba)
+
+    print(f"[val] Recall:    {val_recall:.4f}")
+    print(f"[val] Precision: {val_precision:.4f}")
+    print(f"[val] F1:        {val_f1:.4f}")
+    print(f"[val] PR-AUC:    {val_pr_auc:.4f}")
+
     # test.csv is untouched by training/early stopping — used only for final evaluation.
     y_pred_proba = booster.predict(X_test, num_iteration=booster.best_iteration)
     y_pred = (y_pred_proba >= 0.5).astype(int)
@@ -221,13 +256,53 @@ def main() -> None:
     f1 = f1_score(y_test, y_pred)
     pr_auc = average_precision_score(y_test, y_pred_proba)
 
-    print(f"Recall:    {recall:.4f}")
-    print(f"Precision: {precision:.4f}")
-    print(f"F1:        {f1:.4f}")
-    print(f"PR-AUC:    {pr_auc:.4f}")
+    print(f"[test] Recall:    {recall:.4f}")
+    print(f"[test] Precision: {precision:.4f}")
+    print(f"[test] F1:        {f1:.4f}")
+    print(f"[test] PR-AUC:    {pr_auc:.4f}")
 
+    MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     booster.save_model(MODEL_PATH)
     print(f"Model saved to {MODEL_PATH}")
+
+    importance = pd.DataFrame(
+        {"feature": booster.feature_name(), "importance": booster.feature_importance()}
+    ).sort_values("importance", ascending=False)
+    FEATURE_IMPORTANCE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    importance.to_csv(FEATURE_IMPORTANCE_PATH, index=False)
+    print(f"Feature importance saved to {FEATURE_IMPORTANCE_PATH}")
+
+    upstream_commit = json.loads(DATA_SOURCE_PATH.read_text(encoding="utf-8"))["commit"]
+    record = pd.DataFrame([{
+        "experiment_id": EXPERIMENT_KEY,
+        "data_version": DATA_VERSION,
+        "upstream_data_commit": upstream_commit,
+        "experiment_name": EXPERIMENT_NAME,
+        "used_features": ";".join(feature_cols),
+        "excluded_features": ";".join(EXCLUDED_FEATURES),
+        "train_samples": len(train_df),
+        "val_samples": len(val_df),
+        "test_samples": len(test_df),
+        "val_recall": val_recall,
+        "val_precision": val_precision,
+        "val_f1": val_f1,
+        "val_pr_auc": val_pr_auc,
+        "test_recall": recall,
+        "test_precision": precision,
+        "test_f1": f1,
+        "test_pr_auc": pr_auc,
+        "best_iteration": booster.best_iteration,
+        "model_file": str(MODEL_PATH.relative_to(BASE_DIR)),
+        "notes": EXPERIMENT_NOTES,
+    }])
+    EXPERIMENTS_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    record.to_csv(
+        EXPERIMENTS_LOG_PATH,
+        mode="a",
+        header=not EXPERIMENTS_LOG_PATH.exists(),
+        index=False,
+    )
+    print(f"Experiment record appended to {EXPERIMENTS_LOG_PATH}")
 
 
 if __name__ == "__main__":

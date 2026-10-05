@@ -220,3 +220,6 @@ __marimo__/
 # Fetched upstream data snapshot (see data/SOURCE.json + scripts/fetch_data.py).
 # data/SOURCE.json itself (the pinned commit + file manifest) stays tracked.
 /data/raw/
+
+# Experiment model artifacts (train_model.py MODEL_PATH, named <data_version>_<experiment_id>_<name>.txt)
+# are tracked under models/ so they're preserved on GitHub, same as splits/ and results/.
