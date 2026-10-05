@@ -1,3 +1,5 @@
 lightgbm
 pandas
 scikit-learn
+matplotlib
+shap
