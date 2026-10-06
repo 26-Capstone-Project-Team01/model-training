@@ -28,10 +28,10 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # Experiment identity: DATA_VERSION tracks which upstream data snapshot is reflected
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
-DATA_VERSION = "D04"
+DATA_VERSION = "D05"
 EXPERIMENT_ID = "E00"
 EXPERIMENT_NAME = "baseline"
-EXPERIMENT_NOTES = "29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정"
+EXPERIMENT_NOTES = "D04-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). 데이터만 D04 + NPMStudy 30쌍(Train 악성)"
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
 EXCLUDED_FEATURES: List[str] = []
