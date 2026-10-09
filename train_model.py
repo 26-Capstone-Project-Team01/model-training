@@ -30,18 +30,15 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
 DATA_VERSION = "D06"
-EXPERIMENT_ID = "E00"
-EXPERIMENT_NAME = "baseline"
+EXPERIMENT_ID = "E04"
+EXPERIMENT_NAME = "no_update_interval"
 EXPERIMENT_NOTES = (
-    "D04/D05-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). "
-    "데이터는 4-B 반영(raw pairs/ 재구성, individual-compromise 4개 bucket을 individuals_case로 통합, "
-    "baselines.csv 갱신 991->1,145행, Train 2,767/Test 677). "
-    "assign_components()에 generic bucket(individuals_case 등) 예외를 추가해 Train/Validation 분할이 "
-    "무관한 개별 침해 사례를 하나의 그룹으로 강제 묶지 않도록 수정."
+    "D06-E00과 동일 데이터/분할/하이퍼파라미터/seed(20261002). "
+    "29개 feature 중 updateInterval만 제거한 28개 feature로 학습 (updateInterval ablation)."
 )
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
-EXCLUDED_FEATURES: List[str] = []
+EXCLUDED_FEATURES: List[str] = ["updateInterval"]
 
 EXPERIMENT_KEY = f"{DATA_VERSION}-{EXPERIMENT_ID}"
 EXPERIMENT_TAG = f"{DATA_VERSION}_{EXPERIMENT_ID}_{EXPERIMENT_NAME}"
