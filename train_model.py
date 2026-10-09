@@ -30,15 +30,27 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
 DATA_VERSION = "D06"
-EXPERIMENT_ID = "E04"
-EXPERIMENT_NAME = "no_update_interval"
+EXPERIMENT_ID = "E06"
+EXPERIMENT_NAME = "package_json_only"
 EXPERIMENT_NOTES = (
     "D06-E00과 동일 데이터/분할/하이퍼파라미터/seed(20261002). "
-    "29개 feature 중 updateInterval만 제거한 28개 feature로 학습 (updateInterval ablation)."
+    "난독화 feature 22개(obf* 전체, feature-extractor obfuscation.py 산출)를 모두 제거하고 "
+    "package.json feature 7개(feature-extractor package_json.py 산출: installScriptPresent, "
+    "installScriptAdded, scriptEntryAdded, newDependencyAdded, newDependencyCount, updateType, "
+    "updateInterval)만으로 학습."
 )
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
-EXCLUDED_FEATURES: List[str] = ["updateInterval"]
+EXCLUDED_FEATURES: List[str] = [
+    "obfChangedFileCount",
+    "obfHexIdentRatioNew", "obfHexIdentRatioChange", "obfHexIdentRatioChangedCode",
+    "obfHexNumberRatioNew", "obfHexNumberRatioChange", "obfHexNumberRatioChangedCode",
+    "obfBracketAccessRatioNew", "obfBracketAccessRatioChange", "obfBracketAccessRatioChangedCode",
+    "obfEscapeDensityNew", "obfEscapeDensityChange", "obfEscapeDensityChangedCode",
+    "obfShortIdentRatioNew", "obfShortIdentRatioChange", "obfShortIdentRatioChangedCode",
+    "obfMeanIdentLengthNew", "obfMeanIdentLengthChange", "obfMeanIdentLengthChangedCode",
+    "obfWhitespaceRatioNew", "obfWhitespaceRatioChange", "obfWhitespaceRatioChangedCode",
+]
 
 EXPERIMENT_KEY = f"{DATA_VERSION}-{EXPERIMENT_ID}"
 EXPERIMENT_TAG = f"{DATA_VERSION}_{EXPERIMENT_ID}_{EXPERIMENT_NAME}"
