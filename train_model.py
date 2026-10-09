@@ -2,6 +2,7 @@
 
 import json
 import random
+import re
 from pathlib import Path
 from typing import Dict, List, Sequence, Set, Tuple
 
@@ -28,10 +29,16 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # Experiment identity: DATA_VERSION tracks which upstream data snapshot is reflected
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
-DATA_VERSION = "D05"
+DATA_VERSION = "D06"
 EXPERIMENT_ID = "E00"
 EXPERIMENT_NAME = "baseline"
-EXPERIMENT_NOTES = "D04-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). 데이터만 D04 + NPMStudy 30쌍(Train 악성)"
+EXPERIMENT_NOTES = (
+    "D04/D05-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). "
+    "데이터는 4-B 반영(raw pairs/ 재구성, individual-compromise 4개 bucket을 individuals_case로 통합, "
+    "baselines.csv 갱신 991->1,145행, Train 2,767/Test 677). "
+    "assign_components()에 generic bucket(individuals_case 등) 예외를 추가해 Train/Validation 분할이 "
+    "무관한 개별 침해 사례를 하나의 그룹으로 강제 묶지 않도록 수정."
+)
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
 EXCLUDED_FEATURES: List[str] = []
@@ -52,6 +59,16 @@ CATEGORICAL_COLS = ["updateType"]
 
 VAL_SIZE = 0.2
 RANDOM_STATE = 20261002
+
+# Generic "bucket" splitGroups (npm-malware-package-pairs' make_malicious_pair_groups.py
+# GENERIC_BUCKET_CAMPAIGN) collect unrelated single-package compromises under one placeholder
+# name. Treating that name as a real shared group would union every unrelated package under it
+# into one artificial component — exactly what this split is meant to avoid.
+GENERIC_BUCKET_SPLIT_GROUP = re.compile(r"^(individual-compromise(-\d+(?:st|nd|rd|th))?|individuals_case)$")
+
+
+def is_shared_attack_split_group(split_group) -> bool:
+    return bool(split_group) and not GENERIC_BUCKET_SPLIT_GROUP.match(split_group)
 
 
 class UnionFind:
@@ -94,7 +111,7 @@ def assign_components(merged: pd.DataFrame) -> pd.Series:
     uf = UnionFind()
     for _, row in merged.iterrows():
         pkg_node = f"pkg:{row['package']}"
-        if row["class"] == "malicious" and pd.notna(row["splitGroup"]) and row["splitGroup"]:
+        if row["class"] == "malicious" and pd.notna(row["splitGroup"]) and is_shared_attack_split_group(row["splitGroup"]):
             uf.union(pkg_node, f"grp:{row['splitGroup']}")
     return merged["package"].map(lambda pkg: uf.find(f"pkg:{pkg}"))
 
