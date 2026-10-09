@@ -30,26 +30,24 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
 DATA_VERSION = "D06"
-EXPERIMENT_ID = "E01"
-EXPERIMENT_NAME = "no_changed_code"
+EXPERIMENT_ID = "E08"
+EXPERIMENT_NAME = "campaign_sample_weight"
 EXPERIMENT_NOTES = (
-    "D06-E00과 동일 데이터/분할/하이퍼파라미터/seed(20261002). "
-    "ChangedCode 관련 feature 7개(이번 업데이트에서 바뀐 JS 파일만의 난독화 비율; 바뀐 파일이 "
-    "없으면 obfChangedFileCount==0이고 ChangedCode 7개가 전부 결측)만 제거한 22개 feature로 학습. "
-    "ChangedCode feature 묶음 전체의 영향을 보는 ablation이며, 결측 패턴만의 효과를 분리한 것은 "
-    "아님(New/Change 14개 + obfChangedFileCount는 그대로 유지, 신규 engineered feature는 추가하지 않음)."
+    "D06-E00과 동일 데이터/분할/29개 feature/하이퍼파라미터/seed(20261002). "
+    "실제 학습 Train(악성 741개, Validation 분리 후)에서 campaign(=악성 splitGroup) 크기가 "
+    "극단적으로 불균형(1위 332개 vs 1개뿐인 campaign 4개)한 문제를 완화하기 위해, 악성 pair에 "
+    "campaign 단위 sample weight = 1/sqrt(campaign_size)를 적용하고 악성 weight 합이 741이 "
+    "되도록 정규화. individuals_case(및 구 individual-compromise*)는 하나의 campaign으로 묶지 "
+    "않고 pair마다 독립 campaign(size=1)으로 처리. benign/hard_benign weight=1 유지. "
+    "Validation/Test에는 가중치를 적용하지 않음(둘 다 weight=1)."
 )
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
-EXCLUDED_FEATURES: List[str] = [
-    "obfHexIdentRatioChangedCode",
-    "obfHexNumberRatioChangedCode",
-    "obfBracketAccessRatioChangedCode",
-    "obfEscapeDensityChangedCode",
-    "obfShortIdentRatioChangedCode",
-    "obfMeanIdentLengthChangedCode",
-    "obfWhitespaceRatioChangedCode",
-]
+EXCLUDED_FEATURES: List[str] = []
+
+# D06-E08: campaign-level sample weighting for malicious Train rows (see compute_sample_weights).
+# False reproduces plain D06-E00-style unweighted training.
+USE_CAMPAIGN_WEIGHTING = True
 
 EXPERIMENT_KEY = f"{DATA_VERSION}-{EXPERIMENT_ID}"
 EXPERIMENT_TAG = f"{DATA_VERSION}_{EXPERIMENT_ID}_{EXPERIMENT_NAME}"
@@ -77,6 +75,39 @@ GENERIC_BUCKET_SPLIT_GROUP = re.compile(r"^(individual-compromise(-\d+(?:st|nd|r
 
 def is_shared_attack_split_group(split_group) -> bool:
     return bool(split_group) and not GENERIC_BUCKET_SPLIT_GROUP.match(split_group)
+
+
+def compute_sample_weights(train_df: pd.DataFrame) -> pd.Series:
+    """Campaign-level sample weight for malicious Train rows, to offset a few campaigns
+    dominating the malicious count (e.g. one campaign alone is 332 of 741 Train malicious pairs).
+
+    weight = 1/sqrt(campaign_size), then rescaled so malicious weights sum to the malicious row
+    count (benign/hard_benign are unaffected, weight=1) — this redistributes attention across
+    campaigns without shifting the overall malicious:benign balance that unweighted training sees.
+    Generic-bucket splitGroups (is_shared_attack_split_group) are not a real shared campaign, so
+    each of those rows is its own singleton campaign (size=1) rather than being pooled together.
+    """
+    merged = load_merged_assignment(train_df)
+    weight = pd.Series(1.0, index=train_df.index)
+
+    is_malicious = (merged["class"] == "malicious").to_numpy()
+    if not is_malicious.any():
+        return weight
+
+    def campaign_key(idx: int, split_group) -> str:
+        if pd.notna(split_group) and is_shared_attack_split_group(split_group):
+            return split_group
+        return f"singleton:{idx}"
+
+    campaign_keys = pd.Series(
+        [campaign_key(i, sg) for i, sg in zip(merged.index, merged["splitGroup"])],
+        index=merged.index,
+    )
+    mal_keys = campaign_keys[is_malicious]
+    campaign_size = mal_keys.map(mal_keys.value_counts())
+    raw_weight = 1.0 / campaign_size.pow(0.5)
+    weight.loc[is_malicious] = (raw_weight * (is_malicious.sum() / raw_weight.sum())).to_numpy()
+    return weight
 
 
 class UnionFind:
@@ -230,9 +261,12 @@ def main() -> None:
     X_val, y_val, _ = build_features(val_df)
     X_test, y_test, _ = build_features(test_df)
 
+    train_weight = compute_sample_weights(train_df) if USE_CAMPAIGN_WEIGHTING else None
+
     train_set = lgb.Dataset(
         X_train,
         label=y_train,
+        weight=train_weight,
         categorical_feature=CATEGORICAL_COLS,
         feature_name=feature_cols,
     )
