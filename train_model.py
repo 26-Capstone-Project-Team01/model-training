@@ -30,26 +30,25 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
 DATA_VERSION = "D06"
-EXPERIMENT_ID = "E06"
-EXPERIMENT_NAME = "package_json_only"
+EXPERIMENT_ID = "E01"
+EXPERIMENT_NAME = "no_changed_code"
 EXPERIMENT_NOTES = (
     "D06-E00과 동일 데이터/분할/하이퍼파라미터/seed(20261002). "
-    "난독화 feature 22개(obf* 전체, feature-extractor obfuscation.py 산출)를 모두 제거하고 "
-    "package.json feature 7개(feature-extractor package_json.py 산출: installScriptPresent, "
-    "installScriptAdded, scriptEntryAdded, newDependencyAdded, newDependencyCount, updateType, "
-    "updateInterval)만으로 학습."
+    "ChangedCode 관련 feature 7개(이번 업데이트에서 바뀐 JS 파일만의 난독화 비율; 바뀐 파일이 "
+    "없으면 obfChangedFileCount==0이고 ChangedCode 7개가 전부 결측)만 제거한 22개 feature로 학습. "
+    "ChangedCode feature 묶음 전체의 영향을 보는 ablation이며, 결측 패턴만의 효과를 분리한 것은 "
+    "아님(New/Change 14개 + obfChangedFileCount는 그대로 유지, 신규 engineered feature는 추가하지 않음)."
 )
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
 EXCLUDED_FEATURES: List[str] = [
-    "obfChangedFileCount",
-    "obfHexIdentRatioNew", "obfHexIdentRatioChange", "obfHexIdentRatioChangedCode",
-    "obfHexNumberRatioNew", "obfHexNumberRatioChange", "obfHexNumberRatioChangedCode",
-    "obfBracketAccessRatioNew", "obfBracketAccessRatioChange", "obfBracketAccessRatioChangedCode",
-    "obfEscapeDensityNew", "obfEscapeDensityChange", "obfEscapeDensityChangedCode",
-    "obfShortIdentRatioNew", "obfShortIdentRatioChange", "obfShortIdentRatioChangedCode",
-    "obfMeanIdentLengthNew", "obfMeanIdentLengthChange", "obfMeanIdentLengthChangedCode",
-    "obfWhitespaceRatioNew", "obfWhitespaceRatioChange", "obfWhitespaceRatioChangedCode",
+    "obfHexIdentRatioChangedCode",
+    "obfHexNumberRatioChangedCode",
+    "obfBracketAccessRatioChangedCode",
+    "obfEscapeDensityChangedCode",
+    "obfShortIdentRatioChangedCode",
+    "obfMeanIdentLengthChangedCode",
+    "obfWhitespaceRatioChangedCode",
 ]
 
 EXPERIMENT_KEY = f"{DATA_VERSION}-{EXPERIMENT_ID}"
