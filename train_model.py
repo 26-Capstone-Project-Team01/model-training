@@ -2,6 +2,7 @@
 
 import json
 import random
+import re
 from pathlib import Path
 from typing import Dict, List, Sequence, Set, Tuple
 
@@ -31,7 +32,12 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 DATA_VERSION = "D05"
 EXPERIMENT_ID = "E00"
 EXPERIMENT_NAME = "baseline"
-EXPERIMENT_NOTES = "D04-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). 데이터만 D04 + NPMStudy 30쌍(Train 악성)"
+EXPERIMENT_NOTES = (
+    "D04-E00과 같은 조건(29개 feature 전체 사용, feature 제거/결측값 대체 없음, 기본 LightGBM 설정). "
+    "데이터는 D04 + NPMStudy 30쌍(Train 악성). 이전 D05-E00(현 D05-E00_pre-fix)의 grouping/split 정책을 "
+    "수정: individual-compromise[-Nth] 같은 범용 수집-라운드 버킷은 더 이상 campaign처럼 하나의 component로 "
+    "묶지 않음(package 단위 누수 방지는 유지). 자세한 비교는 results/D05_E00_analysis.md 참고"
+)
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
 EXCLUDED_FEATURES: List[str] = []
@@ -52,6 +58,21 @@ CATEGORICAL_COLS = ["updateType"]
 
 VAL_SIZE = 0.2
 RANDOM_STATE = 20261002
+
+# Upstream splitGroup values that are generic "unrelated single-package compromises collected
+# in data-collection round N" buckets (e.g. "individual-compromise-4th"), not an actual shared
+# campaign/payload/attack-signature grouping. Confirmed against the full upstream
+# split_assignment.csv: every other splitGroup carries a distinct name (optionally dated), e.g.
+# "shai-hulud-original_2025-09" or "sap-maintainer-compromise" — only this family is a bare
+# collection-round label. Rows with one of these should not be unioned together just because
+# they share this name; package-level grouping (below) still applies to them.
+GENERIC_BUCKET_SPLIT_GROUP = re.compile(r"^individual-compromise(-\d+(?:st|nd|rd|th))?$")
+
+
+def is_shared_attack_split_group(split_group) -> bool:
+    """True when splitGroup is evidence of an actual shared attack (campaign/payload/signature),
+    not a generic collection-round bucket of otherwise-unrelated individual compromises."""
+    return bool(split_group) and not GENERIC_BUCKET_SPLIT_GROUP.match(split_group)
 
 
 class UnionFind:
@@ -90,11 +111,18 @@ def load_merged_assignment(train_df: pd.DataFrame) -> pd.DataFrame:
 
 
 def assign_components(merged: pd.DataFrame) -> pd.Series:
-    """Union package with its malicious splitGroup so neither can be split across train/validation."""
+    """Union package with its malicious splitGroup so neither can be split across train/validation.
+    Generic collection-round buckets (see GENERIC_BUCKET_SPLIT_GROUP) are excluded from the
+    splitGroup union, since they bundle unrelated single-package incidents under one name with
+    no shared-attack evidence; package-level grouping still applies to those rows."""
     uf = UnionFind()
     for _, row in merged.iterrows():
         pkg_node = f"pkg:{row['package']}"
-        if row["class"] == "malicious" and pd.notna(row["splitGroup"]) and row["splitGroup"]:
+        if (
+            row["class"] == "malicious"
+            and pd.notna(row["splitGroup"])
+            and is_shared_attack_split_group(row["splitGroup"])
+        ):
             uf.union(pkg_node, f"grp:{row['splitGroup']}")
     return merged["package"].map(lambda pkg: uf.find(f"pkg:{pkg}"))
 
