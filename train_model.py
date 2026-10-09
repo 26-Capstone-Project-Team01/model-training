@@ -30,22 +30,29 @@ SPLIT_ASSIGNMENT_PATH = BASE_DIR / "splits" / "train_val_split_assignment.csv"
 # (bump when new data is fetched), EXPERIMENT_ID/NAME identify this run within that
 # data version. Bump these by hand before each new run (see results/experiments.csv).
 DATA_VERSION = "D06"
-EXPERIMENT_ID = "E08"
-EXPERIMENT_NAME = "campaign_sample_weight"
+EXPERIMENT_ID = "E09"
+EXPERIMENT_NAME = "package_json_only_campaign_weight"
 EXPERIMENT_NOTES = (
-    "D06-E00과 동일 데이터/분할/29개 feature/하이퍼파라미터/seed(20261002). "
-    "실제 학습 Train(악성 741개, Validation 분리 후)에서 campaign(=악성 splitGroup) 크기가 "
-    "극단적으로 불균형(1위 332개 vs 1개뿐인 campaign 4개)한 문제를 완화하기 위해, 악성 pair에 "
-    "campaign 단위 sample weight = 1/sqrt(campaign_size)를 적용하고 악성 weight 합이 741이 "
-    "되도록 정규화. individuals_case(및 구 individual-compromise*)는 하나의 campaign으로 묶지 "
-    "않고 pair마다 독립 campaign(size=1)으로 처리. benign/hard_benign weight=1 유지. "
-    "Validation/Test에는 가중치를 적용하지 않음(둘 다 weight=1)."
+    "D06-E00과 동일 데이터/분할/하이퍼파라미터/seed(20261002). E06(package.json feature 7개만 "
+    "사용, 난독화 22개 전체 제거)과 E08(campaign 단위 sample weight = 1/sqrt(campaign_size), "
+    "악성 weight 합을 악성 Train 개수로 정규화, individuals_case는 pair마다 독립 singleton "
+    "campaign으로 처리, benign/hard_benign weight=1, Validation/Test 가중치 미적용)을 결합한 "
+    "실험 — 두 개선이 함께 추가적인 이득을 주는지 확인."
 )
 # Feature columns to drop in addition to DROP_COLS, for ablation experiments
 # (e.g. EXCLUDED_FEATURES = ["updateType"] for an updateType-ablation run).
-EXCLUDED_FEATURES: List[str] = []
+EXCLUDED_FEATURES: List[str] = [
+    "obfChangedFileCount",
+    "obfHexIdentRatioNew", "obfHexIdentRatioChange", "obfHexIdentRatioChangedCode",
+    "obfHexNumberRatioNew", "obfHexNumberRatioChange", "obfHexNumberRatioChangedCode",
+    "obfBracketAccessRatioNew", "obfBracketAccessRatioChange", "obfBracketAccessRatioChangedCode",
+    "obfEscapeDensityNew", "obfEscapeDensityChange", "obfEscapeDensityChangedCode",
+    "obfShortIdentRatioNew", "obfShortIdentRatioChange", "obfShortIdentRatioChangedCode",
+    "obfMeanIdentLengthNew", "obfMeanIdentLengthChange", "obfMeanIdentLengthChangedCode",
+    "obfWhitespaceRatioNew", "obfWhitespaceRatioChange", "obfWhitespaceRatioChangedCode",
+]
 
-# D06-E08: campaign-level sample weighting for malicious Train rows (see compute_sample_weights).
+# D06-E08/E09: campaign-level sample weighting for malicious Train rows (see compute_sample_weights).
 # False reproduces plain D06-E00-style unweighted training.
 USE_CAMPAIGN_WEIGHTING = True
 
