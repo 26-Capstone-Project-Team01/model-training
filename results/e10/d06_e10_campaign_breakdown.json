@@ -1,0 +1,426 @@
+{
+  "alpha0.0_fold0": {
+    "sha1-hulud-second-coming_2025-11": {
+      "n": 332,
+      "caught": 230,
+      "recall": 0.6927710843373494
+    }
+  },
+  "alpha0.0_fold1": {
+    "bitwarden-cli_2026-04": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "chaindrop_2026-08": {
+      "n": 25,
+      "caught": 24,
+      "recall": 0.96
+    },
+    "individuals_case": {
+      "n": 21,
+      "caught": 2,
+      "recall": 0.09523809523809523
+    },
+    "injective_2026-07": {
+      "n": 12,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "mini-shai-hulud_2026-05": {
+      "n": 198,
+      "caught": 96,
+      "recall": 0.48484848484848486
+    },
+    "node-gyp-dll_2025-07": {
+      "n": 9,
+      "caught": 9,
+      "recall": 1.0
+    },
+    "react-native-aria-gluestack_2025-06": {
+      "n": 17,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "sap-maintainer-compromise": {
+      "n": 4,
+      "caught": 4,
+      "recall": 1.0
+    },
+    "solana-web3js_2024-12": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "toptal-xene_2025-07": {
+      "n": 10,
+      "caught": 5,
+      "recall": 0.5
+    }
+  },
+  "alpha0.0_fold2": {
+    "autotel-node-env-resolver_2026-06": {
+      "n": 29,
+      "caught": 2,
+      "recall": 0.06896551724137931
+    },
+    "axios_2026-03": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "individuals_case": {
+      "n": 29,
+      "caught": 1,
+      "recall": 0.034482758620689655
+    },
+    "js-metrics_2018": {
+      "n": 9,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma-leoplatform_2026-06": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma_2026-06": {
+      "n": 26,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "nx-s1ngularity_2025-08": {
+      "n": 7,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "pgserve-automagik-openwebconcept_2026-04": {
+      "n": 10,
+      "caught": 2,
+      "recall": 0.2
+    },
+    "shai-hulud-original_2025-09": {
+      "n": 186,
+      "caught": 133,
+      "recall": 0.7150537634408602
+    }
+  },
+  "alpha0.25_fold0": {
+    "sha1-hulud-second-coming_2025-11": {
+      "n": 332,
+      "caught": 326,
+      "recall": 0.9819277108433735
+    }
+  },
+  "alpha0.25_fold1": {
+    "bitwarden-cli_2026-04": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "chaindrop_2026-08": {
+      "n": 25,
+      "caught": 24,
+      "recall": 0.96
+    },
+    "individuals_case": {
+      "n": 21,
+      "caught": 11,
+      "recall": 0.5238095238095238
+    },
+    "injective_2026-07": {
+      "n": 12,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "mini-shai-hulud_2026-05": {
+      "n": 198,
+      "caught": 98,
+      "recall": 0.494949494949495
+    },
+    "node-gyp-dll_2025-07": {
+      "n": 9,
+      "caught": 9,
+      "recall": 1.0
+    },
+    "react-native-aria-gluestack_2025-06": {
+      "n": 17,
+      "caught": 3,
+      "recall": 0.17647058823529413
+    },
+    "sap-maintainer-compromise": {
+      "n": 4,
+      "caught": 4,
+      "recall": 1.0
+    },
+    "solana-web3js_2024-12": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "toptal-xene_2025-07": {
+      "n": 10,
+      "caught": 8,
+      "recall": 0.8
+    }
+  },
+  "alpha0.25_fold2": {
+    "autotel-node-env-resolver_2026-06": {
+      "n": 29,
+      "caught": 2,
+      "recall": 0.06896551724137931
+    },
+    "axios_2026-03": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "individuals_case": {
+      "n": 29,
+      "caught": 3,
+      "recall": 0.10344827586206896
+    },
+    "js-metrics_2018": {
+      "n": 9,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma-leoplatform_2026-06": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma_2026-06": {
+      "n": 26,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "nx-s1ngularity_2025-08": {
+      "n": 7,
+      "caught": 7,
+      "recall": 1.0
+    },
+    "pgserve-automagik-openwebconcept_2026-04": {
+      "n": 10,
+      "caught": 2,
+      "recall": 0.2
+    },
+    "shai-hulud-original_2025-09": {
+      "n": 186,
+      "caught": 133,
+      "recall": 0.7150537634408602
+    }
+  },
+  "alpha0.5_fold0": {
+    "sha1-hulud-second-coming_2025-11": {
+      "n": 332,
+      "caught": 326,
+      "recall": 0.9819277108433735
+    }
+  },
+  "alpha0.5_fold1": {
+    "bitwarden-cli_2026-04": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "chaindrop_2026-08": {
+      "n": 25,
+      "caught": 24,
+      "recall": 0.96
+    },
+    "individuals_case": {
+      "n": 21,
+      "caught": 13,
+      "recall": 0.6190476190476191
+    },
+    "injective_2026-07": {
+      "n": 12,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "mini-shai-hulud_2026-05": {
+      "n": 198,
+      "caught": 112,
+      "recall": 0.5656565656565656
+    },
+    "node-gyp-dll_2025-07": {
+      "n": 9,
+      "caught": 9,
+      "recall": 1.0
+    },
+    "react-native-aria-gluestack_2025-06": {
+      "n": 17,
+      "caught": 3,
+      "recall": 0.17647058823529413
+    },
+    "sap-maintainer-compromise": {
+      "n": 4,
+      "caught": 4,
+      "recall": 1.0
+    },
+    "solana-web3js_2024-12": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "toptal-xene_2025-07": {
+      "n": 10,
+      "caught": 8,
+      "recall": 0.8
+    }
+  },
+  "alpha0.5_fold2": {
+    "autotel-node-env-resolver_2026-06": {
+      "n": 29,
+      "caught": 4,
+      "recall": 0.13793103448275862
+    },
+    "axios_2026-03": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "individuals_case": {
+      "n": 29,
+      "caught": 13,
+      "recall": 0.4482758620689655
+    },
+    "js-metrics_2018": {
+      "n": 9,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma-leoplatform_2026-06": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma_2026-06": {
+      "n": 26,
+      "caught": 1,
+      "recall": 0.038461538461538464
+    },
+    "nx-s1ngularity_2025-08": {
+      "n": 7,
+      "caught": 7,
+      "recall": 1.0
+    },
+    "pgserve-automagik-openwebconcept_2026-04": {
+      "n": 10,
+      "caught": 2,
+      "recall": 0.2
+    },
+    "shai-hulud-original_2025-09": {
+      "n": 186,
+      "caught": 138,
+      "recall": 0.7419354838709677
+    }
+  },
+  "alpha0.75_fold0": {
+    "sha1-hulud-second-coming_2025-11": {
+      "n": 332,
+      "caught": 303,
+      "recall": 0.9126506024096386
+    }
+  },
+  "alpha0.75_fold1": {
+    "bitwarden-cli_2026-04": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "chaindrop_2026-08": {
+      "n": 25,
+      "caught": 23,
+      "recall": 0.92
+    },
+    "individuals_case": {
+      "n": 21,
+      "caught": 16,
+      "recall": 0.7619047619047619
+    },
+    "injective_2026-07": {
+      "n": 12,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "mini-shai-hulud_2026-05": {
+      "n": 198,
+      "caught": 101,
+      "recall": 0.51010101010101
+    },
+    "node-gyp-dll_2025-07": {
+      "n": 9,
+      "caught": 8,
+      "recall": 0.8888888888888888
+    },
+    "react-native-aria-gluestack_2025-06": {
+      "n": 17,
+      "caught": 3,
+      "recall": 0.17647058823529413
+    },
+    "sap-maintainer-compromise": {
+      "n": 4,
+      "caught": 4,
+      "recall": 1.0
+    },
+    "solana-web3js_2024-12": {
+      "n": 1,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "toptal-xene_2025-07": {
+      "n": 10,
+      "caught": 5,
+      "recall": 0.5
+    }
+  },
+  "alpha0.75_fold2": {
+    "autotel-node-env-resolver_2026-06": {
+      "n": 29,
+      "caught": 4,
+      "recall": 0.13793103448275862
+    },
+    "axios_2026-03": {
+      "n": 1,
+      "caught": 1,
+      "recall": 1.0
+    },
+    "individuals_case": {
+      "n": 29,
+      "caught": 17,
+      "recall": 0.5862068965517241
+    },
+    "js-metrics_2018": {
+      "n": 9,
+      "caught": 0,
+      "recall": 0.0
+    },
+    "miasma-leoplatform_2026-06": {
+      "n": 1,
+      "caught": 1,
+      "recall": 1.0
+    },
+    "miasma_2026-06": {
+      "n": 26,
+      "caught": 1,
+      "recall": 0.038461538461538464
+    },
+    "nx-s1ngularity_2025-08": {
+      "n": 7,
+      "caught": 7,
+      "recall": 1.0
+    },
+    "pgserve-automagik-openwebconcept_2026-04": {
+      "n": 10,
+      "caught": 2,
+      "recall": 0.2
+    },
+    "shai-hulud-original_2025-09": {
+      "n": 186,
+      "caught": 140,
+      "recall": 0.7526881720430108
+    }
+  }
+}
