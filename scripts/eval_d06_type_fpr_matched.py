@@ -28,7 +28,7 @@
   읽을 수 있어, 동점 판정과 임계값 재적용이 저장된 값과 어긋날 수 있기 때문이다.
 - 기존 기본 임계값 0.5(pred 컬럼) 행도 함께 남겨 기존 집계와 대조한다.
 - match_R1_random: 정상 전체가 아니라 무작위 정상 1,600쌍만 기준으로, R1의 무작위 정상 FP 수를 k로
-  같은 방식(proba > b_(k+1))을 적용한다(target_scope 컬럼 = random_benign). 나머지 운영점은 benign(1,839).
+  같은 방식(proba > b_(k+1))을 적용한다(target_scope 컬럼 = random_benign). 나머지 운영점은 all_benign(정상 1,839).
 
 지표
 - 전체 FPR(정상 1,839), hard benign FPR(hard_benign 239), 무작위 정상 FPR(benign 1,600),
@@ -185,10 +185,11 @@ def load_predictions(train: pd.DataFrame) -> dict[str, pd.DataFrame]:
     out = {}
     for name, df in variants.items():
         df = df[KEY + ["class", "campaign", "fold", "pred", "proba"]].reset_index(drop=True)
-        assert len(df) == N_TRAIN and not df.duplicated(KEY).any(), f"{name}: 행 수/중복 이상"
+        require(len(df) == N_TRAIN and not df.duplicated(KEY).any(), f"{name}: 예측 행 수/중복 이상")
         merged = df.merge(feats, on=KEY, how="inner", validate="one_to_one")
-        assert len(merged) == N_TRAIN, f"{name}: train.csv와 1:1로 결합되지 않습니다"
-        assert ((merged["class"] == "malicious") == (merged["label"] == 1)).all()
+        require(len(merged) == N_TRAIN, f"{name}: train.csv와 1:1로 결합되지 않습니다")
+        require(((merged["class"] == "malicious") == (merged["label"] == 1)).all(),
+                f"{name}: class == malicious와 label == 1이 일치하지 않는 pair가 있습니다")
         out[name] = merged
     return out
 
@@ -264,7 +265,7 @@ def evaluate(preds: dict[str, pd.DataFrame], pairs: pd.DataFrame) -> tuple[pd.Da
         rule_rows[rule] = rows[-1]
 
     # (운영점, 목표 FPR, 허용 FP 수, 임계값을 정하는 정상 집단: target_scope 값과 그 class 목록)
-    scope_all = ("benign", ("benign", "hard_benign"))
+    scope_all = ("all_benign", ("benign", "hard_benign"))
     targets = [(op, fpr, int(math.floor(fpr * N_BENIGN + 1e-9)), scope_all) for op, fpr in TARGET_FPRS.items()]
     targets += [(f"match_{r}", rule_rows[r]["fp"] / N_BENIGN, rule_rows[r]["fp"], scope_all) for r in RULES]
     r1_random_fp = rule_rows["R1"]["random_benign_fp"]
@@ -280,7 +281,8 @@ def evaluate(preds: dict[str, pd.DataFrame], pairs: pd.DataFrame) -> tuple[pd.Da
             thr = select_threshold(benign, max_fp)
             ties = (int((benign == thr).sum()), int((malicious == thr).sum()))
             record(name, "model", op, target_fpr, max_fp, thr, "proba > threshold", df, proba > thr, ties, scope)
-            assert rows[-1]["random_benign_fp" if scope == "random_benign" else "fp"] <= max_fp
+            fp_key = "random_benign_fp" if scope == "random_benign" else "fp"
+            require(rows[-1][fp_key] <= max_fp, f"{name} {op}: {fp_key} {rows[-1][fp_key]}가 허용 FP {max_fp}를 넘습니다")
 
     table = pd.DataFrame(rows)
     camp = pd.concat(camp_rows, ignore_index=True)[["method", "operating_point", "campaign", "n", "caught", "recall"]]
@@ -296,14 +298,16 @@ def check_against_existing(table: pd.DataFrame, preds: dict[str, pd.DataFrame]) 
     cv = pd.read_csv(CV_FOLD_METRICS_PATH)
     e10 = pd.read_csv(E10_FOLD_METRICS_PATH)
     for name, df in preds.items():
-        assert ((df["proba"] >= 0.5).astype(int) == df["pred"]).all(), f"{name}: pred가 proba >= 0.5와 다릅니다"
+        require(((df["proba"] >= 0.5).astype(int) == df["pred"]).all(), f"{name}: pred가 proba >= 0.5와 다릅니다")
     existing = {
         "E06": cv[cv["variant"] == "E06"], "E09": cv[cv["variant"] == "E09"],
         "E10_a0.25": e10[e10["alpha"] == 0.25], "E10_a0.75": e10[e10["alpha"] == 0.75],
     }
     for name, folds in existing.items():
         row = table[(table["method"] == name) & (table["operating_point"] == "default_0.5")].iloc[0]
-        assert row["tp"] == folds["tp"].sum() and row["fp"] == folds["fp"].sum(), f"{name}: 기존 fold 집계와 다릅니다"
+        require(row["tp"] == folds["tp"].sum() and row["fp"] == folds["fp"].sum(),
+                f"{name}: default_0.5 TP {row['tp']} / FP {row['fp']}가 기존 fold 집계 합"
+                f"(TP {folds['tp'].sum()} / FP {folds['fp'].sum()})과 다릅니다")
         notes.append(f"{name}: threshold 0.5 TP {row['tp']} / FP {row['fp']} = 기존 fold 집계 합과 일치")
 
     for name in MODELS:
@@ -311,12 +315,13 @@ def check_against_existing(table: pd.DataFrame, preds: dict[str, pd.DataFrame]) 
         proba = df["proba"].to_numpy()
         candidates = np.unique(proba)
         fp_at = {
-            "benign": np.array([(proba[(df["label"] == 0).to_numpy()] > c).sum() for c in candidates]),
+            "all_benign": np.array([(proba[(df["label"] == 0).to_numpy()] > c).sum() for c in candidates]),
             "random_benign": np.array([(proba[(df["class"] == "benign").to_numpy()] > c).sum() for c in candidates]),
         }
         for _, row in table[(table["method"] == name) & table["target_max_fp"].notna()].iterrows():
             lowest = candidates[fp_at[row["target_scope"]] <= row["target_max_fp"]].min()
-            assert lowest == row["threshold"], f"{name} {row['operating_point']}: 전수 탐색 결과와 임계값이 다릅니다"
+            require(lowest == row["threshold"],
+                    f"{name} {row['operating_point']}: 전수 탐색 결과({lowest})와 임계값({row['threshold']})이 다릅니다")
     notes.append("모든 모델·운영점(match_R1_random 포함, 각 target_scope 기준): 관측 점수 전체를 후보로 전수 탐색한 "
                  "'가장 낮은 유효 임계값'과 선택한 임계값이 같음")
     return notes
@@ -365,6 +370,8 @@ def write_report(table: pd.DataFrame, notes: list[str], b_note: str) -> None:
     ]
     for _, r in table.iterrows():
         target = "–" if pd.isna(r["target_fpr"]) else fmt(r["target_fpr"])
+        if r["target_scope"] == "random_benign":  # 기준 집단이 1,600쌍이라 1,839 기준 달성 FPR과 비교되지 않게 FP 수로 적는다
+            target = f"무작위 FP ≤ {int(r['target_max_fp'])}"
         lines.append(
             f"| {r['method']} | {r['operating_point']} | {target} | {fmt(r['achieved_fpr'])} ({r['fp']}) "
             f"| {fmt(r['hard_benign_fpr'])} | {fmt(r['random_benign_fpr'])} ({r['random_benign_fp']}) "
