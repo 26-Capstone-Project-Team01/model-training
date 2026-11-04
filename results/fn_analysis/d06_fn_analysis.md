@@ -157,7 +157,7 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 ### 4-1. 데이터로 확인된 사실
 
 - 공통 미탐 296쌍의 유형: A 124 · B 44 · C 128. 유형별 Recall(E06 / E09): A 82.2% / 82.4%, B 11.5% / 5.8%, C 2.1% / 9.2%(2-1).
-- **package.json feature만으로는 구별 정보가 부족한 pair가 전부다.** 공통 미탐 296쌍 중 296쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 그 악성 이상인 비율의 중앙값이 A 0.40, B 0.64, C 0.16이다. 즉 updateInterval 임계값으로 이 악성을 잡으려 하면 같은 모양의 정상도 그만큼 함께 걸린다.
+- **package.json feature만으로는 구별 정보가 부족한 pair가 전부(296/296)다.** 공통 미탐 296쌍 중 296쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 그 악성 이상인 비율의 중앙값이 A 0.40, B 0.64, C 0.16이다. 즉 updateInterval 임계값으로 이 악성을 잡으려 하면 같은 모양의 정상도 그만큼 함께 걸린다.
 - **A 유형**: 두 모델이 모두 잡은 A의 updateInterval 중앙값은 222일, patch 비율 98.7%, 새 의존성 비율 0.0%다. 함께 놓친 A는 updateInterval 중앙값 13.5일, patch 58.1%, 새 의존성 41.1%이고, A 유형 hard benign은 중앙값 5.0일, patch 56.1%, 새 의존성 29.5%다.
 - **B 유형**: 놓친 B는 patch 95.5%, 새 의존성 평균 1.00개, updateInterval 중앙값 5.9일이고, B 유형 무작위 정상은 patch 46.8%, 평균 1.65개, 중앙값 29.8일이다.
 - **C 유형**: 놓친 C는 설치 스크립트·새 의존성 변화가 없고 patch 99.2%, updateInterval 중앙값 74.4일이다. 한 모델이라도 잡은 C의 수와 updateInterval 중앙값: malicious_detected_both 2쌍(88일), malicious_E09_only 11쌍(598일), malicious_E06_only 1쌍(190일).
@@ -179,7 +179,7 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 아래는 4-1의 사실에서 귀납적으로 추론한 가설이며, 확인하려면 4-1 밖의 실험이 필요하다.
 
 - **H1. 모델이 '설치 스크립트 추가 + 긴 배포 간격'이라는 지름길을 학습했다.** 근거: 4-1의 A 유형 프로필(잡힌 A와 놓친 A의 updateInterval 차이)과 split importance의 updateInterval 독주. baseline 규칙 설계도 updateInterval을 통한 label 누수를 경계한다(`be87ab4cf:derived/pairs/baseline_rule.py` L21-24: 악성 직전 후보를 날짜 경계로 일괄 제외하면 정상 hotfix까지 빠져 악성 baseline만 체계적으로 오래되고 updateInterval로 label이 누수되므로, 일괄 제외 대신 clean 검증을 쓴다). worm처럼 짧은 간격으로 연속 배포하는 공격은 이 지름길에서 벗어나 미탐될 것으로 추정한다.
-- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 대부분이 이산 feature가 같은 정상 pair를 갖고, 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 0.39~0.66으로 약하다. 이 경우 가중치·임계값 조정만으로는 같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 차이로 남지 않는 것(0절: TP 차이 156 → 9)도 이와 맞는다.
+- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 전부(296/296)가 이산 feature가 같은 정상 pair를 갖고, 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 0.39~0.66으로 약하다. 이 경우 가중치·임계값 조정만으로는 같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 차이로 남지 않는 것(0절: TP 차이 156 → 9)도 이와 맞는다.
 - **H3. 필요한 정보의 일부는 이미 train.csv에 있다(난독화 feature).** 근거: 캠페인 균등으로 봐도 분리도가 남고 변경 JS 유무도 다르다. 모두 넣었을 때 캠페인별 값에 과적합하는지는 campaign CV 근거가 없어 미검증이다. 이를 가르려면 일부 feature만 campaign CV로 넣어 보는 실험이 필요하다.
 - **H4. CV 수치의 변동은 fold 구성과 운영점에 크게 좌우된다.** fold 0이 단일 캠페인(`sha1-hulud-second-coming_2025-11`)이라 fold 평균에서 이 캠페인이 1/3 비중을 갖는다. E09가 E06보다 더 잡은 pair 중 이 캠페인은 0.5 고정에서 96/156쌍, FPR 5%에서 0/20쌍이다. early stopping이 평가 fold를 보므로 CV 수치는 낙관적일 수 있다.
 - **H5. 공격의 실체 정보(hook이 실행하는 파일의 내용, 추가된 의존성의 정체, 주입된 코드의 동작)는 현재 어떤 feature에도 직접 없다.** 근거: 4-1의 공격 흔적. 난독화 비율은 코드의 '모양'만 보므로, 난독화하지 않은 악성 코드에는 신호가 약할 것으로 추정한다.

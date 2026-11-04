@@ -575,13 +575,23 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
     tc = lambda op, m, t: int(srow(op, m, "type", t)["tp"])
     alpha_models = [("0", "E06"), ("0.25", "E10_a0.25"), ("0.5", "E09"), ("0.75", "E10_a0.75")]
     sha1_fn = {m: int(srow(P, m, "campaign", SHA1_HULUD)["fn"]) for _, m in alpha_models}
+    n_same = int((same["n_same_vector_benign"] > 0).sum())
+    # 4-1 결론(same_claim)과 H2 근거(same_basis) 문구를 계산값으로 고른다: 0건(0/0 포함) / 전부 / 과반 / 그 미만.
+    same_frac = f"({n_same}/{n['both']})"
+    if n_same == 0:
+        same_claim, same_basis = f"없다{same_frac}", f"동일한 이산 feature의 정상 pair를 가진 공통 미탐은 없고{same_frac}"
+    else:
+        same_q, same_ga, same_da = (("전부", "가", "다") if n_same == n["both"] else ("대부분", "이", "이다") if 2 * n_same > n["both"]
+                                    else ("일부", "가", "다"))
+        same_claim = f"{same_q}{same_frac}{same_da}"
+        same_basis = f"공통 미탐 {same_q}{same_frac}{same_ga} 이산 feature가 같은 정상 pair를 갖고"
 
     L += [f"## 4. 미탐 원인 ({OP_LABEL[P]} 기준)", "", "### 4-1. 데이터로 확인된 사실", "",
           f"- 공통 미탐 {n['both']}쌍의 유형: A {len(both_a)} · B {int((both['type'] == 'B').sum())} · C {len(both_c)}. "
           "유형별 Recall(E06 / E09): " + ", ".join(f"{t} {pct(srow(P, 'E06', 'type', t)['recall'])} / {pct(srow(P, 'E09', 'type', t)['recall'])}"
                                                    for t in ev.TYPES) + "(2-1).",
-          f"- **package.json feature만으로는 구별 정보가 부족한 pair가 전부다.** 공통 미탐 {n['both']}쌍 중 "
-          f"{int((same['n_same_vector_benign'] > 0).sum())}쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, "
+          f"- **package.json feature만으로는 구별 정보가 부족한 pair가 {same_claim}.** 공통 미탐 {n['both']}쌍 중 "
+          f"{n_same}쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, "
           "updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 "
           "그 악성 이상인 비율의 중앙값이 "
           + ", ".join(f"{t} {v:.2f}" for t, v in same_by_type.items())
@@ -656,8 +666,8 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           "(`be87ab4cf:derived/pairs/baseline_rule.py` L21-24: 악성 직전 후보를 날짜 경계로 일괄 제외하면 정상 hotfix까지 빠져 악성 "
           "baseline만 체계적으로 오래되고 updateInterval로 label이 누수되므로, 일괄 제외 대신 clean 검증을 쓴다). worm처럼 짧은 간격으로 "
           "연속 배포하는 공격은 이 지름길에서 벗어나 미탐될 것으로 추정한다.",
-          f"- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 대부분이 이산 feature가 "
-          f"같은 정상 pair를 갖고, 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 "
+          f"- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: {same_basis}"
+          f", 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 "
           f"{used_auc.min():.2f}~{used_auc.max():.2f}으로 약하다. 이 경우 가중치·임계값 조정만으로는 "
           "같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 "
           f"차이로 남지 않는 것(0절: TP 차이 {tp_d05} → {tp_dP})도 이와 맞는다.",
