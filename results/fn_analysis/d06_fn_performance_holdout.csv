@@ -1,9 +1,0 @@
-model,evaluation,status,n_malicious,n_benign,tp,fn,fp,tn,recall,precision,fpr,f1,pr_auc,counts_derived,best_iteration
-E06,train_val_split_validation,evaluated,187.0,368.0,133.0,54.0,12.0,356.0,0.7112299465240641,0.9172413793103448,0.03260869565217391,0.8012048192771084,0.907214235640945,True,6.0
-E06,train_val_split_test,evaluated,217.0,460.0,132.0,85.0,17.0,443.0,0.6082949308755761,0.8859060402684564,0.03695652173913044,0.7213114754098361,0.8687580548681246,True,6.0
-E09,train_val_split_validation,evaluated,187.0,368.0,146.0,41.0,21.0,347.0,0.7807486631016043,0.874251497005988,0.057065217391304345,0.8248587570621468,0.8988831040788456,True,7.0
-E09,train_val_split_test,evaluated,217.0,460.0,154.0,63.0,39.0,421.0,0.7096774193548387,0.7979274611398963,0.08478260869565217,0.751219512195122,0.8143329429804234,True,7.0
-E10_a0.25,train_val_split_validation,미평가,,,,,,,,,,,,,
-E10_a0.25,train_val_split_test,미평가,,,,,,,,,,,,,
-E10_a0.75,train_val_split_validation,미평가,,,,,,,,,,,,,
-E10_a0.75,train_val_split_test,미평가,,,,,,,,,,,,,

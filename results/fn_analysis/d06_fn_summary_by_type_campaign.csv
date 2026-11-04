@@ -1,201 +1,601 @@
-model,level,key,n,tp,fn,recall,fn_share_of_model_fn
-E06,type,A,734,506,228,0.6893732970027248,0.5428571428571428
-E06,type,B,52,0,52,0.0,0.12380952380952381
-E06,type,C,142,2,140,0.014084507042253521,0.3333333333333333
-E06,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.06428571428571428
-E06,campaign,axios_2026-03,1,0,1,0.0,0.002380952380952381
-E06,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.002380952380952381
-E06,campaign,chaindrop_2026-08,25,24,1,0.96,0.002380952380952381
-E06,campaign,individuals_case,50,3,47,0.06,0.11190476190476191
-E06,campaign,injective_2026-07,12,0,12,0.0,0.02857142857142857
-E06,campaign,js-metrics_2018,9,0,9,0.0,0.02142857142857143
-E06,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.002380952380952381
-E06,campaign,miasma_2026-06,26,0,26,0.0,0.06190476190476191
-E06,campaign,mini-shai-hulud_2026-05,198,96,102,0.48484848484848486,0.24285714285714285
-E06,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
-E06,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.016666666666666666
-E06,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.01904761904761905
-E06,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.04047619047619048
-E06,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
-E06,campaign,sha1-hulud-second-coming_2025-11,332,230,102,0.6927710843373494,0.24285714285714285
-E06,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.1261904761904762
-E06,campaign,solana-web3js_2024-12,1,0,1,0.0,0.002380952380952381
-E06,campaign,toptal-xene_2025-07,10,5,5,0.5,0.011904761904761904
-E06,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.06428571428571428
-E06,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.002380952380952381
-E06,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.002380952380952381
-E06,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.002380952380952381
-E06,campaign_type,individuals_case / A,8,3,5,0.375,0.011904761904761904
-E06,campaign_type,individuals_case / B,4,0,4,0.0,0.009523809523809525
-E06,campaign_type,individuals_case / C,38,0,38,0.0,0.09047619047619047
-E06,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.02857142857142857
-E06,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.02142857142857143
-E06,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.002380952380952381
-E06,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.06190476190476191
-E06,campaign_type,mini-shai-hulud_2026-05 / A,152,96,56,0.631578947368421,0.13333333333333333
-E06,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.10952380952380952
-E06,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
-E06,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.016666666666666666
-E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.004761904761904762
-E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.014285714285714285
-E06,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.04047619047619048
-E06,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
-E06,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,230,100,0.696969696969697,0.23809523809523808
-E06,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.004761904761904762
-E06,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.12142857142857143
-E06,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.004761904761904762
-E06,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.002380952380952381
-E06,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.011904761904761904
-E06,fold,0,332,230,102,0.6927710843373494,0.24285714285714285
-E06,fold,1,298,140,158,0.4697986577181208,0.3761904761904762
-E06,fold,2,298,138,160,0.46308724832214765,0.38095238095238093
-E09,type,A,734,617,117,0.840599455040872,0.4431818181818182
-E09,type,B,52,13,39,0.25,0.14772727272727273
-E09,type,C,142,34,108,0.23943661971830985,0.4090909090909091
-E09,campaign,autotel-node-env-resolver_2026-06,29,4,25,0.13793103448275862,0.0946969696969697
-E09,campaign,axios_2026-03,1,0,1,0.0,0.003787878787878788
-E09,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003787878787878788
-E09,campaign,chaindrop_2026-08,25,24,1,0.96,0.003787878787878788
-E09,campaign,individuals_case,50,26,24,0.52,0.09090909090909091
-E09,campaign,injective_2026-07,12,0,12,0.0,0.045454545454545456
-E09,campaign,js-metrics_2018,9,0,9,0.0,0.03409090909090909
-E09,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.003787878787878788
-E09,campaign,miasma_2026-06,26,1,25,0.038461538461538464,0.0946969696969697
-E09,campaign,mini-shai-hulud_2026-05,198,112,86,0.5656565656565656,0.32575757575757575
-E09,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
-E09,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
-E09,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.030303030303030304
-E09,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.05303030303030303
-E09,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
-E09,campaign,sha1-hulud-second-coming_2025-11,332,326,6,0.9819277108433735,0.022727272727272728
-E09,campaign,shai-hulud-original_2025-09,186,138,48,0.7419354838709677,0.18181818181818182
-E09,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003787878787878788
-E09,campaign,toptal-xene_2025-07,10,8,2,0.8,0.007575757575757576
-E09,campaign_type,autotel-node-env-resolver_2026-06 / C,29,4,25,0.13793103448275862,0.0946969696969697
-E09,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.003787878787878788
-E09,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003787878787878788
-E09,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.003787878787878788
-E09,campaign_type,individuals_case / A,8,3,5,0.375,0.01893939393939394
-E09,campaign_type,individuals_case / B,4,0,4,0.0,0.015151515151515152
-E09,campaign_type,individuals_case / C,38,23,15,0.6052631578947368,0.056818181818181816
-E09,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.045454545454545456
-E09,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.03409090909090909
-E09,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.003787878787878788
-E09,campaign_type,miasma_2026-06 / C,26,1,25,0.038461538461538464,0.0946969696969697
-E09,campaign_type,mini-shai-hulud_2026-05 / A,152,99,53,0.6513157894736842,0.20075757575757575
-E09,campaign_type,mini-shai-hulud_2026-05 / B,46,13,33,0.2826086956521739,0.125
-E09,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
-E09,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
-E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.007575757575757576
-E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.022727272727272728
-E09,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.05303030303030303
-E09,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
-E09,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,324,6,0.9818181818181818,0.022727272727272728
-E09,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,2,0,1.0,0.0
-E09,campaign_type,shai-hulud-original_2025-09 / A,184,137,47,0.7445652173913043,0.17803030303030304
-E09,campaign_type,shai-hulud-original_2025-09 / C,2,1,1,0.5,0.003787878787878788
-E09,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003787878787878788
-E09,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.007575757575757576
-E09,fold,0,332,326,6,0.9819277108433735,0.022727272727272728
-E09,fold,1,298,173,125,0.5805369127516778,0.4734848484848485
-E09,fold,2,298,165,133,0.5536912751677853,0.5037878787878788
-E10_a0.25,type,A,734,611,123,0.832425068119891,0.412751677852349
-E10_a0.25,type,B,52,2,50,0.038461538461538464,0.16778523489932887
-E10_a0.25,type,C,142,17,125,0.11971830985915492,0.41946308724832215
-E10_a0.25,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.09060402684563758
-E10_a0.25,campaign,axios_2026-03,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign,chaindrop_2026-08,25,24,1,0.96,0.003355704697986577
-E10_a0.25,campaign,individuals_case,50,14,36,0.28,0.12080536912751678
-E10_a0.25,campaign,injective_2026-07,12,0,12,0.0,0.040268456375838924
-E10_a0.25,campaign,js-metrics_2018,9,0,9,0.0,0.030201342281879196
-E10_a0.25,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign,miasma_2026-06,26,0,26,0.0,0.087248322147651
-E10_a0.25,campaign,mini-shai-hulud_2026-05,198,98,100,0.494949494949495,0.33557046979865773
-E10_a0.25,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
-E10_a0.25,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
-E10_a0.25,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.026845637583892617
-E10_a0.25,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.04697986577181208
-E10_a0.25,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
-E10_a0.25,campaign,sha1-hulud-second-coming_2025-11,332,326,6,0.9819277108433735,0.020134228187919462
-E10_a0.25,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.17785234899328858
-E10_a0.25,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign,toptal-xene_2025-07,10,8,2,0.8,0.006711409395973154
-E10_a0.25,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.09060402684563758
-E10_a0.25,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.003355704697986577
-E10_a0.25,campaign_type,individuals_case / A,8,3,5,0.375,0.016778523489932886
-E10_a0.25,campaign_type,individuals_case / B,4,0,4,0.0,0.013422818791946308
-E10_a0.25,campaign_type,individuals_case / C,38,11,27,0.2894736842105263,0.09060402684563758
-E10_a0.25,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.040268456375838924
-E10_a0.25,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.030201342281879196
-E10_a0.25,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.087248322147651
-E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / A,152,96,56,0.631578947368421,0.18791946308724833
-E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / B,46,2,44,0.043478260869565216,0.1476510067114094
-E10_a0.25,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
-E10_a0.25,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
-E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.006711409395973154
-E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.020134228187919462
-E10_a0.25,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.04697986577181208
-E10_a0.25,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
-E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,325,5,0.9848484848484849,0.016778523489932886
-E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.003355704697986577
-E10_a0.25,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.17114093959731544
-E10_a0.25,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.006711409395973154
-E10_a0.25,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003355704697986577
-E10_a0.25,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.006711409395973154
-E10_a0.25,fold,0,332,326,6,0.9819277108433735,0.020134228187919462
-E10_a0.25,fold,1,298,157,141,0.5268456375838926,0.47315436241610737
-E10_a0.25,fold,2,298,147,151,0.49328859060402686,0.5067114093959731
-E10_a0.75,type,A,734,583,151,0.7942779291553134,0.5171232876712328
-E10_a0.75,type,B,52,18,34,0.34615384615384615,0.11643835616438356
-E10_a0.75,type,C,142,35,107,0.24647887323943662,0.3664383561643836
-E10_a0.75,campaign,autotel-node-env-resolver_2026-06,29,4,25,0.13793103448275862,0.08561643835616438
-E10_a0.75,campaign,axios_2026-03,1,1,0,1.0,0.0
-E10_a0.75,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003424657534246575
-E10_a0.75,campaign,chaindrop_2026-08,25,23,2,0.92,0.00684931506849315
-E10_a0.75,campaign,individuals_case,50,33,17,0.66,0.05821917808219178
-E10_a0.75,campaign,injective_2026-07,12,0,12,0.0,0.0410958904109589
-E10_a0.75,campaign,js-metrics_2018,9,0,9,0.0,0.030821917808219176
-E10_a0.75,campaign,miasma-leoplatform_2026-06,1,1,0,1.0,0.0
-E10_a0.75,campaign,miasma_2026-06,26,1,25,0.038461538461538464,0.08561643835616438
-E10_a0.75,campaign,mini-shai-hulud_2026-05,198,101,97,0.51010101010101,0.3321917808219178
-E10_a0.75,campaign,node-gyp-dll_2025-07,9,8,1,0.8888888888888888,0.003424657534246575
-E10_a0.75,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
-E10_a0.75,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.0273972602739726
-E10_a0.75,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.04794520547945205
-E10_a0.75,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
-E10_a0.75,campaign,sha1-hulud-second-coming_2025-11,332,303,29,0.9126506024096386,0.09931506849315068
-E10_a0.75,campaign,shai-hulud-original_2025-09,186,140,46,0.7526881720430108,0.15753424657534246
-E10_a0.75,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003424657534246575
-E10_a0.75,campaign,toptal-xene_2025-07,10,5,5,0.5,0.017123287671232876
-E10_a0.75,campaign_type,autotel-node-env-resolver_2026-06 / C,29,4,25,0.13793103448275862,0.08561643835616438
-E10_a0.75,campaign_type,axios_2026-03 / B,1,1,0,1.0,0.0
-E10_a0.75,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003424657534246575
-E10_a0.75,campaign_type,chaindrop_2026-08 / A,25,23,2,0.92,0.00684931506849315
-E10_a0.75,campaign_type,individuals_case / A,8,5,3,0.625,0.010273972602739725
-E10_a0.75,campaign_type,individuals_case / B,4,3,1,0.75,0.003424657534246575
-E10_a0.75,campaign_type,individuals_case / C,38,25,13,0.6578947368421053,0.04452054794520548
-E10_a0.75,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.0410958904109589
-E10_a0.75,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.030821917808219176
-E10_a0.75,campaign_type,miasma-leoplatform_2026-06 / B,1,1,0,1.0,0.0
-E10_a0.75,campaign_type,miasma_2026-06 / C,26,1,25,0.038461538461538464,0.08561643835616438
-E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / A,152,88,64,0.5789473684210527,0.2191780821917808
-E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / B,46,13,33,0.2826086956521739,0.11301369863013698
-E10_a0.75,campaign_type,node-gyp-dll_2025-07 / A,9,8,1,0.8888888888888888,0.003424657534246575
-E10_a0.75,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
-E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.00684931506849315
-E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.02054794520547945
-E10_a0.75,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.04794520547945205
-E10_a0.75,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
-E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,302,28,0.9151515151515152,0.0958904109589041
-E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.003424657534246575
-E10_a0.75,campaign_type,shai-hulud-original_2025-09 / A,184,139,45,0.7554347826086957,0.1541095890410959
-E10_a0.75,campaign_type,shai-hulud-original_2025-09 / C,2,1,1,0.5,0.003424657534246575
-E10_a0.75,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003424657534246575
-E10_a0.75,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.017123287671232876
-E10_a0.75,fold,0,332,303,29,0.9126506024096386,0.09931506849315068
-E10_a0.75,fold,1,298,160,138,0.5369127516778524,0.4726027397260274
-E10_a0.75,fold,2,298,173,125,0.5805369127516778,0.4280821917808219
+operating_point,model,level,key,n,tp,fn,recall,fn_share_of_model_fn
+default_0.5,E06,type,A,734,506,228,0.6893732970027248,0.5428571428571428
+default_0.5,E06,type,B,52,0,52,0.0,0.12380952380952381
+default_0.5,E06,type,C,142,2,140,0.014084507042253521,0.3333333333333333
+default_0.5,E06,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.06428571428571428
+default_0.5,E06,campaign,axios_2026-03,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign,chaindrop_2026-08,25,24,1,0.96,0.002380952380952381
+default_0.5,E06,campaign,individuals_case,50,3,47,0.06,0.11190476190476191
+default_0.5,E06,campaign,injective_2026-07,12,0,12,0.0,0.02857142857142857
+default_0.5,E06,campaign,js-metrics_2018,9,0,9,0.0,0.02142857142857143
+default_0.5,E06,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign,miasma_2026-06,26,0,26,0.0,0.06190476190476191
+default_0.5,E06,campaign,mini-shai-hulud_2026-05,198,96,102,0.48484848484848486,0.24285714285714285
+default_0.5,E06,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+default_0.5,E06,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.016666666666666666
+default_0.5,E06,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.01904761904761905
+default_0.5,E06,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.04047619047619048
+default_0.5,E06,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+default_0.5,E06,campaign,sha1-hulud-second-coming_2025-11,332,230,102,0.6927710843373494,0.24285714285714285
+default_0.5,E06,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.1261904761904762
+default_0.5,E06,campaign,solana-web3js_2024-12,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign,toptal-xene_2025-07,10,5,5,0.5,0.011904761904761904
+default_0.5,E06,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.06428571428571428
+default_0.5,E06,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.002380952380952381
+default_0.5,E06,campaign_type,individuals_case / A,8,3,5,0.375,0.011904761904761904
+default_0.5,E06,campaign_type,individuals_case / B,4,0,4,0.0,0.009523809523809525
+default_0.5,E06,campaign_type,individuals_case / C,38,0,38,0.0,0.09047619047619047
+default_0.5,E06,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.02857142857142857
+default_0.5,E06,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.02142857142857143
+default_0.5,E06,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.06190476190476191
+default_0.5,E06,campaign_type,mini-shai-hulud_2026-05 / A,152,96,56,0.631578947368421,0.13333333333333333
+default_0.5,E06,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.10952380952380952
+default_0.5,E06,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+default_0.5,E06,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.016666666666666666
+default_0.5,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.004761904761904762
+default_0.5,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.014285714285714285
+default_0.5,E06,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.04047619047619048
+default_0.5,E06,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+default_0.5,E06,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,230,100,0.696969696969697,0.23809523809523808
+default_0.5,E06,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.004761904761904762
+default_0.5,E06,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.12142857142857143
+default_0.5,E06,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.004761904761904762
+default_0.5,E06,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.002380952380952381
+default_0.5,E06,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.011904761904761904
+default_0.5,E06,fold,0,332,230,102,0.6927710843373494,0.24285714285714285
+default_0.5,E06,fold,1,298,140,158,0.4697986577181208,0.3761904761904762
+default_0.5,E06,fold,2,298,138,160,0.46308724832214765,0.38095238095238093
+default_0.5,E09,type,A,734,617,117,0.840599455040872,0.4431818181818182
+default_0.5,E09,type,B,52,13,39,0.25,0.14772727272727273
+default_0.5,E09,type,C,142,34,108,0.23943661971830985,0.4090909090909091
+default_0.5,E09,campaign,autotel-node-env-resolver_2026-06,29,4,25,0.13793103448275862,0.0946969696969697
+default_0.5,E09,campaign,axios_2026-03,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign,chaindrop_2026-08,25,24,1,0.96,0.003787878787878788
+default_0.5,E09,campaign,individuals_case,50,26,24,0.52,0.09090909090909091
+default_0.5,E09,campaign,injective_2026-07,12,0,12,0.0,0.045454545454545456
+default_0.5,E09,campaign,js-metrics_2018,9,0,9,0.0,0.03409090909090909
+default_0.5,E09,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign,miasma_2026-06,26,1,25,0.038461538461538464,0.0946969696969697
+default_0.5,E09,campaign,mini-shai-hulud_2026-05,198,112,86,0.5656565656565656,0.32575757575757575
+default_0.5,E09,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+default_0.5,E09,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
+default_0.5,E09,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.030303030303030304
+default_0.5,E09,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.05303030303030303
+default_0.5,E09,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+default_0.5,E09,campaign,sha1-hulud-second-coming_2025-11,332,326,6,0.9819277108433735,0.022727272727272728
+default_0.5,E09,campaign,shai-hulud-original_2025-09,186,138,48,0.7419354838709677,0.18181818181818182
+default_0.5,E09,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign,toptal-xene_2025-07,10,8,2,0.8,0.007575757575757576
+default_0.5,E09,campaign_type,autotel-node-env-resolver_2026-06 / C,29,4,25,0.13793103448275862,0.0946969696969697
+default_0.5,E09,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.003787878787878788
+default_0.5,E09,campaign_type,individuals_case / A,8,3,5,0.375,0.01893939393939394
+default_0.5,E09,campaign_type,individuals_case / B,4,0,4,0.0,0.015151515151515152
+default_0.5,E09,campaign_type,individuals_case / C,38,23,15,0.6052631578947368,0.056818181818181816
+default_0.5,E09,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.045454545454545456
+default_0.5,E09,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.03409090909090909
+default_0.5,E09,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign_type,miasma_2026-06 / C,26,1,25,0.038461538461538464,0.0946969696969697
+default_0.5,E09,campaign_type,mini-shai-hulud_2026-05 / A,152,99,53,0.6513157894736842,0.20075757575757575
+default_0.5,E09,campaign_type,mini-shai-hulud_2026-05 / B,46,13,33,0.2826086956521739,0.125
+default_0.5,E09,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+default_0.5,E09,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
+default_0.5,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.007575757575757576
+default_0.5,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.022727272727272728
+default_0.5,E09,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.05303030303030303
+default_0.5,E09,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+default_0.5,E09,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,324,6,0.9818181818181818,0.022727272727272728
+default_0.5,E09,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,2,0,1.0,0.0
+default_0.5,E09,campaign_type,shai-hulud-original_2025-09 / A,184,137,47,0.7445652173913043,0.17803030303030304
+default_0.5,E09,campaign_type,shai-hulud-original_2025-09 / C,2,1,1,0.5,0.003787878787878788
+default_0.5,E09,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003787878787878788
+default_0.5,E09,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.007575757575757576
+default_0.5,E09,fold,0,332,326,6,0.9819277108433735,0.022727272727272728
+default_0.5,E09,fold,1,298,173,125,0.5805369127516778,0.4734848484848485
+default_0.5,E09,fold,2,298,165,133,0.5536912751677853,0.5037878787878788
+default_0.5,E10_a0.25,type,A,734,611,123,0.832425068119891,0.412751677852349
+default_0.5,E10_a0.25,type,B,52,2,50,0.038461538461538464,0.16778523489932887
+default_0.5,E10_a0.25,type,C,142,17,125,0.11971830985915492,0.41946308724832215
+default_0.5,E10_a0.25,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.09060402684563758
+default_0.5,E10_a0.25,campaign,axios_2026-03,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign,chaindrop_2026-08,25,24,1,0.96,0.003355704697986577
+default_0.5,E10_a0.25,campaign,individuals_case,50,14,36,0.28,0.12080536912751678
+default_0.5,E10_a0.25,campaign,injective_2026-07,12,0,12,0.0,0.040268456375838924
+default_0.5,E10_a0.25,campaign,js-metrics_2018,9,0,9,0.0,0.030201342281879196
+default_0.5,E10_a0.25,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign,miasma_2026-06,26,0,26,0.0,0.087248322147651
+default_0.5,E10_a0.25,campaign,mini-shai-hulud_2026-05,198,98,100,0.494949494949495,0.33557046979865773
+default_0.5,E10_a0.25,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+default_0.5,E10_a0.25,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
+default_0.5,E10_a0.25,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.026845637583892617
+default_0.5,E10_a0.25,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.04697986577181208
+default_0.5,E10_a0.25,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+default_0.5,E10_a0.25,campaign,sha1-hulud-second-coming_2025-11,332,326,6,0.9819277108433735,0.020134228187919462
+default_0.5,E10_a0.25,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.17785234899328858
+default_0.5,E10_a0.25,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign,toptal-xene_2025-07,10,8,2,0.8,0.006711409395973154
+default_0.5,E10_a0.25,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.09060402684563758
+default_0.5,E10_a0.25,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,individuals_case / A,8,3,5,0.375,0.016778523489932886
+default_0.5,E10_a0.25,campaign_type,individuals_case / B,4,0,4,0.0,0.013422818791946308
+default_0.5,E10_a0.25,campaign_type,individuals_case / C,38,11,27,0.2894736842105263,0.09060402684563758
+default_0.5,E10_a0.25,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.040268456375838924
+default_0.5,E10_a0.25,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.030201342281879196
+default_0.5,E10_a0.25,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.087248322147651
+default_0.5,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / A,152,96,56,0.631578947368421,0.18791946308724833
+default_0.5,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / B,46,2,44,0.043478260869565216,0.1476510067114094
+default_0.5,E10_a0.25,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+default_0.5,E10_a0.25,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
+default_0.5,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.006711409395973154
+default_0.5,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.020134228187919462
+default_0.5,E10_a0.25,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.04697986577181208
+default_0.5,E10_a0.25,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+default_0.5,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,325,5,0.9848484848484849,0.016778523489932886
+default_0.5,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.17114093959731544
+default_0.5,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.006711409395973154
+default_0.5,E10_a0.25,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003355704697986577
+default_0.5,E10_a0.25,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.006711409395973154
+default_0.5,E10_a0.25,fold,0,332,326,6,0.9819277108433735,0.020134228187919462
+default_0.5,E10_a0.25,fold,1,298,157,141,0.5268456375838926,0.47315436241610737
+default_0.5,E10_a0.25,fold,2,298,147,151,0.49328859060402686,0.5067114093959731
+default_0.5,E10_a0.75,type,A,734,583,151,0.7942779291553134,0.5171232876712328
+default_0.5,E10_a0.75,type,B,52,18,34,0.34615384615384615,0.11643835616438356
+default_0.5,E10_a0.75,type,C,142,35,107,0.24647887323943662,0.3664383561643836
+default_0.5,E10_a0.75,campaign,autotel-node-env-resolver_2026-06,29,4,25,0.13793103448275862,0.08561643835616438
+default_0.5,E10_a0.75,campaign,axios_2026-03,1,1,0,1.0,0.0
+default_0.5,E10_a0.75,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003424657534246575
+default_0.5,E10_a0.75,campaign,chaindrop_2026-08,25,23,2,0.92,0.00684931506849315
+default_0.5,E10_a0.75,campaign,individuals_case,50,33,17,0.66,0.05821917808219178
+default_0.5,E10_a0.75,campaign,injective_2026-07,12,0,12,0.0,0.0410958904109589
+default_0.5,E10_a0.75,campaign,js-metrics_2018,9,0,9,0.0,0.030821917808219176
+default_0.5,E10_a0.75,campaign,miasma-leoplatform_2026-06,1,1,0,1.0,0.0
+default_0.5,E10_a0.75,campaign,miasma_2026-06,26,1,25,0.038461538461538464,0.08561643835616438
+default_0.5,E10_a0.75,campaign,mini-shai-hulud_2026-05,198,101,97,0.51010101010101,0.3321917808219178
+default_0.5,E10_a0.75,campaign,node-gyp-dll_2025-07,9,8,1,0.8888888888888888,0.003424657534246575
+default_0.5,E10_a0.75,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
+default_0.5,E10_a0.75,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.0273972602739726
+default_0.5,E10_a0.75,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.04794520547945205
+default_0.5,E10_a0.75,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+default_0.5,E10_a0.75,campaign,sha1-hulud-second-coming_2025-11,332,303,29,0.9126506024096386,0.09931506849315068
+default_0.5,E10_a0.75,campaign,shai-hulud-original_2025-09,186,140,46,0.7526881720430108,0.15753424657534246
+default_0.5,E10_a0.75,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003424657534246575
+default_0.5,E10_a0.75,campaign,toptal-xene_2025-07,10,5,5,0.5,0.017123287671232876
+default_0.5,E10_a0.75,campaign_type,autotel-node-env-resolver_2026-06 / C,29,4,25,0.13793103448275862,0.08561643835616438
+default_0.5,E10_a0.75,campaign_type,axios_2026-03 / B,1,1,0,1.0,0.0
+default_0.5,E10_a0.75,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,chaindrop_2026-08 / A,25,23,2,0.92,0.00684931506849315
+default_0.5,E10_a0.75,campaign_type,individuals_case / A,8,5,3,0.625,0.010273972602739725
+default_0.5,E10_a0.75,campaign_type,individuals_case / B,4,3,1,0.75,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,individuals_case / C,38,25,13,0.6578947368421053,0.04452054794520548
+default_0.5,E10_a0.75,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.0410958904109589
+default_0.5,E10_a0.75,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.030821917808219176
+default_0.5,E10_a0.75,campaign_type,miasma-leoplatform_2026-06 / B,1,1,0,1.0,0.0
+default_0.5,E10_a0.75,campaign_type,miasma_2026-06 / C,26,1,25,0.038461538461538464,0.08561643835616438
+default_0.5,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / A,152,88,64,0.5789473684210527,0.2191780821917808
+default_0.5,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / B,46,13,33,0.2826086956521739,0.11301369863013698
+default_0.5,E10_a0.75,campaign_type,node-gyp-dll_2025-07 / A,9,8,1,0.8888888888888888,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
+default_0.5,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.00684931506849315
+default_0.5,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.02054794520547945
+default_0.5,E10_a0.75,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.04794520547945205
+default_0.5,E10_a0.75,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+default_0.5,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,302,28,0.9151515151515152,0.0958904109589041
+default_0.5,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / A,184,139,45,0.7554347826086957,0.1541095890410959
+default_0.5,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / C,2,1,1,0.5,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003424657534246575
+default_0.5,E10_a0.75,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.017123287671232876
+default_0.5,E10_a0.75,fold,0,332,303,29,0.9126506024096386,0.09931506849315068
+default_0.5,E10_a0.75,fold,1,298,160,138,0.5369127516778524,0.4726027397260274
+default_0.5,E10_a0.75,fold,2,298,173,125,0.5805369127516778,0.4280821917808219
+fpr_1pct,E06,type,A,734,222,512,0.3024523160762943,0.7252124645892352
+fpr_1pct,E06,type,B,52,0,52,0.0,0.07365439093484419
+fpr_1pct,E06,type,C,142,0,142,0.0,0.20113314447592068
+fpr_1pct,E06,campaign,autotel-node-env-resolver_2026-06,29,0,29,0.0,0.04107648725212465
+fpr_1pct,E06,campaign,axios_2026-03,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign,chaindrop_2026-08,25,24,1,0.96,0.00141643059490085
+fpr_1pct,E06,campaign,individuals_case,50,3,47,0.06,0.06657223796033994
+fpr_1pct,E06,campaign,injective_2026-07,12,0,12,0.0,0.0169971671388102
+fpr_1pct,E06,campaign,js-metrics_2018,9,0,9,0.0,0.012747875354107648
+fpr_1pct,E06,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign,miasma_2026-06,26,0,26,0.0,0.036827195467422094
+fpr_1pct,E06,campaign,mini-shai-hulud_2026-05,198,95,103,0.4797979797979798,0.14589235127478753
+fpr_1pct,E06,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+fpr_1pct,E06,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.009915014164305949
+fpr_1pct,E06,campaign,pgserve-automagik-openwebconcept_2026-04,10,0,10,0.0,0.014164305949008499
+fpr_1pct,E06,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.024079320113314446
+fpr_1pct,E06,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_1pct,E06,campaign,sha1-hulud-second-coming_2025-11,332,0,332,0.0,0.4702549575070821
+fpr_1pct,E06,campaign,shai-hulud-original_2025-09,186,87,99,0.46774193548387094,0.14022662889518414
+fpr_1pct,E06,campaign,solana-web3js_2024-12,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign,toptal-xene_2025-07,10,0,10,0.0,0.014164305949008499
+fpr_1pct,E06,campaign_type,autotel-node-env-resolver_2026-06 / C,29,0,29,0.0,0.04107648725212465
+fpr_1pct,E06,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.00141643059490085
+fpr_1pct,E06,campaign_type,individuals_case / A,8,3,5,0.375,0.007082152974504249
+fpr_1pct,E06,campaign_type,individuals_case / B,4,0,4,0.0,0.0056657223796034
+fpr_1pct,E06,campaign_type,individuals_case / C,38,0,38,0.0,0.053824362606232294
+fpr_1pct,E06,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.0169971671388102
+fpr_1pct,E06,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.012747875354107648
+fpr_1pct,E06,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.036827195467422094
+fpr_1pct,E06,campaign_type,mini-shai-hulud_2026-05 / A,152,95,57,0.625,0.08073654390934844
+fpr_1pct,E06,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.06515580736543909
+fpr_1pct,E06,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+fpr_1pct,E06,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.009915014164305949
+fpr_1pct,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,0,4,0.0,0.0056657223796034
+fpr_1pct,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.0084985835694051
+fpr_1pct,E06,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.024079320113314446
+fpr_1pct,E06,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_1pct,E06,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,0,330,0.0,0.46742209631728043
+fpr_1pct,E06,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.0028328611898017
+fpr_1pct,E06,campaign_type,shai-hulud-original_2025-09 / A,184,87,97,0.47282608695652173,0.13739376770538245
+fpr_1pct,E06,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.0028328611898017
+fpr_1pct,E06,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.00141643059490085
+fpr_1pct,E06,campaign_type,toptal-xene_2025-07 / A,10,0,10,0.0,0.014164305949008499
+fpr_1pct,E06,fold,0,332,0,332,0.0,0.4702549575070821
+fpr_1pct,E06,fold,1,298,134,164,0.44966442953020136,0.23229461756373937
+fpr_1pct,E06,fold,2,298,88,210,0.2953020134228188,0.29745042492917845
+fpr_1pct,E09,type,A,734,399,335,0.5435967302452316,0.6332703213610587
+fpr_1pct,E09,type,B,52,0,52,0.0,0.09829867674858223
+fpr_1pct,E09,type,C,142,0,142,0.0,0.2684310018903592
+fpr_1pct,E09,campaign,autotel-node-env-resolver_2026-06,29,0,29,0.0,0.054820415879017016
+fpr_1pct,E09,campaign,axios_2026-03,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign,chaindrop_2026-08,25,23,2,0.92,0.003780718336483932
+fpr_1pct,E09,campaign,individuals_case,50,2,48,0.04,0.09073724007561437
+fpr_1pct,E09,campaign,injective_2026-07,12,0,12,0.0,0.022684310018903593
+fpr_1pct,E09,campaign,js-metrics_2018,9,0,9,0.0,0.017013232514177693
+fpr_1pct,E09,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign,miasma_2026-06,26,0,26,0.0,0.04914933837429111
+fpr_1pct,E09,campaign,mini-shai-hulud_2026-05,198,74,124,0.37373737373737376,0.23440453686200377
+fpr_1pct,E09,campaign,node-gyp-dll_2025-07,9,7,2,0.7777777777777778,0.003780718336483932
+fpr_1pct,E09,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.013232514177693762
+fpr_1pct,E09,campaign,pgserve-automagik-openwebconcept_2026-04,10,0,10,0.0,0.01890359168241966
+fpr_1pct,E09,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.03213610586011342
+fpr_1pct,E09,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_1pct,E09,campaign,sha1-hulud-second-coming_2025-11,332,282,50,0.8493975903614458,0.0945179584120983
+fpr_1pct,E09,campaign,shai-hulud-original_2025-09,186,0,186,0.0,0.3516068052930057
+fpr_1pct,E09,campaign,solana-web3js_2024-12,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign,toptal-xene_2025-07,10,7,3,0.7,0.005671077504725898
+fpr_1pct,E09,campaign_type,autotel-node-env-resolver_2026-06 / C,29,0,29,0.0,0.054820415879017016
+fpr_1pct,E09,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign_type,chaindrop_2026-08 / A,25,23,2,0.92,0.003780718336483932
+fpr_1pct,E09,campaign_type,individuals_case / A,8,2,6,0.25,0.011342155009451797
+fpr_1pct,E09,campaign_type,individuals_case / B,4,0,4,0.0,0.007561436672967864
+fpr_1pct,E09,campaign_type,individuals_case / C,38,0,38,0.0,0.07183364839319471
+fpr_1pct,E09,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.022684310018903593
+fpr_1pct,E09,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.017013232514177693
+fpr_1pct,E09,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.04914933837429111
+fpr_1pct,E09,campaign_type,mini-shai-hulud_2026-05 / A,152,74,78,0.4868421052631579,0.14744801512287334
+fpr_1pct,E09,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.08695652173913043
+fpr_1pct,E09,campaign_type,node-gyp-dll_2025-07 / A,9,7,2,0.7777777777777778,0.003780718336483932
+fpr_1pct,E09,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.013232514177693762
+fpr_1pct,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,0,4,0.0,0.007561436672967864
+fpr_1pct,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.011342155009451797
+fpr_1pct,E09,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.03213610586011342
+fpr_1pct,E09,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_1pct,E09,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,282,48,0.8545454545454545,0.09073724007561437
+fpr_1pct,E09,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.003780718336483932
+fpr_1pct,E09,campaign_type,shai-hulud-original_2025-09 / A,184,0,184,0.0,0.34782608695652173
+fpr_1pct,E09,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.003780718336483932
+fpr_1pct,E09,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.001890359168241966
+fpr_1pct,E09,campaign_type,toptal-xene_2025-07 / A,10,7,3,0.7,0.005671077504725898
+fpr_1pct,E09,fold,0,332,282,50,0.8493975903614458,0.0945179584120983
+fpr_1pct,E09,fold,1,298,117,181,0.3926174496644295,0.34215500945179583
+fpr_1pct,E09,fold,2,298,0,298,0.0,0.5633270321361059
+fpr_1pct,E10_a0.25,type,A,734,517,217,0.7043596730245232,0.5279805352798054
+fpr_1pct,E10_a0.25,type,B,52,0,52,0.0,0.12652068126520682
+fpr_1pct,E10_a0.25,type,C,142,0,142,0.0,0.34549878345498786
+fpr_1pct,E10_a0.25,campaign,autotel-node-env-resolver_2026-06,29,0,29,0.0,0.0705596107055961
+fpr_1pct,E10_a0.25,campaign,axios_2026-03,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign,chaindrop_2026-08,25,23,2,0.92,0.004866180048661801
+fpr_1pct,E10_a0.25,campaign,individuals_case,50,3,47,0.06,0.11435523114355231
+fpr_1pct,E10_a0.25,campaign,injective_2026-07,12,0,12,0.0,0.029197080291970802
+fpr_1pct,E10_a0.25,campaign,js-metrics_2018,9,0,9,0.0,0.021897810218978103
+fpr_1pct,E10_a0.25,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign,miasma_2026-06,26,0,26,0.0,0.06326034063260341
+fpr_1pct,E10_a0.25,campaign,mini-shai-hulud_2026-05,198,88,110,0.4444444444444444,0.26763990267639903
+fpr_1pct,E10_a0.25,campaign,node-gyp-dll_2025-07,9,8,1,0.8888888888888888,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.0170316301703163
+fpr_1pct,E10_a0.25,campaign,pgserve-automagik-openwebconcept_2026-04,10,0,10,0.0,0.024330900243309004
+fpr_1pct,E10_a0.25,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.0413625304136253
+fpr_1pct,E10_a0.25,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_1pct,E10_a0.25,campaign,sha1-hulud-second-coming_2025-11,332,308,24,0.927710843373494,0.058394160583941604
+fpr_1pct,E10_a0.25,campaign,shai-hulud-original_2025-09,186,83,103,0.44623655913978494,0.25060827250608275
+fpr_1pct,E10_a0.25,campaign,solana-web3js_2024-12,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign,toptal-xene_2025-07,10,0,10,0.0,0.024330900243309004
+fpr_1pct,E10_a0.25,campaign_type,autotel-node-env-resolver_2026-06 / C,29,0,29,0.0,0.0705596107055961
+fpr_1pct,E10_a0.25,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign_type,chaindrop_2026-08 / A,25,23,2,0.92,0.004866180048661801
+fpr_1pct,E10_a0.25,campaign_type,individuals_case / A,8,3,5,0.375,0.012165450121654502
+fpr_1pct,E10_a0.25,campaign_type,individuals_case / B,4,0,4,0.0,0.009732360097323601
+fpr_1pct,E10_a0.25,campaign_type,individuals_case / C,38,0,38,0.0,0.09245742092457421
+fpr_1pct,E10_a0.25,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.029197080291970802
+fpr_1pct,E10_a0.25,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.021897810218978103
+fpr_1pct,E10_a0.25,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.06326034063260341
+fpr_1pct,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / A,152,88,64,0.5789473684210527,0.15571776155717762
+fpr_1pct,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.11192214111922141
+fpr_1pct,E10_a0.25,campaign_type,node-gyp-dll_2025-07 / A,9,8,1,0.8888888888888888,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.0170316301703163
+fpr_1pct,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,0,4,0.0,0.009732360097323601
+fpr_1pct,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.014598540145985401
+fpr_1pct,E10_a0.25,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.0413625304136253
+fpr_1pct,E10_a0.25,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_1pct,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,308,22,0.9333333333333333,0.0535279805352798
+fpr_1pct,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.004866180048661801
+fpr_1pct,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / A,184,83,101,0.45108695652173914,0.24574209245742093
+fpr_1pct,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.004866180048661801
+fpr_1pct,E10_a0.25,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.0024330900243309003
+fpr_1pct,E10_a0.25,campaign_type,toptal-xene_2025-07 / A,10,0,10,0.0,0.024330900243309004
+fpr_1pct,E10_a0.25,fold,0,332,308,24,0.927710843373494,0.058394160583941604
+fpr_1pct,E10_a0.25,fold,1,298,125,173,0.41946308724832215,0.4209245742092457
+fpr_1pct,E10_a0.25,fold,2,298,84,214,0.28187919463087246,0.5206812652068127
+fpr_1pct,E10_a0.75,type,A,734,267,467,0.3637602179836512,0.7065052950075643
+fpr_1pct,E10_a0.75,type,B,52,0,52,0.0,0.07866868381240545
+fpr_1pct,E10_a0.75,type,C,142,0,142,0.0,0.21482602118003025
+fpr_1pct,E10_a0.75,campaign,autotel-node-env-resolver_2026-06,29,0,29,0.0,0.04387291981845688
+fpr_1pct,E10_a0.75,campaign,axios_2026-03,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign,chaindrop_2026-08,25,0,25,0.0,0.037821482602118005
+fpr_1pct,E10_a0.75,campaign,individuals_case,50,0,50,0.0,0.07564296520423601
+fpr_1pct,E10_a0.75,campaign,injective_2026-07,12,0,12,0.0,0.018154311649016642
+fpr_1pct,E10_a0.75,campaign,js-metrics_2018,9,0,9,0.0,0.01361573373676248
+fpr_1pct,E10_a0.75,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign,miasma_2026-06,26,0,26,0.0,0.039334341906202726
+fpr_1pct,E10_a0.75,campaign,mini-shai-hulud_2026-05,198,0,198,0.0,0.29954614220877457
+fpr_1pct,E10_a0.75,campaign,node-gyp-dll_2025-07,9,0,9,0.0,0.01361573373676248
+fpr_1pct,E10_a0.75,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.01059001512859304
+fpr_1pct,E10_a0.75,campaign,pgserve-automagik-openwebconcept_2026-04,10,0,10,0.0,0.015128593040847202
+fpr_1pct,E10_a0.75,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.025718608169440244
+fpr_1pct,E10_a0.75,campaign,sap-maintainer-compromise,4,0,4,0.0,0.006051437216338881
+fpr_1pct,E10_a0.75,campaign,sha1-hulud-second-coming_2025-11,332,267,65,0.8042168674698795,0.09833585476550681
+fpr_1pct,E10_a0.75,campaign,shai-hulud-original_2025-09,186,0,186,0.0,0.2813918305597579
+fpr_1pct,E10_a0.75,campaign,solana-web3js_2024-12,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign,toptal-xene_2025-07,10,0,10,0.0,0.015128593040847202
+fpr_1pct,E10_a0.75,campaign_type,autotel-node-env-resolver_2026-06 / C,29,0,29,0.0,0.04387291981845688
+fpr_1pct,E10_a0.75,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign_type,chaindrop_2026-08 / A,25,0,25,0.0,0.037821482602118005
+fpr_1pct,E10_a0.75,campaign_type,individuals_case / A,8,0,8,0.0,0.012102874432677761
+fpr_1pct,E10_a0.75,campaign_type,individuals_case / B,4,0,4,0.0,0.006051437216338881
+fpr_1pct,E10_a0.75,campaign_type,individuals_case / C,38,0,38,0.0,0.057488653555219364
+fpr_1pct,E10_a0.75,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.018154311649016642
+fpr_1pct,E10_a0.75,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.01361573373676248
+fpr_1pct,E10_a0.75,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.039334341906202726
+fpr_1pct,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / A,152,0,152,0.0,0.22995461422087746
+fpr_1pct,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.06959152798789713
+fpr_1pct,E10_a0.75,campaign_type,node-gyp-dll_2025-07 / A,9,0,9,0.0,0.01361573373676248
+fpr_1pct,E10_a0.75,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.01059001512859304
+fpr_1pct,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,0,4,0.0,0.006051437216338881
+fpr_1pct,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.009077155824508321
+fpr_1pct,E10_a0.75,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.025718608169440244
+fpr_1pct,E10_a0.75,campaign_type,sap-maintainer-compromise / A,4,0,4,0.0,0.006051437216338881
+fpr_1pct,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,267,63,0.8090909090909091,0.09531013615733737
+fpr_1pct,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.0030257186081694403
+fpr_1pct,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / A,184,0,184,0.0,0.2783661119515885
+fpr_1pct,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.0030257186081694403
+fpr_1pct,E10_a0.75,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.0015128593040847202
+fpr_1pct,E10_a0.75,campaign_type,toptal-xene_2025-07 / A,10,0,10,0.0,0.015128593040847202
+fpr_1pct,E10_a0.75,fold,0,332,267,65,0.8042168674698795,0.09833585476550681
+fpr_1pct,E10_a0.75,fold,1,298,0,298,0.0,0.4508320726172466
+fpr_1pct,E10_a0.75,fold,2,298,0,298,0.0,0.4508320726172466
+fpr_5pct,E06,type,A,734,603,131,0.8215258855585831,0.41455696202531644
+fpr_5pct,E06,type,B,52,6,46,0.11538461538461539,0.14556962025316456
+fpr_5pct,E06,type,C,142,3,139,0.02112676056338028,0.439873417721519
+fpr_5pct,E06,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.08544303797468354
+fpr_5pct,E06,campaign,axios_2026-03,1,1,0,1.0,0.0
+fpr_5pct,E06,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.0031645569620253164
+fpr_5pct,E06,campaign,chaindrop_2026-08,25,24,1,0.96,0.0031645569620253164
+fpr_5pct,E06,campaign,individuals_case,50,7,43,0.14,0.1360759493670886
+fpr_5pct,E06,campaign,injective_2026-07,12,0,12,0.0,0.0379746835443038
+fpr_5pct,E06,campaign,js-metrics_2018,9,0,9,0.0,0.028481012658227847
+fpr_5pct,E06,campaign,miasma-leoplatform_2026-06,1,1,0,1.0,0.0
+fpr_5pct,E06,campaign,miasma_2026-06,26,0,26,0.0,0.08227848101265822
+fpr_5pct,E06,campaign,mini-shai-hulud_2026-05,198,97,101,0.4898989898989899,0.31962025316455694
+fpr_5pct,E06,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+fpr_5pct,E06,campaign,nx-s1ngularity_2025-08,7,0,7,0.0,0.022151898734177215
+fpr_5pct,E06,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.02531645569620253
+fpr_5pct,E06,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.05379746835443038
+fpr_5pct,E06,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_5pct,E06,campaign,sha1-hulud-second-coming_2025-11,332,324,8,0.9759036144578314,0.02531645569620253
+fpr_5pct,E06,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.16772151898734178
+fpr_5pct,E06,campaign,solana-web3js_2024-12,1,0,1,0.0,0.0031645569620253164
+fpr_5pct,E06,campaign,toptal-xene_2025-07,10,8,2,0.8,0.006329113924050633
+fpr_5pct,E06,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.08544303797468354
+fpr_5pct,E06,campaign_type,axios_2026-03 / B,1,1,0,1.0,0.0
+fpr_5pct,E06,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.0031645569620253164
+fpr_5pct,E06,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.0031645569620253164
+fpr_5pct,E06,campaign_type,individuals_case / A,8,3,5,0.375,0.015822784810126583
+fpr_5pct,E06,campaign_type,individuals_case / B,4,3,1,0.75,0.0031645569620253164
+fpr_5pct,E06,campaign_type,individuals_case / C,38,1,37,0.02631578947368421,0.11708860759493671
+fpr_5pct,E06,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.0379746835443038
+fpr_5pct,E06,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.028481012658227847
+fpr_5pct,E06,campaign_type,miasma-leoplatform_2026-06 / B,1,1,0,1.0,0.0
+fpr_5pct,E06,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.08227848101265822
+fpr_5pct,E06,campaign_type,mini-shai-hulud_2026-05 / A,152,96,56,0.631578947368421,0.17721518987341772
+fpr_5pct,E06,campaign_type,mini-shai-hulud_2026-05 / B,46,1,45,0.021739130434782608,0.14240506329113925
+fpr_5pct,E06,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+fpr_5pct,E06,campaign_type,nx-s1ngularity_2025-08 / A,7,0,7,0.0,0.022151898734177215
+fpr_5pct,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.006329113924050633
+fpr_5pct,E06,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.0189873417721519
+fpr_5pct,E06,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.05379746835443038
+fpr_5pct,E06,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_5pct,E06,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,324,6,0.9818181818181818,0.0189873417721519
+fpr_5pct,E06,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.006329113924050633
+fpr_5pct,E06,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.16139240506329114
+fpr_5pct,E06,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.006329113924050633
+fpr_5pct,E06,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.0031645569620253164
+fpr_5pct,E06,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.006329113924050633
+fpr_5pct,E06,fold,0,332,324,8,0.9759036144578314,0.02531645569620253
+fpr_5pct,E06,fold,1,298,145,153,0.4865771812080537,0.48417721518987344
+fpr_5pct,E06,fold,2,298,143,155,0.4798657718120805,0.49050632911392406
+fpr_5pct,E09,type,A,734,605,129,0.8242506811989101,0.4201954397394137
+fpr_5pct,E09,type,B,52,3,49,0.057692307692307696,0.15960912052117263
+fpr_5pct,E09,type,C,142,13,129,0.09154929577464789,0.4201954397394137
+fpr_5pct,E09,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.08794788273615635
+fpr_5pct,E09,campaign,axios_2026-03,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign,chaindrop_2026-08,25,24,1,0.96,0.003257328990228013
+fpr_5pct,E09,campaign,individuals_case,50,11,39,0.22,0.1270358306188925
+fpr_5pct,E09,campaign,injective_2026-07,12,0,12,0.0,0.03908794788273615
+fpr_5pct,E09,campaign,js-metrics_2018,9,0,9,0.0,0.029315960912052116
+fpr_5pct,E09,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign,miasma_2026-06,26,0,26,0.0,0.08469055374592833
+fpr_5pct,E09,campaign,mini-shai-hulud_2026-05,198,98,100,0.494949494949495,0.3257328990228013
+fpr_5pct,E09,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+fpr_5pct,E09,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
+fpr_5pct,E09,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.026058631921824105
+fpr_5pct,E09,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.04560260586319218
+fpr_5pct,E09,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_5pct,E09,campaign,sha1-hulud-second-coming_2025-11,332,324,8,0.9759036144578314,0.026058631921824105
+fpr_5pct,E09,campaign,shai-hulud-original_2025-09,186,129,57,0.6935483870967742,0.18566775244299674
+fpr_5pct,E09,campaign,solana-web3js_2024-12,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign,toptal-xene_2025-07,10,8,2,0.8,0.006514657980456026
+fpr_5pct,E09,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.08794788273615635
+fpr_5pct,E09,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.003257328990228013
+fpr_5pct,E09,campaign_type,individuals_case / A,8,3,5,0.375,0.016286644951140065
+fpr_5pct,E09,campaign_type,individuals_case / B,4,0,4,0.0,0.013029315960912053
+fpr_5pct,E09,campaign_type,individuals_case / C,38,8,30,0.21052631578947367,0.09771986970684039
+fpr_5pct,E09,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.03908794788273615
+fpr_5pct,E09,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.029315960912052116
+fpr_5pct,E09,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.08469055374592833
+fpr_5pct,E09,campaign_type,mini-shai-hulud_2026-05 / A,152,95,57,0.625,0.18566775244299674
+fpr_5pct,E09,campaign_type,mini-shai-hulud_2026-05 / B,46,3,43,0.06521739130434782,0.14006514657980457
+fpr_5pct,E09,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+fpr_5pct,E09,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
+fpr_5pct,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.006514657980456026
+fpr_5pct,E09,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.019543973941368076
+fpr_5pct,E09,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.04560260586319218
+fpr_5pct,E09,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_5pct,E09,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,324,6,0.9818181818181818,0.019543973941368076
+fpr_5pct,E09,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,0,2,0.0,0.006514657980456026
+fpr_5pct,E09,campaign_type,shai-hulud-original_2025-09 / A,184,129,55,0.7010869565217391,0.1791530944625407
+fpr_5pct,E09,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.006514657980456026
+fpr_5pct,E09,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.003257328990228013
+fpr_5pct,E09,campaign_type,toptal-xene_2025-07 / A,10,8,2,0.8,0.006514657980456026
+fpr_5pct,E09,fold,0,332,324,8,0.9759036144578314,0.026058631921824105
+fpr_5pct,E09,fold,1,298,156,142,0.5234899328859061,0.46254071661237783
+fpr_5pct,E09,fold,2,298,141,157,0.47315436241610737,0.511400651465798
+fpr_5pct,E10_a0.25,type,A,734,607,127,0.8269754768392371,0.40063091482649843
+fpr_5pct,E10_a0.25,type,B,52,0,52,0.0,0.1640378548895899
+fpr_5pct,E10_a0.25,type,C,142,4,138,0.028169014084507043,0.4353312302839117
+fpr_5pct,E10_a0.25,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.08517350157728706
+fpr_5pct,E10_a0.25,campaign,axios_2026-03,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign,chaindrop_2026-08,25,24,1,0.96,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign,individuals_case,50,4,46,0.08,0.14511041009463724
+fpr_5pct,E10_a0.25,campaign,injective_2026-07,12,0,12,0.0,0.03785488958990536
+fpr_5pct,E10_a0.25,campaign,js-metrics_2018,9,0,9,0.0,0.028391167192429023
+fpr_5pct,E10_a0.25,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign,miasma_2026-06,26,0,26,0.0,0.08201892744479496
+fpr_5pct,E10_a0.25,campaign,mini-shai-hulud_2026-05,198,95,103,0.4797979797979798,0.3249211356466877
+fpr_5pct,E10_a0.25,campaign,node-gyp-dll_2025-07,9,9,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign,nx-s1ngularity_2025-08,7,7,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.025236593059936908
+fpr_5pct,E10_a0.25,campaign,react-native-aria-gluestack_2025-06,17,0,17,0.0,0.05362776025236593
+fpr_5pct,E10_a0.25,campaign,sap-maintainer-compromise,4,4,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign,sha1-hulud-second-coming_2025-11,332,326,6,0.9819277108433735,0.01892744479495268
+fpr_5pct,E10_a0.25,campaign,shai-hulud-original_2025-09,186,133,53,0.7150537634408602,0.167192429022082
+fpr_5pct,E10_a0.25,campaign,solana-web3js_2024-12,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign,toptal-xene_2025-07,10,5,5,0.5,0.015772870662460567
+fpr_5pct,E10_a0.25,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.08517350157728706
+fpr_5pct,E10_a0.25,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,chaindrop_2026-08 / A,25,24,1,0.96,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,individuals_case / A,8,3,5,0.375,0.015772870662460567
+fpr_5pct,E10_a0.25,campaign_type,individuals_case / B,4,0,4,0.0,0.012618296529968454
+fpr_5pct,E10_a0.25,campaign_type,individuals_case / C,38,1,37,0.02631578947368421,0.1167192429022082
+fpr_5pct,E10_a0.25,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.03785488958990536
+fpr_5pct,E10_a0.25,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.028391167192429023
+fpr_5pct,E10_a0.25,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.08201892744479496
+fpr_5pct,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / A,152,95,57,0.625,0.17981072555205047
+fpr_5pct,E10_a0.25,campaign_type,mini-shai-hulud_2026-05 / B,46,0,46,0.0,0.14511041009463724
+fpr_5pct,E10_a0.25,campaign_type,node-gyp-dll_2025-07 / A,9,9,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign_type,nx-s1ngularity_2025-08 / A,7,7,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.006309148264984227
+fpr_5pct,E10_a0.25,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.01892744479495268
+fpr_5pct,E10_a0.25,campaign_type,react-native-aria-gluestack_2025-06 / C,17,0,17,0.0,0.05362776025236593
+fpr_5pct,E10_a0.25,campaign_type,sap-maintainer-compromise / A,4,4,0,1.0,0.0
+fpr_5pct,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,325,5,0.9848484848484849,0.015772870662460567
+fpr_5pct,E10_a0.25,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / A,184,133,51,0.7228260869565217,0.1608832807570978
+fpr_5pct,E10_a0.25,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.006309148264984227
+fpr_5pct,E10_a0.25,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.0031545741324921135
+fpr_5pct,E10_a0.25,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.015772870662460567
+fpr_5pct,E10_a0.25,fold,0,332,326,6,0.9819277108433735,0.01892744479495268
+fpr_5pct,E10_a0.25,fold,1,298,140,158,0.4697986577181208,0.49842271293375395
+fpr_5pct,E10_a0.25,fold,2,298,145,153,0.4865771812080537,0.48264984227129337
+fpr_5pct,E10_a0.75,type,A,734,480,254,0.6539509536784741,0.6120481927710844
+fpr_5pct,E10_a0.75,type,B,52,13,39,0.25,0.09397590361445783
+fpr_5pct,E10_a0.75,type,C,142,20,122,0.14084507042253522,0.29397590361445786
+fpr_5pct,E10_a0.75,campaign,autotel-node-env-resolver_2026-06,29,2,27,0.06896551724137931,0.06506024096385542
+fpr_5pct,E10_a0.75,campaign,axios_2026-03,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign,bitwarden-cli_2026-04,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign,chaindrop_2026-08,25,8,17,0.32,0.04096385542168675
+fpr_5pct,E10_a0.75,campaign,individuals_case,50,19,31,0.38,0.0746987951807229
+fpr_5pct,E10_a0.75,campaign,injective_2026-07,12,0,12,0.0,0.02891566265060241
+fpr_5pct,E10_a0.75,campaign,js-metrics_2018,9,0,9,0.0,0.021686746987951807
+fpr_5pct,E10_a0.75,campaign,miasma-leoplatform_2026-06,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign,miasma_2026-06,26,0,26,0.0,0.06265060240963856
+fpr_5pct,E10_a0.75,campaign,mini-shai-hulud_2026-05,198,73,125,0.3686868686868687,0.30120481927710846
+fpr_5pct,E10_a0.75,campaign,node-gyp-dll_2025-07,9,6,3,0.6666666666666666,0.007228915662650603
+fpr_5pct,E10_a0.75,campaign,nx-s1ngularity_2025-08,7,5,2,0.7142857142857143,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign,pgserve-automagik-openwebconcept_2026-04,10,2,8,0.2,0.01927710843373494
+fpr_5pct,E10_a0.75,campaign,react-native-aria-gluestack_2025-06,17,3,14,0.17647058823529413,0.033734939759036145
+fpr_5pct,E10_a0.75,campaign,sap-maintainer-compromise,4,2,2,0.5,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign,sha1-hulud-second-coming_2025-11,332,293,39,0.8825301204819277,0.09397590361445783
+fpr_5pct,E10_a0.75,campaign,shai-hulud-original_2025-09,186,95,91,0.510752688172043,0.21927710843373494
+fpr_5pct,E10_a0.75,campaign,solana-web3js_2024-12,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign,toptal-xene_2025-07,10,5,5,0.5,0.012048192771084338
+fpr_5pct,E10_a0.75,campaign_type,autotel-node-env-resolver_2026-06 / C,29,2,27,0.06896551724137931,0.06506024096385542
+fpr_5pct,E10_a0.75,campaign_type,axios_2026-03 / B,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign_type,bitwarden-cli_2026-04 / A,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign_type,chaindrop_2026-08 / A,25,8,17,0.32,0.04096385542168675
+fpr_5pct,E10_a0.75,campaign_type,individuals_case / A,8,5,3,0.625,0.007228915662650603
+fpr_5pct,E10_a0.75,campaign_type,individuals_case / B,4,0,4,0.0,0.00963855421686747
+fpr_5pct,E10_a0.75,campaign_type,individuals_case / C,38,14,24,0.3684210526315789,0.05783132530120482
+fpr_5pct,E10_a0.75,campaign_type,injective_2026-07 / C,12,0,12,0.0,0.02891566265060241
+fpr_5pct,E10_a0.75,campaign_type,js-metrics_2018 / C,9,0,9,0.0,0.021686746987951807
+fpr_5pct,E10_a0.75,campaign_type,miasma-leoplatform_2026-06 / B,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign_type,miasma_2026-06 / C,26,0,26,0.0,0.06265060240963856
+fpr_5pct,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / A,152,60,92,0.39473684210526316,0.2216867469879518
+fpr_5pct,E10_a0.75,campaign_type,mini-shai-hulud_2026-05 / B,46,13,33,0.2826086956521739,0.07951807228915662
+fpr_5pct,E10_a0.75,campaign_type,node-gyp-dll_2025-07 / A,9,6,3,0.6666666666666666,0.007228915662650603
+fpr_5pct,E10_a0.75,campaign_type,nx-s1ngularity_2025-08 / A,7,5,2,0.7142857142857143,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / A,4,2,2,0.5,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign_type,pgserve-automagik-openwebconcept_2026-04 / C,6,0,6,0.0,0.014457831325301205
+fpr_5pct,E10_a0.75,campaign_type,react-native-aria-gluestack_2025-06 / C,17,3,14,0.17647058823529413,0.033734939759036145
+fpr_5pct,E10_a0.75,campaign_type,sap-maintainer-compromise / A,4,2,2,0.5,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / A,330,292,38,0.8848484848484849,0.09156626506024096
+fpr_5pct,E10_a0.75,campaign_type,sha1-hulud-second-coming_2025-11 / C,2,1,1,0.5,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / A,184,95,89,0.5163043478260869,0.21445783132530122
+fpr_5pct,E10_a0.75,campaign_type,shai-hulud-original_2025-09 / C,2,0,2,0.0,0.004819277108433735
+fpr_5pct,E10_a0.75,campaign_type,solana-web3js_2024-12 / C,1,0,1,0.0,0.0024096385542168677
+fpr_5pct,E10_a0.75,campaign_type,toptal-xene_2025-07 / A,10,5,5,0.5,0.012048192771084338
+fpr_5pct,E10_a0.75,fold,0,332,293,39,0.8825301204819277,0.09397590361445783
+fpr_5pct,E10_a0.75,fold,1,298,110,188,0.3691275167785235,0.4530120481927711
+fpr_5pct,E10_a0.75,fold,2,298,110,188,0.3691275167785235,0.4530120481927711
