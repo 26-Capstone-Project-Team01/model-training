@@ -680,7 +680,7 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           "| 1 | **기존 난독화 feature 일부를 package.json 모델에 다시 넣고 campaign CV로 평가**: 변경 JS 유무(obfChangedFileCount>0)와 "
           "분리도가 캠페인 균등으로도 남은 ChangedCode 비율 몇 개(공백·대괄호 접근·짧은 식별자·16진수). feature 추출 변경 없이 바로 가능 "
           f"| A·B·C 전반, 특히 package.json 값이 정상과 같은 공통 미탐 | 모델 입력에 미탐을 구별할 정보를 처음으로 넣음 | 4-1의 AUC "
-          f"(모델 사용 feature {used_auc.min():.2f}~{used_auc.max():.2f} vs 난독화 feature 상위), 변경 JS 결측 비율 차이. 29개 전부 넣은 E00은 "
+          f"(AUC를 잰 수치형 2개(updateInterval, newDependencyCount) {used_auc.min():.2f}~{used_auc.max():.2f} vs 난독화 feature 상위), 변경 JS 결측 비율 차이. 29개 전부 넣은 E00은 "
           "campaign CV 근거 없음(미검증) |",
           "| 2 | **변경·추가된 JS 코드의 행위(API) feature 추가**: 새로 생긴 `child_process`·`eval`/`Function`·네트워크(`http(s)`, `fetch`, "
           "`dns`)·환경변수/자격증명 파일 접근·base64 디코드, 그리고 install hook이 이번에 추가·변경된 파일을 실행하는지 "
