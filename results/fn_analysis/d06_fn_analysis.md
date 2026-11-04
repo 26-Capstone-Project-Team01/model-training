@@ -101,6 +101,8 @@
 | miasma-leoplatform_2026-06 | 1 | 2 | 0.0% (1) | 0.0% (1) | 0.0% (1) | 0.0% (1) |
 | solana-web3js_2024-12 | 1 | 1 | 0.0% (1) | 0.0% (1) | 0.0% (1) | 0.0% (1) |
 
+pooled 기준, 임계값 방식에 민감하다(6절: fold별 임계값이면 FPR 1% TP와 캠페인별 Recall이 크게 달라진다).
+
 ### 2-2. 캠페인별 Recall (FN), FPR 5%
 
 | 캠페인 | n | fold | E06 | E09 | E10_a0.25 | E10_a0.75 |
@@ -155,13 +157,13 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 ### 4-1. 데이터로 확인된 사실
 
 - 공통 미탐 296쌍의 유형: A 124 · B 44 · C 128. 유형별 Recall(E06 / E09): A 82.2% / 82.4%, B 11.5% / 5.8%, C 2.1% / 9.2%(2-1).
-- **package.json feature만으로는 구별 정보가 부족한 pair가 대부분이다.** 공통 미탐 296쌍 중 296쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 그 악성 이상인 비율의 중앙값이 A 0.40, B 0.64, C 0.16이다. 즉 updateInterval 임계값으로 이 악성을 잡으려 하면 같은 모양의 정상도 그만큼 함께 걸린다.
+- **package.json feature만으로는 구별 정보가 부족한 pair가 전부다.** 공통 미탐 296쌍 중 296쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 그 악성 이상인 비율의 중앙값이 A 0.40, B 0.64, C 0.16이다. 즉 updateInterval 임계값으로 이 악성을 잡으려 하면 같은 모양의 정상도 그만큼 함께 걸린다.
 - **A 유형**: 두 모델이 모두 잡은 A의 updateInterval 중앙값은 222일, patch 비율 98.7%, 새 의존성 비율 0.0%다. 함께 놓친 A는 updateInterval 중앙값 13.5일, patch 58.1%, 새 의존성 41.1%이고, A 유형 hard benign은 중앙값 5.0일, patch 56.1%, 새 의존성 29.5%다.
 - **B 유형**: 놓친 B는 patch 95.5%, 새 의존성 평균 1.00개, updateInterval 중앙값 5.9일이고, B 유형 무작위 정상은 patch 46.8%, 평균 1.65개, 중앙값 29.8일이다.
 - **C 유형**: 놓친 C는 설치 스크립트·새 의존성 변화가 없고 patch 99.2%, updateInterval 중앙값 74.4일이다. 한 모델이라도 잡은 C의 수와 updateInterval 중앙값: malicious_detected_both 2쌍(88일), malicious_E09_only 11쌍(598일), malicious_E06_only 1쌍(190일).
 - **모델 설정(코드로 확인)**: 기본 LightGBM(`objective=binary`), 클래스 가중치 없음(E06), 학습·기존 보고의 판정 임계값 0.5, early stopping을 평가 fold 자체로 수행(`scripts/run_cv_e06_e09.py` docstring의 'Approach A' 주의). 저장된 feature importance는 split 횟수이며 E06·E09 모두 updateInterval이 압도적 1위다(`results/feature_importance/`). fold별 best_iteration은 E06 3/25/11, E09 23/20/11, E10_a0.25 30/22/12, E10_a0.75 78/16/10.
 - **캠페인 집중**: 공통 미탐의 캠페인 상위는 `mini-shai-hulud_2026-05` 99, `shai-hulud-original_2025-09` 53, `individuals_case` 35, `autotel-node-env-resolver_2026-06` 27, `miasma_2026-06` 26, `react-native-aria-gluestack_2025-06` 14이다. CV가 campaign 단위라 공유 공격 캠페인은 fold 사이에서 분리되고, 학습에 한 번도 쓰이지 않은 fold에서 평가된다(새 캠페인 일반화 문제). 예외로 `individuals_case`(fold 1,2)는 독립 사건을 모은 보고용 묶음이라 여러 fold에 걸친다(`scripts/run_cv_e06_e09.py`의 `is_shared_attack_split_group` 참고). 따라서 이 묶음의 Recall은 leave-campaign-out 검증 결과로 읽지 않는다.
-- **모델이 쓰는 feature는 이 미탐들을 거의 구별하지 못한다.** 공통 미탐 vs 같은 유형 정상의 단변량 AUC(0.5 = 구별 불가, 범위 0.39~0.66): A: `newDependencyCount` 0.58, `updateInterval` 0.51; B: `updateInterval` 0.39, `newDependencyCount` 0.40; C: `updateInterval` 0.66, `newDependencyCount` 0.50.
+- **모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)는 이 미탐들을 약하게만 구별한다.** 공통 미탐 vs 같은 유형 정상의 단변량 AUC(0.5 = 구별 불가, 범위 0.39~0.66): A: `newDependencyCount` 0.58, `updateInterval` 0.51; B: `updateInterval` 0.39, `newDependencyCount` 0.40; C: `updateInterval` 0.66, `newDependencyCount` 0.50.
 - **쓰지 않은 난독화 feature에는 구별 정보가 있다.** E06·E09·E10은 난독화 feature 22개를 쓰지 않는다. 같은 비교의 AUC 상위는 A: `obfWhitespaceRatioChangedCode` 0.05(캠페인 균등 0.06), `obfBracketAccessRatioChangedCode` 0.93(캠페인 균등 0.82), `obfWhitespaceRatioNew` 0.07(캠페인 균등 0.10); B: `obfBracketAccessRatioChangedCode` 0.98(캠페인 균등 1.00), `obfHexIdentRatioChangedCode` 0.98(캠페인 균등 0.99), `obfHexNumberRatioChangedCode` 0.97(캠페인 균등 0.99); C: `obfWhitespaceRatioNew` 0.19(캠페인 균등 0.23), `obfWhitespaceRatioChangedCode` 0.20(캠페인 균등 0.22), `obfMeanIdentLengthChangedCode` 0.20(캠페인 균등 0.31). 상위 8개의 평균 |AUC−0.5|는 pooled→캠페인 균등으로 A 0.40→0.35, B 0.46→0.47, C 0.28→0.24다. 캠페인 균등 값은 미탐이 3쌍 이상인 캠페인 A 4개, B 1개, C 7개로만 계산했다.
 - **변경 JS가 있는지 자체도 다르다.** 변경 JS가 없어 ChangedCode feature가 결측인 비율은 같은 유형 정상 A 18.5%, B 14.4%, C 40.6%, 공통 미탐 A 2.4%, B 4.5%, C 9.4%이다.
 - **난독화 feature를 모두 넣은 모델의 일반화는 근거 없음(미검증).** 29개 feature를 모두 쓴 D06-E00은 Train campaign CV 결과가 없다(`results/cv`·`results/e10`에는 E06·E09·E10만 있다). 이 분석에서는 E00의 일반화 여부를 판단하지 않는다.
@@ -176,8 +178,8 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 
 아래는 4-1의 사실에서 귀납적으로 추론한 가설이며, 확인하려면 4-1 밖의 실험이 필요하다.
 
-- **H1. 모델이 '설치 스크립트 추가 + 긴 배포 간격'이라는 지름길을 학습했다.** 근거: 4-1의 A 유형 프로필(잡힌 A와 놓친 A의 updateInterval 차이)과 split importance의 updateInterval 독주. 데이터 저장소 `baseline_rule.py`도 baseline 선정이 updateInterval을 통해 label을 누설할 수 있다고 경고한다. worm처럼 짧은 간격으로 연속 배포하는 공격은 이 지름길에서 벗어나 미탐된다.
-- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 대부분이 이산 feature가 같은 정상 pair를 갖고, 모델이 쓰는 feature의 AUC가 0.39~0.66다. 이 경우 가중치·임계값 조정만으로는 같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 차이로 남지 않는 것(0절: TP 차이 156 → 9)도 이와 맞는다.
+- **H1. 모델이 '설치 스크립트 추가 + 긴 배포 간격'이라는 지름길을 학습했다.** 근거: 4-1의 A 유형 프로필(잡힌 A와 놓친 A의 updateInterval 차이)과 split importance의 updateInterval 독주. baseline 규칙 설계도 updateInterval을 통한 label 누수를 경계한다(`be87ab4cf:derived/pairs/baseline_rule.py` L21-24: 악성 직전 후보를 날짜 경계로 일괄 제외하면 정상 hotfix까지 빠져 악성 baseline만 체계적으로 오래되고 updateInterval로 label이 누수되므로, 일괄 제외 대신 clean 검증을 쓴다). worm처럼 짧은 간격으로 연속 배포하는 공격은 이 지름길에서 벗어나 미탐될 것으로 추정한다.
+- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 대부분이 이산 feature가 같은 정상 pair를 갖고, 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 0.39~0.66으로 약하다. 이 경우 가중치·임계값 조정만으로는 같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 차이로 남지 않는 것(0절: TP 차이 156 → 9)도 이와 맞는다.
 - **H3. 필요한 정보의 일부는 이미 train.csv에 있다(난독화 feature).** 근거: 캠페인 균등으로 봐도 분리도가 남고 변경 JS 유무도 다르다. 모두 넣었을 때 캠페인별 값에 과적합하는지는 campaign CV 근거가 없어 미검증이다. 이를 가르려면 일부 feature만 campaign CV로 넣어 보는 실험이 필요하다.
 - **H4. CV 수치의 변동은 fold 구성과 운영점에 크게 좌우된다.** fold 0이 단일 캠페인(`sha1-hulud-second-coming_2025-11`)이라 fold 평균에서 이 캠페인이 1/3 비중을 갖는다. E09가 E06보다 더 잡은 pair 중 이 캠페인은 0.5 고정에서 96/156쌍, FPR 5%에서 0/20쌍이다. early stopping이 평가 fold를 보므로 CV 수치는 낙관적일 수 있다.
 - **H5. 공격의 실체 정보(hook이 실행하는 파일의 내용, 추가된 의존성의 정체, 주입된 코드의 동작)는 현재 어떤 feature에도 직접 없다.** 근거: 4-1의 공격 흔적. 난독화 비율은 코드의 '모양'만 보므로, 난독화하지 않은 악성 코드에는 신호가 약할 것으로 추정한다.
@@ -193,7 +195,7 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 | 3 | **추가된 의존성 정체 feature 추가**: 새 의존성 패키지가 업데이트 직전에 처음 publish됐는지, 그 의존성의 install script 여부, 버전 지정이 URL/git/tarball인지 | B 유형 미탐(E09 기준 49)과 의존성을 동반한 A 미탐 | 의존성 추가 '여부'가 같은 정상 B와 구별 | E09가 놓친 B의 추가 의존성 상위: `@tanstack/setup` 40 |
 | 4 | **LightGBM 학습 방식 보완**: early stopping을 학습 fold 내부 검증으로 분리, `scale_pos_weight`/class weight로 Recall 우선, Recall 목표 임계값을 학습 fold에서 정함 | 전반 | CV 수치의 낙관 편향 제거, Recall 우선 운영점 | 4-1 모델 설정, best_iteration 3~78 |
 | 5 | **updateInterval 의존 점검(E04를 같은 CV로)**: updateInterval 제거·구간화 | 지름길 학습으로 짧은 간격 공격을 놓치는 문제 | 1~3의 feature가 실제로 쓰이는지 보는 기준선 | H1. D06-E04는 campaign CV 결과가 없다 |
-| 6 | **유형·캠페인 가중치**: E10 α를 유형 단위로 확장(B·C 악성 가중 ↑) | B·C 미탐 | 소수 유형의 학습 신호 확대 | FPR 5%에서 α=0/0.25/0.5/0.75의 B TP 6/0/3/13, C TP 3/4/13/20, `sha1-hulud-second-coming_2025-11` FN 8/6/8/39(2-1, 2-2) |
+| 6 | **유형·캠페인 가중치**: E10 α를 유형 단위로 확장(B·C 악성 가중 ↑) | B·C 미탐 | 소수 유형의 학습 신호 확대 | FPR 5%에서 α=0/0.25/0.5/0.75의 B TP 6/0/3/13, C TP 3/4/13/20, `sha1-hulud-second-coming_2025-11` FN 8/6/8/39(2-1, 2-2). pooled 기준, 임계값 방식에 민감(6절) |
 | 7 | **캠페인 편향 대응**: 단일 캠페인 fold가 생기지 않게 fold 구성, 캠페인 평균 Recall 병기 | 평가 편향 | 개선 여부 판단의 신뢰도 | fold 0 = 단일 캠페인(H4) |
 
 1은 기존 feature만 쓰므로 이번 제약(feature 추출 변경 없음) 안에서 다음 실험으로 바로 할 수 있다. 2·3은 feature 추출 코드 변경이 필요하다. H2가 맞다면 4~7만으로는 개선 폭이 제한될 수 있다.
@@ -201,7 +203,7 @@ pair별 목록(운영점별, 모델별 확률·판정, feature, 공격 흔적)�
 ## 6. 한계
 
 - 모든 수치는 Train campaign CV OOF 기준이다. 최종 일반화 성능 추정이 아니다.
-- FPR 운영점의 임계값은 3 fold의 OOF 점수를 합쳐 하나로 정했고, 같은 정상 1,839쌍에서 달성 FPR을 쟀다. fold마다 모델이 달라 점수 척도가 조금씩 다를 수 있다.
+- FPR 운영점의 임계값은 3 fold의 OOF 점수를 합쳐 하나로 정했고, 같은 정상 1,839쌍에서 달성 FPR을 쟀다. 결과는 임계값 방식에 민감하다. fold별로 같은 규약의 임계값을 쓰면 FPR 1% TP가 E06 222→534, E09 399→506, E10_a0.25 517→543, E10_a0.75 267→365로 달라지고(E06 fold 0 sha1-hulud 0→324), FPR 5% 전체 TP 순서는 같지만 B·C TP는 바뀐다(예: E10_a0.75 B 13→3). 이 수치는 Revy 검증 값으로, 저장 OOF로 별도 계산했으며 이 스크립트는 계산하지 않는다.
 - CV는 early stopping에 평가 fold를 쓰므로 수치가 낙관적일 수 있다(`scripts/run_cv_e06_e09.py`).
 - 단변량 AUC는 feature 하나씩 본 값이라, 모델에 넣었을 때의 효과를 보장하지 않는다.
 - 공격 흔적 열은 데이터 저장소의 `malicious_pair_groups.csv`(고정 커밋)에서 가져왔다.

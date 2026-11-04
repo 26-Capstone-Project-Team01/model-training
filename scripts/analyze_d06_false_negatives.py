@@ -375,7 +375,7 @@ def same_vector_check(f: pd.DataFrame) -> pd.DataFrame:
     key = lambda df: df[DISCRETE_PKG_FEATURES].astype(str).agg("|".join, axis=1)
     bkey = key(benign)
     rows = []
-    for (_, r), k in zip(missed.iterrows(), key(missed)):
+    for (_, r), k in zip(missed.iterrows(), key(missed), strict=True):
         same = benign[bkey == k]
         rows.append({"type": r["type"], "n_same_vector_benign": len(same),
                      "share_benign_interval_ge": (same["updateInterval"] >= r["updateInterval"]).mean() if len(same) else np.nan})
@@ -530,6 +530,8 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
         for c in camps:
             cells = [srow(op, m, "campaign", c) for m in MODELS]
             L.append(f"| {c} | {int(camp_n[c])} | {folds_of[c]} | " + " | ".join(f"{pct(r['recall'])} ({int(r['fn'])})" for r in cells) + " |")
+        if op == "fpr_1pct":
+            L += ["", "pooled 기준, 임계값 방식에 민감하다(6절: fold별 임계값이면 FPR 1% TP와 캠페인별 Recall이 크게 달라진다)."]
     L += ["", "캠페인×유형·fold별 분해는 `d06_fn_summary_by_type_campaign.csv`에 있다.", ""]
 
     # --- FN comparison
@@ -578,7 +580,7 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           f"- 공통 미탐 {n['both']}쌍의 유형: A {len(both_a)} · B {int((both['type'] == 'B').sum())} · C {len(both_c)}. "
           "유형별 Recall(E06 / E09): " + ", ".join(f"{t} {pct(srow(P, 'E06', 'type', t)['recall'])} / {pct(srow(P, 'E09', 'type', t)['recall'])}"
                                                    for t in ev.TYPES) + "(2-1).",
-          f"- **package.json feature만으로는 구별 정보가 부족한 pair가 대부분이다.** 공통 미탐 {n['both']}쌍 중 "
+          f"- **package.json feature만으로는 구별 정보가 부족한 pair가 전부다.** 공통 미탐 {n['both']}쌍 중 "
           f"{int((same['n_same_vector_benign'] > 0).sum())}쌍은 이산 package.json feature 6개(설치 스크립트 3종, 새 의존성 여부·개수, "
           "updateType)가 완전히 같은 정상 pair가 있다. 남은 구별 수단은 updateInterval뿐인데, 같은 값의 정상 중 updateInterval이 "
           "그 악성 이상인 비율의 중앙값이 "
@@ -612,8 +614,8 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           "일반화 문제). 예외로 " + ", ".join(f"`{c}`(fold {folds_of[c]})" for c in multi_fold)
           + "는 독립 사건을 모은 보고용 묶음이라 여러 fold에 걸친다(`scripts/run_cv_e06_e09.py`의 `is_shared_attack_split_group` 참고). "
           "따라서 이 묶음의 Recall은 leave-campaign-out 검증 결과로 읽지 않는다.",
-          f"- **모델이 쓰는 feature는 이 미탐들을 거의 구별하지 못한다.** 공통 미탐 vs 같은 유형 정상의 단변량 AUC(0.5 = 구별 불가, 범위 "
-          f"{used_auc.min():.2f}~{used_auc.max():.2f}): "
+          f"- **모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)는 이 미탐들을 약하게만 구별한다.** "
+          f"공통 미탐 vs 같은 유형 정상의 단변량 AUC(0.5 = 구별 불가, 범위 {used_auc.min():.2f}~{used_auc.max():.2f}): "
           + "; ".join(f"{t}: " + ", ".join(f"`{r.feature}` {r.auc_pooled:.2f}" for r in s[(s['type'] == t) & s['used_by_e06_e09_e10']].itertuples())
                       for t in ev.TYPES) + ".",
           "- **쓰지 않은 난독화 feature에는 구별 정보가 있다.** E06·E09·E10은 난독화 feature 22개를 쓰지 않는다. 같은 비교의 AUC 상위는 "
@@ -650,10 +652,13 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
     L += ["### 4-2. 추정(검증되지 않은 원인 가설)", "",
           "아래는 4-1의 사실에서 귀납적으로 추론한 가설이며, 확인하려면 4-1 밖의 실험이 필요하다.", "",
           "- **H1. 모델이 '설치 스크립트 추가 + 긴 배포 간격'이라는 지름길을 학습했다.** 근거: 4-1의 A 유형 프로필(잡힌 A와 놓친 A의 "
-          "updateInterval 차이)과 split importance의 updateInterval 독주. 데이터 저장소 `baseline_rule.py`도 baseline 선정이 updateInterval을 통해 "
-          "label을 누설할 수 있다고 경고한다. worm처럼 짧은 간격으로 연속 배포하는 공격은 이 지름길에서 벗어나 미탐된다.",
+          "updateInterval 차이)과 split importance의 updateInterval 독주. baseline 규칙 설계도 updateInterval을 통한 label 누수를 경계한다"
+          "(`be87ab4cf:derived/pairs/baseline_rule.py` L21-24: 악성 직전 후보를 날짜 경계로 일괄 제외하면 정상 hotfix까지 빠져 악성 "
+          "baseline만 체계적으로 오래되고 updateInterval로 label이 누수되므로, 일괄 제외 대신 clean 검증을 쓴다). worm처럼 짧은 간격으로 "
+          "연속 배포하는 공격은 이 지름길에서 벗어나 미탐될 것으로 추정한다.",
           f"- **H2. E06·E09·E10의 미탐은 주로 입력 정보 부족 때문이다(7개 package.json feature 기준).** 근거: 공통 미탐 대부분이 이산 feature가 "
-          f"같은 정상 pair를 갖고, 모델이 쓰는 feature의 AUC가 {used_auc.min():.2f}~{used_auc.max():.2f}다. 이 경우 가중치·임계값 조정만으로는 "
+          f"같은 정상 pair를 갖고, 모델이 쓰는 feature 중 AUC를 잰 수치형 2개(updateInterval, newDependencyCount)의 AUC가 "
+          f"{used_auc.min():.2f}~{used_auc.max():.2f}으로 약하다. 이 경우 가중치·임계값 조정만으로는 "
           "같은 모양의 정상을 함께 오탐하지 않고 Recall을 크게 올리기 어렵다. 0.5 고정에서 E09가 더 잡은 pair 상당수가 같은 FPR에서는 "
           f"차이로 남지 않는 것(0절: TP 차이 {tp_d05} → {tp_dP})도 이와 맞는다.",
           "- **H3. 필요한 정보의 일부는 이미 train.csv에 있다(난독화 feature).** 근거: 캠페인 균등으로 봐도 분리도가 남고 변경 JS 유무도 다르다. "
@@ -692,15 +697,17 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           "| 1~3의 feature가 실제로 쓰이는지 보는 기준선 | H1. D06-E04는 campaign CV 결과가 없다 |",
           "| 6 | **유형·캠페인 가중치**: E10 α를 유형 단위로 확장(B·C 악성 가중 ↑) | B·C 미탐 | 소수 유형의 학습 신호 확대 "
           f"| {OP_LABEL[P]}에서 α=0/0.25/0.5/0.75의 B TP {bc('B')}, C TP {bc('C')}, `{SHA1_HULUD}` FN "
-          + "/".join(str(sha1_fn[m]) for _, m in alpha_models) + "(2-1, 2-2) |",
+          + "/".join(str(sha1_fn[m]) for _, m in alpha_models) + "(2-1, 2-2). pooled 기준, 임계값 방식에 민감(6절) |",
           "| 7 | **캠페인 편향 대응**: 단일 캠페인 fold가 생기지 않게 fold 구성, 캠페인 평균 Recall 병기 | 평가 편향 | 개선 여부 판단의 신뢰도 "
           "| fold 0 = 단일 캠페인(H4) |", "",
           "1은 기존 feature만 쓰므로 이번 제약(feature 추출 변경 없음) 안에서 다음 실험으로 바로 할 수 있다. 2·3은 feature 추출 코드 변경이 "
           "필요하다. H2가 맞다면 4~7만으로는 개선 폭이 제한될 수 있다.", "",
           "## 6. 한계", "",
           "- 모든 수치는 Train campaign CV OOF 기준이다. 최종 일반화 성능 추정이 아니다.",
-          "- FPR 운영점의 임계값은 3 fold의 OOF 점수를 합쳐 하나로 정했고, 같은 정상 1,839쌍에서 달성 FPR을 쟀다. fold마다 모델이 달라 점수 척도가 "
-          "조금씩 다를 수 있다.",
+          "- FPR 운영점의 임계값은 3 fold의 OOF 점수를 합쳐 하나로 정했고, 같은 정상 1,839쌍에서 달성 FPR을 쟀다. 결과는 임계값 방식에 민감하다. "
+          "fold별로 같은 규약의 임계값을 쓰면 FPR 1% TP가 E06 222→534, E09 399→506, E10_a0.25 517→543, E10_a0.75 267→365로 달라지고"
+          "(E06 fold 0 sha1-hulud 0→324), FPR 5% 전체 TP 순서는 같지만 B·C TP는 바뀐다(예: E10_a0.75 B 13→3). 이 수치는 Revy 검증 값으로, "
+          "저장 OOF로 별도 계산했으며 이 스크립트는 계산하지 않는다.",
           "- CV는 early stopping에 평가 fold를 쓰므로 수치가 낙관적일 수 있다(`scripts/run_cv_e06_e09.py`).",
           "- 단변량 AUC는 feature 하나씩 본 값이라, 모델에 넣었을 때의 효과를 보장하지 않는다.",
           "- 공격 흔적 열은 데이터 저장소의 `malicious_pair_groups.csv`(고정 커밋)에서 가져왔다.",
