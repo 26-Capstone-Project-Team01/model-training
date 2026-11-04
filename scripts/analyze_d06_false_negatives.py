@@ -520,6 +520,8 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
             cells = [srow(op, m, "type", t) for m in MODELS]
             L.append(f"| {OP_LABEL[op]} | {t} | {int(cells[0]['n'])} | " + " | ".join(f"{pct(r['recall'])} ({int(r['fn'])})" for r in cells) + " |")
     folds_of = mal_all.groupby("campaign")["fold"].agg(lambda x: ",".join(map(str, sorted(x.unique()))))
+    multi_fold = sorted(c for c, v in folds_of.items() if "," in v)
+    require(multi_fold == ["individuals_case"], f"여러 fold에 걸친 campaign이 individuals_case 하나가 아닙니다(보고서 문장 전제): {multi_fold}")
     camp_n = mal_all["campaign"].value_counts()
     camps = sorted(camp_n.index, key=lambda c: (-camp_n[c], c))
     for op in OPS:
@@ -606,7 +608,10 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           + ", ".join(f"{m} {'/'.join(map(str, v))}" for m, v in best_it.items()) + ".",
           "- **캠페인 집중**: 공통 미탐의 캠페인 상위는 "
           + ", ".join(f"`{c}` {k}" for c, k in top_counts(both["campaign"], 6))
-          + "이다. CV가 campaign 단위라 각 캠페인은 학습에 한 번도 쓰이지 않은 fold에서 평가된다(새 캠페인 일반화 문제).",
+          + "이다. CV가 campaign 단위라 공유 공격 캠페인은 fold 사이에서 분리되고, 학습에 한 번도 쓰이지 않은 fold에서 평가된다(새 캠페인 "
+          "일반화 문제). 예외로 " + ", ".join(f"`{c}`(fold {folds_of[c]})" for c in multi_fold)
+          + "는 독립 사건을 모은 보고용 묶음이라 여러 fold에 걸친다(`scripts/run_cv_e06_e09.py`의 `is_shared_attack_split_group` 참고). "
+          "따라서 이 묶음의 Recall은 leave-campaign-out 검증 결과로 읽지 않는다.",
           f"- **모델이 쓰는 feature는 이 미탐들을 거의 구별하지 못한다.** 공통 미탐 vs 같은 유형 정상의 단변량 AUC(0.5 = 구별 불가, 범위 "
           f"{used_auc.min():.2f}~{used_auc.max():.2f}): "
           + "; ".join(f"{t}: " + ", ".join(f"`{r.feature}` {r.auc_pooled:.2f}" for r in s[(s['type'] == t) & s['used_by_e06_e09_e10']].itertuples())
@@ -636,9 +641,10 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           + ". 모델은 의존성 추가 여부·개수만 보고 이름·출처·새로 생긴 패키지인지는 보지 않는다.",
           f"  - `injective_2026-07` {len(inj)}쌍 중 {int((inj['changedJsFileCount'] == '0').sum())}쌍은 변경된 JS 파일이 없다"
           f"(그중 E09 미탐 {int(((inj['changedJsFileCount'] == '0') & (inj['pred_E09'] == 0)).sum())}쌍).",
-          f"  - 공통 미탐 C {len(both_c)}쌍 중 변경 JS 파일이 1개인 비율은 {pct(c_one_js)}이고, 상위 캠페인은 pair마다 가장 큰 변경 JS의 "
-          "해시가 다르다(" + ", ".join(f"`{c}` {int(uniq[c])}/{int((both['campaign'] == c).sum())}" for c, _ in top_counts(both_c["campaign"], 3))
-          + "). 같은 payload 해시로 잡을 수 있는 구조가 아니다.",
+          f"  - 공통 미탐 C {len(both_c)}쌍 중 변경 JS 파일이 1개인 비율은 {pct(c_one_js)}이고, 상위 캠페인에서 `largestChangedJsSha1`(가장 큰 변경 JS "
+          "파일 전체의 해시) 고유값 수는 " + ", ".join(f"`{c}` {int(uniq[c])}/{int((both['campaign'] == c).sum())}" for c, _ in top_counts(both_c["campaign"], 3))
+          + "로, 이 열의 파일 전체 해시는 대부분 pair마다 다르다. 주입된 payload 자체나 다른 변경 파일의 해시가 재사용되는지는 이 열만으로 "
+          "알 수 없어 미검증이다.",
           ""]
 
     L += ["### 4-2. 추정(검증되지 않은 원인 가설)", "",
@@ -674,7 +680,7 @@ def write_report(frames, thr, perf_cv, summ, prof, sep, check_note) -> None:
           "| 2 | **변경·추가된 JS 코드의 행위(API) feature 추가**: 새로 생긴 `child_process`·`eval`/`Function`·네트워크(`http(s)`, `fetch`, "
           "`dns`)·환경변수/자격증명 파일 접근·base64 디코드, 그리고 install hook이 이번에 추가·변경된 파일을 실행하는지 "
           f"| C 유형 미탐(공통 {len(both_c)}: hook·의존성 없이 JS에 코드 주입)과 A 유형 미탐(공통 {len(both_a)}) | 난독화 여부와 상관없이 악성 "
-          f"'행위'에 직접 신호 | 공통 미탐 C의 변경 JS 1개 비율 {pct(c_one_js)}, 캠페인 안에서도 payload 해시가 다름, 공통 미탐 A의 hook 상위 "
+          f"'행위'에 직접 신호 | 공통 미탐 C의 변경 JS 1개 비율 {pct(c_one_js)}, 가장 큰 변경 JS 파일 전체 해시가 대부분 pair마다 다름(payload 자체 해시 재사용은 미검증), 공통 미탐 A의 hook 상위 "
           + ", ".join(f"`{h}`" for h, _ in a_hooks) + " |",
           "| 3 | **추가된 의존성 정체 feature 추가**: 새 의존성 패키지가 업데이트 직전에 처음 publish됐는지, 그 의존성의 install script 여부, "
           f"버전 지정이 URL/git/tarball인지 | B 유형 미탐(E09 기준 {len(b_missed)})과 의존성을 동반한 A 미탐 | 의존성 추가 '여부'가 같은 정상 B와 구별 "
