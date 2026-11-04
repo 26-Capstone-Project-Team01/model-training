@@ -352,7 +352,7 @@ def write_report(table: pd.DataFrame, notes: list[str], b_note: str) -> None:
         "그중 hard benign 239). Test 677쌍은 사용하지 않음.",
         "- 예측: 기존 저장 OOF 예측(E06·E09 = `results/diagnostics/d06_diag01_pair_predictions.csv`, "
         "E10 α=0.25·0.75 = `results/e10/d06_e10_pair_predictions.csv`). 재학습 없음. "
-        "E10 α=0·0.5는 E06·E09와 동일해 제외.",
+        "E10 α=0·0.5는 E06·E09와 pair별 pred·fold가 일치하고 proba는 읽기·재저장 과정의 차이(1e-15 이내)로만 달라 제외.",
         "- 유형: A = installScriptAdded OR scriptEntryAdded / B = A 아님 AND newDependencyAdded / C = 나머지 "
         "(악성 A 734 · B 52 · C 142).",
         "- 규칙: " + " / ".join(f"{k} = {v}" for k, v in RULES.items()) + ".",

@@ -1,7 +1,7 @@
 # D06 유형별·동일 FPR 평가 (Train 3-fold CV OOF)
 
 - 데이터: `be87ab4cf:derived/splits/train.csv` (Train 2,767쌍 = 악성 928 / 정상 1,839, 그중 hard benign 239). Test 677쌍은 사용하지 않음.
-- 예측: 기존 저장 OOF 예측(E06·E09 = `results/diagnostics/d06_diag01_pair_predictions.csv`, E10 α=0.25·0.75 = `results/e10/d06_e10_pair_predictions.csv`). 재학습 없음. E10 α=0·0.5는 E06·E09와 동일해 제외.
+- 예측: 기존 저장 OOF 예측(E06·E09 = `results/diagnostics/d06_diag01_pair_predictions.csv`, E10 α=0.25·0.75 = `results/e10/d06_e10_pair_predictions.csv`). 재학습 없음. E10 α=0·0.5는 E06·E09와 pair별 pred·fold가 일치하고 proba는 읽기·재저장 과정의 차이(1e-15 이내)로만 달라 제외.
 - 유형: A = installScriptAdded OR scriptEntryAdded / B = A 아님 AND newDependencyAdded / C = 나머지 (악성 A 734 · B 52 · C 142).
 - 규칙: R1 = installScriptAdded / R2 = installScriptAdded OR scriptEntryAdded / R3 = installScriptAdded OR scriptEntryAdded OR newDependencyAdded.
 - 임계값: 정상 1,839쌍의 OOF 점수를 3 fold 합쳐(pooled) 허용 FP 수 k = floor(목표 FPR × 1,839) 이하가 되는 가장 낮은 임계값 t = (k+1)번째로 높은 정상 점수, 판정은 proba > t. t와 같은 점수의 정상·악성 pair는 모두 음성(동점 처리)이라 달성 FPR이 목표보다 낮을 수 있음. 규칙 FPR에 맞출 때는 규칙의 FP 수를 그대로 k로 씀. 기존 기본값(default_0.5)은 proba >= 0.5. match_R1_random은 무작위 정상 1,600쌍만으로 같은 방식을 적용해 R1의 무작위 정상 FP 수 이하가 되는 가장 낮은 임계값(hard benign FP는 제약하지 않음).
