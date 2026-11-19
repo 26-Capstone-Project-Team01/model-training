@@ -158,7 +158,7 @@ python -I -B -X utf8 experiments/d06_feature_comparison_18/verify_bundle.py --tr
 | 학습 횟수 | 최대 500회, outer 평가 fold를 early stopping 검증 세트로 사용 | 200회 요청 고정, early stopping 없음, outer는 평가에만 사용 |
 | 기준 조정 자료 | 없음 | calibration stage |
 
-팀 기록에서 "추가 18모델"로 부르는 phase3 residual 실행(규칙 적중 행 제외 학습)과도 다른 묶음이다. 그 실행의 모델(29개 특징 전체 학습 6, R_obf 적중 행을 fit에서 뺀 6, R2_and_obf 적중 행을 fit에서 뺀 6)은 이 묶음에 들어 있지 않고, 이 묶음의 모델은 규칙 적중 행을 빼지 않았다.
+팀 기록에서 "추가 18모델"로 부르는 phase3 residual 실행(규칙 적중 행 제외 학습)과도 다른 묶음이다. 그 실행의 29개 특징 전체 학습 6개는 이 묶음 full29 6개와 바이트가 같고, R_obf·R2_and_obf 적중 행을 fit에서 뺀 12개는 이 묶음에 들어 있지 않다. 이 묶음의 모델은 규칙 적중 행을 빼지 않았다.
 
 ## 8. 해석 한계
 
