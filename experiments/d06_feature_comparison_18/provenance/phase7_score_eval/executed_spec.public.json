@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "registered_utc": "2026-11-09T16:18:37.630283+00:00",
+  "registered_before_evaluation": true,
+  "question": "Characterize recall/FN, review workload, ranking and low scores for a human-decision risk-score service; FPR is reported, never an exclusion gate.",
+  "scope": "Saved scores only. No training, model inference, probability calibration fit, Test677 raw access, malware execution, remote write, or product policy.",
+  "models": [
+    {
+      "name": "base7",
+      "source_run": "temp/detection-feasibility/phase2/runs/run_20261108T154115Z_30448755",
+      "source_manifest_sha256": "bbfea7d755a143cafa4ec88de40598d08c870e564a13a0c7cb5a4fca02f26234",
+      "source_files": {
+        "predictions.csv": "a6155fb2c63964f37b0530699e6ebb8515bcec4c9eadaf5a8f2d1696f55c96c8",
+        "outer_assignment.csv": "b61b48c60ee8c5cd6a687521c99e8c3f1a5e15e7397588bc2650e3275772de21",
+        "splits.csv": "e900fcddff2c2c57bee5aa89b375490b2a8248573b1fc428d08cc14a23bfcdbb",
+        "metrics.csv": "d42a4fb53c7950688b1909bc84cdf173ad74a49e8c7ed4bf27c5d306ee6e84b5",
+        "training.csv": "363946662fd035c5cea5e2f88ac41fdc1f68adb087233a48a40db3094f00be31",
+        "feature_sets.json": "c95f15593853d7edf4afdd97cafbefc225a7515307d333b524fba7c5d6c28510"
+      },
+      "evaluator_sha256": "e78005afc15c2c2faf6654303b252f636ea88d69d0295bec9d0d0cafe6f50d42",
+      "variant": "M_base",
+      "requested_source_rounds": 200,
+      "scenarios": {
+        "primary": 20261109,
+        "calibration_seed": 20261110
+      },
+      "folds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "full29",
+      "source_run": "temp/detection-feasibility/phase2/runs/run_20261108T154115Z_30448755",
+      "source_manifest_sha256": "bbfea7d755a143cafa4ec88de40598d08c870e564a13a0c7cb5a4fca02f26234",
+      "source_files": {
+        "predictions.csv": "a6155fb2c63964f37b0530699e6ebb8515bcec4c9eadaf5a8f2d1696f55c96c8",
+        "outer_assignment.csv": "b61b48c60ee8c5cd6a687521c99e8c3f1a5e15e7397588bc2650e3275772de21",
+        "splits.csv": "e900fcddff2c2c57bee5aa89b375490b2a8248573b1fc428d08cc14a23bfcdbb",
+        "metrics.csv": "d42a4fb53c7950688b1909bc84cdf173ad74a49e8c7ed4bf27c5d306ee6e84b5",
+        "training.csv": "363946662fd035c5cea5e2f88ac41fdc1f68adb087233a48a40db3094f00be31",
+        "feature_sets.json": "c95f15593853d7edf4afdd97cafbefc225a7515307d333b524fba7c5d6c28510"
+      },
+      "evaluator_sha256": "e78005afc15c2c2faf6654303b252f636ea88d69d0295bec9d0d0cafe6f50d42",
+      "variant": "M_full",
+      "requested_source_rounds": 200,
+      "scenarios": {
+        "primary": 20261109,
+        "calibration_seed": 20261110
+      },
+      "folds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "no_interval28",
+      "source_run": "temp/detection-feasibility/phase2/runs/run_20261108T154840Z_3f2cb795",
+      "source_manifest_sha256": "ea4a94de38d32e4b156975545e48ff5a49d4bbf6c58e62efb3eeaac9d2cb3a0a",
+      "source_files": {
+        "predictions.csv": "63993b64e64e9026c187ad692a1afeda3eee9dd5c65e7b76fca69dfbd25917e8",
+        "outer_assignment.csv": "b61b48c60ee8c5cd6a687521c99e8c3f1a5e15e7397588bc2650e3275772de21",
+        "splits.csv": "158e83488f2711d6c9dd50b42588b004131f0cd88c5ae263030bfac314030d3b",
+        "metrics.csv": "751eed84fd3c281d7a11c7368815a226f4369c7713a19d827a8c674ddf6e7877",
+        "training.csv": "2e2c58bbf0bea9f4d661baf5b368a06b67591c329f7a5f51d13f0ed3dc90edef",
+        "feature_sets.json": "128336878d081e2c4187aff924439b3846de7e1ee0aa35b36759e0bbde7e8c37"
+      },
+      "evaluator_sha256": "e78005afc15c2c2faf6654303b252f636ea88d69d0295bec9d0d0cafe6f50d42",
+      "variant": "M_full_no_interval",
+      "requested_source_rounds": 200,
+      "scenarios": {
+        "posthoc": 20261109,
+        "posthoc_calibration_seed": 20261110
+      },
+      "folds": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "helper_sha256": {
+    "model-training/.orca/worktrees/model-training/exp-direction-20261109/scripts/direction_pilot_eval.py": "e78005afc15c2c2faf6654303b252f636ea88d69d0295bec9d0d0cafe6f50d42",
+    "model-training/.orca/worktrees/model-training/exp-direction-20261109/scripts/direction_fusion_eval.py": "41db811439304e08f975e8957c44eec61c8b65d041911075193683e764b132a7"
+  },
+  "thresholds": [
+    0,
+    0.001,
+    0.005,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    0.9,
+    0.99,
+    1
+  ],
+  "threshold_rule": "score >= fixed threshold; no threshold chosen from outer results; all grid points reported",
+  "top_fractions": [
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "ranking": "Within each outer model/fold only. k=ceil(fraction*n). At the exact score tie boundary report exact-k malicious/normal capture minimum and maximum plus tie-all workload. Do not pick a favorable tie order. Pooled fold-quota totals sum fold counts/ranges and do not rank mixed OOF scores.",
+  "low_score_thresholds": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "low_rule": "score <= cutoff, independent diagnostic with inclusive boundary; can overlap positive score>=t at exact equality; not a safe verdict",
+  "score_bin_edges": [
+    0,
+    0.001,
+    0.01,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.99,
+    1
+  ],
+  "bin_rule": "left-inclusive and right-exclusive except final bin includes 1; empty bin rates undefined",
+  "reliability_bins": 10,
+  "logloss_clip_epsilon": 1e-15,
+  "probability_diagnostics": "Brier, clipped binary logloss, fixed 10-bin ECE, bin n/mean risk score/observed malicious fraction on outer only; unweighted empirical D06 cohort; no probability or calibration-success claim. Report fold and pooled bins separately and weighted fold ECE as a cancellation check.",
+  "calibration_recall_examples": [
+    0.9,
+    0.95
+  ],
+  "recall_threshold_rule": "Choose largest threshold from calibration malicious scores achieving requested recall using >= ties. Apply unchanged outer. No malicious calibration rows means unavailable. Examples are not adopted operating criteria; no normal FPR constraint.",
+  "report": [
+    "fixed-threshold TP/FN/FP/TN and review-candidate count/rate; class and group breakdowns",
+    "fold-local ranking and pooled fold-quota capture bounds",
+    "low-score malicious count/all malicious fraction/low-bucket malicious fraction and groups",
+    "reliability bins and Brier/logloss/ECE with cohort and fit prevalences",
+    "calibration-recall operating examples and unchanged outer outcomes",
+    "saved scores, metadata, splits, source hashes, code/spec snapshots and verification"
+  ],
+  "limits": [
+    "D06 2767 rows is repeatedly inspected development data with malicious prevalence 928/2767, not deployment prevalence",
+    "same rows in two inner seeds, never pool seeds as independent observations",
+    "fit/calibration seeds change both populations",
+    "each fold/model has its own score scale; no pooled OOF ranking",
+    "score is labeled risk score, not malicious probability; weighted-model scores elsewhere cannot be assumed on a comparable probability scale",
+    "review candidates are not confirmed detections; no assumption of correct human review",
+    "unselected or low-score rows remain potential misses, never safe",
+    "A/B/C is a feature-derived proxy; groups do not guarantee independent attack families",
+    "no best threshold/model selected from outer metrics; no FPR ceiling rejects a candidate"
+  ]
+}

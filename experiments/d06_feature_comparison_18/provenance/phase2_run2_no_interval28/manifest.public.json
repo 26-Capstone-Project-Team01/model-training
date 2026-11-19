@@ -1,0 +1,301 @@
+{
+  "status": "completed",
+  "started_utc": "20261108T154840Z",
+  "spec_path": "temp/detection-feasibility/phase2/prepared_specs/posthoc_robustness_spec.json",
+  "spec_sha256": "2a61c00dafb4b37da7683a97c90686a4170802b8f20943f41636479d0169f7a5",
+  "decision_criteria_path": "temp/detection-feasibility/phase2/decision_criteria.json",
+  "decision_criteria_sha256": "5982694cb557767be49bc08ad23e57c036572dff44db09172688063dcdd91f15",
+  "script_sha256": "2a1e060dfe09967c969021480adaf5bb40063f9b6535075db01cf4b0af946915",
+  "argv": [
+    "scripts/direction_context_eval.py",
+    "--workspace",
+    ".",
+    "--prepared-spec",
+    "temp/detection-feasibility/phase2/prepared_specs/posthoc_robustness_spec.json"
+  ],
+  "python": "3.13.5",
+  "packages": {
+    "lightgbm": "4.7.0",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+  },
+  "read_test": false,
+  "remote_writes": false,
+  "inputs": {
+    "train": {
+      "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+      "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+    },
+    "groups": {
+      "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train_malicious_groups.csv",
+      "sha256": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2"
+    },
+    "classes": {
+      "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+      "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+    }
+  },
+  "rows": 2767,
+  "feature_count": 29,
+  "components": 1893,
+  "malicious_components": 56,
+  "largest3_components": [
+    "component_0013",
+    "component_0007",
+    "component_0014"
+  ],
+  "completed_utc": "2026-11-08T15:49:03.870832+00:00",
+  "trained_models": 30,
+  "validation": [
+    "input hashes",
+    "strict joins",
+    "three-way group disjointness",
+    "calibration budgets",
+    "OOF row uniqueness",
+    "feature whitelists",
+    "unchanged input hashes"
+  ],
+  "outputs": [
+    {
+      "path": "executed_script_snapshot.py",
+      "sha256": "2a1e060dfe09967c969021480adaf5bb40063f9b6535075db01cf4b0af946915",
+      "bytes": 31003
+    },
+    {
+      "path": "executed_spec.json",
+      "sha256": "2a61c00dafb4b37da7683a97c90686a4170802b8f20943f41636479d0169f7a5",
+      "bytes": 9471
+    },
+    {
+      "path": "feature_importance.csv",
+      "sha256": "ac0c72f76d8e2a87e90007ce7f7f1e5f62f3f3203f84250b11d1b622b934135a",
+      "bytes": 45606
+    },
+    {
+      "path": "feature_sets.json",
+      "sha256": "128336878d081e2c4187aff924439b3846de7e1ee0aa35b36759e0bbde7e8c37",
+      "bytes": 7912
+    },
+    {
+      "path": "group_metrics.csv",
+      "sha256": "88c52cd8e6a0ec88dcb56831c56ec35c9e8f956a5edf9a1d60b32bc9832f6812",
+      "bytes": 560939
+    },
+    {
+      "path": "metrics.csv",
+      "sha256": "751eed84fd3c281d7a11c7368815a226f4369c7713a19d827a8c674ddf6e7877",
+      "bytes": 150788
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_base_fold0.txt",
+      "sha256": "6a16dd5ec5819e9e8a4f49c9d41977edae7df92b7b4da4c6435ec01dd8efabd1",
+      "bytes": 689027
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_base_fold1.txt",
+      "sha256": "61d09b4fc24da10951363fdd279632cdf3653c33b182725cb423ebc057427067",
+      "bytes": 691072
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_base_fold2.txt",
+      "sha256": "7463620173f6089f66dddefe5cea2fa9cc96768249a7e8a2714eb51f57f826b2",
+      "bytes": 691343
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_full_no_interval_fold0.txt",
+      "sha256": "8ddae73fc17abd8362fd9ccec72c65f7cec5e5f05de5286395e34605a96381ca",
+      "bytes": 677292
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_full_no_interval_fold1.txt",
+      "sha256": "6e94efc69c35c4d8ebb612c7b8cc74266b7576de52fff9fcab50e27e3d9d3df3",
+      "bytes": 512027
+    },
+    {
+      "path": "models\\posthoc_calibration_seed_M_full_no_interval_fold2.txt",
+      "sha256": "00d17b45f5edd3a55110f7f8a4738b50f67a170ab5c249fee06037ed2e00b401",
+      "bytes": 627070
+    },
+    {
+      "path": "models\\posthoc_M_base_fold0.txt",
+      "sha256": "5f79fc2c0edf22f835bdc5e60d00cc21cb39aaa750e9d62131de5cf414388787",
+      "bytes": 690730
+    },
+    {
+      "path": "models\\posthoc_M_base_fold1.txt",
+      "sha256": "d8be84c628da3f0f4aeb6496a63cdeebaddd0f234bb9d55a42cdf32599560434",
+      "bytes": 674841
+    },
+    {
+      "path": "models\\posthoc_M_base_fold2.txt",
+      "sha256": "0eba803fbca250843ff68a225e7495d4268093acd518a203056b09eb449e150b",
+      "bytes": 676442
+    },
+    {
+      "path": "models\\posthoc_M_base_plus_changedcount_fold0.txt",
+      "sha256": "4e14b12ac2a9b8da5f434c11b8a433d1c5b38caeba4b948d72bdb1ce91799bf5",
+      "bytes": 696804
+    },
+    {
+      "path": "models\\posthoc_M_base_plus_changedcount_fold1.txt",
+      "sha256": "ff54d6f2644fbc64f0e68abc7ec481310c5506a425bb9195e00f5806536ad8c2",
+      "bytes": 664832
+    },
+    {
+      "path": "models\\posthoc_M_base_plus_changedcount_fold2.txt",
+      "sha256": "f83728d257cca47a9b251211d621fa4d30457799aa8773953a188f265e62034e",
+      "bytes": 698635
+    },
+    {
+      "path": "models\\posthoc_M_full_fold0.txt",
+      "sha256": "6367af5603f179ccc82eb19d21d352bb5ada0d0ae7cc4b5e657711e2f68af18d",
+      "bytes": 543192
+    },
+    {
+      "path": "models\\posthoc_M_full_fold1.txt",
+      "sha256": "cb07dc39691eec565b554bd0bd494d508d040f493ca03cb230bac6acd1de316b",
+      "bytes": 380126
+    },
+    {
+      "path": "models\\posthoc_M_full_fold2.txt",
+      "sha256": "69589d0c5f99586abf21e2518e35166e8c690aa5b81c961aef81df4cc600229f",
+      "bytes": 533947
+    },
+    {
+      "path": "models\\posthoc_M_full_no_changed_fold0.txt",
+      "sha256": "8b16e8b03a39ff6efc448bd6ff3a6541819438b4cb9401d2215d35db27797461",
+      "bytes": 584501
+    },
+    {
+      "path": "models\\posthoc_M_full_no_changed_fold1.txt",
+      "sha256": "b8b5bb52f8a9f9f75ba54843efefd573ab749d9f0ba30dcc50a2673d0b8dfe4f",
+      "bytes": 430932
+    },
+    {
+      "path": "models\\posthoc_M_full_no_changed_fold2.txt",
+      "sha256": "6cdcda8b49b500a90c7b3e26f810dc0b1a1d7110a2f794e5a82f93e94729117e",
+      "bytes": 538121
+    },
+    {
+      "path": "models\\posthoc_M_full_no_interval_fold0.txt",
+      "sha256": "dcf13d1083d2eb72eff5ca23e337e41b41cc84b32e064653a87f4f03f1ae3741",
+      "bytes": 539916
+    },
+    {
+      "path": "models\\posthoc_M_full_no_interval_fold1.txt",
+      "sha256": "236a1401115f60489514cb202485d94694f8f48e99608b62a2fbbb65d395f6d4",
+      "bytes": 384945
+    },
+    {
+      "path": "models\\posthoc_M_full_no_interval_fold2.txt",
+      "sha256": "1c38c229094e8b47a31e110ee60749b377e56723eb2ba3b5c9205d50a4da7272",
+      "bytes": 575660
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_base_fold0.txt",
+      "sha256": "2732397f268b8b88326fdda185687798e953b6ade56a987bccbc32c4007c3b2d",
+      "bytes": 170673
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_base_fold1.txt",
+      "sha256": "601d23f06532915c86550df36639a1172fe5b992a046f8d69da70f98a9965b40",
+      "bytes": 153842
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_base_fold2.txt",
+      "sha256": "28cc1356ddaa0996e6c69998945e5c7dd6e0bd99040b85a87544934e2ed2cd72",
+      "bytes": 171050
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_full_fold0.txt",
+      "sha256": "63c578d18eb7c79beeac846af1a91bf1048f8e0fff23fd08c8055084ab520d20",
+      "bytes": 175160
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_full_fold1.txt",
+      "sha256": "f303b64a70d2c98685499a9db6da6c3910f77c9288f12561f6ac235219a8ebbb",
+      "bytes": 160051
+    },
+    {
+      "path": "models\\posthoc_rounds50_M_full_fold2.txt",
+      "sha256": "98f9230f7af99f4cf83a645b7cc26470069f02e6ce8c3960f7510237c27fcb69",
+      "bytes": 173563
+    },
+    {
+      "path": "models\\posthoc_T_full_fold0.json",
+      "sha256": "8583a8ce056151e0cc3caf8a447174d7daf74ab1f0663c897fb060810a914026",
+      "bytes": 3098
+    },
+    {
+      "path": "models\\posthoc_T_full_fold0.txt",
+      "sha256": "26ca14daab240cf34aac6ecb95e567258603bda42b9bf5a0df70ee91cf4e5f6a",
+      "bytes": 830
+    },
+    {
+      "path": "models\\posthoc_T_full_fold1.json",
+      "sha256": "5e7285ed6bd48fe9bb1bb59ccf7e7055ed35694976281f001865a497b9c9effa",
+      "bytes": 2229
+    },
+    {
+      "path": "models\\posthoc_T_full_fold1.txt",
+      "sha256": "3afbb3cfa597f33034edecbcfbe965c4b79b617148b52ec3ed5f565220af3c96",
+      "bytes": 481
+    },
+    {
+      "path": "models\\posthoc_T_full_fold2.json",
+      "sha256": "05b719cfadb525b75d96ac4635c0b791237c326c4cc0f88715451ff9b824ba47",
+      "bytes": 2506
+    },
+    {
+      "path": "models\\posthoc_T_full_fold2.txt",
+      "sha256": "7e252389b29dd087ba588746f62c9da133340153b3bf2b75561f176ecc05706c",
+      "bytes": 582
+    },
+    {
+      "path": "outer_assignment.csv",
+      "sha256": "b61b48c60ee8c5cd6a687521c99e8c3f1a5e15e7397588bc2650e3275772de21",
+      "bytes": 292563
+    },
+    {
+      "path": "pair_decisions.csv",
+      "sha256": "6b563107c092f81f1a9cbe932217eaaba1b17d959995f8bf11b91c67654d0f89",
+      "bytes": 14111589
+    },
+    {
+      "path": "paired_deltas.csv",
+      "sha256": "b3f90fbf876808ad28c60e25a61e3a76614624256a9593b34af178a6faec14c4",
+      "bytes": 3873
+    },
+    {
+      "path": "predictions.csv",
+      "sha256": "63993b64e64e9026c187ad692a1afeda3eee9dd5c65e7b76fca69dfbd25917e8",
+      "bytes": 3115878
+    },
+    {
+      "path": "splits.csv",
+      "sha256": "158e83488f2711d6c9dd50b42588b004131f0cd88c5ae263030bfac314030d3b",
+      "bytes": 1420211
+    },
+    {
+      "path": "summary.md",
+      "sha256": "82236936f53c6206e750d829cea890f1012388d5671ea8a8cee65424223e33e5",
+      "bytes": 2906
+    },
+    {
+      "path": "thresholds.csv",
+      "sha256": "2609c6c0ac0c957704641d946aeb2fbe6cbded52a1aab66da1cb150500983b8c",
+      "bytes": 30213
+    },
+    {
+      "path": "training.csv",
+      "sha256": "2e2c58bbf0bea9f4d661baf5b368a06b67591c329f7a5f51d13f0ed3dc90edef",
+      "bytes": 2917
+    },
+    {
+      "path": "zero_sensitivity_counts.json",
+      "sha256": "89ae58f675db825277027e9ecb895000cf9fbd8aba42273656b3ac0db99cbb80",
+      "bytes": 409
+    }
+  ]
+}

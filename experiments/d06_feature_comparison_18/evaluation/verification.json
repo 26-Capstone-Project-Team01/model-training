@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "saved_score_rows": 25644,
+  "outer_rows_per_model_seed": 2767,
+  "models": 3,
+  "seeds": 2,
+  "folds": 3,
+  "original_score_coverage": "complete calibration and outer",
+  "same_rows_and_splits": true,
+  "pooled_metric_accounting": true,
+  "thresholds": 336,
+  "ranking": 144,
+  "low_scores": 72,
+  "recall_examples": 48
+}
