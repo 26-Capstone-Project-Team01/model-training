@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "registered_at_kst": "2026-11-09T00:42:00+09:00",
+  "status": "pilot decision aids, not team SLA or deployment approval",
+  "primary_operating_point": "calibration FPR target 5%; actual outer FPR always reported separately",
+  "secondary_operating_point": "calibration FPR target 1%, and fixed 0.5 model threshold",
+  "feature_expansion_candidate": {
+    "comparison": "candidate versus freshly trained M_base on identical eligible rows and splits",
+    "minimum_recall_gain_pp": 5,
+    "maximum_actual_fpr_increase_pp": 0.5,
+    "alternative": "FP reduction at least 20% while Recall loss is at most 2pp",
+    "robustness": "positive gain in at least two outer folds and two non-generic campaigns, inspect alternate calibration seed and 50-round sensitivity",
+    "rule_comparison": "report R1/R2/R3 actual operating points and same-information shallow tree; do not claim ML superiority from beating a weaker-information rule"
+  },
+  "hybrid_candidate": {
+    "comparison": "hybrid versus same feature model alone on identical eligible rows and splits",
+    "minimum_recall_gain_pp": 3,
+    "maximum_actual_fpr_increase_pp": 0.5,
+    "requirements": "combined calibration budget feasible in every outer fold; gain not confined to one campaign; report extra false positives and rescued positives"
+  },
+  "uncertain": "tradeoff, inconsistent folds, insufficient calibration normals, extraction/source bias or only one-campaign benefit -> targeted follow-up rather than adoption",
+  "reject_this_hypothesis": "no added detection and greater FP/cost, or effect explained by leakage/source artefacts",
+  "unseen_evaluation": "not available in this pilot; D06 is previously studied development data; Test677 is not evaluated here",
+  "source_subset": "complete-case comparisons on identical preselected cohort; population metric must not be equated with full-Train metrics",
+  "posthoc": "any later amendment must be separately versioned and labelled exploratory, never overwrite this file after results"
+}

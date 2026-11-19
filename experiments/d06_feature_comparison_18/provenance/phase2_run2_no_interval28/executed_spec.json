@@ -1,0 +1,263 @@
+{
+  "version": "1.0.0",
+  "registered_before_training": true,
+  "scope": "D06 development-only pilot; Test 677 is not read",
+  "train_input": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+  "train_sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "groups_input": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train_malicious_groups.csv",
+  "groups_sha256": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2",
+  "classes_input": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+  "classes_sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b",
+  "grouping": "package union real campaign excluding generic individual buckets union nonempty largestChangedJsSha1 and changedJsSetSha1; malicious hashes only available",
+  "outer": "3 deterministic largest-malicious-first folds, remaining benign components balanced by class counts; all variants share folds",
+  "inner": "outer training group-disjoint fit/calibration, seeded greedy target 25 percent of each class; report actual counts",
+  "primary_seed": 20261109,
+  "calibration_sensitivity_seed": 20261110,
+  "model_seed": 20261109,
+  "lightgbm": {
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "verbosity": -1,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "seed": 20261109
+  },
+  "rounds": 200,
+  "early_stopping": false,
+  "features": {
+    "M_base": [
+      "installScriptPresent",
+      "installScriptAdded",
+      "scriptEntryAdded",
+      "newDependencyAdded",
+      "newDependencyCount",
+      "updateType",
+      "updateInterval"
+    ],
+    "M_obf_extra": [
+      "obfHexIdentRatioNew",
+      "obfHexIdentRatioChange",
+      "obfHexNumberRatioNew",
+      "obfHexNumberRatioChange",
+      "obfBracketAccessRatioNew",
+      "obfBracketAccessRatioChange",
+      "obfEscapeDensityNew",
+      "obfEscapeDensityChange"
+    ],
+    "M_full": "all 29 source features, never metadata or identifiers",
+    "M_obf_no_interval": "M_obf minus updateInterval",
+    "M_base_weighted": "M_base with malicious 1/sqrt(fit campaign size), normalized malicious total; generic cases keyed by package",
+    "T_obf": "single sklearn DecisionTreeClassifier(max_depth=3, random_state=20261109), same M_obf15, native missing routing and fixed updateType codes"
+  },
+  "primary_models": [
+    "M_base",
+    "M_obf",
+    "M_full",
+    "M_obf_no_interval",
+    "M_base_weighted",
+    "T_obf"
+  ],
+  "diagnostic_models": [
+    "M_full_sanitized",
+    "M_missingness",
+    "M_base_shuffled",
+    "M_obf_shuffled"
+  ],
+  "sanitization": "only exact zeros in obfMeanIdentLengthNew/ChangedCode and obfWhitespaceRatioNew/ChangedCode -> NaN; Change zero is retained; this is a sensitivity, not a corrected ground truth",
+  "missingness": "29 isna indicators only, diagnostic not main comparison",
+  "shuffle": "one fixed-seed permutation of fit labels only; calibration and outer labels remain original; diagnostic",
+  "seed_sensitivity_models": [
+    "M_base",
+    "M_obf",
+    "M_full"
+  ],
+  "round_sensitivity": {
+    "rounds": 50,
+    "models": [
+      "M_base",
+      "M_obf"
+    ]
+  },
+  "rules": {
+    "R1": "installScriptAdded",
+    "R2": "installScriptAdded OR scriptEntryAdded",
+    "R3": "R2 OR newDependencyAdded",
+    "R_obf": "obfHexIdentRatioNew > 0 AND obfHexIdentRatioChange > 0; weak signal",
+    "R2_and_obf": "R2 AND R_obf"
+  },
+  "operating_points": [
+    0.5,
+    0.01,
+    0.05
+  ],
+  "threshold": "normal calibration FP budget floor(n*target_fpr); prediction score >= nextafter((k+1)-th descending eligible score, +inf), conservative ties; report actual outer FPR",
+  "hybrids": [
+    "ML",
+    "R1_OR_ML",
+    "R_obf_OR_ML",
+    "R2_AND_ML"
+  ],
+  "hybrid_calibration": "calibrate total combined decision; rule-only FP above budget is impossible, no fake passed budget",
+  "report": [
+    "fold and pooled confusion counts",
+    "random/hard benign FPR",
+    "campaign and component recall",
+    "largest three malicious components excluded sensitivity",
+    "paired gains/losses vs same-run M_base",
+    "all predictions/splits/thresholds",
+    "input/output hashes and timings"
+  ],
+  "context": "not used in this robustness run",
+  "limits": [
+    "D06 has already informed feature selection",
+    "only three outer folds with dominant components",
+    "no future/time holdout claim",
+    "fixed rounds may affect rankings",
+    "native model files only; no pickle"
+  ],
+  "preregistered_for_followup": true,
+  "label": "posthoc robustness, after inspecting the primary run",
+  "reference_run": "run_20261108T154115Z_30448755",
+  "reason": "Separate updateInterval shortcut, ChangedCode contribution, same-information depth-3 tree, and full-model training-length sensitivity. These were not primary comparisons.",
+  "inherit_spec": "evaluation_spec.json",
+  "feature_sets_extra": {
+    "M_full_no_interval": "all29 minus updateInterval",
+    "M_full_no_changed": "base7 plus New/Change of all seven obfuscation ratios, excluding obfChangedFileCount and ChangedCode",
+    "M_base_plus_changedcount": "base7 plus obfChangedFileCount",
+    "T_full": "all29 depth3 tree"
+  },
+  "schedules": [
+    {
+      "scenario": "posthoc",
+      "seed": 20261109,
+      "rounds": 200,
+      "variants": [
+        "M_base",
+        "M_full",
+        "M_full_no_interval",
+        "M_full_no_changed",
+        "M_base_plus_changedcount",
+        "T_full"
+      ]
+    },
+    {
+      "scenario": "posthoc_calibration_seed",
+      "seed": 20261110,
+      "rounds": 200,
+      "variants": [
+        "M_base",
+        "M_full_no_interval"
+      ]
+    },
+    {
+      "scenario": "posthoc_rounds50",
+      "seed": 20261109,
+      "rounds": 50,
+      "variants": [
+        "M_base",
+        "M_full"
+      ]
+    }
+  ],
+  "selection": "Report all specified comparisons. Do not replace the primary result with the best followup row.",
+  "notes": "M_base and M_full references are retrained on identical splits to verify deterministic reproducibility and produce within-run paired deltas. Outer results never choose rounds or thresholds.",
+  "parent_spec_sha256": "ab28b628da04779001d603679fb2c5eb4daec8b7e9fe8d833d4421aa826d8b7f",
+  "followup_spec_sha256": "4d6274d4a3e149e107110750edc4e332a443554ae4c7884f54dfbe28fd037284",
+  "feature_sets_explicit": {
+    "M_full_no_interval": [
+      "installScriptPresent",
+      "installScriptAdded",
+      "scriptEntryAdded",
+      "newDependencyAdded",
+      "newDependencyCount",
+      "updateType",
+      "obfChangedFileCount",
+      "obfHexIdentRatioNew",
+      "obfHexIdentRatioChange",
+      "obfHexIdentRatioChangedCode",
+      "obfHexNumberRatioNew",
+      "obfHexNumberRatioChange",
+      "obfHexNumberRatioChangedCode",
+      "obfBracketAccessRatioNew",
+      "obfBracketAccessRatioChange",
+      "obfBracketAccessRatioChangedCode",
+      "obfEscapeDensityNew",
+      "obfEscapeDensityChange",
+      "obfEscapeDensityChangedCode",
+      "obfShortIdentRatioNew",
+      "obfShortIdentRatioChange",
+      "obfShortIdentRatioChangedCode",
+      "obfMeanIdentLengthNew",
+      "obfMeanIdentLengthChange",
+      "obfMeanIdentLengthChangedCode",
+      "obfWhitespaceRatioNew",
+      "obfWhitespaceRatioChange",
+      "obfWhitespaceRatioChangedCode"
+    ],
+    "M_full_no_changed": [
+      "installScriptPresent",
+      "installScriptAdded",
+      "scriptEntryAdded",
+      "newDependencyAdded",
+      "newDependencyCount",
+      "updateType",
+      "updateInterval",
+      "obfHexIdentRatioNew",
+      "obfHexIdentRatioChange",
+      "obfHexNumberRatioNew",
+      "obfHexNumberRatioChange",
+      "obfBracketAccessRatioNew",
+      "obfBracketAccessRatioChange",
+      "obfEscapeDensityNew",
+      "obfEscapeDensityChange",
+      "obfShortIdentRatioNew",
+      "obfShortIdentRatioChange",
+      "obfMeanIdentLengthNew",
+      "obfMeanIdentLengthChange",
+      "obfWhitespaceRatioNew",
+      "obfWhitespaceRatioChange"
+    ],
+    "M_base_plus_changedcount": [
+      "installScriptPresent",
+      "installScriptAdded",
+      "scriptEntryAdded",
+      "newDependencyAdded",
+      "newDependencyCount",
+      "updateType",
+      "updateInterval",
+      "obfChangedFileCount"
+    ],
+    "T_full": [
+      "installScriptPresent",
+      "installScriptAdded",
+      "scriptEntryAdded",
+      "newDependencyAdded",
+      "newDependencyCount",
+      "updateType",
+      "updateInterval",
+      "obfChangedFileCount",
+      "obfHexIdentRatioNew",
+      "obfHexIdentRatioChange",
+      "obfHexIdentRatioChangedCode",
+      "obfHexNumberRatioNew",
+      "obfHexNumberRatioChange",
+      "obfHexNumberRatioChangedCode",
+      "obfBracketAccessRatioNew",
+      "obfBracketAccessRatioChange",
+      "obfBracketAccessRatioChangedCode",
+      "obfEscapeDensityNew",
+      "obfEscapeDensityChange",
+      "obfEscapeDensityChangedCode",
+      "obfShortIdentRatioNew",
+      "obfShortIdentRatioChange",
+      "obfShortIdentRatioChangedCode",
+      "obfMeanIdentLengthNew",
+      "obfMeanIdentLengthChange",
+      "obfMeanIdentLengthChangedCode",
+      "obfWhitespaceRatioNew",
+      "obfWhitespaceRatioChange",
+      "obfWhitespaceRatioChangedCode"
+    ]
+  }
+}
