@@ -49,7 +49,8 @@
       "seed": 20261109
     },
     "rounds": 200,
-    "early_stopping": false
+    "early_stopping": false,
+    "inner_rng_seed": "inner_seed + outer_fold: inner_split permutes the sorted component list with numpy.random.default_rng(inner_seed + outer_fold) before the greedy calibration pick (both training snapshots call inner_split(..., seed + fold)); the executed spec 'inner' text above does not state the fold offset."
   },
   "feature_encoding": "updateType -> pandas Categorical with categories [major, minor, patch] (LightGBM categorical_feature); every other feature -> float64 (bool True/False -> 1.0/0.0); missing values stay NaN.",
   "feature_sets": {

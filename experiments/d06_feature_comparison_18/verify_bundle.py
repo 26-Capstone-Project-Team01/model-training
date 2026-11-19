@@ -1,7 +1,9 @@
 """D06 18모델 인계 묶음 검증(표준 라이브러리만 사용, 모델 로드·추론·학습 없음).
 
 사용: python -I -B -X utf8 verify_bundle.py [--train-csv <train.csv>]
-통과하면 종료 코드 0, 하나라도 어긋나면 1이다.
+묶음 무결성 검사가 통과하면 종료 코드 0, 하나라도 어긋나면 1이다.
+외부 입력(학습 특징 CSV, 저장소의 class 파일)은 주어졌거나 있을 때만 확인한다.
+확인하지 못한 외부 입력은 종료 코드와 별개로 마지막에 "외부 입력 검증 미완료"로 출력한다.
 """
 import argparse
 import csv
@@ -39,8 +41,9 @@ def read_csv(path):
 def check_sums():
     listed = {}
     for line in (HERE / "SHA256SUMS").read_text(encoding="utf-8").splitlines():
-        digest, rel = line.split("  ", 1)
-        listed[rel] = digest
+        m = re.fullmatch(r"([0-9a-f]{64}) [ *](.+)", line)  # sha256sum text("  ") and binary(" *") forms
+        if check(m is not None, f"SHA256SUMS 형식 오류: {line[:80]}"):
+            listed[m.group(2)] = m.group(1)
     for rel, digest in listed.items():
         p = HERE / rel
         if check(p.is_file(), f"SHA256SUMS 파일 없음: {rel}"):
@@ -103,7 +106,7 @@ def check_inputs(index, train_csv):
     if CLASSES_CSV.is_file():
         check(sha(CLASSES_CSV) == inputs["classes"]["sha256"], "results/diagnostics/d06_diag01_pair_predictions.csv 해시 불일치")
     else:
-        notes.append("classes 입력(저장소 results/diagnostics) 없음: 해시 확인 건너뜀")
+        notes.append("class 파일 해시 미확인(저장소의 results/diagnostics/d06_diag01_pair_predictions.csv 없음)")
     meta = read_csv(HERE / "scores/row_metadata.csv")
     if train_csv:
         check(sha(train_csv) == inputs["train"]["sha256"], "train.csv SHA256 불일치")
@@ -114,7 +117,7 @@ def check_inputs(index, train_csv):
         check([c for c in header if c in index["feature_sets"]["full29"]["features"]] == index["feature_sets"]["full29"]["features"],
               "train.csv 특징 열 순서 불일치")
     else:
-        notes.append("--train-csv 미지정: train.csv 해시·행 순서 확인 건너뜀")
+        notes.append("학습 특징 CSV 해시·행 순서·특징 열 순서 미확인(--train-csv 미지정)")
     return meta, notes
 
 
@@ -225,14 +228,20 @@ def main():
         check_public_copies()
     except (OSError, KeyError, ValueError, AttributeError, IndexError) as exc:
         errors.append(f"검증 중단: {type(exc).__name__}: {exc}")
-    for n in notes:
-        print("참고:", n)
     if errors:
         print(f"실패 {len(errors)}건")
         for e in errors[:50]:
             print(" -", e)
-        sys.exit(1)
-    print("통과: 모델 18개 해시·선택 key·feature 순서·rounds, split1/split2 row_id 완전성·stage 비중복, 점수 대응, 입력 해시, 원 saved_splits 재구성")
+    else:
+        print("묶음 무결성 통과: 모델 18개 해시·선택 key·feature 순서·rounds, split1/split2 row_id 완전성·stage 비중복,"
+              " 점수 대응, 묶음 안 그룹 입력 해시, 원 saved_splits 재구성")
+    if notes:
+        print(f"외부 입력 검증 미완료 {len(notes)}건(아래 항목은 확인하지 않았다):")
+        for n in notes:
+            print(" -", n)
+    elif not errors:  # an abort before check_inputs leaves notes empty, so completion is claimed only on a clean run
+        print("외부 입력 검증 완료: 학습 특징 CSV 해시·행 순서·특징 열 순서, class 파일 해시")
+    sys.exit(1 if errors else 0)
 
 
 if __name__ == "__main__":

@@ -13,6 +13,8 @@ D06 개발자료 2,767쌍으로 이미 학습한 LightGBM 모델 18개와 그 �
    python -I -B -X utf8 experiments/d06_feature_comparison_18/verify_bundle.py
    ```
 
+   기본 실행은 묶음 무결성만 확인하며 종료 코드 0은 그 통과를 뜻한다. 학습 특징 CSV는 `--train-csv`를 줄 때(5절), class 파일은 이 저장소 안에서 실행할 때만 확인한다. 확인하지 못한 외부 입력은 마지막에 "외부 입력 검증 미완료"로 표시되므로 전체 입력 해시가 통과한 것으로 읽지 않는다.
+
 2. `model_index.csv`(또는 `model_index.json`)에서 18개 모델의 특징 순서, 분할, fold, 원 실행, 해시, 학습 횟수를 확인한다.
 3. 3절의 규칙으로 `splits/split1.csv`·`splits/split2.csv`와 `scores/saved_scores.csv`를 모델에 연결한다.
 4. `evaluation/summary.md`에서 임계값별 Recall/FN, 검토 후보 수, fold 안 순위, 낮은 점수 악성, 확률 해석 진단을 본다.
@@ -40,7 +42,8 @@ D06 개발자료 2,767쌍으로 이미 학습한 LightGBM 모델 18개와 그 �
 | no_interval28 | split1 | 200 | 151 | 200 |
 | no_interval28 | split2 | 200 | 200 | 200 |
 
-149·151은 LightGBM이 더 나눌 분할을 찾지 못해 요청 횟수 전에 멈춘 결과로 원 학습 기록(`training.csv`의 `trained_rounds`)과 모델 파일의 트리 수가 같다.
+149·151은 요청 횟수 전에 학습이 끝난 모델이며 원 학습 기록(`training.csv`의 `trained_rounds`)과 모델 파일의 트리 수가 같다.
+학습 로그는 남지 않았다(`verbosity=-1`). 학습 코드에 검증 세트·callback이 없고 early stopping을 쓰지 않으므로 LightGBM이 더 나눌 분할을 찾지 못해 멈춘 것으로 해석했다(로그 확인이 아니라 코드에 근거한 해석).
 early stopping과 outer 자료는 학습 횟수 결정에 쓰지 않았다.
 
 ## 3. 분할 정의와 파일 연결
@@ -50,6 +53,7 @@ early stopping과 outer 자료는 학습 횟수 결정에 쓰지 않았다.
 - outer fold 0/1/2는 component 단위 3fold이고 세 특징 세트와 두 split이 모두 같은 배정을 쓴다. 행 수는 945/911/911, 악성은 332/298/298이다.
 - 각 outer fold의 나머지 두 fold(학습 부분)를 component 단위로 다시 fit과 calibration으로 나눈 것이 내부 분할이다. class별로 약 25%를 calibration에 두도록 seed를 쓴 greedy 배정이다.
 - split1은 내부 seed 20261109(기본), split2는 내부 seed 20261110(대체)이다. split2는 fit/calibration 배정만 바꾼 것이며 outer fold2와 무관하다.
+- 실제 RNG seed는 `inner_seed + outer_fold`다. fold k의 내부 분할은 정렬한 component 목록을 `numpy.random.default_rng(inner_seed + k)`로 섞은 순서로 greedy 배정한다. 이 fold 더하기는 실행 명세의 `inner` 설명에는 없고 두 학습 스냅샷의 코드(`inner_split(..., seed + fold)`)에 있다. 그래서 split1 fold1과 split2 fold0은 같은 RNG seed 20261110을 쓰지만 나누는 행 집합이 다르다.
 - stage의 의미: `fit`은 모델 학습, `calibration`은 임계값 같은 기준 조정, `outer`는 평가에만 쓴 행이다. 모델·split·fold마다 세 stage가 2,767행을 중복 없이 나누고 component도 stage 사이에 겹치지 않는다.
 
 | split | fold | fit 행(악성) | calibration 행(악성) | outer 행 |
@@ -70,6 +74,7 @@ early stopping과 outer 자료는 학습 횟수 결정에 쓰지 않았다.
 - 분할: `split_file`에서 `split_filter`(model, seed, fold)가 같은 행.
 - 점수: `scores/saved_scores.csv`에서 `score_filter`(model, seed, fold)가 같은 행. stage는 calibration과 outer만 있다.
 - 평가 결과: `evaluation/*.csv`에서 `evaluation_key`(model, variant, source_scenario, seed, fold)가 같은 행. fold가 -1인 행은 세 outer fold를 합친 값이다.
+- `evaluation/low_by_group.csv`에는 fold=-1 합산 행만 있어 fold별 key로는 행이 나오지 않으므로 model, variant, source_scenario, seed와 fold=-1로 찾는다. `evaluation/cohorts.csv`에는 fold별 행만 있다.
 
 ## 4. 입력, 환경, 학습 조건
 
@@ -127,6 +132,7 @@ python -I -B -X utf8 experiments/d06_feature_comparison_18/verify_bundle.py --tr
 - `scores/saved_scores.csv`: 18개 모델의 calibration과 outer 점수 25,644행이다(모델·split마다 outer 2,767행). fit 행 점수는 없다. 점수는 원 학습 실행의 `predictions.csv` 값과 같다.
 - `scores/row_metadata.csv`: row_id별 쌍 정보와 outer_fold다.
 - `evaluation/`: 저장 점수만 다시 읽어 계산한 진단이다(새 학습, 추론, 확률 보정 0회). 계산 명세는 `provenance/phase7_score_eval/executed_spec.public.json`이다.
+- 진단 계산 코드(`executed_script.py`, `evaluator_snapshot.py`, `fusion_helper_snapshot.py`, `tests_snapshot.py`)는 이 묶음에 넣지 않았고 경로와 SHA-256만 `provenance/phase7_score_eval/manifest.public.json`에 있다. 따라서 `evaluation/` 수치를 같은 코드로 다시 계산하는 기능은 이 묶음에 없으며, 다시 계산하려면 저장 점수와 계산 명세로 따로 구현해야 한다.
 
 | 파일 | 내용 |
 |---|---|
@@ -151,6 +157,8 @@ python -I -B -X utf8 experiments/d06_feature_comparison_18/verify_bundle.py --tr
 | 분할 | `splits/cv_3fold_assignment.csv` | component 3fold + fold마다 fit/calibration 내부 분할 2개 |
 | 학습 횟수 | 최대 500회, outer 평가 fold를 early stopping 검증 세트로 사용 | 200회 요청 고정, early stopping 없음, outer는 평가에만 사용 |
 | 기준 조정 자료 | 없음 | calibration stage |
+
+팀 기록에서 "추가 18모델"로 부르는 phase3 residual 실행(규칙 적중 행 제외 학습)과도 다른 묶음이다. 그 실행의 모델(29개 특징 전체 학습 6, R_obf 적중 행을 fit에서 뺀 6, R2_and_obf 적중 행을 fit에서 뺀 6)은 이 묶음에 들어 있지 않고, 이 묶음의 모델은 규칙 적중 행을 빼지 않았다.
 
 ## 8. 해석 한계
 
@@ -195,6 +203,14 @@ experiments/d06_feature_comparison_18/
 - 모델 파일의 `feature_names` 순서와 색인·원 `feature_sets.json`의 일치, 트리 수와 실제 학습 횟수
 - split1/split2의 seed, 모델·fold마다 row_id 2,767개 완전성, fit/calibration/outer 비중복, component 비중복, outer와 `row_metadata`의 일치, 원 `saved_splits.csv` 바이트 재구성
 - 점수 행과 분할 calibration/outer row_id의 1:1 대응, 점수 범위, 메타데이터 일치
-- 입력 해시(그룹 파일, 저장소 안 class 파일, `--train-csv`를 주면 학습 특징 CSV와 행 순서)
+- 입력 해시: 묶음 안 그룹 파일은 항상 확인한다. 저장소 안 class 파일은 이 저장소에서 실행할 때, 학습 특징 CSV(해시·행 순서·특징 열 순서)는 `--train-csv`를 줄 때만 확인한다. 확인하지 못한 외부 입력은 종료 코드가 0이어도 마지막에 "외부 입력 검증 미완료"로 표시된다.
 
-Linux나 Git Bash에서는 `sha256sum -c SHA256SUMS`로도 파일 해시를 확인할 수 있다.
+`sha256sum -c SHA256SUMS`는 묶음 폴더 안에서 실행한다(Linux, Git Bash).
+SHA256SUMS는 README.md와 verify_bundle.py까지 포함하므로 묶음 안 파일을 하나라도 고치면 묶음 폴더 안에서 SHA256SUMS를 다시 만들고 `verify_bundle.py --train-csv`를 다시 실행한다.
+
+```bash
+cd experiments/d06_feature_comparison_18
+sha256sum -c SHA256SUMS
+# 파일을 고친 뒤 재생성
+find . -type f ! -name SHA256SUMS ! -path '*/__pycache__/*' -printf '%P\n' | LC_ALL=C sort | xargs sha256sum > SHA256SUMS
+```
