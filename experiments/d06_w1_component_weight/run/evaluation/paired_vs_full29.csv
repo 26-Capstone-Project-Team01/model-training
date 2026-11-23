@@ -1,0 +1,17 @@
+variant,seed,threshold,tp_gain,tp_lost,fp_added,fp_removed,hard_benign_fp_added,hard_benign_fp_removed
+w1_component,20261109,0.01,6,10,5,3,1,2
+w1_component,20261109,0.05,9,8,2,2,1,0
+w1_component,20261109,0.1,10,57,4,2,3,0
+w1_component,20261109,0.5,7,45,2,1,0,0
+w1_splitgroup,20261109,0.01,10,7,5,2,1,0
+w1_splitgroup,20261109,0.05,14,5,3,3,0,1
+w1_splitgroup,20261109,0.1,12,49,3,2,1,0
+w1_splitgroup,20261109,0.5,33,44,1,1,0,0
+w1_component,20261110,0.01,18,1,7,5,2,1
+w1_component,20261110,0.05,18,2,5,3,3,2
+w1_component,20261110,0.1,21,8,4,1,4,1
+w1_component,20261110,0.5,14,29,0,2,0,1
+w1_splitgroup,20261110,0.01,19,5,7,6,1,1
+w1_splitgroup,20261110,0.05,23,22,3,4,1,2
+w1_splitgroup,20261110,0.1,24,39,2,2,2,1
+w1_splitgroup,20261110,0.5,24,53,0,3,0,2

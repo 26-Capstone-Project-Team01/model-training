@@ -1,0 +1,75 @@
+{
+  "purpose": "full29 unweighted retrain with the same code/inputs to confirm W1 differs from PR #13 full29 only by sample weight",
+  "models": [
+    {
+      "model": "full29_split1_fold0",
+      "pr13_model_sha256": "6367af5603f179ccc82eb19d21d352bb5ada0d0ae7cc4b5e657711e2f68af18d",
+      "repro_model_sha256": "63ce8721403201442518e07758c23be0ac913b492404484fecddfd46e5ec7935",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "63ce8721403201442518e07758c23be0ac913b492404484fecddfd46e5ec7935",
+      "pr13_content_sha256_without_CR": "63ce8721403201442518e07758c23be0ac913b492404484fecddfd46e5ec7935",
+      "trained_rounds": 200
+    },
+    {
+      "model": "full29_split1_fold1",
+      "pr13_model_sha256": "cb07dc39691eec565b554bd0bd494d508d040f493ca03cb230bac6acd1de316b",
+      "repro_model_sha256": "db7783d7df545b5e1e8f7e5cc3ff15af0ee9b1c4fdb89a8ef83d8a40567c81ae",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "db7783d7df545b5e1e8f7e5cc3ff15af0ee9b1c4fdb89a8ef83d8a40567c81ae",
+      "pr13_content_sha256_without_CR": "db7783d7df545b5e1e8f7e5cc3ff15af0ee9b1c4fdb89a8ef83d8a40567c81ae",
+      "trained_rounds": 149
+    },
+    {
+      "model": "full29_split1_fold2",
+      "pr13_model_sha256": "69589d0c5f99586abf21e2518e35166e8c690aa5b81c961aef81df4cc600229f",
+      "repro_model_sha256": "24156ccc48ee326b5d31b7003b28811142eb836aa7b792eb6180b30a7f03a67f",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "24156ccc48ee326b5d31b7003b28811142eb836aa7b792eb6180b30a7f03a67f",
+      "pr13_content_sha256_without_CR": "24156ccc48ee326b5d31b7003b28811142eb836aa7b792eb6180b30a7f03a67f",
+      "trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold0",
+      "pr13_model_sha256": "97b2372b563ddee98dd76fb9f37f93a814d29b0a66dc48dbb21c6ac2fa59abc8",
+      "repro_model_sha256": "7196bc83cff6d8be1f4727c791d4b7511825e6085d5012010f7e7cd857c007e7",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "7196bc83cff6d8be1f4727c791d4b7511825e6085d5012010f7e7cd857c007e7",
+      "pr13_content_sha256_without_CR": "7196bc83cff6d8be1f4727c791d4b7511825e6085d5012010f7e7cd857c007e7",
+      "trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold1",
+      "pr13_model_sha256": "d29662f275f661388358d2117c434dfcbe06a19e6f9d0f4c86dfc627f4255a61",
+      "repro_model_sha256": "4160e98d7cb492836590a0bb291eb4f558d815dc82a640e0f998f27542a4607e",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "4160e98d7cb492836590a0bb291eb4f558d815dc82a640e0f998f27542a4607e",
+      "pr13_content_sha256_without_CR": "4160e98d7cb492836590a0bb291eb4f558d815dc82a640e0f998f27542a4607e",
+      "trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold2",
+      "pr13_model_sha256": "f0cf682a2efa1f3a47f6c5fff837ef449ef2dcce71a55a9740f8d1911fb414d7",
+      "repro_model_sha256": "f882bfbcd58b15b8b8088e8ba5432aaa09b8bd350deb5f23cb54ecbe01bcfdea",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "repro_content_sha256_without_CR": "f882bfbcd58b15b8b8088e8ba5432aaa09b8bd350deb5f23cb54ecbe01bcfdea",
+      "pr13_content_sha256_without_CR": "f882bfbcd58b15b8b8088e8ba5432aaa09b8bd350deb5f23cb54ecbe01bcfdea",
+      "trained_rounds": 200
+    }
+  ],
+  "all_model_content_equal": true,
+  "scores": {
+    "pr13_rows": 8548,
+    "repro_rows": 8548,
+    "matched_rows": 8548,
+    "max_abs_diff": 1.1102230246251565e-16,
+    "exact_equal_fraction": 0.99859616284511
+  },
+  "evaluator_selfcheck": "evaluate_w1.py recomputes PR #13 full29 thresholds/ranking/low_scores/recall_examples and exits on any mismatch",
+  "note": "raw bytes differ because PR #13 models were written on Windows with mixed CRLF; repro files and scores are not kept in this folder to avoid duplicating PR #13"
+}
