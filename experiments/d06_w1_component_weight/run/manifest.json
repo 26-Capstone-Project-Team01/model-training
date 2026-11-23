@@ -1,0 +1,69 @@
+{
+  "experiment_id": "D06-W1",
+  "data_version": "D06",
+  "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+  "inputs": {
+    "train": {
+      "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+      "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+    },
+    "groups": {
+      "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train_malicious_groups.csv",
+      "sha256": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2"
+    },
+    "classes": {
+      "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+      "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+    }
+  },
+  "snapshot": "d06_feature_comparison_18/provenance/phase2_run1_base7_full29/executed_script_snapshot.py",
+  "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+  "script_sha256": "4ace1929dd9d637dc564aa348fd5b742db9c1c1bd232d069c31fd678d488e6f1",
+  "lightgbm_params": {
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "verbosity": -1,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "seed": 20261109
+  },
+  "rounds": 200,
+  "packages": {
+    "lightgbm": "4.7.0",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3"
+  },
+  "read_test": false,
+  "features": [
+    "installScriptPresent",
+    "installScriptAdded",
+    "scriptEntryAdded",
+    "newDependencyAdded",
+    "newDependencyCount",
+    "updateType",
+    "updateInterval",
+    "obfChangedFileCount",
+    "obfHexIdentRatioNew",
+    "obfHexIdentRatioChange",
+    "obfHexIdentRatioChangedCode",
+    "obfHexNumberRatioNew",
+    "obfHexNumberRatioChange",
+    "obfHexNumberRatioChangedCode",
+    "obfBracketAccessRatioNew",
+    "obfBracketAccessRatioChange",
+    "obfBracketAccessRatioChangedCode",
+    "obfEscapeDensityNew",
+    "obfEscapeDensityChange",
+    "obfEscapeDensityChangedCode",
+    "obfShortIdentRatioNew",
+    "obfShortIdentRatioChange",
+    "obfShortIdentRatioChangedCode",
+    "obfMeanIdentLengthNew",
+    "obfMeanIdentLengthChange",
+    "obfMeanIdentLengthChangedCode",
+    "obfWhitespaceRatioNew",
+    "obfWhitespaceRatioChange",
+    "obfWhitespaceRatioChangedCode"
+  ]
+}
