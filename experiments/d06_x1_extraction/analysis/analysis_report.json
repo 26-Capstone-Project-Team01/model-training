@@ -1,0 +1,975 @@
+{
+ "checks": {
+  "train_rows": 2767,
+  "x1_rows": 2767,
+  "x1_duplicate_keys": 0,
+  "train_pairs_without_x1_row": 0,
+  "x1_rows_not_in_train": 0,
+  "label_class_consistent": true,
+  "class_counts": {
+   "benign": 1600,
+   "malicious": 928,
+   "hard_benign": 239
+  }
+ },
+ "status_by_class": {
+  "error": {
+   "benign": 0,
+   "hard_benign": 2,
+   "malicious": 0
+  },
+  "ok": {
+   "benign": 1600,
+   "hard_benign": 237,
+   "malicious": 928
+  }
+ },
+ "errors": [
+  {
+   "class": "hard_benign",
+   "error_stage": "packument",
+   "n": 2
+  }
+ ],
+ "distribution": [
+  {
+   "feature": "installHookNewProgramCount",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 713,
+   "nonzero_rate_of_observed": 0.7683189655172413,
+   "values": {
+    "0": 215,
+    "1": 701,
+    "2": 11,
+    "3": 1
+   }
+  },
+  {
+   "feature": "installHookNewProgramCount",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 1,
+   "nonzero_rate_of_observed": 0.000625,
+   "values": {
+    "0": 1599,
+    "1": 1
+   }
+  },
+  {
+   "feature": "installHookNewProgramCount",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 0,
+   "nonzero": 103,
+   "nonzero_rate_of_observed": 0.4345991561181435,
+   "values": {
+    "0": 134,
+    "1": 99,
+    "2": 4
+   }
+  },
+  {
+   "feature": "installHookArgsChanged",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 7,
+   "nonzero_rate_of_observed": 0.007543103448275862,
+   "values": {
+    "0": 921,
+    "1": 7
+   }
+  },
+  {
+   "feature": "installHookArgsChanged",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 1,
+   "nonzero_rate_of_observed": 0.000625,
+   "values": {
+    "0": 1599,
+    "1": 1
+   }
+  },
+  {
+   "feature": "installHookArgsChanged",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 0,
+   "nonzero": 0,
+   "nonzero_rate_of_observed": 0.0,
+   "values": {
+    "0": 237
+   }
+  },
+  {
+   "feature": "installHookRefFileChanged",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 4,
+   "nonzero": 710,
+   "nonzero_rate_of_observed": 0.7683982683982684,
+   "values": {
+    "0": 214,
+    "1": 710
+   }
+  },
+  {
+   "feature": "installHookRefFileChanged",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 1,
+   "nonzero": 3,
+   "nonzero_rate_of_observed": 0.001876172607879925,
+   "values": {
+    "0": 1596,
+    "1": 3
+   }
+  },
+  {
+   "feature": "installHookRefFileChanged",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 6,
+   "nonzero": 38,
+   "nonzero_rate_of_observed": 0.1645021645021645,
+   "values": {
+    "0": 193,
+    "1": 38
+   }
+  },
+  {
+   "feature": "installHookNewExternalExecCount",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 0,
+   "nonzero_rate_of_observed": 0.0,
+   "values": {
+    "0": 928
+   }
+  },
+  {
+   "feature": "installHookNewExternalExecCount",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 0,
+   "nonzero_rate_of_observed": 0.0,
+   "values": {
+    "0": 1600
+   }
+  },
+  {
+   "feature": "installHookNewExternalExecCount",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 0,
+   "nonzero": 0,
+   "nonzero_rate_of_observed": 0.0,
+   "values": {
+    "0": 237
+   }
+  },
+  {
+   "feature": "addedProcExecCallCount",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 516,
+   "nonzero_rate_of_observed": 0.5560344827586207,
+   "values": {
+    "0": 412,
+    "1": 28,
+    "4": 7,
+    "5": 66,
+    "6": 323,
+    "7": 45,
+    "8": 47
+   }
+  },
+  {
+   "feature": "addedProcExecCallCount",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 11,
+   "nonzero_rate_of_observed": 0.006875,
+   "values": {
+    "0": 1589,
+    "1": 7,
+    "2": 2,
+    "3": 2
+   }
+  },
+  {
+   "feature": "addedProcExecCallCount",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 0,
+   "nonzero": 26,
+   "nonzero_rate_of_observed": 0.10970464135021098,
+   "values": {
+    "0": 211,
+    "1": 12,
+    "2": 4,
+    "3": 2,
+    "4": 2,
+    "6": 2,
+    "8": 2,
+    "10": 1
+   }
+  },
+  {
+   "feature": "addedNetworkCallCount",
+   "class": "malicious",
+   "n": 928,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 770,
+   "nonzero_rate_of_observed": 0.8297413793103449,
+   "values": {
+    "0": 158,
+    "1": 57,
+    "2": 5,
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "7": 67,
+    "8": 3
+   }
+  },
+  {
+   "feature": "addedNetworkCallCount",
+   "class": "benign",
+   "n": 1600,
+   "extract_failed": 0,
+   "missing_in_ok": 0,
+   "nonzero": 26,
+   "nonzero_rate_of_observed": 0.01625,
+   "values": {
+    "0": 1574,
+    "1": 13,
+    "2": 7,
+    "3": 1,
+    "6": 3,
+    "7": 1,
+    "226": 1
+   }
+  },
+  {
+   "feature": "addedNetworkCallCount",
+   "class": "hard_benign",
+   "n": 239,
+   "extract_failed": 2,
+   "missing_in_ok": 0,
+   "nonzero": 43,
+   "nonzero_rate_of_observed": 0.18143459915611815,
+   "values": {
+    "0": 194,
+    "1": 11,
+    "2": 8,
+    "3": 3,
+    "4": 8,
+    "5": 3,
+    "6": 2,
+    "8": 1
+   }
+  }
+ ],
+ "top_spearman": {
+  "installHookNewProgramCount": {
+   "installScriptAdded": 0.977,
+   "installScriptPresent": 0.945,
+   "scriptEntryAdded": 0.869,
+   "obfBracketAccessRatioChange": 0.657,
+   "obfBracketAccessRatioChangedCode": 0.65
+  },
+  "installHookArgsChanged": {
+   "obfEscapeDensityChangedCode": 0.097,
+   "installScriptPresent": 0.079,
+   "obfEscapeDensityNew": 0.078,
+   "obfMeanIdentLengthNew": 0.06,
+   "updateInterval": 0.052
+  },
+  "installHookRefFileChanged": {
+   "installScriptAdded": 0.918,
+   "installScriptPresent": 0.9,
+   "scriptEntryAdded": 0.812,
+   "obfBracketAccessRatioChange": 0.729,
+   "obfHexIdentRatioChange": 0.707
+  },
+  "installHookNewExternalExecCount": {
+   "installScriptPresent": NaN,
+   "installScriptAdded": NaN,
+   "scriptEntryAdded": NaN,
+   "newDependencyAdded": NaN,
+   "newDependencyCount": NaN
+  },
+  "addedProcExecCallCount": {
+   "obfHexIdentRatioNew": 0.887,
+   "obfHexIdentRatioChange": 0.884,
+   "obfHexIdentRatioChangedCode": 0.878,
+   "obfHexNumberRatioChange": 0.85,
+   "obfHexNumberRatioChangedCode": 0.816
+  },
+  "addedNetworkCallCount": {
+   "installScriptAdded": 0.755,
+   "obfBracketAccessRatioChange": 0.75,
+   "obfEscapeDensityChange": 0.741,
+   "obfBracketAccessRatioChangedCode": 0.737,
+   "installScriptPresent": 0.734
+  }
+ },
+ "newprog_vs_installScriptAdded": [
+  {
+   "class": "benign",
+   "installScriptAdded": 0.0,
+   "newprog": 0,
+   "n": 1599
+  },
+  {
+   "class": "benign",
+   "installScriptAdded": 1.0,
+   "newprog": 1,
+   "n": 1
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 0.0,
+   "newprog": -1,
+   "n": 1
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 0.0,
+   "newprog": 0,
+   "n": 121
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 0.0,
+   "newprog": 1,
+   "n": 2
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 0.0,
+   "newprog": 2,
+   "n": 1
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 1.0,
+   "newprog": -1,
+   "n": 1
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 1.0,
+   "newprog": 0,
+   "n": 13
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 1.0,
+   "newprog": 1,
+   "n": 97
+  },
+  {
+   "class": "hard_benign",
+   "installScriptAdded": 1.0,
+   "newprog": 2,
+   "n": 3
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 0.0,
+   "newprog": 0,
+   "n": 209
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 0.0,
+   "newprog": 1,
+   "n": 3
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 1.0,
+   "newprog": 0,
+   "n": 6
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 1.0,
+   "newprog": 1,
+   "n": 698
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 1.0,
+   "newprog": 2,
+   "n": 11
+  },
+  {
+   "class": "malicious",
+   "installScriptAdded": 1.0,
+   "newprog": 3,
+   "n": 1
+  }
+ ],
+ "examples": {
+  "installScriptAdded_true_newprog_0": [
+   {
+    "package": "@mesadev/saguaro",
+    "old_version": "0.4.21",
+    "new_version": "0.4.22",
+    "class": "malicious",
+    "splitGroup": "mini-shai-hulud_2026-05"
+   },
+   {
+    "package": "cmux-agent-mcp",
+    "old_version": "0.1.2",
+    "new_version": "0.1.3",
+    "class": "malicious",
+    "splitGroup": "mini-shai-hulud_2026-05"
+   },
+   {
+    "package": "mbt",
+    "old_version": "1.2.47",
+    "new_version": "1.2.48",
+    "class": "malicious",
+    "splitGroup": "sap-maintainer-compromise"
+   },
+   {
+    "package": "@asyncapi/cli",
+    "old_version": "4.1.1",
+    "new_version": "4.1.3",
+    "class": "malicious",
+    "splitGroup": "sha1-hulud-second-coming_2025-11"
+   },
+   {
+    "package": "browser-webdriver-downloader",
+    "old_version": "3.0.7",
+    "new_version": "3.0.8",
+    "class": "malicious",
+    "splitGroup": "shai-hulud-original_2025-09"
+   },
+   {
+    "package": "cmux-agent-mcp",
+    "old_version": "0.1.2",
+    "new_version": "0.1.7",
+    "class": "malicious",
+    "splitGroup": "mini-shai-hulud_2026-05"
+   },
+   {
+    "package": "react-native-ble-plx",
+    "old_version": "0.1.3",
+    "new_version": "0.1.4",
+    "class": "hard_benign",
+    "splitGroup": ""
+   },
+   {
+    "package": "png-img",
+    "old_version": "0.4.1",
+    "new_version": "1.0.0",
+    "class": "hard_benign",
+    "splitGroup": ""
+   }
+  ],
+  "installScriptAdded_false_newprog_pos": [
+   {
+    "package": "@hapheus/n8n-nodes-pgp",
+    "old_version": "1.5.0",
+    "new_version": "1.5.1",
+    "class": "malicious",
+    "splitGroup": "sha1-hulud-second-coming_2025-11"
+   },
+   {
+    "package": "n8n-nodes-vercel-ai-sdk",
+    "old_version": "0.1.6",
+    "new_version": "0.1.7",
+    "class": "malicious",
+    "splitGroup": "sha1-hulud-second-coming_2025-11"
+   },
+   {
+    "package": "@crowdstrike/glide-core",
+    "old_version": "0.34.1",
+    "new_version": "0.34.2",
+    "class": "malicious",
+    "splitGroup": "shai-hulud-original_2025-09"
+   },
+   {
+    "package": "xxhash-addon",
+    "old_version": "2.0.3",
+    "new_version": "2.1.0",
+    "class": "hard_benign",
+    "splitGroup": ""
+   },
+   {
+    "package": "@lumen5/beamcoder",
+    "old_version": "0.0.4",
+    "new_version": "0.0.12",
+    "class": "hard_benign",
+    "splitGroup": ""
+   },
+   {
+    "package": "skia-canvas",
+    "old_version": "0.9.6",
+    "new_version": "0.9.15",
+    "class": "hard_benign",
+    "splitGroup": ""
+   }
+  ],
+  "addedProcExecCallCount_pos_benign_or_hard": [
+   {
+    "package": "frontengineerplugin",
+    "old_version": "0.0.36",
+    "new_version": "0.1.4",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 12.0
+   },
+   {
+    "package": "@mongez/huskier",
+    "old_version": "1.0.7",
+    "new_version": "1.1.0",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 10.0
+   },
+   {
+    "package": "browserrig",
+    "old_version": "0.1.0",
+    "new_version": "0.2.1",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "vite-react-ssg",
+    "old_version": "0.3.3",
+    "new_version": "0.4.0",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "react-native-enriched-markdown",
+    "old_version": "1.0.0",
+    "new_version": "1.0.1",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 6.0
+   },
+   {
+    "package": "zero-native",
+    "old_version": "0.0.0",
+    "new_version": "0.1.0",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 6.0
+   },
+   {
+    "package": "@wix/wix-code-lsp-server",
+    "old_version": "1.0.17",
+    "new_version": "1.0.18",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 4.0
+   },
+   {
+    "package": "@prisma/composer",
+    "old_version": "0.6.0",
+    "new_version": "0.7.0",
+    "class": "hard_benign",
+    "addedProcExecCallCount": 4.0
+   }
+  ],
+  "addedProcExecCallCount_zero_malicious_with_changed_js": {
+   "shai-hulud-original_2025-09": 186,
+   "mini-shai-hulud_2026-05": 57,
+   "individuals_case": 44,
+   "autotel-node-env-resolver_2026-06": 29,
+   "miasma_2026-06": 26,
+   "react-native-aria-gluestack_2025-06": 17,
+   "chaindrop_2026-08": 10,
+   "js-metrics_2018": 9,
+   "injective_2026-07": 1,
+   "miasma-leoplatform_2026-06": 1
+  },
+  "addedProcExecCallCount_pos_malicious_top": [
+   {
+    "package": "@antv/t8",
+    "old_version": "0.3.0",
+    "new_version": "0.5.0",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "@antv/l7-source",
+    "old_version": "2.25.10",
+    "new_version": "2.27.10",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "@antv/l7-map",
+    "old_version": "2.25.10",
+    "new_version": "2.27.10",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "@antv/l7-draw",
+    "old_version": "3.1.5",
+    "new_version": "3.2.5",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "@antv/lite-insight",
+    "old_version": "2.1.1",
+    "new_version": "2.2.1",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   },
+   {
+    "package": "@antv/li-aiearth-assets",
+    "old_version": "0.4.7",
+    "new_version": "0.5.7",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedProcExecCallCount": 8.0
+   }
+  ],
+  "addedNetworkCallCount_pos_benign_or_hard": [
+   {
+    "package": "klaviyo-api",
+    "old_version": "12.0.0",
+    "new_version": "12.0.1",
+    "class": "benign",
+    "addedNetworkCallCount": 226.0
+   },
+   {
+    "package": "jeep-sqlite",
+    "old_version": "1.6.8",
+    "new_version": "1.6.9",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 22.0
+   },
+   {
+    "package": "stockfish",
+    "old_version": "18.0.0",
+    "new_version": "18.0.1",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 15.0
+   },
+   {
+    "package": "zsign-wasm",
+    "old_version": "0.0.0",
+    "new_version": "0.0.1",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 13.0
+   },
+   {
+    "package": "glpk-wasm",
+    "old_version": "0.0.7",
+    "new_version": "0.1.0",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 12.0
+   },
+   {
+    "package": "browserrig",
+    "old_version": "0.1.0",
+    "new_version": "0.2.1",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 12.0
+   },
+   {
+    "package": "prisma-openapi",
+    "old_version": "1.5.0",
+    "new_version": "1.5.1",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 10.0
+   },
+   {
+    "package": "@vlcn.io/crsqlite-wasm",
+    "old_version": "0.5.3",
+    "new_version": "0.5.4",
+    "class": "hard_benign",
+    "addedNetworkCallCount": 9.0
+   }
+  ],
+  "addedNetworkCallCount_zero_malicious_with_changed_js": {
+   "autotel-node-env-resolver_2026-06": 29,
+   "miasma_2026-06": 26,
+   "mini-shai-hulud_2026-05": 17,
+   "react-native-aria-gluestack_2025-06": 17,
+   "individuals_case": 16,
+   "chaindrop_2026-08": 10,
+   "node-gyp-dll_2025-07": 9,
+   "pgserve-automagik-openwebconcept_2026-04": 2,
+   "miasma-leoplatform_2026-06": 1
+  },
+  "addedNetworkCallCount_pos_malicious_top": [
+   {
+    "package": "@antv/f6",
+    "old_version": "0.0.19",
+    "new_version": "0.1.19",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   },
+   {
+    "package": "@antv/gi-assets-scene",
+    "old_version": "2.2.21",
+    "new_version": "2.3.21",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   },
+   {
+    "package": "@antv/gi-assets-xlab",
+    "old_version": "0.1.30",
+    "new_version": "0.2.30",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   },
+   {
+    "package": "@antv/x6-react-components",
+    "old_version": "2.0.9",
+    "new_version": "2.2.9",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   },
+   {
+    "package": "@antv/li-aiearth-assets",
+    "old_version": "0.4.7",
+    "new_version": "0.6.7",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   },
+   {
+    "package": "@antv/narrative-text-editor",
+    "old_version": "0.2.20",
+    "new_version": "0.4.20",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "addedNetworkCallCount": 27.0
+   }
+  ],
+  "installHookRefFileChanged_pos_benign_or_hard": [
+   {
+    "package": "node",
+    "old_version": "20.6.0",
+    "new_version": "20.6.1",
+    "class": "benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "bwh-auth",
+    "old_version": "0.3.1",
+    "new_version": "0.3.2",
+    "class": "benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "vue-demi",
+    "old_version": "0.2.0",
+    "new_version": "0.3.0",
+    "class": "benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "easy-ffmpeg",
+    "old_version": "0.0.2",
+    "new_version": "0.0.4",
+    "class": "hard_benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@napi-rs/simple-git-linux-x64-musl",
+    "old_version": "0.1.0",
+    "new_version": "0.1.1",
+    "class": "hard_benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "agent-browser",
+    "old_version": "0.1.0",
+    "new_version": "0.1.1",
+    "class": "hard_benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@seydx/node-av-linux-x64",
+    "old_version": "3.1.1",
+    "new_version": "3.1.2",
+    "class": "hard_benign",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "zero-native",
+    "old_version": "0.0.0",
+    "new_version": "0.1.0",
+    "class": "hard_benign",
+    "installHookRefFileChanged": 1.0
+   }
+  ],
+  "installHookRefFileChanged_zero_malicious_with_changed_js": {
+   "individuals_case": 41,
+   "mini-shai-hulud_2026-05": 41,
+   "autotel-node-env-resolver_2026-06": 29,
+   "miasma_2026-06": 26,
+   "shai-hulud-original_2025-09": 18,
+   "react-native-aria-gluestack_2025-06": 17,
+   "js-metrics_2018": 9,
+   "injective_2026-07": 1,
+   "miasma-leoplatform_2026-06": 1,
+   "solana-web3js_2024-12": 1
+  },
+  "installHookRefFileChanged_pos_malicious_top": [
+   {
+    "package": "@bitwarden/cli",
+    "old_version": "2026.3.0",
+    "new_version": "2026.4.0",
+    "splitGroup": "bitwarden-cli_2026-04",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@antv/ava",
+    "old_version": "3.4.1",
+    "new_version": "3.6.1",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@antv/ava-react",
+    "old_version": "3.3.2",
+    "new_version": "3.5.2",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@antv/data-samples",
+    "old_version": "1.0.1",
+    "new_version": "1.2.1",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@antv/data-set",
+    "old_version": "0.11.8",
+    "new_version": "0.12.8",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "installHookRefFileChanged": 1.0
+   },
+   {
+    "package": "@antv/dumi-theme-antv",
+    "old_version": "0.8.4",
+    "new_version": "0.10.4",
+    "splitGroup": "mini-shai-hulud_2026-05",
+    "installHookRefFileChanged": 1.0
+   }
+  ]
+ },
+ "campaign_concentration": [
+  {
+   "feature": "installHookNewProgramCount",
+   "malicious_nonzero": 713,
+   "campaigns": 11,
+   "top_campaign": "sha1-hulud-second-coming_2025-11",
+   "top_share": 0.4642356241234222,
+   "by_campaign": {
+    "sha1-hulud-second-coming_2025-11": 331,
+    "shai-hulud-original_2025-09": 166,
+    "mini-shai-hulud_2026-05": 149,
+    "chaindrop_2026-08": 25,
+    "toptal-xene_2025-07": 10,
+    "node-gyp-dll_2025-07": 9,
+    "individuals_case": 8,
+    "nx-s1ngularity_2025-08": 7
+   }
+  },
+  {
+   "feature": "installHookArgsChanged",
+   "malicious_nonzero": 7,
+   "campaigns": 2,
+   "top_campaign": "pgserve-automagik-openwebconcept_2026-04",
+   "top_share": 0.8571428571428571,
+   "by_campaign": {
+    "pgserve-automagik-openwebconcept_2026-04": 6,
+    "shai-hulud-original_2025-09": 1
+   }
+  },
+  {
+   "feature": "installHookRefFileChanged",
+   "malicious_nonzero": 710,
+   "campaigns": 10,
+   "top_campaign": "sha1-hulud-second-coming_2025-11",
+   "top_share": 0.4676056338028169,
+   "by_campaign": {
+    "sha1-hulud-second-coming_2025-11": 332,
+    "shai-hulud-original_2025-09": 168,
+    "mini-shai-hulud_2026-05": 152,
+    "chaindrop_2026-08": 25,
+    "node-gyp-dll_2025-07": 9,
+    "pgserve-automagik-openwebconcept_2026-04": 7,
+    "nx-s1ngularity_2025-08": 7,
+    "individuals_case": 5
+   }
+  },
+  {
+   "feature": "installHookNewExternalExecCount",
+   "malicious_nonzero": 0,
+   "campaigns": 0,
+   "top_campaign": "",
+   "top_share": NaN,
+   "by_campaign": {}
+  },
+  {
+   "feature": "addedProcExecCallCount",
+   "malicious_nonzero": 516,
+   "campaigns": 9,
+   "top_campaign": "sha1-hulud-second-coming_2025-11",
+   "top_share": 0.6434108527131783,
+   "by_campaign": {
+    "sha1-hulud-second-coming_2025-11": 332,
+    "mini-shai-hulud_2026-05": 136,
+    "chaindrop_2026-08": 15,
+    "pgserve-automagik-openwebconcept_2026-04": 10,
+    "node-gyp-dll_2025-07": 9,
+    "nx-s1ngularity_2025-08": 7,
+    "sap-maintainer-compromise": 4,
+    "individuals_case": 2
+   }
+  },
+  {
+   "feature": "addedNetworkCallCount",
+   "malicious_nonzero": 770,
+   "campaigns": 12,
+   "top_campaign": "sha1-hulud-second-coming_2025-11",
+   "top_share": 0.43116883116883115,
+   "by_campaign": {
+    "sha1-hulud-second-coming_2025-11": 332,
+    "shai-hulud-original_2025-09": 186,
+    "mini-shai-hulud_2026-05": 176,
+    "individuals_case": 30,
+    "chaindrop_2026-08": 15,
+    "js-metrics_2018": 9,
+    "pgserve-automagik-openwebconcept_2026-04": 8,
+    "nx-s1ngularity_2025-08": 7
+   }
+  }
+ ]
+}

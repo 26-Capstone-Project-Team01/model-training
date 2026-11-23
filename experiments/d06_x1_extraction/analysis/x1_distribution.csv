@@ -1,0 +1,19 @@
+feature,class,n,extract_failed,missing_in_ok,nonzero,nonzero_rate_of_observed,values
+installHookNewProgramCount,malicious,928,0,0,713,0.7683189655172413,"{'0': 215, '1': 701, '2': 11, '3': 1}"
+installHookNewProgramCount,benign,1600,0,0,1,0.000625,"{'0': 1599, '1': 1}"
+installHookNewProgramCount,hard_benign,239,2,0,103,0.4345991561181435,"{'0': 134, '1': 99, '2': 4}"
+installHookArgsChanged,malicious,928,0,0,7,0.007543103448275862,"{'0': 921, '1': 7}"
+installHookArgsChanged,benign,1600,0,0,1,0.000625,"{'0': 1599, '1': 1}"
+installHookArgsChanged,hard_benign,239,2,0,0,0.0,{'0': 237}
+installHookRefFileChanged,malicious,928,0,4,710,0.7683982683982684,"{'0': 214, '1': 710}"
+installHookRefFileChanged,benign,1600,0,1,3,0.001876172607879925,"{'0': 1596, '1': 3}"
+installHookRefFileChanged,hard_benign,239,2,6,38,0.1645021645021645,"{'0': 193, '1': 38}"
+installHookNewExternalExecCount,malicious,928,0,0,0,0.0,{'0': 928}
+installHookNewExternalExecCount,benign,1600,0,0,0,0.0,{'0': 1600}
+installHookNewExternalExecCount,hard_benign,239,2,0,0,0.0,{'0': 237}
+addedProcExecCallCount,malicious,928,0,0,516,0.5560344827586207,"{'0': 412, '1': 28, '4': 7, '5': 66, '6': 323, '7': 45, '8': 47}"
+addedProcExecCallCount,benign,1600,0,0,11,0.006875,"{'0': 1589, '1': 7, '2': 2, '3': 2}"
+addedProcExecCallCount,hard_benign,239,2,0,26,0.10970464135021098,"{'0': 211, '1': 12, '2': 4, '3': 2, '4': 2, '6': 2, '8': 2, '10': 1}"
+addedNetworkCallCount,malicious,928,0,0,770,0.8297413793103449,"{'0': 158, '1': 57, '2': 5, '3': 2, '4': 2, '5': 2, '7': 67, '8': 3}"
+addedNetworkCallCount,benign,1600,0,0,26,0.01625,"{'0': 1574, '1': 13, '2': 7, '3': 1, '6': 3, '7': 1, '226': 1}"
+addedNetworkCallCount,hard_benign,239,2,0,43,0.18143459915611815,"{'0': 194, '1': 11, '2': 8, '3': 3, '4': 8, '5': 3, '6': 2, '8': 1}"

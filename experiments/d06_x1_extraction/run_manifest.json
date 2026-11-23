@@ -1,0 +1,42 @@
+{
+  "experiment_id": "D06-X1-EXTRACTION",
+  "status": "extraction and feature analysis complete; no model training",
+  "data": {
+    "version": "D06",
+    "repository": "26-Capstone-Project-Team01/npm-malware-package-pairs",
+    "commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+    "inputs": {
+      "derived/splits/train.csv": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+      "derived/pairs/baselines.csv": "acc48b6a6ef5883987ee93d978059c9a9c037bc4186598d6f23c62d3d2a793d2",
+      "derived/pairs/malicious_pair_groups.csv": "b05c9dfd869dde5b9a488d830bebec998c9673a388e835ec1b52c253153d7a7b"
+    },
+    "pairs": {"total": 2767, "malicious": 928, "benign": 1600, "hard_benign": 239},
+    "test_677_used": false
+  },
+  "extractor": {
+    "repository": "26-Capstone-Project-Team01/depbee-analyzer",
+    "branch": "feat/x1-code-context",
+    "commit": "d56738c234aae239d82729f964b7dd35f304fa93",
+    "draft_pr": 17,
+    "extractor_name": "code_context (OPTIONAL_EXTRACTOR_REGISTRY, not in default run)",
+    "features": ["installHookNewProgramCount", "installHookArgsChanged", "installHookRefFileChanged",
+                 "installHookNewExternalExecCount", "addedProcExecCallCount", "addedNetworkCallCount"]
+  },
+  "splits": {
+    "source": "model-training main experiments/d06_feature_comparison_18 (PR #13, merge e267281)",
+    "files": ["splits/split1.csv (inner seed 20261109)", "splits/split2.csv (inner seed 20261110)", "scores/row_metadata.csv"],
+    "row_alignment": "analysis/d06_full35.csv row i == train.csv data row i == PR #13 row_id i (verified, keys and labels identical)"
+  },
+  "environment": {"python": "3.13.18", "pandas": "3.0.6", "numpy": "2.5.3", "requests": "2.34.2",
+                  "workers": {"malicious": 2, "benign": 3}},
+  "source_handling": {
+    "registry": "dist.integrity sha512 (or dist.shasum sha1) verified before tarfile.extractall(filter='data'); 3,719 tarballs, all sha512",
+    "archive": "partial clone (--filter=blob:none, core.symlinks=false, hooksPath=/dev/null), sparse checkout of malicious_raw/normal_raw in batches of 60 pairs",
+    "executed_package_code": false
+  },
+  "result": {"ok": 2765, "failed": 2,
+             "failed_pairs": [
+               {"package": "nestjs-grpc", "old_version": "1.3.11", "new_version": "1.4.0", "class": "hard_benign", "reason": "old version not in registry metadata"},
+               {"package": "@camstack/addon-decoder-ffmpeg", "old_version": "0.1.11", "new_version": "0.1.12", "class": "hard_benign", "reason": "package 404 in registry"}],
+             "missing_in_ok": {"installHookRefFileChanged": 11}}
+}
