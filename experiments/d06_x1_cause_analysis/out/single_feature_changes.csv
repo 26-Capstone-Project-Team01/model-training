@@ -1,0 +1,132 @@
+variant,threshold,change,split,fold,group,n,feat_values,examples
+full29_ref,0.05,gained,split2,1,chaindrop,3,{1.0: 3},"@cacheable/memory, @cacheable/net, cacheable"
+full29_ref,0.05,gained,split2,2,individuals_case,1,{1.0: 1},kraken-api
+full29_ref,0.05,gained,split2,2,miasma,1,{0.0: 1},executable-stories-demo
+full29_ref,0.05,gained,split2,2,shai-orig,51,{1.0: 51},"@art-ws/config-eslint, @crowdstrike/commitlint, @ctrl/deluge"
+full29_ref,0.05,lost,split1,1,mini-shai,1,{0.0: 1},@tanstack/react-router
+full29_ref,0.05,lost,split2,2,autotel,2,{0.0: 2},"awaitly-analyze, eslint-plugin-awaitly"
+full29_ref,0.05,lost,split2,2,individuals_case,1,{0.0: 1},nginxbeautifier
+full29_ref,0.05,lost,split2,2,js-metrics_2018,2,{0.0: 2},"@fangrong/xoc, device-mqtt"
+full29_ref,0.05,lost,split2,2,miasma,5,{0.0: 5},"awaitly-libsql, awaitly-mongo, awaitly-postgres"
+full29_ref,0.05,lost,split2,2,nx-s1ngularity_202,1,{1.0: 1},@nx/js
+full29_ref,0.05,lost,split2,2,pgserve-automagik-,2,{1.0: 2},"@openwebconcept/design-tokens, @openwebconcept/theme-owc"
+full29_ref,0.05,fp_added,split1,0,hard_benign,2,{1.0: 2},"meteor-desktop, @cloudbase/cli"
+full29_ref,0.05,fp_added,split2,0,hard_benign,1,{0.0: 1},cypress-image-diff-js
+full29_ref,0.05,fp_added,split2,2,hard_benign,1,{1.0: 1},react-native-ble-plx
+full29_ref,0.05,fp_removed,split1,0,benign,1,{0.0: 1},@stdlib/error-tools-database
+full29_ref,0.05,fp_removed,split1,0,hard_benign,2,"{0.0: 1, 1.0: 1}","xxhash-addon, cypress-accessibility-checker"
+full29_ref,0.05,fp_removed,split2,0,hard_benign,3,{0.0: 3},"@interopio/iocd-cli, @ffmpeg/core-mt, ghost-cursor-playwright"
+full29_ref,0.05,fp_removed,split2,2,hard_benign,1,{0.0: 1},@etu-wiki/sharp-iiif-shims
+full29_ref,0.5,gained,split1,1,chaindrop,6,{1.0: 6},"@cacheable/memory, @cacheable/net, cacheable-request"
+full29_ref,0.5,gained,split1,1,mini-shai,1,{1.0: 1},@uipath/apollo-react
+full29_ref,0.5,gained,split2,1,chaindrop,2,{1.0: 2},"cacheable-request, ecto"
+full29_ref,0.5,gained,split2,1,react-native-aria-,1,{0.0: 1},@react-native-aria/focus
+full29_ref,0.5,gained,split2,2,shai-orig,22,{1.0: 22},"@art-ws/eslint, @art-ws/package-base, @crowdstrike/foundry-js"
+full29_ref,0.5,lost,split1,1,mini-shai,2,{0.0: 2},"@tanstack/react-router, @tanstack/router-core"
+full29_ref,0.5,lost,split2,1,individuals_case,1,{1.0: 1},eslint-scope
+full29_ref,0.5,lost,split2,1,mini-shai,9,"{0.0: 1, 1.0: 8}","@mesadev/rest, @mesadev/sdk, @tanstack/router-core"
+full29_ref,0.5,lost,split2,2,autotel,2,{0.0: 2},"@vapi-ai/server-sdk, autotel"
+full29_ref,0.5,lost,split2,2,individuals_case,1,{0.0: 1},radicjs
+full29_ref,0.5,lost,split2,2,miasma,1,{0.0: 1},@vapi-ai/server-sdk
+full29_ref,0.5,lost,split2,2,shai-orig,3,{0.0: 3},"oradm-to-sqlz, react-jsonschema-form-conditionals, thangved-react-grid"
+full29_proc,0.05,gained,split1,2,miasma,2,{0.0: 2},"executable-stories-demo, executable-stories-mcp"
+full29_proc,0.05,gained,split1,2,pgserve-automagik-,6,{7.0: 6},"@automagik/genie, @automagik/genie, @automagik/genie"
+full29_proc,0.05,gained,split1,2,shai-orig,2,{0.0: 2},"react-complaint-image, react-complaint-image"
+full29_proc,0.05,gained,split2,1,react-native-aria-,1,{0.0: 1},@gluestack-ui/utils
+full29_proc,0.05,gained,split2,2,autotel,3,{0.0: 3},"autotel-eventcatalog, autotel-mongoose, effect-analyzer"
+full29_proc,0.05,gained,split2,2,js-metrics_2018,1,{0.0: 1},motiv.scss
+full29_proc,0.05,gained,split2,2,miasma,4,{0.0: 4},"autotel-cloudflare, autotel-web, executable-stories-demo"
+full29_proc,0.05,gained,split2,2,nx-s1ngularity_202,1,{4.0: 1},@nx/eslint
+full29_proc,0.05,lost,split1,2,autotel,3,{0.0: 3},"node-env-resolver, node-env-resolver-nextjs, node-env-resolver-vite"
+full29_proc,0.05,lost,split1,2,individuals_case,1,{0.0: 1},nginxbeautifier
+full29_proc,0.05,lost,split1,2,js-metrics_2018,2,{0.0: 2},"@fangrong/xoc, device-mqtt"
+full29_proc,0.05,lost,split1,2,miasma,2,{0.0: 2},"autotel-subscribers, awaitly-visualizer"
+full29_proc,0.05,lost,split1,2,shai-orig,5,{0.0: 5},"@ctrl/react-adsense, @operato/styles, airpilot"
+full29_proc,0.05,lost,split2,1,chaindrop,7,{0.0: 7},"@cacheable/node-cache, @cacheable/utils, cache-manager"
+full29_proc,0.05,lost,split2,1,individuals_case,1,{0.0: 1},eslint-scope
+full29_proc,0.05,lost,split2,1,mini-shai,23,{0.0: 23},"@tanstack/react-router, @tanstack/react-start, @tanstack/react-start-client"
+full29_proc,0.05,lost,split2,1,node-gyp-dll_2025-,2,{1.0: 2},"got-fetch, got-fetch"
+full29_proc,0.05,lost,split2,2,autotel,1,{0.0: 1},awaitly-analyze
+full29_proc,0.05,lost,split2,2,miasma,3,{0.0: 3},"awaitly-libsql, awaitly-mongo, awaitly-postgres"
+full29_proc,0.05,lost,split2,2,shai-orig,7,{0.0: 7},"@art-ws/eslint, @art-ws/package-base, @crowdstrike/foundry-js"
+full29_proc,0.05,fp_added,split1,2,benign,1,{0.0: 1},@budibase/pouchdb-replication-stream
+full29_proc,0.05,fp_added,split1,2,hard_benign,1,{10.0: 1},@mongez/huskier
+full29_proc,0.05,fp_added,split2,0,benign,1,{0.0: 1},into-stream
+full29_proc,0.05,fp_added,split2,2,benign,3,{0.0: 3},"shasum, @metamask/object-multiplex, foundationdb"
+full29_proc,0.05,fp_removed,split1,0,hard_benign,1,{0.0: 1},cypress-accessibility-checker
+full29_proc,0.05,fp_removed,split1,2,benign,1,{0.0: 1},@outqource/crypto
+full29_proc,0.05,fp_removed,split2,0,hard_benign,1,{0.0: 1},@ffmpeg/core-mt
+full29_proc,0.5,gained,split1,2,pgserve-automagik-,1,{6.0: 1},pgserve
+full29_proc,0.5,gained,split1,2,shai-orig,1,{0.0: 1},@teselagen/bio-parsers
+full29_proc,0.5,gained,split2,1,individuals_case,1,{0.0: 1},jquery-airload
+full29_proc,0.5,gained,split2,1,node-gyp-dll_2025-,1,{1.0: 1},eslint-plugin-prettier
+full29_proc,0.5,gained,split2,2,individuals_case,1,{0.0: 1},coa
+full29_proc,0.5,gained,split2,2,miasma,4,{0.0: 4},"autotel-edge, autotel-subscribers, executable-stories-formatters"
+full29_proc,0.5,lost,split1,2,individuals_case,1,{0.0: 1},nginxbeautifier
+full29_proc,0.5,lost,split1,2,js-metrics_2018,2,{0.0: 2},"@fangrong/xoc, motiv.scss"
+full29_proc,0.5,lost,split1,2,shai-orig,3,{0.0: 3},"globalize-rpk, pm2-gelf-json, ts-gaussian"
+full29_proc,0.5,lost,split2,1,chaindrop,4,{0.0: 4},"@cacheable/node-cache, @cacheable/utils, cache-manager"
+full29_proc,0.5,lost,split2,1,individuals_case,1,{0.0: 1},eslint-scope
+full29_proc,0.5,lost,split2,1,mini-shai,39,{0.0: 39},"@tanstack/arktype-adapter, @tanstack/eslint-plugin-router, @tanstack/eslint-plugin-start"
+full29_proc,0.5,lost,split2,2,autotel,1,{0.0: 1},@vapi-ai/server-sdk
+full29_proc,0.5,lost,split2,2,individuals_case,1,{0.0: 1},pensi-scheduler
+full29_proc,0.5,lost,split2,2,miasma,1,{0.0: 1},@vapi-ai/server-sdk
+full29_proc,0.5,lost,split2,2,shai-orig,11,{0.0: 11},"@crowdstrike/falcon-shoelace, @ctrl/ngx-rightclick, @teselagen/range-utils"
+full29_proc,0.5,fp_added,split2,2,hard_benign,1,{0.0: 1},@etu-wiki/sharp-iiif-shims
+full29_proc,0.5,fp_removed,split1,2,benign,1,{0.0: 1},@outqource/crypto
+full29_proc,0.5,fp_removed,split1,2,hard_benign,1,{0.0: 1},@etu-wiki/sharp-iiif-shims
+full29_proc,0.5,fp_removed,split2,0,hard_benign,1,{0.0: 1},esbuild-plugin-environment
+full29_net,0.05,gained,split1,2,individuals_case,6,"{1.0: 4, 2.0: 1, 8.0: 1}","grunt-radic, grunt-radical, pensi-scheduler"
+full29_net,0.05,gained,split1,2,js-metrics_2018,2,"{1.0: 1, 3.0: 1}","ngx-pica, precode.js"
+full29_net,0.05,gained,split1,2,shai-orig,37,{17.0: 37},"@crowdstrike/commitlint, @crowdstrike/glide-core, @hestjs/cqrs"
+full29_net,0.05,gained,split2,1,chaindrop,3,{0.0: 3},"@cacheable/memory, @cacheable/net, cacheable"
+full29_net,0.05,gained,split2,1,individuals_case,6,"{1.0: 4, 2.0: 1, 3.0: 1}","angular-location-update, geoheat, jekyll-for-github-projects"
+full29_net,0.05,gained,split2,2,individuals_case,7,"{1.0: 6, 10.0: 1}","xrpl, kraken-api, mx-nested-menu"
+full29_net,0.05,gained,split2,2,js-metrics_2018,4,"{1.0: 2, 2.0: 1, 3.0: 1}","iie-viz, motiv.scss, ngx-pica"
+full29_net,0.05,gained,split2,2,nx-s1ngularity_202,2,{1.0: 2},"@nx/eslint, @nx/workspace"
+full29_net,0.05,gained,split2,2,shai-orig,15,{17.0: 15},"@nativescript-community/perms, @nstudio/xplat, @operato/headroom"
+full29_net,0.05,lost,split1,1,chaindrop,10,{0.0: 10},"@cacheable/memory, @cacheable/net, @cacheable/node-cache"
+full29_net,0.05,lost,split1,1,sap-maintainer-com,1,{4.0: 1},mbt
+full29_net,0.05,lost,split1,2,autotel,1,{0.0: 1},awaitly-analyze
+full29_net,0.05,lost,split1,2,individuals_case,1,{0.0: 1},is
+full29_net,0.05,lost,split1,2,js-metrics_2018,1,{1.0: 1},device-mqtt
+full29_net,0.05,lost,split1,2,miasma,5,{0.0: 5},"autotel-subscribers, awaitly-analyze, awaitly-libsql"
+full29_net,0.05,lost,split2,1,node-gyp-dll_2025-,3,{0.0: 3},"got-fetch, eslint-plugin-prettier, got-fetch"
+full29_net,0.05,lost,split2,1,react-native-aria-,3,{0.0: 3},"@react-native-aria/focus, @react-native-aria/separator, @react-native-aria/switch"
+full29_net,0.05,lost,split2,2,autotel,9,{0.0: 9},"awaitly-analyze, awaitly-libsql, awaitly-mongo"
+full29_net,0.05,lost,split2,2,individuals_case,3,{0.0: 3},"autotel-mcp, autotel-terminal, is"
+full29_net,0.05,lost,split2,2,miasma,9,{0.0: 9},"autotel-edge, autotel-subscribers, awaitly-analyze"
+full29_net,0.05,fp_added,split2,0,benign,1,{7.0: 1},@docker/node-sdk
+full29_net,0.05,fp_added,split2,0,hard_benign,3,"{0.0: 1, 1.0: 2}","cypress-image-diff-js, ibm_db, cypress-accessibility-checker"
+full29_net,0.05,fp_added,split2,2,hard_benign,1,{0.0: 1},react-native-ble-plx
+full29_net,0.05,fp_removed,split1,0,hard_benign,1,{0.0: 1},xxhash-addon
+full29_net,0.05,fp_removed,split1,2,benign,3,{0.0: 3},"tzdata, overlayscrollbars-react, @outqource/crypto"
+full29_net,0.05,fp_removed,split2,0,benign,1,{0.0: 1},redux-saga-testing
+full29_net,0.05,fp_removed,split2,0,hard_benign,3,{0.0: 3},"@interopio/iocd-cli, @dao-xyz/sqlite3-vec, ghost-cursor-playwright"
+full29_net,0.05,fp_removed,split2,2,benign,2,{0.0: 2},"ace-python-ruff-linter, overlayscrollbars-react"
+full29_net,0.5,gained,split1,1,mini-shai,1,{7.0: 1},@uipath/apollo-react
+full29_net,0.5,gained,split1,2,individuals_case,2,"{2.0: 1, 8.0: 1}","radicjs, pm-controls"
+full29_net,0.5,gained,split1,2,js-metrics_2018,1,{3.0: 1},ngx-pica
+full29_net,0.5,gained,split1,2,miasma,1,{0.0: 1},wrangler-deploy
+full29_net,0.5,gained,split1,2,pgserve-automagik-,1,{1.0: 1},pgserve
+full29_net,0.5,gained,split1,2,shai-orig,68,{17.0: 68},"@art-ws/config-eslint, @art-ws/ssl-info, @crowdstrike/falcon-shoelace"
+full29_net,0.5,gained,split2,1,individuals_case,8,"{1.0: 6, 2.0: 2}","angular-location-update, geoheat, jekyll-for-github-projects"
+full29_net,0.5,gained,split2,2,individuals_case,5,"{0.0: 1, 1.0: 4}","coa, mx-nested-menu, nginxbeautifier"
+full29_net,0.5,gained,split2,2,js-metrics_2018,3,"{1.0: 2, 3.0: 1}","@fangrong/xoc, device-mqtt, ngx-pica"
+full29_net,0.5,gained,split2,2,shai-orig,11,{17.0: 11},"@art-ws/eslint, @art-ws/package-base, @nstudio/xplat"
+full29_net,0.5,lost,split1,1,chaindrop,4,{0.0: 4},"@cacheable/node-cache, @cacheable/utils, cache-manager"
+full29_net,0.5,lost,split1,1,sap-maintainer-com,1,{4.0: 1},mbt
+full29_net,0.5,lost,split1,2,autotel,8,{0.0: 8},"autotel-mcp, awaitly-libsql, awaitly-mongo"
+full29_net,0.5,lost,split1,2,individuals_case,3,"{0.0: 2, 1.0: 1}","autotel-mcp, nginxbeautifier, is"
+full29_net,0.5,lost,split1,2,js-metrics_2018,1,{1.0: 1},@fangrong/xoc
+full29_net,0.5,lost,split2,1,react-native-aria-,2,{0.0: 2},"@react-native-aria/separator, @react-native-aria/switch"
+full29_net,0.5,lost,split2,2,autotel,8,{0.0: 8},"@vapi-ai/server-sdk, autotel, autotel-mcp"
+full29_net,0.5,lost,split2,2,individuals_case,3,{0.0: 3},"autotel-subscribers, awaitly-visualizer, is"
+full29_net,0.5,lost,split2,2,miasma,2,{0.0: 2},"@immobiliarelabs/backstage-plugin-ldap-auth, @vapi-ai/server-sdk"
+full29_net,0.5,lost,split2,2,miasma-leoplatform,1,{0.0: 1},leo-logger
+full29_net,0.5,fp_added,split1,0,benign,1,{0.0: 1},@stdlib/error-tools-database
+full29_net,0.5,fp_added,split1,0,hard_benign,1,{1.0: 1},cypress-accessibility-checker
+full29_net,0.5,fp_added,split2,0,benign,1,{7.0: 1},@docker/node-sdk
+full29_net,0.5,fp_added,split2,0,hard_benign,2,"{1.0: 1, 4.0: 1}","@ffmpeg/core-mt, cypress-accessibility-checker"
+full29_net,0.5,fp_removed,split1,2,benign,1,{0.0: 1},@outqource/crypto
+full29_net,0.5,fp_removed,split2,0,benign,1,{0.0: 1},graphql-resolvers
