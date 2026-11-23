@@ -1,0 +1,163 @@
+{
+  "purpose": "full29 unweighted retrain with run_full35.py (PR #13 snapshot, pinned libraries) vs PR #13 saved full29",
+  "models": [
+    {
+      "model": "full29_split1_fold0",
+      "pr13_model_sha256": "6367af5603f179ccc82eb19d21d352bb5ada0d0ae7cc4b5e657711e2f68af18d",
+      "repro_model_sha256": "63ce8721403201442518e07758c23be0ac913b492404484fecddfd46e5ec7935",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 200,
+      "repro_trained_rounds": 200
+    },
+    {
+      "model": "full29_split1_fold1",
+      "pr13_model_sha256": "cb07dc39691eec565b554bd0bd494d508d040f493ca03cb230bac6acd1de316b",
+      "repro_model_sha256": "db7783d7df545b5e1e8f7e5cc3ff15af0ee9b1c4fdb89a8ef83d8a40567c81ae",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 149,
+      "repro_trained_rounds": 149
+    },
+    {
+      "model": "full29_split1_fold2",
+      "pr13_model_sha256": "69589d0c5f99586abf21e2518e35166e8c690aa5b81c961aef81df4cc600229f",
+      "repro_model_sha256": "24156ccc48ee326b5d31b7003b28811142eb836aa7b792eb6180b30a7f03a67f",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 200,
+      "repro_trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold0",
+      "pr13_model_sha256": "97b2372b563ddee98dd76fb9f37f93a814d29b0a66dc48dbb21c6ac2fa59abc8",
+      "repro_model_sha256": "7196bc83cff6d8be1f4727c791d4b7511825e6085d5012010f7e7cd857c007e7",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 200,
+      "repro_trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold1",
+      "pr13_model_sha256": "d29662f275f661388358d2117c434dfcbe06a19e6f9d0f4c86dfc627f4255a61",
+      "repro_model_sha256": "4160e98d7cb492836590a0bb291eb4f558d815dc82a640e0f998f27542a4607e",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 200,
+      "repro_trained_rounds": 200
+    },
+    {
+      "model": "full29_split2_fold2",
+      "pr13_model_sha256": "f0cf682a2efa1f3a47f6c5fff837ef449ef2dcce71a55a9740f8d1911fb414d7",
+      "repro_model_sha256": "f882bfbcd58b15b8b8088e8ba5432aaa09b8bd350deb5f23cb54ecbe01bcfdea",
+      "raw_bytes_equal": false,
+      "content_equal_after_removing_CR": true,
+      "pr13_actual_rounds": 200,
+      "repro_trained_rounds": 200
+    }
+  ],
+  "all_model_content_equal": true,
+  "scores": {
+    "pr13_rows": 8548,
+    "repro_rows": 8548,
+    "matched_rows": 8548,
+    "max_abs_diff": 1.1102230246251565e-16,
+    "exact_equal_fraction": 0.99859616284511
+  },
+  "run_manifest": {
+    "experiment_id": "D06-FULL35-COMPARE",
+    "stage": "repro",
+    "data_version": "D06",
+    "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+    "inputs": {
+      "train": {
+        "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+        "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+      },
+      "groups": {
+        "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train_malicious_groups.csv",
+        "sha256": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2"
+      },
+      "classes": {
+        "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+        "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+      }
+    },
+    "x1": {
+      "path": "d06_x1_extraction/analysis/d06_full35.csv",
+      "sha256": "a97b761a15feca5559a522078ac370ba46320055a248df90e254b07d1fc27f23",
+      "schema_sha256": "87c399319061714d6296a2f058fbaa39f49d84126e11148b5a94ce21d10f3a03",
+      "extractor_commit": "d56738c234aae239d82729f964b7dd35f304fa93"
+    },
+    "snapshot": "d06_feature_comparison_18/provenance/phase2_run1_base7_full29/executed_script_snapshot.py",
+    "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+    "script_sha256": "ba951f377b36faeb6977a16f3cd29aa6e6ea7f87f52f1fe67ab8583a2ee33374",
+    "lightgbm_params": {
+      "objective": "binary",
+      "metric": "binary_logloss",
+      "verbosity": -1,
+      "num_threads": 2,
+      "deterministic": true,
+      "force_col_wise": true,
+      "seed": 20261109
+    },
+    "rounds": 200,
+    "early_stopping": false,
+    "sample_weight": null,
+    "missing": "NaN (LightGBM default handling)",
+    "x1_encoding": "booleans True/False -> 1.0/0.0, empty -> NaN; counts as float; no clipping or log transform",
+    "variants": {
+      "full29_repro": [
+        "installScriptPresent",
+        "installScriptAdded",
+        "scriptEntryAdded",
+        "newDependencyAdded",
+        "newDependencyCount",
+        "updateType",
+        "updateInterval",
+        "obfChangedFileCount",
+        "obfHexIdentRatioNew",
+        "obfHexIdentRatioChange",
+        "obfHexIdentRatioChangedCode",
+        "obfHexNumberRatioNew",
+        "obfHexNumberRatioChange",
+        "obfHexNumberRatioChangedCode",
+        "obfBracketAccessRatioNew",
+        "obfBracketAccessRatioChange",
+        "obfBracketAccessRatioChangedCode",
+        "obfEscapeDensityNew",
+        "obfEscapeDensityChange",
+        "obfEscapeDensityChangedCode",
+        "obfShortIdentRatioNew",
+        "obfShortIdentRatioChange",
+        "obfShortIdentRatioChangedCode",
+        "obfMeanIdentLengthNew",
+        "obfMeanIdentLengthChange",
+        "obfMeanIdentLengthChangedCode",
+        "obfWhitespaceRatioNew",
+        "obfWhitespaceRatioChange",
+        "obfWhitespaceRatioChangedCode"
+      ]
+    },
+    "packages": {
+      "lightgbm": "4.7.0",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "sklearn": "1.9.1"
+    },
+    "python": "3.13.18",
+    "python_pr13": "3.13.5",
+    "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "argv": [
+      "run_full35.py",
+      "--workspace",
+      "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/ws_full35",
+      "--stage",
+      "repro",
+      "--out",
+      "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/repro_run"
+    ],
+    "read_test": false
+  },
+  "passed": true
+}
