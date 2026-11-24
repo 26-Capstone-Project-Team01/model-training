@@ -1,0 +1,89 @@
+{
+ "experiment_id": "D06-X3-MODELS",
+ "stage": "verify",
+ "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+ "inputs": {
+  "train": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "groups": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2",
+  "classes": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+ },
+ "x1_csv_sha256": "a97b761a15feca5559a522078ac370ba46320055a248df90e254b07d1fc27f23",
+ "runner": "d06_full35_compare/run_full35.py",
+ "runner_sha256": "ba951f377b36faeb6977a16f3cd29aa6e6ea7f87f52f1fe67ab8583a2ee33374",
+ "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+ "script_sha256": "b117a04c01bd2190870b2812e832a320642d32699827dbf861aa52eb912e0cac",
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "early_stopping": false,
+ "sample_weight": null,
+ "missing": "NaN",
+ "variants": {
+  "full35": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount"
+  ]
+ },
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "argv": [
+  "train_variants.py",
+  "--workspace",
+  "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/ws_full35",
+  "--stage",
+  "verify",
+  "--out",
+  "run_verify"
+ ],
+ "read_test": false,
+ "outputs": {
+  "feature_importance.csv": "658e6851934b0de0951395b2e8affddf0e1e2b05894633244f628f728b2434e0",
+  "scores.csv": "f2e97024b8f22f57f5435a79fb94f82a4cb8f77138c24cda4f7ef30f0f9226fa",
+  "training.csv": "effa1a16dfef5ed0e0c3b7a525597f471c2e0a694bd61a7997018cc855fc66cb"
+ }
+}
