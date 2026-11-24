@@ -1,0 +1,12 @@
+{
+ "nature": "Train outer = design evidence; Test-674 = development evaluation (not independent)",
+ "thresholds": "Train calibration only, PR #13 calibrate ML, targets 1/3/5%",
+ "script_sha256": "9fc736cc3090f05f3da4a9560105a6b7331d967b66fc19f0c4f7228307f9eb82",
+ "checks": "full35 outer == fair_comparison; full35_x3_d outer == d06_x3_models/eval_x3d; full35/gs24/full28/C5 5% == d06_gs24_followup/eval",
+ "outputs": {
+  "campaign_recall.csv": "56b66bd22e8957d94ad6a1b1621512f9b514569a591600e38fc610c58f3a3ced",
+  "change_vs_full35.csv": "368c89591c741640c2edd3ab826e4e6fe9c0035d9a879c68c7499ad437768a34",
+  "metrics.csv": "c062f80f13d7ca60fb47efe09e655ee5b7d8a2fc33e0998cc2d278e0b530696d",
+  "stability.csv": "5f9bce983aff3485836e4e762aa45fbdb291c72b66439b634b729c920ec6c6ff"
+ }
+}
