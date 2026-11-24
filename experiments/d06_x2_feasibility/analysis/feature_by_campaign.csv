@@ -1,0 +1,8 @@
+class,campaign,n,age_med_h,vc_med
+benign,,92,22695.280336666663,15.0
+hard_benign,,49,24756.459609166664,15.0
+malicious,chaindrop_2026-08,1,16793.974627222222,38.0
+malicious,individuals_case,6,29020.774135416665,28.0
+malicious,miasma-leoplatform_2026-06,1,116426.0024961111,1299.0
+malicious,mini-shai-hulud_2026-05,3,115541.81918305556,1299.0
+malicious,sha1-hulud-second-coming_2025-11,1,18794.74123638889,1076.0

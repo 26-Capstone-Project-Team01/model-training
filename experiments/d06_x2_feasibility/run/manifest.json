@@ -1,0 +1,16 @@
+{
+ "experiment_id": "D06-X2-FEASIBILITY",
+ "nature": "feasibility survey, D06 Train only; no Test, no training, no package code execution",
+ "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+ "train_sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+ "baselines_sha256": "acc48b6a6ef5883987ee93d978059c9a9c037bc4186598d6f23c62d3d2a793d2",
+ "script_sha256": "874767a5f3554e089c4d13eda7d53f8dd038053f51b7af35de1b7d637d3588ca",
+ "registry": "https://registry.npmjs.org/",
+ "run_finished_utc": "2026-11-24T13:06:09.313432+00:00",
+ "pairs_surveyed": 247,
+ "outputs": {
+  "pair_dependencies.csv": "c2616167102eeb76857172906e5a2d24f5f96e4747f2264a21922abd7a1c0be9",
+  "pairs.csv": "e51d3b5b603cb26bf92fff8b6f7a50e227fe0235dde7cb1c705b241fe2c5237a",
+  "registry_query_log.jsonl": "261a300f150499bbe991c206d4b21b1eed827ca776cd409af279d8fdd52a5225"
+ }
+}

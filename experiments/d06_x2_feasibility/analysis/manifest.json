@@ -1,0 +1,21 @@
+{
+ "inputs": {
+  "manifest.json": "b41705a4d35a8894b25f3442fa87fe8fa7ff973dea2e39cc954513d10c50b06d",
+  "pair_dependencies.csv": "c2616167102eeb76857172906e5a2d24f5f96e4747f2264a21922abd7a1c0be9",
+  "pairs.csv": "e51d3b5b603cb26bf92fff8b6f7a50e227fe0235dde7cb1c705b241fe2c5237a",
+  "registry_query_log.jsonl": "261a300f150499bbe991c206d4b21b1eed827ca776cd409af279d8fdd52a5225"
+ },
+ "script_sha256": "3c6d9f94f078ceeb8c0323a024b940ec02d0fb626d9602ebd3191573324823e8",
+ "outputs": {
+  "coverage.json": "fb5dd836722de4e2ad8dbcd974cc61a8e2350080b9bb25e31fa4de758f1acbf9",
+  "dep_status_by_spec_type.csv": "159327c2d400494089e5b8daeacb5c405cfb224e7d610856248755f0dd56146d",
+  "dependency_time_integrity.csv": "a26820ce67b38caa5fa75814d39c83825d4f65ee8eb1f3636a184c55eab3a76e",
+  "feature_by_campaign.csv": "f8cbb8b26839ba53a4ecabbb696bcc6f2800f5c019486bead9d11546d6bbef8b",
+  "feature_distribution_by_class.csv": "923c1391151d8616e2943761593b1142c298e744cea05db3ddbc6f1768b260b7",
+  "nan_signal_risk.csv": "8268e0cefcb997ebd680d33d72c8a7e36559ec33d265c1bd73d3240dd66c159e",
+  "shared_dependencies.csv": "8a6faad25ff28c55df9d0ec5e6b765b3b85f72cc4ec612e6087567c31027c67e",
+  "status_by_campaign.csv": "0eddb6269160ca7ab9df8c91fc15b3a9572c5afaa28225dc558fa2cb19aa25c2",
+  "status_by_class.csv": "9d50a100c68771cf29819f4c69832a44748355e916752873f93235a803253419",
+  "young_dependencies_non_malicious.csv": "a2e703267470fd571da7d2afbea0edc5d4aa33ff90219e0bae06cec3fe47a567"
+ }
+}

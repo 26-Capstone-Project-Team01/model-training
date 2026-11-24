@@ -1,0 +1,9 @@
+class,campaign,created_after_T,dep_lookup_failed_all,dep_lookup_failed_partial,ok,fail_rate
+benign,,0,0,0,92,0.0
+hard_benign,,0,0,3,49,0.05769230769230771
+malicious,axios_2026-03,1,0,0,0,1.0
+malicious,chaindrop_2026-08,0,0,0,1,0.0
+malicious,individuals_case,1,0,0,6,0.1428571428571429
+malicious,miasma-leoplatform_2026-06,0,0,0,1,0.0
+malicious,mini-shai-hulud_2026-05,0,67,22,3,0.967391304347826
+malicious,sha1-hulud-second-coming_2025-11,0,0,0,1,0.0

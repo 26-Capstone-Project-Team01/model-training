@@ -1,0 +1,38 @@
+{
+ "pairs": 247,
+ "pairs_by_class": {
+  "malicious": 103,
+  "benign": 92,
+  "hard_benign": 52
+ },
+ "unique_new_dependencies": 321,
+ "dependency_pair_links": 477,
+ "n_added_matches_train_newDependencyCount": true,
+ "parent_publish_time_available": 247,
+ "unique_deps_by_spec_type": {
+  "registry_range": 313,
+  "git_or_url": 4,
+  "file_link_workspace": 4
+ },
+ "unique_deps_registry_status": {
+  "200": 311,
+  "404": 10
+ },
+ "unique_deps_with_time_map": 311,
+ "unique_deps_status": {
+  "ok": 309,
+  "http_404": 10,
+  "created_after_T": 2
+ },
+ "pair_status": {
+  "ok": 153,
+  "dep_lookup_failed_all": 67,
+  "dep_lookup_failed_partial": 25,
+  "created_after_T": 2
+ },
+ "feature_computable_pairs": 153,
+ "feature_computable_share": 0.6194331983805668,
+ "deps_created_later_than_first_version_gt_1h": 3,
+ "deps_with_security_placeholder": 12,
+ "deps_with_time_entries_gt_versions_now": 60
+}

@@ -1,0 +1,166 @@
+{
+ "_id": "easy-day-js",
+ "_rev": "3-020bcd4bc2fb3b6012a1959c7d10fd2e",
+ "name": "easy-day-js",
+ "dist-tags": {
+  "latest": "1.11.21"
+ },
+ "versions": {
+  "1.11.21": {
+   "name": "easy-day-js",
+   "version": "1.11.21",
+   "keywords": [
+    "dayjs",
+    "date",
+    "time",
+    "immutable",
+    "moment"
+   ],
+   "author": {
+    "name": "iamkun"
+   },
+   "license": "MIT",
+   "_id": "easy-day-js@1.11.21",
+   "maintainers": [
+    {
+     "name": "sergey2016",
+     "email": "sergey2016@tutamail.com"
+    }
+   ],
+   "homepage": "https://day.js.org",
+   "bugs": {
+    "url": "https://github.com/iamkun/dayjs/issues"
+   },
+   "dist": {
+    "shasum": "9d0b4a021c89cac3c438907268d251914d3e5b37",
+    "tarball": "https://registry.npmjs.org/easy-day-js/-/easy-day-js-1.11.21.tgz",
+    "fileCount": 451,
+    "integrity": "sha512-8epfKcaa7LepSXe8E/PURYdS0QFlAzxfvpafvZ05a32xasJloAPLdxmjmWzrzKtjGBrJ++OsnwYYjQbqKpn1QQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCyiKk/+4su3hCtypoFyWZB6e2aLGgRzmt/gavS2gwltgIhAMwSy/Iahq75IzERJqXrtAt4ddvffNWn9+zkoU2eDDGW",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 680092
+   },
+   "jest": {
+    "roots": [
+     "test"
+    ],
+    "testURL": "http://localhost",
+    "testRegex": "test/(.*?/)?.*test.js$",
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+     "src/**/*"
+    ]
+   },
+   "main": "dayjs.min.js",
+   "types": "index.d.ts",
+   "scripts": {
+    "lint": "eslint src/* test/* build/*",
+    "size": "size-limit && gzip-size dayjs.min.js",
+    "test": "cross-env TZ=Pacific/Auckland npm run test-tz && cross-env TZ=Europe/London npm run test-tz && cross-env TZ=America/Whitehorse npm run test-tz && npm run test-tz && jest --coverage --coverageThreshold=\"{ \\\"global\\\": { \\\"lines\\\": 100} }\"",
+    "babel": "cross-env BABEL_ENV=build babel src --out-dir esm --copy-files && node build/esm",
+    "build": "cross-env BABEL_ENV=build node build && npm run size",
+    "sauce": "npx karma start karma.sauce.conf.js",
+    "test-tz": "date && jest test/timezone.test --coverage=false",
+    "prettier": "prettier --write \"docs/**/*.md\"",
+    "test:sauce": "npm run sauce -- 0 && npm run sauce -- 1 && npm run sauce -- 2  && npm run sauce -- 3"
+   },
+   "_npmUser": {
+    "name": "sergey2016",
+    "email": "sergey2016@tutamail.com"
+   },
+   "pre-commit": [
+    "lint"
+   ],
+   "repository": {
+    "url": "git+https://github.com/iamkun/dayjs.git",
+    "type": "git"
+   },
+   "size-limit": [
+    {
+     "path": "dayjs.min.js",
+     "limit": "2.99 KB"
+    }
+   ],
+   "_npmVersion": "11.6.2",
+   "description": "2KB immutable date time library alternative to Moment.js with the same modern API ",
+   "directories": {},
+   "_nodeVersion": "24.13.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "ncp": "^2.0.0",
+    "jest": "^22.4.3",
+    "karma": "^2.0.2",
+    "eslint": "^4.19.1",
+    "moment": "2.29.2",
+    "rollup": "^2.45.1",
+    "mockdate": "^2.0.2",
+    "prettier": "^1.16.1",
+    "cross-env": "^5.1.6",
+    "@babel/cli": "^7.0.0-beta.44",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "pre-commit": "^1.2.2",
+    "size-limit": "^0.18.0",
+    "typescript": "^2.8.3",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/node": "^7.0.0-beta.44",
+    "jasmine-core": "^2.99.1",
+    "gzip-size-cli": "^2.1.0",
+    "karma-jasmine": "^1.1.2",
+    "moment-timezone": "0.5.31",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "eslint-plugin-jest": "^21.15.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "eslint-plugin-import": "^2.10.0",
+    "karma-sauce-launcher": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "@semantic-release/github": "^11.0.4",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "babel-plugin-external-helpers": "^6.22.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/easy-day-js_1.11.21_1781593542272_0.3292093601732373",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  }
+ },
+ "time": {
+  "created": "2026-06-16T07:05:42.093Z",
+  "modified": "2026-06-17T06:50:06.352Z",
+  "1.11.21": "2026-06-16T07:05:42.457Z",
+  "1.11.22": "2026-06-17T01:01:33.087Z"
+ },
+ "bugs": {
+  "url": "https://github.com/iamkun/dayjs/issues"
+ },
+ "author": {
+  "name": "iamkun"
+ },
+ "license": "MIT",
+ "homepage": "https://day.js.org",
+ "keywords": [
+  "dayjs",
+  "date",
+  "time",
+  "immutable",
+  "moment"
+ ],
+ "repository": {
+  "url": "git+https://github.com/iamkun/dayjs.git",
+  "type": "git"
+ },
+ "description": "2KB immutable date time library alternative to Moment.js with the same modern API ",
+ "maintainers": [
+  {
+   "name": "sergey2016",
+   "email": "sergey2016@tutamail.com"
+  }
+ ],
+ "readme": "",
+ "readmeFilename": ""
+}
