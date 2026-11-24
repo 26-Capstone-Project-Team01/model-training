@@ -1,0 +1,5 @@
+class,history_short,ok,registry_404,All
+benign,283,1317,0,1600
+hard_benign,69,169,1,239
+malicious,151,777,0,928
+All,503,2263,1,2767

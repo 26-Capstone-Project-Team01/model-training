@@ -1,0 +1,16 @@
+{
+ "nature": "DIAGNOSTIC ONLY (outer labels used for matching); not used for selection",
+ "script_sha256": "2afbc472050a4a343b6fc6876d321ea88301ed24e547cd1b2e1f21e901533425",
+ "inputs": {
+  "thresholds": "a0e6fe7920b3c9108299b257119635257e9f2c6ec2229adcfeefe6313c828467",
+  "run_models": "cbecdd8d661f2df096763414ac5c31b5b0d9b1fb98788485ba3a1b9fa367541f",
+  "../d06_alt_models/run_alt": "5cfd3021f77dd9024a524eaab52498c5c3bbef012c400e0bf4753a9b292ed628",
+  "../d06_alt_models/run_blend": "0a5312e5d53f5c5e0316de08e35388fd9c1dad243039c6f9cad827c2581fbfe3",
+  "run_blend_x4": "79e2531e1474c0013e4665f3c7a1d5c7fa712d7ba4036611aee1f0e483659e31"
+ },
+ "outputs": {
+  "gain_loss_vs_full35_fpr5.csv": "13c0b13dcda54242dbd1cb995ae9e995dc043e9c5def9a43c00f4a1663d8d92c",
+  "same_outer_fpr.csv": "5bd5dd5c2c3eecd5ddff2c90281c1312c77dc3489186f891ee687c8137c19ddd",
+  "same_recall_as_full35_fpr5.csv": "463fcedadb08fc2b42f6826cfa38023086a3693df15d847283f1dea869870eb4"
+ }
+}

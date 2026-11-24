@@ -1,0 +1,14 @@
+{
+ "script_sha256": "6d360dbea3789281a5f7eb823d55e2cfd405e886ad090acc6d523b7fb714ac84",
+ "inputs": {
+  "d06_x4.csv": "921c1d19e15421fbaf0958e4c4f03f0a4903f4bd52299e06ff668a458dc7d6b2",
+  "d06_x4_status.csv": "6186f03685c56f7a381664566d5af5806faebd4ce13d2b2cc725a61e4e8da340"
+ },
+ "outputs": {
+  "by_class_campaign.csv": "4edd7ac059c4e2f1b140d70df11e44a8fa0c6c5032b4ba09c15c9b5a326f9394",
+  "correlation.json": "d63d122c12f35d28e9a804e08506acb480cc7fd43844a44cbb7df552eaa724a5",
+  "distribution_by_class.csv": "d97b3f6cab42aac4777476e6187bc1840c1e25016a6de0138f7ce9f4198fdf38",
+  "single_feature_auc.json": "d595f395789be7490ee6cde44bccdc69fcd5aa107e7b6d76824cce1585eb7972",
+  "status_by_class.csv": "b7f77f30c79f79bfc2036067b2c94f708f09fa7e8c98424734d758f7482131b7"
+ }
+}

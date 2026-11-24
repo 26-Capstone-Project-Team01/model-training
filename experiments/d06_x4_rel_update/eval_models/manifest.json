@@ -1,0 +1,42 @@
+{
+ "nature": "Train outer only; saved scores; thresholds from calibration (PR #13 calibrate, ML)",
+ "script_sha256": "1c6517d9a41d0a30b64e9db51e74d0ac971689fefe58bc9d4ca3b340e614cc0c",
+ "base_inputs": {
+  "pr13_saved_scores": "a8cd5375c3e95c6166937c49a526b68570afa85037ce75e774e9558f767e920c",
+  "full35_scores": "7b0524dad7b001f7df90c8f6a22197c605b04d54fbaf2cf914929749fb78a049"
+ },
+ "runs": {
+  "run_models": "cbecdd8d661f2df096763414ac5c31b5b0d9b1fb98788485ba3a1b9fa367541f",
+  "../d06_alt_models/run_alt": "5cfd3021f77dd9024a524eaab52498c5c3bbef012c400e0bf4753a9b292ed628",
+  "../d06_alt_models/run_blend": "0a5312e5d53f5c5e0316de08e35388fd9c1dad243039c6f9cad827c2581fbfe3",
+  "run_blend_x4": "79e2531e1474c0013e4665f3c7a1d5c7fa712d7ba4036611aee1f0e483659e31"
+ },
+ "variants": [
+  "base7",
+  "full29",
+  "full35",
+  "full34_x4",
+  "full35_x4",
+  "full35_lr",
+  "full35_mlp",
+  "full35_rf",
+  "B1_f35_lr",
+  "B2_f35_mlp",
+  "B3_f35_lr_mlp",
+  "B1x_full34_x4_lr",
+  "B1x_full35_x4_lr",
+  "B2x_full34_x4_mlp",
+  "B2x_full35_x4_mlp",
+  "B3x_full34_x4_lr_mlp",
+  "B3x_full35_x4_lr_mlp"
+ ],
+ "check": "base7/full29/full35 TP,FP,HardFP == fair_comparison.csv",
+ "outputs": {
+  "campaign_recall.csv": "289766a5bd18ef944257b59e4d3a59bb4a87587da5c5ac1e6974380cb56e90ba",
+  "change_vs_full35.csv": "bf67990afe961a85c7cd59b861a80093e1fb62fa02d95a0934643b42fcd140b2",
+  "change_vs_full35_cases_fpr5.csv": "ab4f5acd56447ea2861e6973da1d8ddcf6c7657cf0c4814c53e478e5c98c6aa4",
+  "metrics.csv": "de0a7e679e27d0efab5dccbeb3d7d0e73e28cb6e6d0069507f12dc9f27f62548",
+  "thresholds.csv": "a0e6fe7920b3c9108299b257119635257e9f2c6ec2229adcfeefe6313c828467",
+  "type_recall.csv": "91120dd5dfa208b393270d348f8bf09b6e36e452f4836ec717b1e2f4c75790d1"
+ }
+}

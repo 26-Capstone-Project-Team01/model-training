@@ -1,0 +1,11 @@
+{
+ "nature": "diagnostic only; no model scoring or selection",
+ "script_sha256": "5b166062de3f04a609d982f9ddd1cc2dc7705c4ad88ded27044c55451fb2fb05",
+ "status_input_sha256": "a134f4db31c4c44f13e51ce24cb82c52dd6f5486a5efabfeb9c13cee3d75fc0b",
+ "pairs": 674,
+ "outputs": {
+  "packuments.jsonl.gz": "66dd2b3c82ac5792d7a19bf1cee5435e24a9936d01b571c813d7f88d6d92e860",
+  "test674_x4.csv": "76b6e1187088b1272eb0f2fa44f4e16a9a058c3970584291d72f5a38cfc128de",
+  "test674_x4_by_group.csv": "cfc1ce92cb49002ebb7ce99db7d688310f318ecba5af3a67b984d7d7f4e6a107"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "all": {
+  "x4RelUpdateIntervalRatio": 0.7259025031568773,
+  "updateInterval": 0.7046574549939288
+ },
+ "hard_benign_vs_malicious": {
+  "x4RelUpdateIntervalRatio": 0.690510459741229,
+  "updateInterval": 0.7250081865466481
+ }
+}

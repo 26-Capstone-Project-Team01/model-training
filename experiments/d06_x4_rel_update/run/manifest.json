@@ -1,0 +1,22 @@
+{
+ "definition": "x4.py",
+ "x4_sha256": "c2a7621aa1ce949811f29852234f997ab84fa16978878694e4d81928b6900d95",
+ "script_sha256": "a36d9d0ca65bead8ce71bab46b277eb34f447d2e7c5dad79ec1ff78c7e0a2382",
+ "train_sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+ "packages": 2678,
+ "registry_status": {
+  "200": 2677,
+  "404": 1
+ },
+ "pair_status": {
+  "ok": 2263,
+  "history_short": 503,
+  "registry_404": 1
+ },
+ "from_log": null,
+ "outputs": {
+  "d06_x4.csv": "921c1d19e15421fbaf0958e4c4f03f0a4903f4bd52299e06ff668a458dc7d6b2",
+  "d06_x4_status.csv": "6186f03685c56f7a381664566d5af5806faebd4ce13d2b2cc725a61e4e8da340",
+  "packuments.jsonl.gz": "2051acb015736f6cbe10f3c5ca13f75ab4077b3fda6165ee8726ea7a6d86143a"
+ }
+}

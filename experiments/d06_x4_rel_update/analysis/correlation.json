@@ -1,0 +1,17 @@
+{
+ "n": 2263,
+ "spearman_ratio_vs_updateInterval": 0.7001225125815345,
+ "pearson_log_ratio_vs_log_updateInterval": 0.570157087436986,
+ "spearman_by_class": {
+  "benign": 0.6113170915297786,
+  "hard_benign": 0.6883173387698275,
+  "malicious": 0.7297973661104078
+ },
+ "numerator_vs_updateInterval": {
+  "n": 2766,
+  "abs_diff_le_1s": 0.9996385977593061,
+  "abs_diff_le_1h": 0.9996385977593061,
+  "spearman": 1.0
+ },
+ "spearman_gapcount_vs_updateInterval": -0.11844038991713338
+}
