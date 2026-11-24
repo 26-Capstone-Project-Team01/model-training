@@ -1,0 +1,57 @@
+{
+ "experiment_id": "D06-TEST-ES-FOLLOWUP",
+ "nature": "post-hoc development experiment on the already-evaluated D06 Test",
+ "plan": "ES_PLAN.md",
+ "plan_sha256": "cf245c5ca09c50f1b9f5ef9e8120200589985c5f41daa80e9833307063e932ec",
+ "script_sha256": "c3e15f1109b1f3cbf773bc13b565f4bfd84e2cac02b015d1eeae11e227b307d4",
+ "inputs": {
+  "train": {
+   "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+   "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+  },
+  "groups": {
+   "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train_malicious_groups.csv",
+   "sha256": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2"
+  },
+  "classes": {
+   "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+   "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+  },
+  "stored_scores": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "stored_splits": "7bcc0f2f25bd85de952e658b1c348eb6731d1aa85695d929bcd6c92329161109"
+ },
+ "early_stopping": {
+  "monitor": "validation binary_logloss",
+  "max_rounds": 200,
+  "stopping_rounds": 50,
+  "first_metric_only": true
+ },
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "outputs": {
+  "campaign_recall.csv": "f20bf27d4d67474dbdab8b1a40bd7ec576fd1ac716c456be775cc2b55aa170fd",
+  "early_stopping.csv": "d082bff4aaf065cac20f00aedff5c6eab82d46bcad78ec7f9b9e988d0270767c",
+  "metrics.csv": "d98897a3b330c66e3a83de74b765b100c6a03e8688cb8b7b25e7bede76dd3ce6",
+  "base7_es_seed20261109.txt": "5989333c101351fed5bbd069e18b1e788d626b1c07c0cfbb7d741e3171bf7f73",
+  "base7_es_seed20261110.txt": "8e2496e04106b03f74bb383b7adb6f652d30f836cfa52730076344d2a35d676d",
+  "full35_es_seed20261109.txt": "d3dbaff35bd43efe9c000766e41c1fbf8f997c295bb59a9896114cfbadb3bb6a",
+  "full35_es_seed20261110.txt": "9a87a881b25dac0b888c4caf1b1b979d5cd2e01492813994568500bc614bf47e",
+  "scores_es.csv": "15ac7b29b3b90dd858dfa0bf0307463ae5e9ed706800f89e41d46d31558c3174",
+  "subfit_validation_split.csv": "cbc530eca17cfa0eead323393209e93777dc2250e38be3615c5adbf52b6e3612",
+  "thresholds.csv": "6273ee929432e43638105146cd5467eaae93bf644691e8cddaffe3f270b8d66f"
+ }
+}
