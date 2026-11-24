@@ -43,3 +43,13 @@ package_json·obfuscation·code_context(기존)와 x3_context·dependency_change
     비율 결측 = 추가 토큰 0(정상 42.4%, HB 32.9%, 악성 3.3%) — JS 변경 없음과 겹친다.
   - D: `dependencyRangeChangedCount` > 0 정상 25.9%, HB 20.3%, 악성 3.9%. `dependencyChangedRatio` 결측(의존성 없음) 정상 28.8%, HB 33.8%, 악성 21.9% — 결측이 악성 쪽으로 몰리지 않는다.
   - 훅 대상 프로세스 실행 호출 수 중앙값: 악성 5, HB 95분위 2.
+
+## 4. Test-677 추출 (완료, 개발 평가용)
+
+- `extract_x3_test.py`: `extract_x3.py`의 쌍 추출 함수를 그대로 쓰고 행 목록만 be87ab4c `derived/splits/test.csv`(677쌍, sha256 e8a70053…)로 바꿨다.
+  모든 행에 `--reuse-x1-calls --file-cache`(동일성 검증 완료) 적용. archive는 데이터 저장소의 별도 worktree(be87ab4c, sparse)를 썼고 원래 clone과 데이터 저장소 상태는 건드리지 않았다.
+- `build_verify_x3_test.py`: `build_x3d.py`·`verify_x3.py`를 그대로 불러 참조 CSV만 `../d06_test_eval/analysis/d06_test_full35.csv`로 바꿨다.
+- 결과: 성공 677(악성 217, 정상 400, HB 60), 실패 0. `test_extraction/*.jsonl`, `test_analysis/d06_test_x3d.csv`, `test_analysis/verify/`.
+- 기존 34개 Feature: HB 3쌍 8값만 저장값과 다르다. contextify·heapdump(네이티브 빌드, registry가 `node-gyp rebuild` 설치 스크립트를 자동 추가)와 husky 5.1.0
+  (registry manifest의 scripts와 tarball package.json이 다름) — Train과 같은 registry 대 tarball 출처 차이다. 비율 산술·분자 일치, 분모 0이면서 호출 있는 쌍 0.
+- 훅 대상 분석: 악성 73/217, HB 15/60, 정상 5/400. `dependencyChangedRatio` 결측: 정상 29.0%, HB 40.0%, 악성 5.1%(Test 악성은 의존성 변경 쌍이 많다 — mastra).

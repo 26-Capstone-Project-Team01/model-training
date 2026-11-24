@@ -1,0 +1,40 @@
+{
+ "pairs": 677,
+ "status": [
+  [
+   "benign",
+   "ok",
+   400
+  ],
+  [
+   "hard_benign",
+   "ok",
+   60
+  ],
+  [
+   "malicious",
+   "ok",
+   217
+  ]
+ ],
+ "existing_features_compared": 34,
+ "existing_feature_mismatches": 8,
+ "addedNetworkCallPer1kAddedTokens_arith_ok": true,
+ "addedProcExecCallPer1kAddedTokens_arith_ok": true,
+ "numerator_from_same_run_matches_stored_x1": true,
+ "denominator": {
+  "A_zero": 321,
+  "A_zero_with_calls": 0,
+  "A_lt_20": 81,
+  "A_lt_100": 149,
+  "A_gt_B": 0,
+  "A_none": 0
+ },
+ "partial_targets_rows": [],
+ "no_hook_but_targets": 0,
+ "inputs": {
+  "test_extraction/malicious.jsonl": "540c84e5459216d57a5d9e1ea14ed796c62ffe436aec9b518f4b4e04a383a75f",
+  "test_extraction/benign.jsonl": "52e96e4a42b8d0573e4a1b640e0c464d76636f42edf4f064cea4c87150ef647b"
+ },
+ "script_sha256": "ad47d9b90204fb3e66204ca86b6f00cc8b2db8e4a6b76a6ce966d964c718a021"
+}

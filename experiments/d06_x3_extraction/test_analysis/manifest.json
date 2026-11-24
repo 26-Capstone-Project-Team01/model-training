@@ -1,0 +1,37 @@
+{
+ "test_sha256": "e8a70053ce639ebc79d7bc8d9402578d3ceaf24853ed31735b5f55c418b8bd73",
+ "reference": "d06_test_eval/analysis/d06_test_full35.csv",
+ "reference_sha256": "60dca3a2d2b05d4ab3b4471882b565ff673dcaff765900aa88de1e3868842e3e",
+ "jsonl": {
+  "malicious.jsonl": "540c84e5459216d57a5d9e1ea14ed796c62ffe436aec9b518f4b4e04a383a75f",
+  "benign.jsonl": "52e96e4a42b8d0573e4a1b640e0c464d76636f42edf4f064cea4c87150ef647b"
+ },
+ "script_sha256": "a25be9f68d48c859c9e640086601db95d4a452a5776aa34e228f26cb2eebb037",
+ "build_x3d_sha256": "0097620e3c311f31c928853ac3d6849f45b0e9c9ca6a6cd79824f012fe6453a2",
+ "verify_x3_sha256": "ad47d9b90204fb3e66204ca86b6f00cc8b2db8e4a6b76a6ce966d964c718a021",
+ "extract_x3_test_sha256": "f21e55dfa857778d49451aaa234916dcacc8d064eaa802007548fffed6957cc9",
+ "extract_x3_sha256": "a2e0fb5334f5053fddb4a8f6d386647033a0a269a862f50f565f8d8dbf5a1505",
+ "extractor": "depbee-analyzer feat/x3-hook-target-context e45cb4d",
+ "options": "--reuse-x1-calls --file-cache (all rows)",
+ "status": [
+  [
+   "benign",
+   "ok",
+   400
+  ],
+  [
+   "hard_benign",
+   "ok",
+   60
+  ],
+  [
+   "malicious",
+   "ok",
+   217
+  ]
+ ],
+ "outputs": {
+  "d06_test_x3d.csv": "d0172317f7f9df64f83a1052ad0b7f55e96df4a6ce2dd9ff48b6cc1f3fb5ae38",
+  "d06_test_x3d_status.csv": "f8a3605702dedb5231da3055ef1092af42f3166652f5904be311c965acacf47a"
+ }
+}

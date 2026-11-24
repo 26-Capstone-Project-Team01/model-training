@@ -1,0 +1,9 @@
+row_id,feature,new,stored
+621,installScriptPresent,False,True
+667,installScriptPresent,False,True
+670,installScriptPresent,False,True
+621,installScriptAdded,False,True
+667,installScriptAdded,False,True
+670,installScriptAdded,False,True
+621,scriptEntryAdded,False,True
+670,scriptEntryAdded,False,True
