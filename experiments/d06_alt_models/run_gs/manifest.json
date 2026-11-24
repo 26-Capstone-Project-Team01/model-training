@@ -1,0 +1,46 @@
+{
+ "stage": "groupsearch",
+ "inputs": {
+  "train": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "groups": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2",
+  "classes": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+ },
+ "runner_sha256": "ba951f377b36faeb6977a16f3cd29aa6e6ea7f87f52f1fe67ab8583a2ee33374",
+ "script_sha256": "bbaa0c98b2d983187040f0eff32395c705fcfba09bed1e492c4cc29d9e3e6886",
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "argv": [
+  "alt_models.py",
+  "--workspace",
+  "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/ws_full35",
+  "--stage",
+  "groupsearch",
+  "--out",
+  "run_gs",
+  "--jobs",
+  "1"
+ ],
+ "read_test": false,
+ "limit_cells": 0,
+ "outputs": {
+  "groupsearch_calibration.csv": "db1ef4f4ee8a97d157e202a501e33e0967013feb0182f0c18260a93f33ad04ff",
+  "groupsearch_ranking.csv": "9c39467c280a7ff53c38a05ab4b42faa98a59828a1649b924bbd783b86fb4b72",
+  "scores.csv": "9a3cbc40bc05fc82555d00113f9b87812de6178b35894ba07ef63e3a4fc41944",
+  "selection.json": "b8a192bd68a28e04ae2f4ee6f4f27114db8414975c06be40d6a8837eacbcbae7"
+ }
+}

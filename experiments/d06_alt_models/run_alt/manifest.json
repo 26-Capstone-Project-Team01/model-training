@@ -1,0 +1,44 @@
+{
+ "stage": "altmodels",
+ "inputs": {
+  "train": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "groups": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2",
+  "classes": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+ },
+ "runner_sha256": "ba951f377b36faeb6977a16f3cd29aa6e6ea7f87f52f1fe67ab8583a2ee33374",
+ "script_sha256": "bbaa0c98b2d983187040f0eff32395c705fcfba09bed1e492c4cc29d9e3e6886",
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "argv": [
+  "alt_models.py",
+  "--workspace",
+  "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/ws_full35",
+  "--stage",
+  "altmodels",
+  "--out",
+  "run_alt",
+  "--jobs",
+  "1"
+ ],
+ "read_test": false,
+ "limit_cells": 0,
+ "outputs": {
+  "scores.csv": "5cfd3021f77dd9024a524eaab52498c5c3bbef012c400e0bf4753a9b292ed628",
+  "training.csv": "9eaeff9a4a9df235b084e7f6529313a72c351f520ca25c3c46f33a9cbb65ca9c"
+ }
+}
