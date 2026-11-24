@@ -1,0 +1,4 @@
+class,n,registry_ok,new_in_time,old_in_time,new_manifest,old_manifest,time_features,size_feature
+benign,50,1.0,1.0,1.0,1.0,1.0,0.9,0.72
+hard_benign,50,1.0,1.0,1.0,1.0,1.0,0.7,0.94
+malicious,50,1.0,1.0,1.0,0.06,1.0,0.88,0.06

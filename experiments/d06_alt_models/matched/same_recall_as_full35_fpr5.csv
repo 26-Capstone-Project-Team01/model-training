@@ -1,0 +1,15 @@
+split,variant,target_TP,TP,FP,hard_FP,benign_FP
+split1,B1_f35_lr,854,854,92,20,72
+split1,B2_f35_mlp,854,854,108,22,86
+split1,B3_f35_lr_mlp,854,854,92,20,72
+split1,full35,854,854,74,32,42
+split1,full35_lr,854,854,310,36,274
+split1,full35_mlp,854,854,229,21,208
+split1,full35_rf,854,854,99,32,67
+split2,B1_f35_lr,876,876,75,25,50
+split2,B2_f35_mlp,876,876,73,21,52
+split2,B3_f35_lr_mlp,876,876,73,21,52
+split2,full35,876,876,87,29,58
+split2,full35_lr,876,876,101,20,81
+split2,full35_mlp,876,876,306,30,276
+split2,full35_rf,876,877,78,31,47

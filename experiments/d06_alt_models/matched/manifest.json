@@ -1,0 +1,14 @@
+{
+ "nature": "DIAGNOSTIC ONLY (outer labels used for matching); not used for selection",
+ "script_sha256": "2afbc472050a4a343b6fc6876d321ea88301ed24e547cd1b2e1f21e901533425",
+ "inputs": {
+  "thresholds": "8d4927d548b2c050ef2bbb6db52ba7ea38ddf8050d1ffe443ada5c1f311d95bc",
+  "run_alt": "5cfd3021f77dd9024a524eaab52498c5c3bbef012c400e0bf4753a9b292ed628",
+  "run_blend": "0a5312e5d53f5c5e0316de08e35388fd9c1dad243039c6f9cad827c2581fbfe3"
+ },
+ "outputs": {
+  "gain_loss_vs_full35_fpr5.csv": "c88e3b55e5479f7934033b2c394c219b1eb07b3a76ef7048d6e3b8e6147986cd",
+  "same_outer_fpr.csv": "395ac853b0ffd5da12ad199c255fed498f6949e674de291853801a348c9668d4",
+  "same_recall_as_full35_fpr5.csv": "814ab514441a0d272c947b7a9db419cafa87034dcfbdcef75f4364f2198b3c30"
+ }
+}

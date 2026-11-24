@@ -1,0 +1,10 @@
+{
+ "script_sha256": "7885e5e0e84a0919adf3b3c2316815f8459a7eeb41fdb75c32a116377b72d212",
+ "sample": "50 per class, random_state 20261124",
+ "outputs": {
+  "coverage_by_class.csv": "032bd11c347d9abdef1aba30d9fc8255f84317f8082ceba026bf11982581bcbe",
+  "distribution_by_class.csv": "4774e23f81b0221c1eb7e1b2e330094bec1372918900214be184bcc555ee6846",
+  "probe_pairs.csv": "c2acb85f786b3b2f7f0cba88f41af7fa7d64810357736d30f1f1df40a1872bcf",
+  "registry_log.jsonl": "de71efd32f465b8e683cfb2f5d500321f8eb676e34e116a074e35ba52e052271"
+ }
+}

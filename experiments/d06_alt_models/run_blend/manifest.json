@@ -1,0 +1,110 @@
+{
+ "selected": {
+  "B1_f35_lr|split1": {
+   "models": [
+    "full35",
+    "full35_lr"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.9,
+    0.1
+   ],
+   "cal_pr_auc": 0.9189783536828328,
+   "full35_only_cal_pr_auc": 0.8401390307856861
+  },
+  "B1_f35_lr|split2": {
+   "models": [
+    "full35",
+    "full35_lr"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.9,
+    0.1
+   ],
+   "cal_pr_auc": 0.9964399182831709,
+   "full35_only_cal_pr_auc": 0.9962359178812493
+  },
+  "B2_f35_mlp|split1": {
+   "models": [
+    "full35",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.9,
+    0.1
+   ],
+   "cal_pr_auc": 0.8981828924717793,
+   "full35_only_cal_pr_auc": 0.8401390307856861
+  },
+  "B2_f35_mlp|split2": {
+   "models": [
+    "full35",
+    "full35_mlp"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.8,
+    0.2
+   ],
+   "cal_pr_auc": 0.9970663763507402,
+   "full35_only_cal_pr_auc": 0.9962359178812493
+  },
+  "B3_f35_lr_mlp|split1": {
+   "models": [
+    "full35",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.9,
+    0.1,
+    -0.0
+   ],
+   "cal_pr_auc": 0.9189783536828328,
+   "full35_only_cal_pr_auc": 0.8401390307856861
+  },
+  "B3_f35_lr_mlp|split2": {
+   "models": [
+    "full35",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.8,
+    0.0,
+    0.2
+   ],
+   "cal_pr_auc": 0.9970663763507402,
+   "full35_only_cal_pr_auc": 0.9962359178812493
+  }
+ },
+ "correlation_calibration": {
+  "full35~full35_lr": {
+   "spearman": 0.7850233837768344,
+   "pearson": 0.9314864731692489
+  },
+  "full35~full35_mlp": {
+   "spearman": 0.8076329078298171,
+   "pearson": 0.9155182926372428
+  },
+  "full35_lr~full35_mlp": {
+   "spearman": 0.7877216786632821,
+   "pearson": 0.9525565386391932
+  }
+ },
+ "script_sha256": "a1d651540535406e6a9ec13dd01e46256ea860f66c344ef3be0f05829ef730ed",
+ "inputs": {
+  "full35_scores": "7b0524dad7b001f7df90c8f6a22197c605b04d54fbaf2cf914929749fb78a049",
+  "alt_scores": "5cfd3021f77dd9024a524eaab52498c5c3bbef012c400e0bf4753a9b292ed628"
+ },
+ "outputs": {
+  "score_scale_calibration.csv": "341d90fab88b098700cdeab9eb33883b3be039186ada8fe3a354c678a6d1e391",
+  "scores.csv": "0a5312e5d53f5c5e0316de08e35388fd9c1dad243039c6f9cad827c2581fbfe3",
+  "selection_calibration.csv": "b5c19c8b774ce0502290569564beff26bd158e2605ea60ee5d437e05e45b600b"
+ }
+}
