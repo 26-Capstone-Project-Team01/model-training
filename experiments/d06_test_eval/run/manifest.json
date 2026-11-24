@@ -1,0 +1,171 @@
+{
+ "experiment_id": "D06-TEST-EVAL",
+ "preregistration": "PREREGISTRATION.md",
+ "preregistration_sha256": "5c941d085f2878ca0d081ed6714fa6f3feb7bca8d48c045267a8c60c1d093923",
+ "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+ "inputs": {
+  "train": {
+   "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+   "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+  },
+  "groups": "b05c9dfd869dde5b9a488d830bebec998c9673a388e835ec1b52c253153d7a7b",
+  "classes": {
+   "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+   "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+  },
+  "train_full35": "a97b761a15feca5559a522078ac370ba46320055a248df90e254b07d1fc27f23",
+  "test_full35": "60dca3a2d2b05d4ab3b4471882b565ff673dcaff765900aa88de1e3868842e3e",
+  "test_status": "a134f4db31c4c44f13e51ce24cb82c52dd6f5486a5efabfeb9c13cee3d75fc0b"
+ },
+ "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+ "script_sha256": "0713a97f348d9d46947aad14965489a22db018ef26e184316889fd2a61fb8cb8",
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "seeds": {
+  "seed20261109": 20261109,
+  "seed20261110": 20261110
+ },
+ "primary_seed": "seed20261109",
+ "models": {
+  "base7": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval"
+  ],
+  "base7_w": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval"
+  ],
+  "full29": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode"
+  ],
+  "full35": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount"
+  ]
+ },
+ "blend": {
+  "A1": 0.1,
+  "A2": 0.2,
+  "A3": 0.3
+ },
+ "targets": [
+  0.01,
+  0.03,
+  0.05
+ ],
+ "leakage_checks": {
+  "package": 0,
+  "key": 0,
+  "largestChangedJsSha1": 0,
+  "changedJsSetSha1": 0,
+  "real_splitGroup": []
+ },
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "read_test_for_selection": false,
+ "outputs": {
+  "campaign_tp.csv": "f59fd523a656dd95a17101b930a1ea33d953a870c2fb55440cd85683d392a375",
+  "e06_e09_reproduction.json": "98c66cfbd7b19465ff0af01f281bae70fff84c0efad3b296dfe4d75f2f32989c",
+  "gain_loss_cases_test674.csv": "71d2158194c051a9b6146af4c798fdac892e21bff0d4f67c5401b6f3567fc271",
+  "gain_loss_vs_full29.csv": "4b791e0d4e8b3db01ba4598ede231a6dff2998aec11759a425b6335d617f2fc6",
+  "metrics.csv": "6c243fe2eb7cc3177384f165e3fda98aed090b2aee67743a761abb7ee7015d5a",
+  "base7_seed20261109.txt": "4813b66b24708c15bcc28292dc15247ccbe032f291713ad6b57f74dae6b41951",
+  "base7_seed20261110.txt": "400dddd3f05f5ae18a9addb5d684907e9830d24a02e8a8b8cfa2c1ef46d12315",
+  "base7_w_seed20261109.txt": "af6df463ca50cfa630cd1d2349f26f77a91834360343f7e321227d6bc4a329a7",
+  "base7_w_seed20261110.txt": "6672185bbfaaabd1f33bf1f494bf345949d70e13d7ef5db5a4d3e3a2efc2578a",
+  "full29_seed20261109.txt": "fd97ff7f182610cd6d1951480e56601ea46d37dcb6d2f498287e9fb5d3a35b9b",
+  "full29_seed20261110.txt": "1809e4487636db3f151def28a6930e090f9ebc9ea0aaaf53b103ea8ebe9ac63b",
+  "full35_seed20261109.txt": "33dc36287dd161c5538d7595c789925889f40ab645c2268a74d6f662bdb6c55f",
+  "full35_seed20261110.txt": "4fd4a857e29c149a6cd1a9e557723d6733c94d078a78ece8139fcb749cc07425",
+  "ranking.csv": "17cd606d3cec25179e26c85ed6e7bc60a9bf6f3e15244bd4d6cc347844260157",
+  "scores.csv": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "splits.csv": "7bcc0f2f25bd85de952e658b1c348eb6731d1aa85695d929bcd6c92329161109",
+  "test_rows.csv": "5f8303cd34403a08c8b1cdad7f73cd2d46afe34b4a328b58e4106a525aacc38b",
+  "thresholds.csv": "9cbebf50185d4c3439cb8957ca6288dff6557410393ff0c5c8d5f8a15800b361",
+  "training.csv": "02f4100d19b2f60efe32be87fb7f548b78166ab6b8cf5078a95e57a114110b95"
+ }
+}

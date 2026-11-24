@@ -75,3 +75,25 @@ python -I -B merge_x1_test.py --test in/test.csv --test-main <main test.csv> --b
   --groups in/malicious_pair_groups.csv --x1 raw/malicious.jsonl raw/benign.jsonl \
   --train-full35 ../d06_x1_extraction/analysis/d06_full35.csv --train-schema ../d06_x1_extraction/analysis/d06_full35_schema.json --out analysis
 ```
+
+## 7. 학습·Test 평가 (사전 등록 조건 그대로)
+
+- 실행: `python -I -B run_test_eval.py --workspace <ws> --groups <be87ab4c malicious_pair_groups.csv> --out run`
+  (`<ws>`는 PR #13 스냅샷 `load_data`가 읽는 Train·그룹·class 입력 배치, 경로·해시는 `run/manifest.json`. lightgbm 4.7.0, pandas 3.0.6, numpy 2.5.3, scikit-learn 1.9.1 필요)
+- 결과 요약과 표: `RESULTS.md`
+- `run/` 파일
+
+| 파일 | 내용 |
+|---|---|
+| `splits.csv` | seed별 fit/calibration 행(row_id, component, class, campaign) |
+| `training.csv` | 모델별 Feature 순서, 가중치, 실제 rounds, 모델 SHA-256, fit/calibration 행 수, gain 상위 5 |
+| `models/*.txt` | 학습된 8개 모델 (4 모델 × 2 seed) |
+| `scores.csv` | calibration·Test 행별 점수 (7 모델 × 2 seed). Test 행은 `test_row`(= `analysis/d06_test_full35.csv` 행 순서) |
+| `test_rows.csv` | Test 행 번호, 키, label, class, campaign, Test-674 포함 여부 |
+| `thresholds.csv` | 모델·seed·목표 FPR별 calibration 임계값, 예산, calibration FP, 동점 |
+| `metrics.csv` | Test-674/677 × seed × 운영점 × 모델 전체 지표 |
+| `ranking.csv` | ROC-AUC, PR-AUC (진단) |
+| `campaign_tp.csv` | 캠페인별 TP |
+| `gain_loss_vs_full29.csv`, `gain_loss_cases_test674.csv` | full29 대비 득실 요약과 행 목록 |
+| `e06_e09_reproduction.json` | 저장 E06·E09 모델의 Test-677 @0.5 재현 |
+| `manifest.json` | 입력·출력 해시, 사전 등록 문서 해시, 파라미터, 누수 검증, 환경 |

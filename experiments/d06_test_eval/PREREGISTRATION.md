@@ -19,7 +19,8 @@
 
 ## 2. 학습 데이터와 분할
 
-- 학습: D06 Train 2,767쌍(`be87ab4c` `train.csv`, SHA-256 `22fbc875…2c23`) 전체. Test는 학습·calibration·모델 선택에 쓰지 않는다.
+- 학습 데이터: D06 Train 2,767쌍(`be87ab4c` `train.csv`, SHA-256 `22fbc875…2c23`) 전체를 **fit / calibration 분할 대상**으로 쓴다.
+  **모델 학습에는 fit 행만 쓰고**, calibration 행은 임계값 결정에만 쓴다. Test는 학습·calibration·모델 선택에 쓰지 않는다.
 - component: PR #13 스냅샷 `components()`(같은 package, 실제 splitGroup, 비어 있지 않은 악성 payload 해시를 union-find). 입력은 PR #13과 같다.
 - 분할: 스냅샷 `inner_split(train_all, seed)`로 Train 전체를 component 단위 fit / calibration(클래스별 약 25%)으로 나눈다. `check_disjoint`로 겹침 0 확인.
   - **주 평가 seed 20261109**, 보조 seed 20261110. (outer fold가 없으므로 seed + fold 보정은 하지 않고 seed 값을 그대로 쓴다.)
@@ -74,9 +75,27 @@
 ## 8. 해석 원칙
 
 - D06 Train outer 결과는 이미 개발에 쓰였다. Test 결과가 outer와 다르면 그 차이를 그대로 보고하고 모델을 바꾸지 않는다.
-- Test 악성은 Train에 없는 캠페인(예: mastra-easy-day-js, canisterworm, debug-chalk-duckdb, rspack-vant, @emilgroup/*)으로 구성돼 있어
-  "새 캠페인에서의 성능"에 가깝지만, 정상 400 + Hard benign 60으로 표본이 작다. FPR 1%는 Test 정상 기준 약 4~5건이다.
+- Test 악성의 캠페인(splitGroup, `be87ab4c` `malicious_pair_groups.csv` 기준):
+
+  | 캠페인 | Test-677 | Test-674 | Train에 있음 |
+  |---|---:|---:|---|
+  | mastra-easy-day-js_2026-06 | 119 | 119 | 없음 |
+  | canisterworm_2026-03 | 68 | 68 | 없음 |
+  | debug-chalk-duckdb_2025-09 | 17 | 17 | 없음 |
+  | rspack-vant_2024-12 | 8 | 7 | 없음 |
+  | individuals_case | 5 | 3 | 있음 (범용 묶음) |
+  | 합계 | 217 | 214 | |
+
+  `individuals_case`는 실제 단일 공격 캠페인이 아니라 서로 무관한 개별 침해 사례를 모은 **범용 묶음**이다(PR #13 component 정의에서도 캠페인으로 묶지 않는다).
+  제외 vant 3쌍의 splitGroup은 individuals_case 2, rspack-vant_2024-12 1이다.
+  따라서 Test 악성 214쌍(674 기준) 중 211쌍은 Train에 없는 실제 캠페인이라 "새 캠페인에서의 성능"에 가깝지만,
+  정상 400 + Hard benign 60으로 표본이 작다. FPR 1%는 Test 정상 기준 약 4~5건이다.
 
 ## 변경 이력
 
-(없음)
+### 2026-11-24 정정 1 (Test 예측·성능 계산 전, 평가 조건 변경 없음)
+
+| 위치 | 기존 내용 | 정정 내용 | 이유 |
+|---|---|---|---|
+| 2절 첫 항목 | "학습: D06 Train 2,767쌍(…) 전체. Test는 학습·calibration·모델 선택에 쓰지 않는다." | Train 2,767쌍 전체는 fit / calibration 분할 대상이고, 모델 학습에는 fit만, calibration은 임계값 결정에만 쓴다고 명시 | "전체로 학습"으로 읽힐 수 있어 3·4절의 실제 조건(fit으로만 학습, calibration으로 임계값)과 맞게 표현을 고침 |
+| 8절 캠페인 예시 | "Train에 없는 캠페인(예: mastra-easy-day-js, canisterworm, debug-chalk-duckdb, rspack-vant, @emilgroup/*)" | `@emilgroup/*` 삭제, Test-677·674 캠페인별 개수 표 추가, individuals_case가 범용 묶음이며 Train에도 있다고 명시 | `@emilgroup/*`는 캠페인이 아니라 패키지 이름 묶음이다(54쌍 모두 canisterworm_2026-03). individuals_case는 Train에 없는 캠페인이 아니다 |

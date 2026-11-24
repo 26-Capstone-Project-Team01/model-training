@@ -1,0 +1,62 @@
+{
+ "E06": {
+  "model_file": "models/D06_E06_package_json_only.txt",
+  "model_sha256": "74e029167f54db5cf2e39fcc10c62eedf80efa36fcb36fa2e9e2e47050dda73d",
+  "trees": 6,
+  "features": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval"
+  ],
+  "TP": 132,
+  "FP": 17,
+  "reproduced": {
+   "recall": 0.6082949308755761,
+   "precision": 0.8859060402684564,
+   "f1": 0.7213114754098361,
+   "pr_auc": 0.8687580548681246
+  },
+  "recorded": {
+   "recall": 0.6082949308755761,
+   "precision": 0.8859060402684564,
+   "f1": 0.7213114754098361,
+   "pr_auc": 0.8687580548681246
+  },
+  "max_abs_diff": 0.0,
+  "match_1e-9": true
+ },
+ "E09": {
+  "model_file": "models/D06_E09_package_json_only_campaign_weight.txt",
+  "model_sha256": "60f9992ab91a2a5765cd55b315247a6062603afa118e060a38a5a31af5e1ec9f",
+  "trees": 7,
+  "features": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval"
+  ],
+  "TP": 154,
+  "FP": 39,
+  "reproduced": {
+   "recall": 0.7096774193548387,
+   "precision": 0.7979274611398963,
+   "f1": 0.751219512195122,
+   "pr_auc": 0.8143329429804234
+  },
+  "recorded": {
+   "recall": 0.7096774193548387,
+   "precision": 0.7979274611398963,
+   "f1": 0.751219512195122,
+   "pr_auc": 0.8143329429804234
+  },
+  "max_abs_diff": 0.0,
+  "match_1e-9": true
+ }
+}
