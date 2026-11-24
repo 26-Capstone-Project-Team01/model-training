@@ -1,0 +1,194 @@
+[
+ {
+  "column": "package",
+  "group": "id"
+ },
+ {
+  "column": "old_version",
+  "group": "id"
+ },
+ {
+  "column": "new_version",
+  "group": "id"
+ },
+ {
+  "column": "installScriptPresent",
+  "group": "full29",
+  "dtype": "bool"
+ },
+ {
+  "column": "installScriptAdded",
+  "group": "full29",
+  "dtype": "bool"
+ },
+ {
+  "column": "scriptEntryAdded",
+  "group": "full29",
+  "dtype": "bool"
+ },
+ {
+  "column": "newDependencyAdded",
+  "group": "full29",
+  "dtype": "bool"
+ },
+ {
+  "column": "newDependencyCount",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "updateType",
+  "group": "full29",
+  "dtype": "category[major,minor,patch]"
+ },
+ {
+  "column": "updateInterval",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfChangedFileCount",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexIdentRatioNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexIdentRatioChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexIdentRatioChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexNumberRatioNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexNumberRatioChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfHexNumberRatioChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfBracketAccessRatioNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfBracketAccessRatioChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfBracketAccessRatioChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfEscapeDensityNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfEscapeDensityChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfEscapeDensityChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfShortIdentRatioNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfShortIdentRatioChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfShortIdentRatioChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfMeanIdentLengthNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfMeanIdentLengthChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfMeanIdentLengthChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfWhitespaceRatioNew",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfWhitespaceRatioChange",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "obfWhitespaceRatioChangedCode",
+  "group": "full29",
+  "dtype": "float"
+ },
+ {
+  "column": "installHookNewProgramCount",
+  "group": "x1",
+  "dtype": "int (nullable)"
+ },
+ {
+  "column": "installHookArgsChanged",
+  "group": "x1",
+  "dtype": "bool (nullable)"
+ },
+ {
+  "column": "installHookRefFileChanged",
+  "group": "x1",
+  "dtype": "bool (nullable)"
+ },
+ {
+  "column": "installHookNewExternalExecCount",
+  "group": "x1",
+  "dtype": "int (nullable)"
+ },
+ {
+  "column": "addedProcExecCallCount",
+  "group": "x1",
+  "dtype": "int (nullable)"
+ },
+ {
+  "column": "addedNetworkCallCount",
+  "group": "x1",
+  "dtype": "int (nullable)"
+ },
+ {
+  "column": "label",
+  "group": "target",
+  "dtype": "int 0/1"
+ }
+]

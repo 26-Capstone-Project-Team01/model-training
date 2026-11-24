@@ -1,0 +1,98 @@
+{
+ "input_sha256": {
+  "test": "e8a70053ce639ebc79d7bc8d9402578d3ceaf24853ed31735b5f55c418b8bd73",
+  "test_main": "604673b95d88009efe5d3200606de972bffa541dea3d75be37163ee501465060",
+  "baselines": "acc48b6a6ef5883987ee93d978059c9a9c037bc4186598d6f23c62d3d2a793d2",
+  "groups": "b05c9dfd869dde5b9a488d830bebec998c9673a388e835ec1b52c253153d7a7b",
+  "x1": {
+   "malicious.jsonl": "d37ab3441bdcc9eb39268bb012e218df75d2c6f41b9f912fe425f1843044bff8",
+   "benign.jsonl": "13a2e85350db6897aeb121a211048caa632d9dc8aa6136d6aa02b194a5e30983"
+  }
+ },
+ "test_rows": 677,
+ "x1_rows": 677,
+ "x1_duplicate_keys": 0,
+ "test_pairs_without_x1_row": 0,
+ "x1_rows_not_in_test": 0,
+ "label_class_consistent": true,
+ "class_counts": {
+  "benign": 400,
+  "malicious": 217,
+  "hard_benign": 60
+ },
+ "columns_identical_to_train_full35": true,
+ "schema_columns_identical": true,
+ "bool_x1_values_seen": {
+  "installHookRefFileChanged": [
+   "",
+   "False",
+   "True"
+  ],
+  "installHookArgsChanged": [
+   "False",
+   "True"
+  ]
+ },
+ "bool_x1_values_ok": true,
+ "int_x1_non_integer_strings": {
+  "installHookNewProgramCount": 0,
+  "installHookNewExternalExecCount": 0,
+  "addedProcExecCallCount": 0,
+  "addedNetworkCallCount": 0
+ },
+ "keys_label_29_unchanged_vs_test_csv": true,
+ "status_counts": {
+  "ok": 677
+ },
+ "failed_pairs": [],
+ "x1_missing_in_ok_rows": {
+  "installHookNewProgramCount": 0,
+  "installHookArgsChanged": 0,
+  "installHookRefFileChanged": 7,
+  "installHookNewExternalExecCount": 0,
+  "addedProcExecCallCount": 0,
+  "addedNetworkCallCount": 0
+ },
+ "x1_missing_total": {
+  "installHookNewProgramCount": 0,
+  "installHookArgsChanged": 0,
+  "installHookRefFileChanged": 7,
+  "installHookNewExternalExecCount": 0,
+  "addedProcExecCallCount": 0,
+  "addedNetworkCallCount": 0
+ },
+ "x1_missing_in_ok_by_class": {
+  "installHookNewProgramCount": {},
+  "installHookArgsChanged": {},
+  "installHookRefFileChanged": {
+   "malicious": 6,
+   "hard_benign": 1
+  },
+  "installHookNewExternalExecCount": {},
+  "addedProcExecCallCount": {},
+  "addedNetworkCallCount": {}
+ },
+ "source_check_counts": {
+  "old": {
+   "sha512": 572,
+   "archive@be87ab4c": 105
+  },
+  "new": {
+   "sha512": 460,
+   "archive@be87ab4c": 217
+  }
+ },
+ "vant3_present_in_677": 3,
+ "test674_rows": 674,
+ "test674_equals_main_test_csv_on_33_cols": true,
+ "test674_class_counts": {
+  "benign": 400,
+  "malicious": 214,
+  "hard_benign": 60
+ },
+ "output_sha256": {
+  "d06_test_full35.csv": "60dca3a2d2b05d4ab3b4471882b565ff673dcaff765900aa88de1e3868842e3e",
+  "d06_test_full35_schema.json": "87c399319061714d6296a2f058fbaa39f49d84126e11148b5a94ce21d10f3a03",
+  "d06_test_x1_status.csv": "a134f4db31c4c44f13e51ce24cb82c52dd6f5486a5efabfeb9c13cee3d75fc0b"
+ }
+}

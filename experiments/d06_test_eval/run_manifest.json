@@ -1,0 +1,64 @@
+{
+ "experiment_id": "D06-TEST-X1-EXTRACTION",
+ "status": "Test 677 X1 extraction and merge complete; no training, no prediction, no metrics",
+ "data": {
+  "repository": "26-Capstone-Project-Team01/npm-malware-package-pairs",
+  "commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+  "inputs": {
+   "derived/splits/test.csv": "e8a70053ce639ebc79d7bc8d9402578d3ceaf24853ed31735b5f55c418b8bd73",
+   "derived/pairs/baselines.csv": "acc48b6a6ef5883987ee93d978059c9a9c037bc4186598d6f23c62d3d2a793d2",
+   "derived/pairs/malicious_pair_groups.csv": "b05c9dfd869dde5b9a488d830bebec998c9673a388e835ec1b52c253153d7a7b"
+  },
+  "test_main_4498acd_test.csv": "604673b95d88009efe5d3200606de972bffa541dea3d75be37163ee501465060",
+  "pairs": {
+   "total": 677,
+   "malicious": 217,
+   "benign": 400,
+   "hard_benign": 60
+  },
+  "test674_excluded": [
+   "vant 4.9.11->4.9.12",
+   "vant 4.9.11->4.9.13",
+   "vant 4.9.11->4.9.14"
+  ]
+ },
+ "extractor": {
+  "repository": "26-Capstone-Project-Team01/depbee-analyzer",
+  "commit": "d56738c234aae239d82729f964b7dd35f304fa93",
+  "extractor": "code_context",
+  "tests": "169 passed, 1 failed (tests/test_cli.py console entry; package not pip-installed in this environment, extractor tests all passed)"
+ },
+ "procedure": "extract_x1_test.py = ../d06_x1_extraction/extract_x1.py with only input list/row-count check/arg name changed",
+ "environment": {
+  "python": "3.13.18",
+  "requests": "2.34.2",
+  "semver": "3.1.2",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "workers": {
+   "malicious": 2,
+   "benign": 3
+  }
+ },
+ "source_handling": {
+  "registry": "dist.integrity sha512 verified before tarfile.extractall(filter='data')",
+  "archive": "new partial clone (blob:none, core.symlinks=false, hooksPath=/dev/null), sparse checkout of be87ab4c in batches of 60",
+  "executed_package_code": false
+ },
+ "reproducibility_check": "original Train extract_x1.py re-run on 12 Train benign pairs in this environment: X1+status identical 12/12 to stored Train raw/benign.jsonl",
+ "result": {
+  "ok": 677,
+  "failed": 0,
+  "missing_in_ok": {
+   "installHookRefFileChanged": 7
+  }
+ },
+ "outputs": {
+  "benign.jsonl": "13a2e85350db6897aeb121a211048caa632d9dc8aa6136d6aa02b194a5e30983",
+  "malicious.jsonl": "d37ab3441bdcc9eb39268bb012e218df75d2c6f41b9f912fe425f1843044bff8",
+  "d06_test_full35.csv": "60dca3a2d2b05d4ab3b4471882b565ff673dcaff765900aa88de1e3868842e3e",
+  "d06_test_full35_schema.json": "87c399319061714d6296a2f058fbaa39f49d84126e11148b5a94ce21d10f3a03",
+  "d06_test_x1_status.csv": "a134f4db31c4c44f13e51ce24cb82c52dd6f5486a5efabfeb9c13cee3d75fc0b",
+  "validation.json": "164b3d62932b6f2cf93192cdae1509ff5ec5fe9881a51a09432969497d48a016"
+ }
+}
