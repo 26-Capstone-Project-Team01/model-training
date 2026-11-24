@@ -1,0 +1,23 @@
+{
+ "experiment_id": "D06-TEST-FOLLOWUP-CAUSE",
+ "nature": "post-hoc cause analysis on the already-evaluated D06 Test (inference/saved scores only; no training, no new features)",
+ "script": "cause_analysis.py",
+ "script_sha256": "2050357027b03926f4564c8d3c27354ec600b4ce0e426934c1c6cd4eade517fc",
+ "inputs": {
+  "followup_run_manifest": "87d18de461235a781343a66eacb580188e31f25f038ab26b518c7d08b223a28f",
+  "d06_test_eval_scores": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "d06_test_eval_splits": "7bcc0f2f25bd85de952e658b1c348eb6731d1aa85695d929bcd6c92329161109",
+  "scores_w1": "138faf0ff309927c799fb74a89cf2454fc9522b26400dcbc038423d9d47a7ca3",
+  "thresholds": "db97feb4980afa8083dd67c82fe34a54c3695ab770899b0f360fab194a77bec4",
+  "e06_e09_test_scores": "ea66478c9a1456dabbdc9cf416a1ce3b82b80b78b8cb7d6b7911149ca0bdd365",
+  "train_val_split_assignment": "29ab4c98d2ae45030aceda31ad93dda2455946f968067f90317739202cbe2903"
+ },
+ "outputs": {
+  "feature_importance.csv": "a28eb0ecc5e0dd73f63e6a3235e8dc09ef274b77e9b25380fe49eab7264ddacf",
+  "feature_profiles.csv": "4b48e5393dd3cfec0708406c2e80753e26c2519a899ef787bc66a1a3ca3efbec",
+  "focus_pair_scores.csv": "080b4995e08fa47a9207f44a11450fffd43727b83d5e02e18dc189635673e948",
+  "score_by_group_test674.csv": "d52b10f26624ffd01280541209eb48b459256d667eb1bd5ada46e2a1d23ffe57",
+  "training_composition.csv": "96a8c28f5057b72cebc29f5d2292c6534f1cdc65c42f0c9cf96a042cbe2fc605",
+  "treeshap_focus_groups.csv": "00a6fb82618e96cbd3d721a59e4cf5941cc5975f31156c865ae163be2e429b91"
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "experiment_id": "D06-TEST-FOLLOWUP",
+ "nature": "post-hoc development experiment on the already-evaluated D06 Test (not pre-registered)",
+ "base": "d06_test_eval (d3c0c0d)",
+ "script_sha256": "80eaf8157cb1b824117a3db9da1eda03a3ee8bb2cfaef996025a6b867175df46",
+ "run_test_eval_sha256": "0713a97f348d9d46947aad14965489a22db018ef26e184316889fd2a61fb8cb8",
+ "inputs": {
+  "train": {
+   "path": "temp/detection-feasibility/phase1/run_20261108T141426Z_d8b14252/inputs/train.csv",
+   "sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+  },
+  "groups": "b05c9dfd869dde5b9a488d830bebec998c9673a388e835ec1b52c253153d7a7b",
+  "classes": {
+   "path": "model-training/results/diagnostics/d06_diag01_pair_predictions.csv",
+   "sha256": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+  },
+  "stored_scores": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "stored_splits": "7bcc0f2f25bd85de952e658b1c348eb6731d1aa85695d929bcd6c92329161109"
+ },
+ "new_models": {
+  "full29_w1": "full29",
+  "full35_w1": "full35"
+ },
+ "weight": "W1 component",
+ "prefix_trees": [
+  6,
+  7,
+  10,
+  20,
+  50,
+  100,
+  200
+ ],
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "outputs": {
+  "e06_e09_test.csv": "177ba3503dc12cdcb83163f2c70ef5003d8156b7ad5487217b89eaa0d5e8f4ed",
+  "e06_e09_test_scores.csv": "ea66478c9a1456dabbdc9cf416a1ce3b82b80b78b8cb7d6b7911149ca0bdd365",
+  "metrics.csv": "c68b70a7b99d761f9578a71976c51908d26d249eaebefd877edd7a7dee19440f",
+  "full29_w1_seed20261109.txt": "7e2ba4dcca8792833141a3b68b69fbb278108c3e234da04ca3cbcc211e241e01",
+  "full29_w1_seed20261110.txt": "c99230f83566750004aaaa19090f981a0e1d10c824518006e329003211062e91",
+  "full35_w1_seed20261109.txt": "4dd27caa257b8f339627dbe36dfc6766edc80847c80bb194646ee99b2bc175d6",
+  "full35_w1_seed20261110.txt": "c3110d4262186ce5496d3e31765f27d39677ac9b4276b9e66ee57f42b51c9aa3",
+  "prefix_metrics.csv": "dcd08906ad4cfb1cfbc7bbf238b62c1879f41b4cef0952b49d92c7d81f89eb1e",
+  "prefix_thresholds_calrank.csv": "2649f5d53b9d651e9f8e2b9ebe77662f3ceab454faeae5f9095cd9640fff1732",
+  "scores_w1.csv": "138faf0ff309927c799fb74a89cf2454fc9522b26400dcbc038423d9d47a7ca3",
+  "thresholds.csv": "db97feb4980afa8083dd67c82fe34a54c3695ab770899b0f360fab194a77bec4",
+  "training_w1.csv": "777c5d54ab8a0c71bd954b5587ed5d38059f344af5278713ebf457d00733b8e3"
+ }
+}
