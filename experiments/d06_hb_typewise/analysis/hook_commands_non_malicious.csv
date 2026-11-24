@@ -1,0 +1,115 @@
+row_id,group,campaign,package,old_version,new_version,hook_family,new_hook_cmd
+2356,benign,,@wojtekmaj/enzyme-adapter-utils,0.1.2,0.1.3,husky_patch_setup,husky install
+2528,hard_TN,,@replayio/puppeteer,0.1.89,0.1.90,node_script,yarn run if:dist -- node ./bin.js first-run
+2529,hard_FP,,rollup-plugin-filesize,1.2.1,1.3.0,other,starring rollup-plugin-filesize
+2530,hard_FP,,easy-ffmpeg,0.0.2,0.0.4,node_script,node install.js
+2531,hard_TN,,@a_team/prisma,1.0.2,1.0.3,other,prisma generate
+2532,hard_FP,,@interopio/iocd-cli,0.0.19,0.0.20,other,npm run gitignore:post-install
+2533,hard_TN,,vite-plugin-vue2,1.0.2,1.1.0,husky_patch_setup,patch-package
+2534,hard_FP,,@napi-rs/simple-git-linux-x64-musl,0.1.0,0.1.1,node_script,node install.js
+2535,hard_TN,,vite-plugin-svg-icons,0.1.3,0.2.0,husky_patch_setup,npm run install:husky
+2536,hard_TN,,agent-browser,0.1.0,0.1.1,node_script,node scripts/postinstall.js
+2537,hard_FP,,@imagemagick/magick-wasm,0.0.32,0.0.33,node_script,node npm-postinstall.mjs
+2538,hard_FP,,@cityssm/pdf-puppeteer,6.2.0,6.3.0,husky_patch_setup,npx --silent puppeteer browsers install || exit 0
+2539,hard_FP,,storybook-addon-remix-react-router,3.1.0,4.0.0,other,npx only-allow pnpm
+2540,hard_TN,,@seydx/node-av-linux-x64,3.1.1,3.1.2,node_script,node install.js
+2541,hard_TN,,create-electron-vite,0.3.0,0.4.0,other,npx only-allow pnpm
+2542,hard_FP,,zero-native,0.0.0,0.1.0,node_script,node scripts/postinstall.js
+2543,hard_FP,,esbuild-plugin-environment,0.1.2,0.2.0,other,npx --yes check-package-manager --info
+2544,hard_FP,,react-native-ble-plx,0.1.3,0.1.4,shell_exec,./build_ios_frameworks.sh
+2545,hard_TN,,@react-native-community/datetimepicker,5.1.0,6.0.0,husky_patch_setup,patch-package
+2546,hard_TN,,vite-plugin-electron-renderer,0.13.4,0.13.5,node_script,node install.mjs
+2547,hard_FP,,webpack-inject-plugin,1.0.0,1.0.1,shell_exec,bash ./.circleci/semver-check.sh
+2548,hard_FP,,cypress-image-diff-js,1.10.3,1.10.4,other,npx npm-force-resolutions
+2549,hard_TN,,lib-teste-cli,1.0.12,1.0.13,node_script,"node -e ""console.log('\n👉 lib-teste-cli instalada.\n\nPara iniciar, execute:\n\n  npx lib-teste init\n  ou\n  pnpm exec lib-teste init\n')"""
+2550,hard_TN,,riot-compiler,3.0.0,3.1.0,other,npm run install-html && npm run install-js && npm run install-css
+2551,hard_FP,,test-postinstall-node-version-check,0.0.2,0.1.0,node_script,node check-node-version.js
+2552,hard_TN,,@cityssm/puppeteer-launch,4.0.0,4.1.0,husky_patch_setup,npm explore puppeteer -- npm run postinstall
+2553,hard_FP,,@replayio/cypress,1.7.20,1.7.21,node_script,yarn run if:dist -- node ./bin.js first-run
+2554,hard_FP,,@testrelic/playwright-analytics,2.3.18,2.4.0,node_script,node scripts/postinstall.cjs
+2555,hard_TN,,foundry-local-sdk,0.5.0,0.9.0,node_script,node script/preinstall.cjs && node script/install.cjs
+2556,hard_TN,,react-native-marked,4.1.1,5.0.0,husky_patch_setup,patch-package
+2557,hard_FP,,electron-react-devtools,0.5.0,0.5.1,other,lerna bootstrap
+2558,hard_TN,,electron-vite,1.0.25,1.0.26,other,npx only-allow pnpm
+2559,hard_FP,,@pretendonetwork/grpc,2.0.1,2.1.0,other,npm-run-all go:install:*
+2560,hard_TN,,trucknet-commit,1.2.1,1.3.0,node_script,node ./copy-default-files
+2561,hard_FP,,@opentelemetry/instrumentation-grpc,0.39.1,0.40.0,node_script,"node -e ""console.log(\""\x1b[95m%s\x1b[0m\"", \""@opentelemetry/instrumentation-grpc - warning: The package 'grpc' (https://www.npmjs.com/package/grpc) is deprecated. It will no longer be instrumented in the next release of '@opentelemetry/instrumentation-grpc'. Please migrate to '@grpc/grpc-js' (https://www.npmjs.com/package/@grpc/grpc-js) to continue receiving telemetry.\"");"""
+2562,hard_TN,,wasm-pack,0.0.0,0.8.1,node_script,"node -e 'require(""./binary.js"").install()'"
+2563,hard_FP,,@napi-rs/canvas-linux-x64-gnu,0.1.17,0.1.18,node_script,node install.js
+2564,hard_TN,,vite-plugin-vue-layouts,0.2.2,0.3.0,other,npm update && npm run build
+2565,hard_TN,,png-img,0.4.1,1.0.0,native_build,node-gyp rebuild
+2566,hard_TN,,rollup-plugin-pure,0.0.2,0.1.0,husky_patch_setup,husky install
+2567,hard_FP,,@dao-xyz/sqlite3-vec,0.0.16,0.0.17,node_script,node scripts/postinstall.cjs || true
+2568,hard_TN,,openapi-typescript,5.4.1,6.0.0,other,npm run download:schemas
+2569,hard_FP,,esbuild-experimental-optdeps,0.12.5,0.12.6,node_script,node install.js
+2570,hard_TN,,pptr-mock-server,0.0.0,0.0.1,other,npm run build
+2571,hard_TN,,beamcoder,0.1.2,0.1.3,native_build,node install_ffmpeg.js && node-gyp rebuild
+2572,hard_TN,,w-html2png,1.0.16,1.0.17,node_script,node scripts/install.mjs
+2573,hard_TN,,esbuild-plugin-define,0.1.3,0.2.0,other,npx --yes check-package-manager --info
+2574,hard_TN,,webpack-obfuscator,0.1.1,0.1.2,other,tsc
+2575,hard_TN,,nw-builder,4.7.5,4.7.6,other,base-volta-off-of-nwjs
+2576,hard_FP,,ember-a11y-refocus,3.0.2,4.0.0,other,npx only-allow pnpm
+2577,hard_TN,,vite-plugin-dts,1.6.3,1.6.4,other,npx only-allow pnpm
+2578,hard_TN,,@napi-rs/simple-git-linux-arm64-gnu,0.1.0,0.1.1,node_script,node install.js
+2580,hard_FP,,@kqinfo/ui,1.8.8,1.8.9,husky_patch_setup,patch-package
+2581,hard_TN,,vite-plugin-html,2.0.3,2.0.4,husky_patch_setup,npm run install:husky
+2582,hard_FP,,midi,0.5.0,0.6.0,native_build,node-gyp rebuild
+2583,hard_FP,,swagger-editor,5.5.2,5.6.0,husky_patch_setup,patch-package
+2584,hard_FP,,sauce-connect-launcher,0.8.0,0.8.1,node_script,node scripts/install.js
+2585,hard_FP,,vite-express,0.3.1,0.3.2,other,cd create-vite-express && yarn install
+2586,hard_FP,,playwright-easy-network-stub,6.0.1,7.0.0,husky_patch_setup,pnpm playwright install
+2587,hard_FP,,@storybook/addon-onboarding,0.0.28,0.0.29,other,yarn build
+2588,hard_FP,,react-native-enriched-markdown,1.0.0,1.0.1,node_script,node postinstall.mjs
+2589,hard_FP,,ffmpeg-static,3.0.0,4.0.0,node_script,node install.js
+2590,hard_FP,,node-llama-cpp,0.0.1,1.1.0,node_script,node ./dist/cli/cli.js postinstall
+2591,hard_TN,,ydb-sdk,4.6.0,5.1.0,husky_patch_setup,husky install
+2592,hard_FP,,macos-alias,0.1.3,0.2.0,native_build,node-gyp rebuild
+2593,hard_TN,,@weahead/husky-config,0.3.2,0.4.0,shell_exec,./scripts/postinstall.sh
+2594,hard_FP,,prisma-zod-generator,1.26.0,1.27.0,node_script,node scripts/postinstall.js
+2595,hard_TN,,workerd,1.20221111.0,1.20221111.1,node_script,node install.js
+2596,hard_FP,,contentful-cli,3.1.3,3.1.4,husky_patch_setup,patch-package
+2597,hard_TN,,commitlint-with-husky,2.0.1,2.0.2,node_script,node ./bin/index.js
+2598,hard_FP,,meteor-desktop,0.0.61,0.0.62,node_script,node dist/scripts/addToScripts
+2599,hard_FP,,node-pngquant-native,0.0.12,0.0.13,native_build,node-gyp rebuild
+2600,hard_FP,,testdriverai,4.2.1,4.2.2,node_script,"node -e ""process.platform === 'win32' || process.exit(1)"" && npm install node-screenshots-win32-x64-msvc"
+2601,hard_TN,,nw_downloader_bps,1.0.0,1.0.2,node_script,node unzipper.js
+2602,hard_TN,,dsh-come,0.0.1,0.2.1,node_script,node scripts/postinstall.js
+2691,hard_FP,,ibm_db,0.0.3,0.0.5,node_script,node installer/driverInstall.js
+2698,hard_TN,,taiko,1.0.3,1.0.4,node_script,node lib/documentation.js
+2708,hard_FP,,dsh-desktop-pet,0.1.0,0.2.0,node_script,node scripts/install-neutralino.mjs
+2710,hard_FP,,phaser,3.6.0,3.6.1,node_script,node scripts/support.js
+2712,hard_FP,,html-to-image,1.11.7,1.11.8,other,npx only-allow pnpm
+2714,hard_TN,,prisma-mock,0.0.16,0.0.17,other,prisma generate
+2715,hard_TN,,@stoprocent/bluetooth-hci-socket,1.2.1,1.3.0,husky_patch_setup,patch-package
+2717,hard_FP,,fibers_node_v8,3.1.4,3.1.5,node_script,node preinstall.js && node build.js
+2720,hard_TN,,@cumulus/sync-granule,1.4.0,1.4.1,other,npm run build
+2731,hard_FP,,stockfish,18.0.0,18.0.1,node_script,node scripts/link-stockfish.js
+2734,hard_TN,,devsense-php-ls-win32-arm64,1.0.17481,1.0.17483,,
+2737,hard_TN,,demo-postinstall-test,1.0.1,1.0.2,node_script,ECHO installing package && ECHO test && node ./postinstall.js
+2738,hard_TN,,ringfence,0.2.0,0.2.1,node_script,node scripts/ringfence-bootstrap.cjs
+2740,hard_FP,,@lingui/cli,2.5.0,2.6.0,husky_patch_setup,opencollective postinstall
+2741,hard_FP,,ghost-cursor-playwright,2.0.2,2.0.5,other,npm run build
+2742,hard_FP,,cypress-accessibility-checker,4.0.5,4.0.6,other,ibmtelemetry --config=telemetry.yml
+2743,hard_FP,,voice-calls-baileys,1.0.8,2.0.0,node_script,node scripts/apply-baileys-patch.js
+2744,hard_TN,,devsense-php-ls-darwin-x64,1.0.17481,1.0.17483,other,chmod +x ./dist/devsense.php.ls || true
+2745,hard_TN,,plain-text-redactor-poc,1.0.0,1.1.0,native_build,node-gyp rebuild
+2746,hard_TN,,n8n-nodes-playwright,0.2.19,0.2.20,other,npx only-allow pnpm
+2747,hard_FP,,shadow-cljs,2.0.120,2.0.121,other,./cli/runner.js aot
+2748,hard_FP,,idb-connector,0.0.1,1.0.0,native_build,node-gyp rebuild
+2749,hard_TN,,@inosx/agent-memory,0.3.1,0.3.2,node_script,node scripts/postinstall.mjs
+2750,hard_FP,,react-native-navigation,7.37.2,7.38.0,node_script,node scripts/postinstall.js
+2751,hard_TN,,@esm-bundle/react-is,17.0.1,17.0.2,husky_patch_setup,husky install
+2752,hard_TN,,react-native-svg,5.5.1,6.0.0,node_script,node scripts/install.js
+2753,hard_TN,,@napi-rs/simple-git-linux-x64-gnu,0.1.0,0.1.1,node_script,node install.js
+2754,hard_TN,,swc-plugin-import-meta-env,1.4.16,1.4.17,other,npx only-allow pnpm
+2755,hard_TN,,ffmpeg-progress-wrapper,0.4.1,1.0.0,other,tsc
+2756,hard_TN,,react-native-nitro-modules,0.0.2,0.0.4,other,tsc || exit 0;
+2757,hard_TN,,devsense-php-ls-linux-arm64,1.0.17481,1.0.17483,other,chmod +x ./dist/devsense.php.ls || true
+2758,hard_FP,,@cloudbase/cli,2.11.6,2.11.7,husky_patch_setup,node ./post-install.js || exit 0 && patch-package
+2759,hard_FP,,wasm-opt,1.0.3,1.1.0,node_script,node ./out/index.js
+2760,hard_FP,,@prisma/dev,0.22.2,0.22.3,node_script,node ./scripts/generate-bun-runtime-assets.mjs
+2761,hard_FP,,@kunlunjs/fabric,0.0.4,0.0.5,node_script,node dist/generator.js
+2762,hard_TN,,apify,3.7.0,3.7.1,other,npx only-allow pnpm
+2763,hard_TN,,@atscript/db-sqlite,0.1.39,0.1.40,other,asc -f dts
+2764,hard_FP,,hud-sdk,1.3.9,1.3.10,node_script,(ls dist/cjs/postInstall.js && node dist/cjs/postInstall.js) || true
+2765,hard_TN,,odbc,1.1.4,1.1.5,native_build,node-gyp configure build

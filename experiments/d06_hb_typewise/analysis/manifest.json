@@ -1,0 +1,16 @@
+{
+ "script_sha256": "f2b6a84ac8b57a860e13d2c705b45c6f9d1f8114b35a960aad2478c24c8b1835",
+ "inputs": {
+  "manifests_summary": "0f5c59186a88c523dd22de918abea401637763e9c41567eea01ca8ce7a477e40"
+ },
+ "note": "Train only, benign subset limited to rows with installScriptAdded or newDependencyAdded (manifests collected only for those)",
+ "outputs": {
+  "dependency_candidates.csv": "dc087347430d1946159e8d5edfa6a7bdd34a23e27171cefeac97c0392e6a5061",
+  "dependency_candidates_by_group.csv": "fccf36489eb8cad939376485ab91e37a4c529239418674b60a5dcce2542f6091",
+  "dependency_candidates_malicious_by_campaign.csv": "cfbbcbee47703d6f91b3f53c336d11b10fe97a9b5cb5d89a22774ddd4b245829",
+  "hook_commands_non_malicious.csv": "1dc2108a57eac72649a1ab62cb8c843188c57a17925c29502dcd0aa5c9f86c60",
+  "hook_family_by_class.csv": "d0daf70f9701fb5123d208200500da5cba67caf7622b4dcbdca3260d2037beb2",
+  "hook_family_malicious_by_campaign.csv": "6847f60236f402a30910c9017888313b5710054ba174cb8b27ffd1d93ff463a5",
+  "hook_profile_by_group.csv": "c103660fdaca5dcecd8fa61db78c94556d85416e77b1ebe4fa6de537de95a305"
+ }
+}

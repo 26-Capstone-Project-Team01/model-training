@@ -1,0 +1,20 @@
+{
+ "data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+ "collector": "hook_commands.py",
+ "collector_script_sha256": "b798e14561a3bd966cac97fc9c3607af0304a75fc8aec19266719019776a6e44",
+ "collected_rows": 1260,
+ "manifest_ok": 1258,
+ "collection_finished_utc": "2026-11-24T15:14:46.659398+00:00",
+ "raw_output_not_preserved": {
+  "manifests_summary.csv": "1b2637a674346b55c8262571a0af6df0f7756a8871527dcffabd600f225001ae",
+  "reason": "contains malicious install-hook command text"
+ },
+ "sanitizer": "sanitize_manifests.py",
+ "sanitizer_script_sha256": "f6925082f1edc338e9d2b37d9209d8aa3cc4bc96a3ef8db070d1204dc21cf1a5",
+ "hookfam_sha256": "a69801f22862a273f784acb1888e732575aff4e85457e46bfe35cd98b56214f8",
+ "sanitized": "malicious rows: old_/new_ preinstall/install/postinstall/prepare emptied; hook_family, hook_has_url, hook_hides_output, hook_tokens, new_hook_cmd_sha256 derived from raw text before removal",
+ "outputs": {
+  "manifests_summary.csv": "0f5c59186a88c523dd22de918abea401637763e9c41567eea01ca8ce7a477e40",
+  "registry_log.jsonl": "f9bc2f2d33d7cf7a23571dfb9797175a327e760353c11cc23e71c7ed902c1da8"
+ }
+}

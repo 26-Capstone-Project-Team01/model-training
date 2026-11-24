@@ -1,0 +1,9 @@
+route,split,TP,FP,hard_FP,routed_rows,routed_malicious
+route_noJS_base7,split1,770,82,33,700.0,31.0
+route_noJS_base7,split2,811,92,18,700.0,31.0
+route_noJS_newDep_noHook_base7,split1,853,98,48,21.0,6.0
+route_noJS_newDep_noHook_base7,split2,880,115,43,21.0,6.0
+base7 (reference),split1,618,111,54,,
+base7 (reference),split2,621,112,34,,
+full35 (reference),split1,854,106,50,,
+full35 (reference),split2,876,117,43,,

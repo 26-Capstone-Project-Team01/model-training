@@ -1,0 +1,24 @@
+{
+ "nature": "saved models/scores only; Train outer = design evidence, Test-674 = diagnostic only",
+ "script_sha256": "0e895a36bae3dc3946b945dbde7ddbff80afd620a068cc67a3a4c428c885f042",
+ "inputs": {
+  "saved_scores": "a8cd5375c3e95c6166937c49a526b68570afa85037ce75e774e9558f767e920c",
+  "full35_scores": "7b0524dad7b001f7df90c8f6a22197c605b04d54fbaf2cf914929749fb78a049",
+  "fair_calibration": "f6ef49cc9729eaee485d4de91f6e09ba47ed5ba270635548524213aadea88aac",
+  "test_scores": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "es_scores": "15ac7b29b3b90dd858dfa0bf0307463ae5e9ed706800f89e41d46d31558c3174"
+ },
+ "routes_fixed_before_evaluation": [
+  "route_noJS_base7",
+  "route_noJS_newDep_noHook_base7"
+ ],
+ "outputs": {
+  "hard_fp_overlap.csv": "78e2d55ff62c6d4494d3a6694f4e1fdb08d955760ebca30e41632b945182f046",
+  "strata_performance.csv": "2af680a39c884f86af32f326ef4eb6323eca67bea17241ed58c6be6769be2d0a",
+  "test_hard_fp_cases.csv": "d4a2a95b9dbf1f9b3dfe3375be8320d9e226cdceb142a7a5a02ed7f868273282",
+  "train_feature_profiles.csv": "6703e003fcc2494debade3d9c864f960ec1b446829eddc75c30145cf9162fd73",
+  "train_hard_fp_cases.csv": "e8a204e0f2681b0fb23893e2397d9339b46d6f61e04efea6cd9b3bdf1e596bb6",
+  "train_routing_design_check.csv": "4d5f53c4506d33a4271eb2911873fe4f50ff57c14fe60df6830966b485f202ee",
+  "train_treeshap_hb_vs_malicious.csv": "42ef8fc54a91c0b731cf3ffffe8a3a1c4623aebcac9b6ae94744fd45635312d9"
+ }
+}

@@ -1,0 +1,5 @@
+grp,n,dep_total_med,range_changed_gt0,range_changed_med,changed_ratio_med,added_ratio_med,added_ratio_eq1,no_deps_new,nonregistry_added_gt0
+benign,93,4.0,0.226,0.0,0.5,0.333,0.215,0.0,0.0
+hard_FP,89,3.0,0.213,0.0,0.166,0.0,0.101,0.236,0.011
+hard_benign,148,1.0,0.196,0.0,0.1,0.0,0.047,0.453,0.007
+malicious,928,2.0,0.039,0.0,0.0,0.0,0.014,0.219,0.096

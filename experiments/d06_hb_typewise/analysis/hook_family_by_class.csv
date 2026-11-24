@@ -1,0 +1,4 @@
+class,,download_tool,husky_patch_setup,native_build,node_script,other,shell_exec
+benign,0,0,1,0,0,0,0
+hard_benign,1,0,17,8,49,35,3
+malicious,0,10,0,0,703,2,1
