@@ -1,0 +1,400 @@
+{
+  "note": "fold models stand in for the missing full-data models; timing differs on every run",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "logical_cpus": 22,
+    "python": "3.13.5",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "import_lightgbm_seconds_once": 0.8978598001413047,
+  "repeats_per_side": 7,
+  "order": "alternating",
+  "predict_threads": 1,
+  "scores_compared_with_saved": 17096,
+  "largest_abs_difference_from_saved_scores": 2.220446049250313e-16,
+  "overall_median": {
+    "one_model": {
+      "load_ms_before_any_predict": 135.39595005568117,
+      "load_ms_after_predict": 85.7650499092415,
+      "predict_us_per_row": 36.06499987654388,
+      "explain_us_per_row": 716.5982498554513
+    },
+    "two_models": {
+      "load_ms_before_any_predict": 260.5465999804437,
+      "load_ms_after_predict": 171.23909993097186,
+      "predict_us_per_row": 76.72300038393587,
+      "explain_us_per_row": 1477.6182506466284
+    }
+  },
+  "pairs": [
+    {
+      "split": "split1",
+      "fold": 0,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 543192,
+        "full35": 530214
+      },
+      "trees": {
+        "full29": 200,
+        "full35": 200
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 147.5554001517594,
+          "min": 113.35689993575215,
+          "max": 156.46860003471375
+        },
+        "two_models": {
+          "median": 255.16679999418557,
+          "min": 221.61159990355372,
+          "max": 285.6769999489188
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 46.23800050467253,
+          "min": 37.770000053569674,
+          "max": 50.27499981224537
+        },
+        "two_models": {
+          "median": 90.1859998703003,
+          "min": 79.80499998666346,
+          "max": 93.84099976159632
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 701.6825000755489,
+          "min": 676.654000999406,
+          "max": 835.8654996845871
+        },
+        "two_models": {
+          "median": 1430.13900029473,
+          "min": 1379.0065003558993,
+          "max": 1537.6429993193597
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 85.07209992967546,
+          "min": 84.60960001684725,
+          "max": 88.72270002029836
+        },
+        "two_models": {
+          "median": 171.94549995474517,
+          "min": 167.68660000525415,
+          "max": 185.41570007801056
+        }
+      }
+    },
+    {
+      "split": "split1",
+      "fold": 1,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 380126,
+        "full35": 365015
+      },
+      "trees": {
+        "full29": 149,
+        "full35": 138
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 102.48819994740188,
+          "min": 79.03479994274676,
+          "max": 132.68850021995604
+        },
+        "two_models": {
+          "median": 183.77260002307594,
+          "min": 155.87660018354654,
+          "max": 231.79030022583902
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 31.677500810474157,
+          "min": 30.283000087365508,
+          "max": 39.06999947503209
+        },
+        "two_models": {
+          "median": 72.03550077974796,
+          "min": 65.64000039361417,
+          "max": 90.44300066307187
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 941.0999994724989,
+          "min": 905.7805000338703,
+          "max": 990.3379995375872
+        },
+        "two_models": {
+          "median": 1720.7419988699257,
+          "min": 1683.8960000313818,
+          "max": 1898.279000306502
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 60.49759988673031,
+          "min": 59.02509996667504,
+          "max": 62.675900058820844
+        },
+        "two_models": {
+          "median": 119.66590001247823,
+          "min": 115.85090006701648,
+          "max": 123.61110001802444
+        }
+      }
+    },
+    {
+      "split": "split1",
+      "fold": 2,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 533947,
+        "full35": 532704
+      },
+      "trees": {
+        "full29": 200,
+        "full35": 200
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 138.41310003772378,
+          "min": 108.63459995016456,
+          "max": 148.65290001034737
+        },
+        "two_models": {
+          "median": 265.92639996670187,
+          "min": 229.46660011075437,
+          "max": 278.742800001055
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 36.744000390172005,
+          "min": 34.7140000667423,
+          "max": 43.629000429064035
+        },
+        "two_models": {
+          "median": 81.41049998812377,
+          "min": 75.58149984106421,
+          "max": 85.21000039763749
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 684.9819992203265,
+          "min": 672.10300010629,
+          "max": 709.3794993124902
+        },
+        "two_models": {
+          "median": 1430.241500493139,
+          "min": 1402.413999894634,
+          "max": 1721.5319990646094
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 86.45799988880754,
+          "min": 83.09020008891821,
+          "max": 92.02690003439784
+        },
+        "two_models": {
+          "median": 170.53269990719855,
+          "min": 164.79980014264584,
+          "max": 177.04230011440814
+        }
+      }
+    },
+    {
+      "split": "split2",
+      "fold": 0,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 616942,
+        "full35": 577617
+      },
+      "trees": {
+        "full29": 200,
+        "full35": 200
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 156.1455000191927,
+          "min": 135.79079997725785,
+          "max": 169.95149990543723
+        },
+        "two_models": {
+          "median": 289.8418998811394,
+          "min": 261.21010002680123,
+          "max": 303.42469993047416
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 35.385999362915754,
+          "min": 30.449499608948827,
+          "max": 42.047499446198344
+        },
+        "two_models": {
+          "median": 71.25349948182702,
+          "min": 63.34049976430833,
+          "max": 77.52850069664419
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 872.5320000667125,
+          "min": 832.5825002975762,
+          "max": 959.4029991421849
+        },
+        "two_models": {
+          "median": 1729.8399994615465,
+          "min": 1701.0820005089045,
+          "max": 1885.1624999660999
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 103.17390016280115,
+          "min": 97.67149994149804,
+          "max": 109.53789995983243
+        },
+        "two_models": {
+          "median": 191.52539991773665,
+          "min": 189.57170005887747,
+          "max": 217.87890000268817
+        }
+      }
+    },
+    {
+      "split": "split2",
+      "fold": 1,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 500504,
+        "full35": 464183
+      },
+      "trees": {
+        "full29": 200,
+        "full35": 200
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 115.7037999946624,
+          "min": 105.2503997925669,
+          "max": 142.39259995520115
+        },
+        "two_models": {
+          "median": 234.18010002933443,
+          "min": 208.9726000558585,
+          "max": 260.1948999799788
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 33.08699931949377,
+          "min": 31.027001095935702,
+          "max": 37.085500080138445
+        },
+        "two_models": {
+          "median": 69.44049964658916,
+          "min": 67.24549923092127,
+          "max": 82.03199948184192
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 604.4480006676167,
+          "min": 584.3554995954037,
+          "max": 616.9140001293272
+        },
+        "two_models": {
+          "median": 1227.116499794647,
+          "min": 1187.8994992002845,
+          "max": 1597.2190001048148
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 83.79529998637736,
+          "min": 78.26059986837208,
+          "max": 108.22100006043911
+        },
+        "two_models": {
+          "median": 155.51099996082485,
+          "min": 150.03599994815886,
+          "max": 167.47150011360645
+        }
+      }
+    },
+    {
+      "split": "split2",
+      "fold": 2,
+      "rows_timed": 200,
+      "model_bytes": {
+        "full29": 585054,
+        "full35": 546132
+      },
+      "trees": {
+        "full29": 200,
+        "full35": 200
+      },
+      "load_ms_before_any_predict": {
+        "one_model": {
+          "median": 132.37880007363856,
+          "min": 119.99040003865957,
+          "max": 155.29919997788966
+        },
+        "two_models": {
+          "median": 294.27170008420944,
+          "min": 276.85420005582273,
+          "max": 346.69840009883046
+        }
+      },
+      "predict_us_per_row": {
+        "one_model": {
+          "median": 38.33250026218593,
+          "min": 35.98200040869415,
+          "max": 40.38850078359246
+        },
+        "two_models": {
+          "median": 82.08050043322146,
+          "min": 76.27149927429855,
+          "max": 91.94200043566525
+        }
+      },
+      "explain_us_per_row": {
+        "one_model": {
+          "median": 731.5139996353537,
+          "min": 709.9579996429384,
+          "max": 834.4990003388375
+        },
+        "two_models": {
+          "median": 1524.9950008001179,
+          "min": 1464.5985001698136,
+          "max": 1618.4125002473593
+        }
+      },
+      "load_ms_after_predict": {
+        "one_model": {
+          "median": 94.01399991475046,
+          "min": 92.03139995224774,
+          "max": 98.59680011868477
+        },
+        "two_models": {
+          "median": 184.3876000493765,
+          "min": 180.75220007449389,
+          "max": 190.0616001803428
+        }
+      }
+    }
+  ]
+}

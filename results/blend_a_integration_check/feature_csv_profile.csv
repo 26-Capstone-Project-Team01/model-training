@@ -1,0 +1,40 @@
+position,column,group,schema_dtype,empty,empty_malicious,empty_benign,empty_hard_benign,distinct,values,min,max
+0,package,id,,0,0,0,0,2678,,,
+1,old_version,id,,0,0,0,0,941,,,
+2,new_version,id,,0,0,0,0,1027,,,
+3,installScriptPresent,full29,bool,0,0,0,0,2,False|True,0,1
+4,installScriptAdded,full29,bool,0,0,0,0,2,False|True,0,1
+5,scriptEntryAdded,full29,bool,0,0,0,0,2,False|True,0,1
+6,newDependencyAdded,full29,bool,0,0,0,0,2,False|True,0,1
+7,newDependencyCount,full29,float,0,0,0,0,14,,0,52
+8,updateType,full29,"category[major,minor,patch]",0,0,0,0,3,major|minor|patch,,
+9,updateInterval,full29,float,0,0,0,0,2767,,12.144,331690145.587
+10,obfChangedFileCount,full29,float,0,0,0,0,69,,0,1977
+11,obfHexIdentRatioNew,full29,float,153,0,111,42,28,,0.0,0.8529411764705882
+12,obfHexIdentRatioChange,full29,float,207,26,119,62,25,,-0.0047278457994908,0.7202452754322477
+13,obfHexIdentRatioChangedCode,full29,float,700,31,594,75,26,,0.0,0.8529411764705882
+14,obfHexNumberRatioNew,full29,float,153,0,111,42,183,,0.0,1.0
+15,obfHexNumberRatioChange,full29,float,207,26,119,62,110,,-0.4610878180460628,1.0
+16,obfHexNumberRatioChangedCode,full29,float,700,31,594,75,126,,0.0,1.0
+17,obfBracketAccessRatioNew,full29,float,153,0,111,42,604,,0.0,1.0
+18,obfBracketAccessRatioChange,full29,float,207,26,119,62,603,,-0.9897188417960554,0.9999485746610212
+19,obfBracketAccessRatioChangedCode,full29,float,700,31,594,75,455,,0.0,1.0
+20,obfEscapeDensityNew,full29,float,153,0,111,42,439,,0.0,0.9297556974632376
+21,obfEscapeDensityChange,full29,float,207,26,119,62,272,,-0.0616120607152308,0.8843903714377785
+22,obfEscapeDensityChangedCode,full29,float,700,31,594,75,235,,0.0,0.9297556974632376
+23,obfShortIdentRatioNew,full29,float,153,0,111,42,1495,,0.0,1.0
+24,obfShortIdentRatioChange,full29,float,207,26,119,62,908,,-0.7011514561694067,0.975975975975976
+25,obfShortIdentRatioChangedCode,full29,float,700,31,594,75,991,,0.0,0.9969670385699718
+26,obfMeanIdentLengthNew,full29,float,156,0,113,43,1924,,1.0,16.571428571428573
+27,obfMeanIdentLengthChange,full29,float,211,26,122,63,1082,,-26.896696428571428,6.150119737372636
+28,obfMeanIdentLengthChangedCode,full29,float,701,31,595,75,1207,,1.1748927038626609,28.0
+29,obfWhitespaceRatioNew,full29,float,155,0,112,43,1882,,0.0,0.5463137996219282
+30,obfWhitespaceRatioChange,full29,float,211,26,122,63,1493,,-0.4872414594208972,0.2828523365247382
+31,obfWhitespaceRatioChangedCode,full29,float,700,31,594,75,1333,,7.709667788487577e-07,0.5715789473684211
+32,installHookNewProgramCount,x1,int (nullable),2,0,0,2,5,,0.0,3.0
+33,installHookArgsChanged,x1,bool (nullable),2,0,0,2,3,|False|True,0.0,1.0
+34,installHookRefFileChanged,x1,bool (nullable),13,4,1,8,3,|False|True,0.0,1.0
+35,installHookNewExternalExecCount,x1,int (nullable),2,0,0,2,2,|0,0.0,0.0
+36,addedProcExecCallCount,x1,int (nullable),2,0,0,2,12,,0.0,12.0
+37,addedNetworkCallCount,x1,int (nullable),2,0,0,2,21,,0.0,226.0
+38,label,target,int 0/1,0,0,0,0,2,0|1,,

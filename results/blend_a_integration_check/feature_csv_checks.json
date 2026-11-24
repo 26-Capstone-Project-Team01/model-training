@@ -1,0 +1,20 @@
+{
+  "rows": 2767,
+  "columns_equal_schema": true,
+  "feature_columns_equal_full35_model_order": true,
+  "first_29_equal_full29_model_order": true,
+  "keys_and_label_equal_row_metadata": true,
+  "rows_with_all_six_x1_empty": 2,
+  "installScriptAdded_true_but_no_new_hook_program": {
+    "malicious": 6,
+    "benign": 0,
+    "hard_benign": 13
+  },
+  "installScriptAdded_false_but_new_hook_program": {
+    "malicious": 3,
+    "benign": 0,
+    "hard_benign": 3
+  },
+  "train_csv_columns": true,
+  "cells_differing_from_train_csv_as_text": 0
+}
