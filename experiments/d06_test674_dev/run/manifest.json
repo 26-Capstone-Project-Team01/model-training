@@ -1,0 +1,343 @@
+{
+ "nature": "DEVELOPMENT evaluation on Test-674 (repeatedly analysed); not a final generalization claim",
+ "preregistration_commit": "75efbe1",
+ "guard": {
+  "seed20261109": "full35 retrain == saved d06_test_eval scores",
+  "seed20261110": "full35 retrain == saved d06_test_eval scores"
+ },
+ "blend_selection": {
+  "B1|seed20261109": {
+   "models": [
+    "full35",
+    "full35_lr"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.9,
+    0.1
+   ],
+   "cal_pr_auc": 0.9672023998477026
+  },
+  "B2|seed20261109": {
+   "models": [
+    "full35",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.7,
+    0.3
+   ],
+   "cal_pr_auc": 0.9732759684184635
+  },
+  "B3|seed20261109": {
+   "models": [
+    "full35",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.6,
+    0.1,
+    0.3
+   ],
+   "cal_pr_auc": 0.9736578096836144
+  },
+  "B3x_full35_x4|seed20261109": {
+   "models": [
+    "full35_x4",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.7,
+    0.0,
+    0.3
+   ],
+   "cal_pr_auc": 0.9735442823781475
+  },
+  "B3x_full34_x4|seed20261109": {
+   "models": [
+    "full34_x4",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.6,
+    0.0,
+    0.4
+   ],
+   "cal_pr_auc": 0.9749476680343357
+  },
+  "x4_blend_representative|seed20261109": "B3x_full34_x4",
+  "x4_base_cal_pr_auc|seed20261109": {
+   "full35_x4": 0.9667836241381181,
+   "full34_x4": 0.9680498691292206
+  },
+  "B1|seed20261110": {
+   "models": [
+    "full35",
+    "full35_lr"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.6,
+    0.4
+   ],
+   "cal_pr_auc": 0.9884433904968011
+  },
+  "B2|seed20261110": {
+   "models": [
+    "full35",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.7,
+    0.3
+   ],
+   "cal_pr_auc": 0.9936621277469045
+  },
+  "B3|seed20261110": {
+   "models": [
+    "full35",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "prob",
+   "weights": [
+    0.7,
+    0.0,
+    0.3
+   ],
+   "cal_pr_auc": 0.9936621277469045
+  },
+  "B3x_full35_x4|seed20261110": {
+   "models": [
+    "full35_x4",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.7,
+    0.0,
+    0.3
+   ],
+   "cal_pr_auc": 0.9944804483368433
+  },
+  "B3x_full34_x4|seed20261110": {
+   "models": [
+    "full34_x4",
+    "full35_lr",
+    "full35_mlp"
+   ],
+   "scale": "logit",
+   "weights": [
+    0.7,
+    0.0,
+    0.3
+   ],
+   "cal_pr_auc": 0.9942547137782762
+  },
+  "x4_blend_representative|seed20261110": "B3x_full34_x4",
+  "x4_base_cal_pr_auc|seed20261110": {
+   "full35_x4": 0.985892319184862,
+   "full34_x4": 0.991160603656433
+  }
+ },
+ "features": {
+  "full35": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount"
+  ],
+  "base7_x1": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount"
+  ],
+  "gs24": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfHexIdentRatioChange",
+   "obfHexNumberRatioChange",
+   "obfBracketAccessRatioChange",
+   "obfEscapeDensityChange",
+   "obfShortIdentRatioChange",
+   "obfMeanIdentLengthChange",
+   "obfWhitespaceRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioChangedCode",
+   "obfChangedFileCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount"
+  ],
+  "full35_x4": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "updateInterval",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount",
+   "x4RelUpdateIntervalRatio",
+   "x4HistoryGapCount"
+  ],
+  "full34_x4": [
+   "installScriptPresent",
+   "installScriptAdded",
+   "scriptEntryAdded",
+   "newDependencyAdded",
+   "newDependencyCount",
+   "updateType",
+   "obfChangedFileCount",
+   "obfHexIdentRatioNew",
+   "obfHexIdentRatioChange",
+   "obfHexIdentRatioChangedCode",
+   "obfHexNumberRatioNew",
+   "obfHexNumberRatioChange",
+   "obfHexNumberRatioChangedCode",
+   "obfBracketAccessRatioNew",
+   "obfBracketAccessRatioChange",
+   "obfBracketAccessRatioChangedCode",
+   "obfEscapeDensityNew",
+   "obfEscapeDensityChange",
+   "obfEscapeDensityChangedCode",
+   "obfShortIdentRatioNew",
+   "obfShortIdentRatioChange",
+   "obfShortIdentRatioChangedCode",
+   "obfMeanIdentLengthNew",
+   "obfMeanIdentLengthChange",
+   "obfMeanIdentLengthChangedCode",
+   "obfWhitespaceRatioNew",
+   "obfWhitespaceRatioChange",
+   "obfWhitespaceRatioChangedCode",
+   "installHookNewProgramCount",
+   "installHookArgsChanged",
+   "installHookRefFileChanged",
+   "installHookNewExternalExecCount",
+   "addedProcExecCallCount",
+   "addedNetworkCallCount",
+   "x4RelUpdateIntervalRatio",
+   "x4HistoryGapCount"
+  ]
+ },
+ "script_sha256": "b1a51661b3657172ffda088032f3537027b73545ea5aab389a14fbd9922edc3f",
+ "reused": {
+  "run_test_eval": "0713a97f348d9d46947aad14965489a22db018ef26e184316889fd2a61fb8cb8",
+  "alt_models": "bbaa0c98b2d983187040f0eff32395c705fcfba09bed1e492c4cc29d9e3e6886",
+  "blend": "a1d651540535406e6a9ec13dd01e46256ea860f66c344ef3be0f05829ef730ed",
+  "saved_test_scores": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "train_x4": "921c1d19e15421fbaf0958e4c4f03f0a4903f4bd52299e06ff668a458dc7d6b2",
+  "test_x4": "76b6e1187088b1272eb0f2fa44f4e16a9a058c3970584291d72f5a38cfc128de"
+ },
+ "inputs": {
+  "train": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "groups": "4f894621f8315e386757ac8c89525a1c40636931c5acc8d8c9835802173894a2",
+  "classes": "877de58c82120e1dcd71dbd934e3349bca79e6d575f4d07594d626f850316c6b"
+ },
+ "packages": {
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "python": "3.13.18",
+ "argv": [
+  "run_dev_eval.py",
+  "--workspace",
+  "/tmp/claude-0/-home-user/51d960bd-2873-5653-80cc-e8b6caa53280/scratchpad/ws_test",
+  "--out",
+  "run"
+ ],
+ "outputs": {
+  "campaign_recall_test674.csv": "81aace357b6ded1a3b4406f358bb69c63505472ab8b1a92093526e1a06399aeb",
+  "metrics_test674.csv": "c9efb20a0eb0ab9ab9eccf01b59b65251467d8e7f0b576d55f4fd368b0d2e2c2",
+  "scores.csv": "bd65b4699d1f65913449f3db5cc6a1f173f34523c238ce944a4203d94f21716e",
+  "thresholds.csv": "3bc44de578b50e3de96fb711caa0021fdab05fcaa7e8bcfb49edf874d51733a2"
+ }
+}
