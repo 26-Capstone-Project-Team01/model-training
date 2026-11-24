@@ -275,7 +275,9 @@ def profile(train_csv: Path | None) -> int:
     print(json.dumps(checks, indent=2))
     required = ["columns_equal_schema", "feature_columns_equal_full35_model_order",
                 "first_29_equal_full29_model_order", "keys_and_label_equal_row_metadata"]
-    return 0 if all(checks[k] for k in required) else 1
+    # the two Train comparisons exist only with --train-csv; one that ran and failed fails the run
+    train_ok = checks.get("train_csv_columns", True) and checks.get("cells_differing_from_train_csv_as_text", 0) == 0
+    return 0 if all(checks[k] for k in required) and train_ok else 1
 
 
 def encode(raw: pd.DataFrame, names: list[str]) -> np.ndarray:
