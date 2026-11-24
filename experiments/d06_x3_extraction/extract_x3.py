@@ -40,7 +40,7 @@ _spec.loader.exec_module(x1)
 _A = None
 
 
-def _analyzer(src: str, reuse_x1_calls: bool = False):
+def _analyzer(src: str, reuse_x1_calls: bool = False, file_cache: bool = False):
     global _A
     if _A is None:
         sys.path.insert(0, src)
@@ -65,12 +65,37 @@ def _analyzer(src: str, reuse_x1_calls: bool = False):
             code_context.added_call_features = cached
             x3_context.added_call_features = cached
             _A["call_cache"] = cache
+        if file_cache:
+            # Speed-up only: memoise pure per-file functions by the file text's SHA-256 inside a worker process.
+            # Campaign pairs often share the same multi-MB payload file, which is otherwise re-analysed in every pair.
+            import hashlib as _h
+            from depbee_analyzer.extractors import code_context, obfuscation, x3_context
+
+            def memo(fn, limit=4000):
+                store = {}
+
+                def wrapped(text):
+                    k = _h.sha256(text.encode("utf-8", "surrogatepass")).hexdigest()
+                    if k not in store:
+                        if len(store) >= limit:
+                            store.clear()
+                        store[k] = fn(text)
+                    return store[k]
+                return wrapped
+
+            cs = memo(code_context.call_signatures)
+            code_context.call_signatures = cs
+            x3_context.call_signatures = cs
+            fm = memo(obfuscation.file_metrics)
+            obfuscation.file_metrics = fm
+            x3_context.file_metrics = fm
+            x3_context.js_tokens = memo(x3_context.js_tokens)
     return _A
 
 
 def extract_pair(args: tuple) -> dict:
-    row, src, archive_repo, cache_dir, work_parent, reuse = args
-    a = _analyzer(src, reuse)
+    row, src, archive_repo, cache_dir, work_parent, reuse, fcache = args
+    a = _analyzer(src, reuse, fcache)
     if "call_cache" in a:
         a["call_cache"].clear()
     started = time.time()
@@ -117,6 +142,7 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--row-ids", type=Path)
     ap.add_argument("--reuse-x1-calls", action="store_true", help="compute added_call_features once per pair (identical output, faster)")
+    ap.add_argument("--file-cache", action="store_true", help="memoise pure per-file functions by text hash within a worker (identical output, faster)")
     args = ap.parse_args()
     train = list(csv.DictReader(open(args.train, newline="", encoding="utf-8")))
     base = {tuple(r[k] for k in KEY): r for r in csv.DictReader(open(args.baselines, newline="", encoding="utf-8"))}
@@ -143,7 +169,7 @@ def main() -> None:
             for i, batch in enumerate(batches):
                 if args.part == "malicious":
                     x1._sparse_batch(Path(args.archive_repo), batch)
-                jobs = [(r, args.analyzer_src, args.archive_repo, args.cache_dir, str(work_parent), args.reuse_x1_calls) for r in batch]
+                jobs = [(r, args.analyzer_src, args.archive_repo, args.cache_dir, str(work_parent), args.reuse_x1_calls, args.file_cache) for r in batch]
                 for n, res in enumerate(pool.map(extract_pair, jobs, chunksize=1), 1):
                     sink.write(json.dumps(res, ensure_ascii=False) + "\n")
                     sink.flush()

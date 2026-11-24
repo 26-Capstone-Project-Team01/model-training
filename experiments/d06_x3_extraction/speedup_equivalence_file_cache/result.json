@@ -1,0 +1,222 @@
+{
+ "eq2_mal.jsonl": {
+  "rows": [
+   {
+    "row_id": 1,
+    "identical": true,
+    "seconds_reference": 3.83,
+    "seconds_both_options": 2.78
+   },
+   {
+    "row_id": 2,
+    "identical": true,
+    "seconds_reference": 4.09,
+    "seconds_both_options": 2.56
+   },
+   {
+    "row_id": 3,
+    "identical": true,
+    "seconds_reference": 3.89,
+    "seconds_both_options": 2.56
+   },
+   {
+    "row_id": 4,
+    "identical": true,
+    "seconds_reference": 3.99,
+    "seconds_both_options": 2.48
+   },
+   {
+    "row_id": 28,
+    "identical": true,
+    "seconds_reference": 5.92,
+    "seconds_both_options": 2.72
+   },
+   {
+    "row_id": 43,
+    "identical": true,
+    "seconds_reference": 4.95,
+    "seconds_both_options": 1.14
+   },
+   {
+    "row_id": 46,
+    "identical": true,
+    "seconds_reference": 5.24,
+    "seconds_both_options": 1.27
+   },
+   {
+    "row_id": 84,
+    "identical": true,
+    "seconds_reference": 8.32,
+    "seconds_both_options": 2.3
+   },
+   {
+    "row_id": 85,
+    "identical": true,
+    "seconds_reference": 8.46,
+    "seconds_both_options": 2.35
+   },
+   {
+    "row_id": 86,
+    "identical": true,
+    "seconds_reference": 7.96,
+    "seconds_both_options": 2.36
+   },
+   {
+    "row_id": 87,
+    "identical": true,
+    "seconds_reference": 7.24,
+    "seconds_both_options": 2.3
+   },
+   {
+    "row_id": 128,
+    "identical": true,
+    "seconds_reference": 18.35,
+    "seconds_both_options": 6.22
+   },
+   {
+    "row_id": 157,
+    "identical": true,
+    "seconds_reference": 16.08,
+    "seconds_both_options": 6.41
+   },
+   {
+    "row_id": 184,
+    "identical": true,
+    "seconds_reference": 19.43,
+    "seconds_both_options": 8.56
+   },
+   {
+    "row_id": 239,
+    "identical": true,
+    "seconds_reference": 67.22,
+    "seconds_both_options": 34.14
+   },
+   {
+    "row_id": 240,
+    "identical": true,
+    "seconds_reference": 68.38,
+    "seconds_both_options": 0.6
+   },
+   {
+    "row_id": 241,
+    "identical": true,
+    "seconds_reference": 67.67,
+    "seconds_both_options": 0.58
+   },
+   {
+    "row_id": 242,
+    "identical": true,
+    "seconds_reference": 67.74,
+    "seconds_both_options": 0.55
+   },
+   {
+    "row_id": 272,
+    "identical": true,
+    "seconds_reference": 33.65,
+    "seconds_both_options": 33.93
+   },
+   {
+    "row_id": 276,
+    "identical": true,
+    "seconds_reference": 33.99,
+    "seconds_both_options": 0.17
+   },
+   {
+    "row_id": 277,
+    "identical": true,
+    "seconds_reference": 34.88,
+    "seconds_both_options": 1.63
+   },
+   {
+    "row_id": 279,
+    "identical": true,
+    "seconds_reference": 33.65,
+    "seconds_both_options": 0.19
+   },
+   {
+    "row_id": 310,
+    "identical": true,
+    "seconds_reference": 34.85,
+    "seconds_both_options": 0.17
+   }
+  ],
+  "all_identical": true
+ },
+ "eq2_ben.jsonl": {
+  "rows": [
+   {
+    "row_id": 1057,
+    "identical": true,
+    "seconds_reference": 0.91,
+    "seconds_both_options": 0.24
+   },
+   {
+    "row_id": 1169,
+    "identical": true,
+    "seconds_reference": 0.35,
+    "seconds_both_options": 0.19
+   },
+   {
+    "row_id": 1203,
+    "identical": true,
+    "seconds_reference": 0.21,
+    "seconds_both_options": 0.05
+   },
+   {
+    "row_id": 1450,
+    "identical": true,
+    "seconds_reference": 0.33,
+    "seconds_both_options": 0.14
+   },
+   {
+    "row_id": 1942,
+    "identical": true,
+    "seconds_reference": 0.28,
+    "seconds_both_options": 0.06
+   },
+   {
+    "row_id": 2022,
+    "identical": true,
+    "seconds_reference": 182.41,
+    "seconds_both_options": 76.67
+   },
+   {
+    "row_id": 2093,
+    "identical": true,
+    "seconds_reference": 0.5,
+    "seconds_both_options": 0.41
+   },
+   {
+    "row_id": 2492,
+    "identical": true,
+    "seconds_reference": 0.61,
+    "seconds_both_options": 0.38
+   },
+   {
+    "row_id": 2571,
+    "identical": true,
+    "seconds_reference": 0.58,
+    "seconds_both_options": 0.28
+   },
+   {
+    "row_id": 2577,
+    "identical": true,
+    "seconds_reference": 189.05,
+    "seconds_both_options": 108.24
+   },
+   {
+    "row_id": 2663,
+    "identical": true,
+    "seconds_reference": 4.55,
+    "seconds_both_options": 1.62
+   },
+   {
+    "row_id": 2726,
+    "identical": true,
+    "seconds_reference": 156.28,
+    "seconds_both_options": 67.53
+   }
+  ],
+  "all_identical": true
+ }
+}

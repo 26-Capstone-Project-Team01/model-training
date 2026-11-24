@@ -21,6 +21,14 @@ package_json·obfuscation·code_context(기존)와 x3_context·dependency_change
 - 동일성 검사: 이미 추출한 정상 12쌍(대형 3쌍 포함)을 옵션을 켜고 다시 추출 → 시간 외 모든 값 동일(`result.json`), 대형 쌍 1.5~2배 빨라짐.
 - 전체 추출의 악성 쪽은 272쌍까지 옵션 없이, 이후는 옵션을 켜고 이어서 추출한다(기록: 전체 추출 보존 시 `malicious_rows_before_reuse_option.txt`).
 
+## 2b. 속도 개선 2 (`speedup_equivalence_file_cache/`)
+
+- 원인: 대형 캠페인 쌍(예: 332쌍 component)이 같은 수 MB payload 파일을 공유해 쌍마다 같은 파일을 세 extractor가 다시 분석한다.
+- `--file-cache`: 작업 프로세스 안에서 파일 단위 순수 함수(`call_signatures`, `obfuscation.file_metrics`, `x3_context.js_tokens`)를 파일 텍스트 SHA-256으로 메모이즈. 추출기 코드는 바꾸지 않았다.
+- 동일성: 이미 추출한 악성 23쌍(같은 payload를 공유하는 쌍 포함, 데이터 저장소 별도 worktree로 체크아웃)과 정상 12쌍을 두 옵션을 켜고 다시 추출 → 시간 외 모든 값 동일(`result.json`).
+  1 worker 기준 악성 560초 → 118초, 정상 536초 → 256초.
+- 악성 348쌍까지는 이 옵션 없이, 이후는 `--reuse-x1-calls --file-cache`로 이어서 추출(경계: 전체 결과 보존 시 `malicious_rows_before_file_cache_option.txt`).
+
 ## 3. 전체 추출
 
 진행 중. 끝나면 `build_x3d.py` → `analysis/`, `verify_x3.py` 전체 검증 결과를 별도 커밋으로 보존한다.
