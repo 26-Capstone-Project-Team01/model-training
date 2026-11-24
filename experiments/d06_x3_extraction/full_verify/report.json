@@ -1,0 +1,51 @@
+{
+ "pairs": 2767,
+ "status": [
+  [
+   "benign",
+   "ok",
+   1600
+  ],
+  [
+   "hard_benign",
+   "error",
+   2
+  ],
+  [
+   "hard_benign",
+   "ok",
+   237
+  ],
+  [
+   "malicious",
+   "ok",
+   928
+  ]
+ ],
+ "existing_features_compared": 34,
+ "existing_feature_mismatches": 18,
+ "addedNetworkCallPer1kAddedTokens_arith_ok": true,
+ "addedProcExecCallPer1kAddedTokens_arith_ok": true,
+ "numerator_from_same_run_matches_stored_x1": true,
+ "denominator": {
+  "A_zero": 788,
+  "A_zero_with_calls": 0,
+  "A_lt_20": 352,
+  "A_lt_100": 627,
+  "A_gt_B": 0,
+  "A_none": 0
+ },
+ "partial_targets_rows": [
+  [
+   2738,
+   "hard_benign",
+   "ringfence"
+  ]
+ ],
+ "no_hook_but_targets": 0,
+ "inputs": {
+  "/home/user/d06_train_x3_work/full/malicious.jsonl": "6634aebc501edb1a321acf26cebd7088bb7e02da529b66e1187e1380f76cd88b",
+  "/home/user/d06_train_x3_work/full/benign.jsonl": "b96142403686ba99a45881d61355c71278c2f49d23469666e3b392cea2dc5257"
+ },
+ "script_sha256": "ad47d9b90204fb3e66204ca86b6f00cc8b2db8e4a6b76a6ce966d964c718a021"
+}

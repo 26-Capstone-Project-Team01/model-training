@@ -1,0 +1,4 @@
+class,hook_present_no_changed_js_target,no_install_hook,targets_analysed,zero_targets_non_js_only,zero_targets_unresolved_only
+benign,27,1568,4,0,1
+hard_benign,61,122,46,2,6
+malicious,13,201,710,0,4

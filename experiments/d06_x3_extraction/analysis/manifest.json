@@ -1,0 +1,57 @@
+{
+ "train_sha256": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+ "jsonl": {
+  "malicious.jsonl": "6634aebc501edb1a321acf26cebd7088bb7e02da529b66e1187e1380f76cd88b",
+  "benign.jsonl": "b96142403686ba99a45881d61355c71278c2f49d23469666e3b392cea2dc5257"
+ },
+ "script_sha256": "0097620e3c311f31c928853ac3d6849f45b0e9c9ca6a6cd79824f012fe6453a2",
+ "status": [
+  [
+   "benign",
+   "ok",
+   1600
+  ],
+  [
+   "hard_benign",
+   "error",
+   2
+  ],
+  [
+   "hard_benign",
+   "ok",
+   237
+  ],
+  [
+   "malicious",
+   "ok",
+   928
+  ]
+ ],
+ "model_columns": [
+  "installHookTargetCount",
+  "installHookTargetMaxBytes",
+  "obfHookHexIdentRatio",
+  "obfHookHexNumberRatio",
+  "obfHookBracketAccessRatio",
+  "obfHookEscapeDensity",
+  "obfHookShortIdentRatio",
+  "obfHookMeanIdentLength",
+  "obfHookWhitespaceRatio",
+  "installHookTargetProcExecCallCount",
+  "installHookTargetNetworkCallCount",
+  "addedNetworkCallPer1kAddedTokens",
+  "addedProcExecCallPer1kAddedTokens",
+  "dependencyRangeChangedCount",
+  "dependencyChangedRatio"
+ ],
+ "diagnostic_columns": [
+  "x3diagChangedCodeAddedTokenCount",
+  "x3diagChangedFileTokenCount",
+  "x3diagHookTargetUnresolvedCount",
+  "x3diagHookTargetNonJsCount"
+ ],
+ "outputs": {
+  "d06_x3d.csv": "bc6fad59cd9d95f691fb786c60966595d37b22fc3a81ddb562656042dd04eb6f",
+  "d06_x3d_status.csv": "385eaf4370c4bdfb28616d27dcf7a628182102e390f2971d8c836bded2926b89"
+ }
+}
