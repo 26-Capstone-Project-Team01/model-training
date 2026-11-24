@@ -1,0 +1,32 @@
+{
+ "nature": "Train outer only; saved scores; thresholds from calibration (PR #13 calibrate, ML)",
+ "script_sha256": "1c6517d9a41d0a30b64e9db51e74d0ac971689fefe58bc9d4ca3b340e614cc0c",
+ "base_inputs": {
+  "pr13_saved_scores": "a8cd5375c3e95c6166937c49a526b68570afa85037ce75e774e9558f767e920c",
+  "full35_scores": "7b0524dad7b001f7df90c8f6a22197c605b04d54fbaf2cf914929749fb78a049"
+ },
+ "runs": {
+  "run_x1": "766285dbd21bc3052828014314936f2e2469d726ae841fa09d96d8a486a68b01",
+  "run_x3d": "6d8545a75f8de56f62106c215f2f9b18a89b0795389b90d9959cdc154d50856c"
+ },
+ "variants": [
+  "base7",
+  "full29",
+  "full35",
+  "base7_x1",
+  "base7_x1_x3",
+  "base7_x1_x3_d",
+  "full35_d",
+  "full35_x3",
+  "full35_x3_d"
+ ],
+ "check": "base7/full29/full35 TP,FP,HardFP == fair_comparison.csv",
+ "outputs": {
+  "campaign_recall.csv": "54f2dac666440aca1baacc606ab3db2018ff733e7b4961d51fc6bffe031043da",
+  "change_vs_full35.csv": "7813a225ba8a74a689d9f2b28ad10cc693238178d507defeade5bf69d579b3c1",
+  "change_vs_full35_cases_fpr5.csv": "ad3a793668142354d8bd90457f7d5dba9536af1b237085116084972f9f40ea51",
+  "metrics.csv": "219e5c3ae636d913c66bdaa3d7f05a157fb6a71203dd4166876870b828b6ff22",
+  "thresholds.csv": "bd624d5693cdd37afe6fdfed919b533a8dd575fed9b3253f472e59a15ec6e4b1",
+  "type_recall.csv": "2f88d41272ac15f05da4b4884fb6366c07ab826a3f089bb4aa7192c78a02781b"
+ }
+}

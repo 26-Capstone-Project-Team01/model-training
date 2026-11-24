@@ -1,0 +1,11 @@
+{
+ "files": {
+  "benign.jsonl": "b96142403686ba99a45881d61355c71278c2f49d23469666e3b392cea2dc5257",
+  "malicious.jsonl": "6634aebc501edb1a321acf26cebd7088bb7e02da529b66e1187e1380f76cd88b",
+  "malicious_rows_before_file_cache_option.txt": "80a5f8151270e5422c678e60ab5237992236578e8bb74c18d614f1bc2acd0403",
+  "malicious_rows_before_reuse_option.txt": "7fbc97824fae5365790333142993e9a1def7ee74fac94242583a29d77bdd3d90"
+ },
+ "extractor": "depbee-analyzer feat/x3-hook-target-context e45cb4d",
+ "options": "rows 0..: no option until malicious_rows_before_reuse_option.txt (252 rows before first restart, 272 incl.), --reuse-x1-calls until malicious_rows_before_file_cache_option.txt (348), then --reuse-x1-calls --file-cache; benign all without options",
+ "executed_package_code": false
+}

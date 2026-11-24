@@ -1,0 +1,99 @@
+{
+ "rows": [
+  {
+   "row_id": 1057,
+   "package": "@frida/crypto",
+   "identical": true,
+   "seconds_before": 0.91,
+   "seconds_with_option": 0.38
+  },
+  {
+   "row_id": 1169,
+   "package": "docker-registry-client",
+   "identical": true,
+   "seconds_before": 0.35,
+   "seconds_with_option": 0.17
+  },
+  {
+   "row_id": 1203,
+   "package": "extension-port-stream",
+   "identical": true,
+   "seconds_before": 0.21,
+   "seconds_with_option": 0.13
+  },
+  {
+   "row_id": 1450,
+   "package": "tsconfig-to-swcconfig",
+   "identical": true,
+   "seconds_before": 0.33,
+   "seconds_with_option": 0.16
+  },
+  {
+   "row_id": 1942,
+   "package": "engine.io-parser",
+   "identical": true,
+   "seconds_before": 0.28,
+   "seconds_with_option": 0.11
+  },
+  {
+   "row_id": 2022,
+   "package": "@coana-tech/cli",
+   "identical": true,
+   "seconds_before": 182.41,
+   "seconds_with_option": 89.12
+  },
+  {
+   "row_id": 2093,
+   "package": "@comunica/actor-dereference-http",
+   "identical": true,
+   "seconds_before": 0.5,
+   "seconds_with_option": 0.26
+  },
+  {
+   "row_id": 2492,
+   "package": "ts-api-utils",
+   "identical": true,
+   "seconds_before": 0.61,
+   "seconds_with_option": 0.41
+  },
+  {
+   "row_id": 2571,
+   "package": "beamcoder",
+   "identical": true,
+   "seconds_before": 0.58,
+   "seconds_with_option": 0.35
+  },
+  {
+   "row_id": 2577,
+   "package": "vite-plugin-dts",
+   "identical": true,
+   "seconds_before": 189.05,
+   "seconds_with_option": 120.35
+  },
+  {
+   "row_id": 2663,
+   "package": "jeep-sqlite",
+   "identical": true,
+   "seconds_before": 4.55,
+   "seconds_with_option": 2.27
+  },
+  {
+   "row_id": 2726,
+   "package": "@herb-tools/language-server",
+   "identical": true,
+   "seconds_before": 156.28,
+   "seconds_with_option": 71.41
+  }
+ ],
+ "all_identical": true,
+ "reference": {
+  "full_benign_jsonl_at_check": "b96142403686ba99a45881d61355c71278c2f49d23469666e3b392cea2dc5257"
+ },
+ "profile_herb_tools_language_server_seconds": {
+  "obfuscation": 33.3,
+  "code_context": 32.9,
+  "x3_context": 35.1,
+  "x3_tokens_only": 2.5,
+  "added_call_features_only": 33.5
+ }
+}

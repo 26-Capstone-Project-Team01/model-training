@@ -1,0 +1,4 @@
+row_id,feature,new,stored
+2599,installScriptPresent,False,True
+2599,installScriptAdded,False,True
+2599,scriptEntryAdded,False,True
