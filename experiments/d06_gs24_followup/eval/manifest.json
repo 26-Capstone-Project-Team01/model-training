@@ -1,0 +1,85 @@
+{
+ "preregistration_commit": "46ade76",
+ "combo_selection": {
+  "test|seed20261109|C1_prob": {
+   "weight": "0.9",
+   "cal_pr_auc": 0.9736955038923027
+  },
+  "test|seed20261109|C2_logit": {
+   "weight": "0.7",
+   "cal_pr_auc": 0.9686424402214547
+  },
+  "test|seed20261109|C3_rank": {
+   "weight": "1.0",
+   "cal_pr_auc": 0.9736443724488473
+  },
+  "test|seed20261109|C6_typewise_rank": {
+   "weight": "(np.float64(0.3), np.float64(1.0))",
+   "cal_pr_auc": 0.9744104408206051
+  },
+  "test|seed20261110|C1_prob": {
+   "weight": "0.0",
+   "cal_pr_auc": 0.9827725399527945
+  },
+  "test|seed20261110|C2_logit": {
+   "weight": "0.0",
+   "cal_pr_auc": 0.9827725399527946
+  },
+  "test|seed20261110|C3_rank": {
+   "weight": "0.0",
+   "cal_pr_auc": 0.9829760386320597
+  },
+  "test|seed20261110|C6_typewise_rank": {
+   "weight": "(np.float64(0.0), np.float64(0.1))",
+   "cal_pr_auc": 0.9832192555892093
+  },
+  "train_outer|split1|C1_prob": {
+   "weight": "0.5",
+   "cal_pr_auc": 0.8538115925500938
+  },
+  "train_outer|split1|C2_logit": {
+   "weight": "0.4",
+   "cal_pr_auc": 0.8350835438554362
+  },
+  "train_outer|split1|C3_rank": {
+   "weight": "0.4",
+   "cal_pr_auc": 0.8623228244117928
+  },
+  "train_outer|split1|C6_typewise_rank": {
+   "weight": "(np.float64(0.0), np.float64(1.0))",
+   "cal_pr_auc": 0.8653216987601225
+  },
+  "train_outer|split2|C1_prob": {
+   "weight": "0.0",
+   "cal_pr_auc": 0.9962359178812493
+  },
+  "train_outer|split2|C2_logit": {
+   "weight": "0.2",
+   "cal_pr_auc": 0.996315068699424
+  },
+  "train_outer|split2|C3_rank": {
+   "weight": "0.2",
+   "cal_pr_auc": 0.9968782156805082
+  },
+  "train_outer|split2|C6_typewise_rank": {
+   "weight": "(np.float64(0.2), np.float64(0.2))",
+   "cal_pr_auc": 0.9968782156805082
+  }
+ },
+ "checks": "full35 train-outer 5% == fair_comparison; full35/gs24 test 5% == d06_test674_dev",
+ "script_sha256": "5e9664099c65356abdd19f210d5b830f65782ad3bbc1cbbd19c1976310393040",
+ "inputs": {
+  "ablation": "d2e316c08261d71e98caf15dc2ba5c4077168ce7202607fa65f359d85277c173",
+  "full35_outer": "7b0524dad7b001f7df90c8f6a22197c605b04d54fbaf2cf914929749fb78a049",
+  "gs24_outer": "9a3cbc40bc05fc82555d00113f9b87812de6178b35894ba07ef63e3a4fc41944",
+  "full35_test": "6abfa8f8d174746ececb9563afc24b55627c0790cb3ab7b30a5e646e1ca3577f",
+  "gs24_test": "bd65b4699d1f65913449f3db5cc6a1f173f34523c238ce944a4203d94f21716e"
+ },
+ "outputs": {
+  "campaign_recall.csv": "a675b0f1c69e29381b39282e8767d45cb887e18ff70ae52caa019404b9b205d9",
+  "gain_loss.csv": "9bf80b7e5a6feafb57214a38724976fbf7b27d57c4af0e0800f7a93c45684b3e",
+  "metrics.csv": "bc81749d4643740883c571995b4f30d27d691574e12362b139323893c720c539",
+  "selection_calibration.csv": "4ff671ea7cbc79392610f06e3a83ce2b7242be0d0ff2a5fceadb6620df874d3a",
+  "type_recall.csv": "ab983df6f1cf072b452e9a4ea178fd6b1e4749c59d2cea2334cb25268b3cc5d3"
+ }
+}

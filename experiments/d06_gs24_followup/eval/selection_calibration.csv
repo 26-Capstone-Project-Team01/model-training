@@ -1,0 +1,617 @@
+protocol,split,combo,weight,cal_pr_auc
+test,seed20261109,C1_prob,0.0,0.9666573910585724
+test,seed20261109,C1_prob,0.1,0.9712314829351316
+test,seed20261109,C1_prob,0.2,0.9715796808405577
+test,seed20261109,C1_prob,0.3,0.9718831502478937
+test,seed20261109,C1_prob,0.4,0.972058121876491
+test,seed20261109,C1_prob,0.5,0.9722023129665953
+test,seed20261109,C1_prob,0.6,0.9725455095327107
+test,seed20261109,C1_prob,0.7,0.9729235716630262
+test,seed20261109,C1_prob,0.8,0.9732439874261533
+test,seed20261109,C1_prob,0.9,0.9736955038923027
+test,seed20261109,C1_prob,1.0,0.9735871039661239
+test,seed20261109,C2_logit,0.0,0.9570276012993368
+test,seed20261109,C2_logit,0.1,0.9642639024641624
+test,seed20261109,C2_logit,0.2,0.9653778137871825
+test,seed20261109,C2_logit,0.3,0.9665065404484323
+test,seed20261109,C2_logit,0.4,0.9674561363255174
+test,seed20261109,C2_logit,0.5,0.9680934074686601
+test,seed20261109,C2_logit,0.6,0.9684349326303325
+test,seed20261109,C2_logit,0.7,0.9686424402214547
+test,seed20261109,C2_logit,0.8,0.9684037679510196
+test,seed20261109,C2_logit,0.9,0.9682035416084365
+test,seed20261109,C2_logit,1.0,0.9676131593262605
+test,seed20261109,C3_rank,0.0,0.9668264482892327
+test,seed20261109,C3_rank,0.1,0.9680730469758733
+test,seed20261109,C3_rank,0.2,0.9689181960437225
+test,seed20261109,C3_rank,0.3,0.9698439736417723
+test,seed20261109,C3_rank,0.4,0.9705488674856434
+test,seed20261109,C3_rank,0.5,0.9709818224243074
+test,seed20261109,C3_rank,0.6,0.9718549629079338
+test,seed20261109,C3_rank,0.7,0.9724838017914075
+test,seed20261109,C3_rank,0.8,0.9732244424767913
+test,seed20261109,C3_rank,0.9,0.9734915603266383
+test,seed20261109,C3_rank,1.0,0.9736443724488473
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.0))",0.9668264482892327
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.1))",0.9676228361935008
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.2))",0.9682090429249602
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.3))",0.968698455103031
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.4))",0.9695976399796974
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.5))",0.970206440476975
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.6))",0.9709672562429162
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.7))",0.9719526235368606
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.8))",0.9727825234899334
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(0.9))",0.9734379053018585
+test,seed20261109,C6_typewise_rank,"(np.float64(0.0), np.float64(1.0))",0.9739472411529057
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.0))",0.9671859491840976
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.1))",0.9680730469758733
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.2))",0.9685793171648165
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.3))",0.9691426026068194
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.4))",0.969925303525705
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.5))",0.9704416035439236
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.6))",0.9712013765083711
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.7))",0.9722413058076884
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.8))",0.9730820323928264
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(0.9))",0.9736906842075064
+test,seed20261109,C6_typewise_rank,"(np.float64(0.1), np.float64(1.0))",0.9742085989852893
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.0))",0.9674138195802674
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.1))",0.968317243517375
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.2))",0.9689181960437225
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.3))",0.9693344303200544
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.4))",0.9700995010846479
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.5))",0.970573788101422
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.6))",0.9712199356030333
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.7))",0.9723062581166007
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.8))",0.9731787554807315
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(0.9))",0.9739648011490957
+test,seed20261109,C6_typewise_rank,"(np.float64(0.2), np.float64(1.0))",0.9742127973482765
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.0))",0.9680104814674991
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.1))",0.9688724007392339
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.2))",0.9693826755894003
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.3))",0.9698439736417723
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.4))",0.9704204916613411
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.5))",0.9709974331914538
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.6))",0.9716076420132067
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.7))",0.9725740757613651
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.8))",0.9736196744218761
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(0.9))",0.9742691894299386
+test,seed20261109,C6_typewise_rank,"(np.float64(0.3), np.float64(1.0))",0.9744104408206051
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.0))",0.9681102652661944
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.1))",0.9690000034270676
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.2))",0.9695596977452903
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.3))",0.9698764943101932
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.4))",0.9705488674856434
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.5))",0.9711087357054192
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.6))",0.9716769691133972
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.7))",0.9725413700515879
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.8))",0.9736077696500748
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(0.9))",0.9742128749037244
+test,seed20261109,C6_typewise_rank,"(np.float64(0.4), np.float64(1.0))",0.9743619981474293
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.0))",0.968010205133404
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.1))",0.968907946422931
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.2))",0.9694543800174094
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.3))",0.969837999593735
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.4))",0.9705120269643629
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.5))",0.9709818224243074
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.6))",0.9716856746386734
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.7))",0.9725290555861489
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.8))",0.9733885674119748
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(0.9))",0.9739461098552353
+test,seed20261109,C6_typewise_rank,"(np.float64(0.5), np.float64(1.0))",0.9743952340235191
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.0))",0.9681817270465624
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.1))",0.9689491070639699
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.2))",0.9695547433852512
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.3))",0.9699002203789344
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.4))",0.9706783522597126
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.5))",0.9711183422717652
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.6))",0.9718549629079338
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.7))",0.9725688332790686
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.8))",0.9733642269069264
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(0.9))",0.9739083318030405
+test,seed20261109,C6_typewise_rank,"(np.float64(0.6), np.float64(1.0))",0.9742834507675763
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.0))",0.968063315855816
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.1))",0.9689471303367344
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.2))",0.969395219800011
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.3))",0.9698326797792366
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.4))",0.9705099060134814
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.5))",0.971091454832326
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.6))",0.9717685076848293
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.7))",0.9724838017914075
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.8))",0.973210147247274
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(0.9))",0.9737865550064397
+test,seed20261109,C6_typewise_rank,"(np.float64(0.7), np.float64(1.0))",0.9739082060713666
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.0))",0.9682683386415378
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.1))",0.9690955917229283
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.2))",0.9695777122345075
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.3))",0.9699365896093216
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.4))",0.9706821182633334
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.5))",0.9711548835013848
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.6))",0.9718416644408854
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.7))",0.9726071337769006
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.8))",0.9732244424767913
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(0.9))",0.9737954944024086
+test,seed20261109,C6_typewise_rank,"(np.float64(0.8), np.float64(1.0))",0.9739343956660836
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.0))",0.9681156413018009
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.1))",0.9690561188619325
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.2))",0.9694954747647432
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.3))",0.9699010880759765
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.4))",0.9705692722235755
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.5))",0.9710504084764267
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.6))",0.9715768017207179
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.7))",0.9723057276496591
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.8))",0.9729131847813137
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(0.9))",0.9734915603266383
+test,seed20261109,C6_typewise_rank,"(np.float64(0.9), np.float64(1.0))",0.9737557567742515
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.0))",0.9677990616370377
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.1))",0.968755412352929
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.2))",0.9691838120387303
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.3))",0.9695526603274109
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.4))",0.9702984558931559
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.5))",0.970777153011037
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.6))",0.9713494876372508
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.7))",0.9719316712641467
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.8))",0.9726079748937296
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(0.9))",0.9732942746497432
+test,seed20261109,C6_typewise_rank,"(np.float64(1.0), np.float64(1.0))",0.9736443724488473
+test,seed20261110,C1_prob,0.0,0.9827725399527945
+test,seed20261110,C1_prob,0.1,0.980128492235535
+test,seed20261110,C1_prob,0.2,0.9791886110172018
+test,seed20261110,C1_prob,0.3,0.9787876403369438
+test,seed20261110,C1_prob,0.4,0.9782739582625112
+test,seed20261110,C1_prob,0.5,0.9773233903352869
+test,seed20261110,C1_prob,0.6,0.9760429752997059
+test,seed20261110,C1_prob,0.7,0.9749443329637454
+test,seed20261110,C1_prob,0.8,0.9735916800949054
+test,seed20261110,C1_prob,0.9,0.971641645578502
+test,seed20261110,C1_prob,1.0,0.9668944230076388
+test,seed20261110,C2_logit,0.0,0.9827725399527946
+test,seed20261110,C2_logit,0.1,0.9820825931190572
+test,seed20261110,C2_logit,0.2,0.9811675141837671
+test,seed20261110,C2_logit,0.3,0.9801578395202695
+test,seed20261110,C2_logit,0.4,0.9783907167531735
+test,seed20261110,C2_logit,0.5,0.9770800081255666
+test,seed20261110,C2_logit,0.6,0.9753491124474368
+test,seed20261110,C2_logit,0.7,0.9734953070871815
+test,seed20261110,C2_logit,0.8,0.9719243065696634
+test,seed20261110,C2_logit,0.9,0.9698022650282587
+test,seed20261110,C2_logit,1.0,0.9660002022858318
+test,seed20261110,C3_rank,0.0,0.9829760386320597
+test,seed20261110,C3_rank,0.1,0.9822798374345252
+test,seed20261110,C3_rank,0.2,0.981436252699196
+test,seed20261110,C3_rank,0.3,0.9805219488960362
+test,seed20261110,C3_rank,0.4,0.9792596036483088
+test,seed20261110,C3_rank,0.5,0.9778792665470396
+test,seed20261110,C3_rank,0.6,0.9764526913499899
+test,seed20261110,C3_rank,0.7,0.9755727032820165
+test,seed20261110,C3_rank,0.8,0.9729117675186826
+test,seed20261110,C3_rank,0.9,0.9700985699407673
+test,seed20261110,C3_rank,1.0,0.9673790222041938
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.0))",0.9829760386320597
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.1))",0.9832192555892093
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.2))",0.9831922981277817
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.3))",0.9831859699240341
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.4))",0.983158813405672
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.5))",0.9830995166302107
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.6))",0.9829300835400165
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.7))",0.9827573520283849
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.8))",0.9826394865455521
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(0.9))",0.9825169563654638
+test,seed20261110,C6_typewise_rank,"(np.float64(0.0), np.float64(1.0))",0.9823296839875658
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.0))",0.9818706773078046
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.1))",0.9822798374345252
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.2))",0.9822683564470518
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.3))",0.9821618209414291
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.4))",0.9821959160838049
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.5))",0.9821987949604223
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.6))",0.9821061589213156
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.7))",0.9819922796064497
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.8))",0.9818612615033255
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(0.9))",0.9817290911368698
+test,seed20261110,C6_typewise_rank,"(np.float64(0.1), np.float64(1.0))",0.9815626935918733
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.0))",0.9808942726408619
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.1))",0.9814794455142987
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.2))",0.981436252699196
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.3))",0.9813547795192166
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.4))",0.9813595743151137
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.5))",0.9813127780670212
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.6))",0.9813131926490681
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.7))",0.9812552887589964
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.8))",0.9811180147060738
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(0.9))",0.9809632345722863
+test,seed20261110,C6_typewise_rank,"(np.float64(0.2), np.float64(1.0))",0.9807617102909405
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.0))",0.9800209938903494
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.1))",0.980569706188327
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.2))",0.9806556390645254
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.3))",0.9805219488960362
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.4))",0.9804633380437296
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.5))",0.9803393579630902
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.6))",0.9802492344402169
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.7))",0.9803240446566405
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.8))",0.9803128115213332
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(0.9))",0.979708923963446
+test,seed20261110,C6_typewise_rank,"(np.float64(0.3), np.float64(1.0))",0.97949803861811
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.0))",0.9786378849121598
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.1))",0.9792666863155071
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.2))",0.9793871494960847
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.3))",0.9793777162081003
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.4))",0.9792596036483088
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.5))",0.9791023209707881
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.6))",0.9790630278089288
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.7))",0.9785594147201829
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.8))",0.9785990210475418
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(0.9))",0.9785220108457119
+test,seed20261110,C6_typewise_rank,"(np.float64(0.4), np.float64(1.0))",0.9782153823608831
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.0))",0.9772264605658683
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.1))",0.9778871788557201
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.2))",0.9781399332875729
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.3))",0.978152204850532
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.4))",0.9780814650747094
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.5))",0.9778792665470396
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.6))",0.9773015746162175
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.7))",0.9772358327932575
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.8))",0.9772732490575994
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(0.9))",0.9771160133320576
+test,seed20261110,C6_typewise_rank,"(np.float64(0.5), np.float64(1.0))",0.9767155473624509
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.0))",0.9761715244449483
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.1))",0.9769357272012076
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.2))",0.9773456750282374
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.3))",0.9773180205682089
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.4))",0.9767458637113747
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.5))",0.9766362641660662
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.6))",0.9764526913499899
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.7))",0.9763840289610097
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.8))",0.976336241091447
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(0.9))",0.9761622609541268
+test,seed20261110,C6_typewise_rank,"(np.float64(0.6), np.float64(1.0))",0.9743358499896053
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.0))",0.9749721188068237
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.1))",0.9754283378007399
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.2))",0.9758980047029688
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.3))",0.9760215555354342
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.4))",0.975970567631382
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.5))",0.9758181715556765
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.6))",0.9756217220192656
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.7))",0.9755727032820165
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.8))",0.9755132851645452
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(0.9))",0.9739161429595505
+test,seed20261110,C6_typewise_rank,"(np.float64(0.7), np.float64(1.0))",0.9731559242870587
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.0))",0.9731184936349996
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.1))",0.9741754239562905
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.2))",0.9747267453976792
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.3))",0.9747505492324912
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.4))",0.9748267356871091
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.5))",0.9747341573141204
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.6))",0.9745765150222748
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.7))",0.9731229114003703
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.8))",0.9729117675186826
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(0.9))",0.9725380720513644
+test,seed20261110,C6_typewise_rank,"(np.float64(0.8), np.float64(1.0))",0.9719713615667573
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.0))",0.9704817014193853
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.1))",0.9716122500798083
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.2))",0.972073194704122
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.3))",0.9722756933301694
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.4))",0.9723779573116564
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.5))",0.9723203712232698
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.6))",0.9707785165356038
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.7))",0.9706519983324026
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.8))",0.9705366448237664
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(0.9))",0.9700985699407673
+test,seed20261110,C6_typewise_rank,"(np.float64(0.9), np.float64(1.0))",0.969251907650351
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.0))",0.9686892514034896
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.1))",0.9697683554018327
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.2))",0.970233493955801
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.3))",0.9705380441661863
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.4))",0.9704540872711955
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.5))",0.970431318484779
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.6))",0.9690461191580625
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.7))",0.9688459131688958
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.8))",0.9686048381185046
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(0.9))",0.968300587566724
+test,seed20261110,C6_typewise_rank,"(np.float64(1.0), np.float64(1.0))",0.9673790222041938
+train_outer,split1,C1_prob,0.0,0.8401390307856861
+train_outer,split1,C1_prob,0.1,0.8522352595676259
+train_outer,split1,C1_prob,0.2,0.8518439412270001
+train_outer,split1,C1_prob,0.3,0.8526577475849481
+train_outer,split1,C1_prob,0.4,0.8524680549843727
+train_outer,split1,C1_prob,0.5,0.8538115925500938
+train_outer,split1,C1_prob,0.6,0.8532670850100822
+train_outer,split1,C1_prob,0.7,0.852936958711337
+train_outer,split1,C1_prob,0.8,0.8504382999327902
+train_outer,split1,C1_prob,0.9,0.8483534369138344
+train_outer,split1,C1_prob,1.0,0.8497425678015528
+train_outer,split1,C2_logit,0.0,0.8110242381074816
+train_outer,split1,C2_logit,0.1,0.832937380262171
+train_outer,split1,C2_logit,0.2,0.8329284824735645
+train_outer,split1,C2_logit,0.3,0.8327771771128704
+train_outer,split1,C2_logit,0.4,0.8350835438554362
+train_outer,split1,C2_logit,0.5,0.8349594298985349
+train_outer,split1,C2_logit,0.6,0.8348830735339647
+train_outer,split1,C2_logit,0.7,0.8347807607564532
+train_outer,split1,C2_logit,0.8,0.8328484684479003
+train_outer,split1,C2_logit,0.9,0.8299348239090705
+train_outer,split1,C2_logit,1.0,0.830707313706199
+train_outer,split1,C3_rank,0.0,0.8606301679595715
+train_outer,split1,C3_rank,0.1,0.8537166421197074
+train_outer,split1,C3_rank,0.2,0.8563931447726724
+train_outer,split1,C3_rank,0.3,0.8604075161265828
+train_outer,split1,C3_rank,0.4,0.8623228244117928
+train_outer,split1,C3_rank,0.5,0.8613061256239035
+train_outer,split1,C3_rank,0.6,0.8617211677172124
+train_outer,split1,C3_rank,0.7,0.86130093015512
+train_outer,split1,C3_rank,0.8,0.8595007251383248
+train_outer,split1,C3_rank,0.9,0.8581004739797248
+train_outer,split1,C3_rank,1.0,0.8604748318844164
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.0))",0.8606301679595715
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.1))",0.8618700352131591
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.2))",0.8626664418922235
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.3))",0.8633945245852788
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.4))",0.8639451603073339
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.5))",0.8640814605374776
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.6))",0.864496086557596
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.7))",0.8648381724325072
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.8))",0.8653070590267883
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(0.9))",0.8651819294036924
+train_outer,split1,C6_typewise_rank,"(np.float64(0.0), np.float64(1.0))",0.8653216987601225
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.0))",0.8526384985152937
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.1))",0.8537166421197074
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.2))",0.854835217745153
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.3))",0.8552558265064958
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.4))",0.8557631750921239
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.5))",0.85621722930552
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.6))",0.8565652789270018
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.7))",0.8567833403898498
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.8))",0.8570276530256186
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(0.9))",0.8570649333731785
+train_outer,split1,C6_typewise_rank,"(np.float64(0.1), np.float64(1.0))",0.8571698321574234
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.0))",0.8543695301954898
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.1))",0.8556209729095156
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.2))",0.8563931447726724
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.3))",0.8568938994006724
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.4))",0.8572188846068527
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.5))",0.8575018898831944
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.6))",0.8582391512328984
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.7))",0.8584918545107657
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.8))",0.8588461658623073
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(0.9))",0.8586730541625652
+train_outer,split1,C6_typewise_rank,"(np.float64(0.2), np.float64(1.0))",0.8585727770823501
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.0))",0.8579471745836912
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.1))",0.8592929953841626
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.2))",0.8598827317278402
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.3))",0.8604075161265828
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.4))",0.860851151186495
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.5))",0.8609814070188239
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.6))",0.8616176097557352
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.7))",0.8621641898335045
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.8))",0.8624783977817477
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(0.9))",0.8623406220094361
+train_outer,split1,C6_typewise_rank,"(np.float64(0.3), np.float64(1.0))",0.8622690728094038
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.0))",0.8595135967868138
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.1))",0.8608302842234973
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.2))",0.8615679450050321
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.3))",0.8620324134410243
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.4))",0.8623228244117928
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.5))",0.8626162729851421
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.6))",0.8631587720872101
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.7))",0.8635510947078343
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.8))",0.8639854363502613
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(0.9))",0.8639603054623582
+train_outer,split1,C6_typewise_rank,"(np.float64(0.4), np.float64(1.0))",0.8638951673981032
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.0))",0.8583405981705242
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.1))",0.8596666806729671
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.2))",0.8603909011318764
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.3))",0.8607640479371644
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.4))",0.8611370647296646
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.5))",0.8613061256239035
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.6))",0.8620763868955108
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.7))",0.8625151025394949
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.8))",0.862952456588094
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(0.9))",0.8627342017916936
+train_outer,split1,C6_typewise_rank,"(np.float64(0.5), np.float64(1.0))",0.8625298708247103
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.0))",0.8583233388241746
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.1))",0.859154307017489
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.2))",0.8600056926215341
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.3))",0.8603651114094119
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.4))",0.8608383756640281
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.5))",0.8611762557583923
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.6))",0.8617211677172124
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.7))",0.8622195117721617
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.8))",0.8626831094058409
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(0.9))",0.862382192042466
+train_outer,split1,C6_typewise_rank,"(np.float64(0.6), np.float64(1.0))",0.8625182330654372
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.0))",0.8574329340414527
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.1))",0.8582072762029743
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.2))",0.859083877466274
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.3))",0.8595145776032472
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.4))",0.859883869571489
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.5))",0.8604116219647023
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.6))",0.8608723406676413
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.7))",0.86130093015512
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.8))",0.8616324177325936
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(0.9))",0.8615474804161339
+train_outer,split1,C6_typewise_rank,"(np.float64(0.7), np.float64(1.0))",0.8617488916695532
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.0))",0.8551848753574518
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.1))",0.8560441496299719
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.2))",0.8567904681917948
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.3))",0.8573381709259622
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.4))",0.8578001631915867
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.5))",0.8583382188083603
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.6))",0.8586209778490307
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.7))",0.8591624841611646
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.8))",0.8595007251383248
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(0.9))",0.8595267500883761
+train_outer,split1,C6_typewise_rank,"(np.float64(0.8), np.float64(1.0))",0.8595279209940664
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.0))",0.8537410352143442
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.1))",0.8545182403530126
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.2))",0.8552281520498276
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.3))",0.855820226034217
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.4))",0.8562845424828441
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.5))",0.8566142166221483
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.6))",0.8573045332324755
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.7))",0.8578554184551507
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.8))",0.8582843384562336
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(0.9))",0.8581004739797248
+train_outer,split1,C6_typewise_rank,"(np.float64(0.9), np.float64(1.0))",0.8583560934316267
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.0))",0.8560388454671489
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.1))",0.8568753434014115
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.2))",0.8575383630231905
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.3))",0.8580412905237589
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.4))",0.8585619491414445
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.5))",0.8589464848230732
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.6))",0.8596726160462881
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.7))",0.8600143263834624
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.8))",0.86047165901509
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(0.9))",0.8604088170422232
+train_outer,split1,C6_typewise_rank,"(np.float64(1.0), np.float64(1.0))",0.8604748318844164
+train_outer,split2,C1_prob,0.0,0.9962359178812493
+train_outer,split2,C1_prob,0.1,0.9954471885295675
+train_outer,split2,C1_prob,0.2,0.9952636597902148
+train_outer,split2,C1_prob,0.3,0.9951428541361116
+train_outer,split2,C1_prob,0.4,0.9950281556922498
+train_outer,split2,C1_prob,0.5,0.994869422375453
+train_outer,split2,C1_prob,0.6,0.9948489711361823
+train_outer,split2,C1_prob,0.7,0.994697072278659
+train_outer,split2,C1_prob,0.8,0.9946019164280565
+train_outer,split2,C1_prob,0.9,0.9943493437775767
+train_outer,split2,C1_prob,1.0,0.9939549572955148
+train_outer,split2,C2_logit,0.0,0.9962359178812495
+train_outer,split2,C2_logit,0.1,0.99630229516278
+train_outer,split2,C2_logit,0.2,0.996315068699424
+train_outer,split2,C2_logit,0.3,0.9962490874907207
+train_outer,split2,C2_logit,0.4,0.9961219932532814
+train_outer,split2,C2_logit,0.5,0.9958869101668139
+train_outer,split2,C2_logit,0.6,0.9956512379929782
+train_outer,split2,C2_logit,0.7,0.9952620718863635
+train_outer,split2,C2_logit,0.8,0.9949289119615746
+train_outer,split2,C2_logit,0.9,0.9946013629495853
+train_outer,split2,C2_logit,1.0,0.993208565664259
+train_outer,split2,C3_rank,0.0,0.9962467939694668
+train_outer,split2,C3_rank,0.1,0.9967062128033722
+train_outer,split2,C3_rank,0.2,0.9968782156805082
+train_outer,split2,C3_rank,0.3,0.9968030925888601
+train_outer,split2,C3_rank,0.4,0.9967726587257486
+train_outer,split2,C3_rank,0.5,0.9964589919796533
+train_outer,split2,C3_rank,0.6,0.9962663355962494
+train_outer,split2,C3_rank,0.7,0.9958179781001358
+train_outer,split2,C3_rank,0.8,0.9953357819998973
+train_outer,split2,C3_rank,0.9,0.9947774206981288
+train_outer,split2,C3_rank,1.0,0.9939752759672178
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.0))",0.9962467939694668
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.1))",0.9965002009723659
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.2))",0.9965376232082899
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.3))",0.9964367966572224
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.4))",0.9963631675396272
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.5))",0.9962308810979038
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.6))",0.996167395208644
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.7))",0.9959950577221264
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.8))",0.9957544954950217
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(0.9))",0.9955619901732154
+train_outer,split2,C6_typewise_rank,"(np.float64(0.0), np.float64(1.0))",0.9952589556316657
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.0))",0.996422098355994
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.1))",0.9967062128033722
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.2))",0.9967377270010291
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.3))",0.9966439860169491
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.4))",0.9965504970609295
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.5))",0.9964494755725152
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.6))",0.9963630308403176
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.7))",0.9961708793599883
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.8))",0.9959312414454473
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(0.9))",0.995756777345834
+train_outer,split2,C6_typewise_rank,"(np.float64(0.1), np.float64(1.0))",0.9954933602729631
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.0))",0.9965467336709857
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.1))",0.9968590984706283
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.2))",0.9968782156805082
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.3))",0.9968500129962337
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.4))",0.9967439708068112
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.5))",0.9966069301770416
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.6))",0.996481928500231
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.7))",0.9963276634936906
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.8))",0.9960599697026056
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(0.9))",0.9958982865309585
+train_outer,split2,C6_typewise_rank,"(np.float64(0.2), np.float64(1.0))",0.9955720630688828
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.0))",0.9964566726807252
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.1))",0.9967959956382767
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.2))",0.9968341991912051
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.3))",0.9968030925888601
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.4))",0.9967134628288216
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.5))",0.9965697961082278
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.6))",0.9964074878256067
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.7))",0.9963061305314321
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.8))",0.9960204025680605
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(0.9))",0.9958307173517591
+train_outer,split2,C6_typewise_rank,"(np.float64(0.3), np.float64(1.0))",0.9954674826195647
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.0))",0.9964701558738117
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.1))",0.9967507919242952
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.2))",0.9968542204159322
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.3))",0.9968597084486804
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.4))",0.9967726587257486
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.5))",0.9965994809102976
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.6))",0.9964554941622698
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.7))",0.9963263947208718
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.8))",0.9960790511184369
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(0.9))",0.9958815944537699
+train_outer,split2,C6_typewise_rank,"(np.float64(0.4), np.float64(1.0))",0.995507520131394
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.0))",0.9962381341144214
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.1))",0.9966149027849517
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.2))",0.9966964512209314
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.3))",0.9966745747943366
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.4))",0.9965943280883581
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.5))",0.9964589919796533
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.6))",0.9963483380433313
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.7))",0.9961799748698615
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.8))",0.9959140627355909
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(0.9))",0.9957830329159508
+train_outer,split2,C6_typewise_rank,"(np.float64(0.5), np.float64(1.0))",0.9952600402272985
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.0))",0.9961274888897549
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.1))",0.9965200023327793
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.2))",0.9965883145468998
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.3))",0.9965579439824802
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.4))",0.9964464588579395
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.5))",0.9963623510986245
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.6))",0.9962663355962494
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.7))",0.9961106495639437
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.8))",0.9958713676545363
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(0.9))",0.9956735812564014
+train_outer,split2,C6_typewise_rank,"(np.float64(0.6), np.float64(1.0))",0.9951685198785333
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.0))",0.9958443013797882
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.1))",0.996222259666845
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.2))",0.9962930663623085
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.3))",0.9962221603358502
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.4))",0.9961717308143325
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.5))",0.996085968664922
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.6))",0.9959745339656983
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.7))",0.9958179781001358
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.8))",0.9956204020378561
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(0.9))",0.9953238706968214
+train_outer,split2,C6_typewise_rank,"(np.float64(0.7), np.float64(1.0))",0.9949029304899802
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.0))",0.9955825673809029
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.1))",0.9959731980888114
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.2))",0.9960497012622361
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.3))",0.9960132145936069
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.4))",0.9959373298116506
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.5))",0.9958665500290143
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.6))",0.9957523094887445
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.7))",0.9955873536254666
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.8))",0.9953357819998973
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(0.9))",0.9950653250540348
+train_outer,split2,C6_typewise_rank,"(np.float64(0.8), np.float64(1.0))",0.9946012830592622
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.0))",0.9952973555707545
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.1))",0.9956706302226849
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.2))",0.9957433407348293
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.3))",0.9957144461004788
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.4))",0.9956401524285413
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.5))",0.9955564356772163
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.6))",0.9954633741898475
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.7))",0.995296090856861
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.8))",0.9950660295422274
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(0.9))",0.9947774206981288
+train_outer,split2,C6_typewise_rank,"(np.float64(0.9), np.float64(1.0))",0.9943094509820757
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.0))",0.9949959838164012
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.1))",0.9953780762899322
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.2))",0.9954579061660681
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.3))",0.9954104637628299
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.4))",0.9953482480434782
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.5))",0.9952667674532697
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.6))",0.9951883684124138
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.7))",0.9950351240714141
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.8))",0.994685742228595
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(0.9))",0.9944868406604167
+train_outer,split2,C6_typewise_rank,"(np.float64(1.0), np.float64(1.0))",0.9939752759672178
