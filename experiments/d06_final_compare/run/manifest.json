@@ -1,0 +1,19 @@
+{
+ "nature": "DEVELOPMENT evaluation on Test-674; TEST-CHOSEN rows are not independent",
+ "operating_points": {
+  "full35": 0.03,
+  "B3": 0.03,
+  "C5": 0.03,
+  "full28_noObfNew": 0.03,
+  "gs24": 0.04
+ },
+ "script_sha256": "f4fa08537ec4e36f9e3c0684b6db1f34089990dc39d4f6184c3e0ffa7a96b891",
+ "inputs": {
+  "test674_dev_scores": "bd65b4699d1f65913449f3db5cc6a1f173f34523c238ce944a4203d94f21716e",
+  "ablation_scores": "d2e316c08261d71e98caf15dc2ba5c4077168ce7202607fa65f359d85277c173"
+ },
+ "outputs": {
+  "test674_final_compare.csv": "c6449abe023670e9361f6ac7a3432661e35c8f7a85719cdb79f952cf29c40074",
+  "test674_stability.csv": "886eea40c6776c78630425740d3cfc24bcb280ce76a987c8904a1481ee5fea61"
+ }
+}
