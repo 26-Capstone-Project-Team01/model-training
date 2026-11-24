@@ -1,0 +1,30 @@
+{
+ "data_commits": {
+  "d06": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+  "new": "4498acddcf72c7bd6cb91486e59bb92fdf1824fa",
+  "before_pr22": "c5b4d32051354299454a4e57f2a08282b10394fb"
+ },
+ "pairs_added": 2695,
+ "package_json_ok": 2695,
+ "by_batch": {
+  "D07/D07-B": 2693,
+  "D08 (PR #22)": 2
+ },
+ "by_status": {
+  "needs_review": 1168,
+  "ok": 1527
+ },
+ "attack_type": {
+  "C": 80,
+  "A": 2576,
+  "B": 39
+ },
+ "mastra_like": [
+  {
+   "pair_dir": "pairs/mini-shai-hulud_2026-05/@cap-js__openapi__1.4.0_to_1.4.1__315b2e2810c3",
+   "status": "needs_review",
+   "batch": "D07/D07-B",
+   "new_dep_names": "@sap/setup"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "train": {
+  "same_key": 0,
+  "same_package_pairs": 2,
+  "same_package_names": [
+   "shell-exec"
+  ]
+ },
+ "test677": {
+  "same_key": 0,
+  "same_package_pairs": 3,
+  "same_package_names": [
+   "vant"
+  ]
+ },
+ "test674": {
+  "same_key": 0,
+  "same_package_pairs": 3,
+  "same_package_names": [
+   "vant"
+  ]
+ },
+ "payload_shared_with_d06_train_pairs": 2460,
+ "payload_shared_with_d06_test677_pairs": 10,
+ "payload_shared_by_campaign": {
+  "canisterworm_2026-03": 6,
+  "chaindrop_2026-08": 1719,
+  "individuals_case": 8,
+  "mini-shai-hulud_2026-05": 270,
+  "nx_2025-08": 1,
+  "sha1-hulud-second-coming_2025-11": 466
+ },
+ "d06_pair_dirs_removed_at_new_commit": 23
+}

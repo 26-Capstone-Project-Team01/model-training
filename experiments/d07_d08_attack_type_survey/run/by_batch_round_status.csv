@@ -1,0 +1,4 @@
+batch,collection_round,status,pairs,attack_type_A,attack_type_B,attack_type_C,mastra_like,no_js_change,new_dependency
+D07/D07-B,5,needs_review,1168,1144,21,3,1,1,202
+D07/D07-B,5,ok,1525,1430,18,77,0,73,65
+D08 (PR #22),6,ok,2,2,0,0,0,0,0

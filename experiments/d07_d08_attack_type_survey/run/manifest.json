@@ -1,0 +1,18 @@
+{
+ "script_sha256": "4830c39cd9118dcbc39147887d6d22adb0f59b6f11335a60959d297001cba33f",
+ "git_no_lazy_fetch": true,
+ "read_only": true,
+ "split_inputs_sha256": {
+  "train": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23",
+  "test677": "e8a70053ce639ebc79d7bc8d9402578d3ceaf24853ed31735b5f55c418b8bd73",
+  "test674": "604673b95d88009efe5d3200606de972bffa541dea3d75be37163ee501465060"
+ },
+ "outputs": {
+  "by_batch_attack_type.csv": "bdefd560815828d65cf4997c5f8dd9cf8f6f27ae3ff99265a3237702d7eb0d5b",
+  "by_batch_round_status.csv": "6bdd3ef1fc1019d9a881db6849c520eeb6da0ffb5996d52d8ae206098412b51f",
+  "by_campaign_status.csv": "7d3c4b0c495f20d3e38622ee84cf337d4432a891a96e998e8a326995e738a5e3",
+  "overlap_with_d06.json": "0113a76185679b62a09f3e18bd55ea45169b43b652fe6af05ab33026b84e901a",
+  "pairs.csv": "d63a4374c6338caf6f6eb775ae5585947a7179870a9b4608fcb421155fc80ced",
+  "summary.json": "2d4d83a5390eab22b9f19918d417fce6adeeb742c82094325867fa56803c6fa8"
+ }
+}

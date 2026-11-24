@@ -1,0 +1,5 @@
+batch,attack_type,pairs,attack_type_A,attack_type_B,attack_type_C,mastra_like,no_js_change,new_dependency
+D07/D07-B,A,2574,2574,0,0,0,61,228
+D07/D07-B,B,39,0,39,0,1,1,39
+D07/D07-B,C,80,0,0,80,0,12,0
+D08 (PR #22),A,2,2,0,0,0,0,0

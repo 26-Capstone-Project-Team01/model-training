@@ -1,0 +1,17 @@
+campaign,status,pairs,attack_type_A,attack_type_B,attack_type_C,mastra_like,no_js_change,new_dependency
+bkc_group_4,needs_review,1,0,0,1,0,0,0
+canisterworm_2026-03,ok,6,6,0,0,0,0,0
+chaindrop_2026-08,needs_review,943,943,0,0,0,0,0
+chaindrop_2026-08,ok,776,776,0,0,0,0,0
+individuals_case,ok,103,35,8,60,0,16,15
+miasma-leoplatform_2026-06,needs_review,6,0,6,0,0,0,6
+miasma-leoplatform_2026-06,ok,10,0,10,0,0,0,10
+miasma_2026-06,needs_review,16,0,14,2,0,0,14
+miasma_2026-06,ok,7,0,0,7,0,0,0
+mini-shai-hulud_2026-05,needs_review,202,201,1,0,1,1,182
+mini-shai-hulud_2026-05,ok,91,91,0,0,0,0,36
+nx_2025-08,ok,4,0,0,4,0,0,0
+sha1-hulud-second-coming_2025-11,ok,466,466,0,0,0,0,3
+shai-hulud-original_2025-09,ok,6,0,0,6,0,0,0
+toptal_2025-07,ok,24,24,0,0,0,24,0
+weavedb_2026-05,ok,34,34,0,0,0,33,1
