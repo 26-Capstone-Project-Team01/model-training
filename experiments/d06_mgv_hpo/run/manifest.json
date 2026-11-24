@@ -1,0 +1,78 @@
+{
+ "dry_run": false,
+ "grid": [
+  {
+   "num_leaves": 15,
+   "min_data_in_leaf": 20,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 15,
+   "min_data_in_leaf": 20,
+   "rounds": 200
+  },
+  {
+   "num_leaves": 15,
+   "min_data_in_leaf": 50,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 15,
+   "min_data_in_leaf": 50,
+   "rounds": 200
+  },
+  {
+   "num_leaves": 31,
+   "min_data_in_leaf": 20,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 31,
+   "min_data_in_leaf": 20,
+   "rounds": 200
+  },
+  {
+   "num_leaves": 31,
+   "min_data_in_leaf": 50,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 31,
+   "min_data_in_leaf": 50,
+   "rounds": 200
+  },
+  {
+   "num_leaves": 63,
+   "min_data_in_leaf": 20,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 63,
+   "min_data_in_leaf": 20,
+   "rounds": 200
+  },
+  {
+   "num_leaves": 63,
+   "min_data_in_leaf": 50,
+   "rounds": 100
+  },
+  {
+   "num_leaves": 63,
+   "min_data_in_leaf": 50,
+   "rounds": 200
+  }
+ ],
+ "pr13_default_full35_reproduces_saved": [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+ ],
+ "script_sha256": "dde9cd0811f7ba52c84058bade25950227bfbf93afc6ca42a41e0fbc15d1edb8",
+ "outputs": {
+  "cells.csv": "50c8c74ce15ded1f39e4f1798b0ed74183ffcd0efdaca895b78b73dbccca5077",
+  "scores.csv": "e39e86fe639d56c1b6e1c166c48d909256b5b4119bc8c40ce10332f5b82a1af7"
+ }
+}

@@ -1,0 +1,3 @@
+e39e86fe639d56c1b6e1c166c48d909256b5b4119bc8c40ce10332f5b82a1af7  run/scores.csv
+1c968ef18c96574545ca5f604899e8fc17626d38a9d55da254f798cd5247f85e  run/scores.csv.gz
+scores.csv is stored gzipped (gzip -n -9). manifest.json hashes refer to the uncompressed CSV; run: gunzip -k run/scores.csv.gz before mgv_eval.py

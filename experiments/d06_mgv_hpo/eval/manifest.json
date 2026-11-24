@@ -1,0 +1,9 @@
+{
+ "script_sha256": "9e903fb068532393e301a0c497210674d4e3c92e671593bfb04fd882942e8f6c",
+ "scores_sha256": "e39e86fe639d56c1b6e1c166c48d909256b5b4119bc8c40ce10332f5b82a1af7",
+ "outputs": {
+  "metrics.csv": "36e70f0bfbe474a95b2596ba01499c8a3de33b356c6f2b16acbbaba937062049",
+  "selection_calibration.csv": "adc14d6f68c5b29ffa49eebb90ea5dfd39c61c1720e0b556327d726a65ede4a7",
+  "summary_non_loco.csv": "8d9451b30c779e9ab874a297e1dc69a3fa5c21b1b444d38f8d991713532be111"
+ }
+}
