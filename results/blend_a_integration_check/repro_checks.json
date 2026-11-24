@@ -1,0 +1,14 @@
+{
+  "paired_rows": 8548,
+  "rows_by_split_and_stage": {
+    "split1/calibration": 1434,
+    "split1/outer": 2767,
+    "split2/calibration": 1580,
+    "split2/outer": 2767
+  },
+  "data_commit_of_scores": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+  "data_commit_equals_data_SOURCE_json": true,
+  "read_test": false,
+  "compared_values": 190,
+  "mismatches": 0
+}
