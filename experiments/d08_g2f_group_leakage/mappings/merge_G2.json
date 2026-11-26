@@ -1,0 +1,97 @@
+{
+ "group_merge": {
+  "toptal-xene_2025-07": "toptal_2025-07",
+  "autotel-node-env-resolver_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "miasma_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "miasma-leoplatform_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "mini-shai-hulud_2026-05": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "sap-maintainer-compromise": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "bitwarden-cli_2026-04": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+ },
+ "row_override": [
+  {
+   "package": "chalk",
+   "old_version": "5.6.0",
+   "new_version": "5.6.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "color-string",
+   "old_version": "2.1.0",
+   "new_version": "2.1.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "prebid-universal-creative",
+   "old_version": "1.17.2",
+   "new_version": "1.17.3",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "proto-tinker-wc",
+   "old_version": "0.1.86",
+   "new_version": "0.1.87",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "strip-ansi",
+   "old_version": "7.1.0",
+   "new_version": "7.1.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "supports-color",
+   "old_version": "10.2.0",
+   "new_version": "10.2.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "@immobiliarelabs/backstage-plugin-gitlab",
+   "old_version": "2.1.1",
+   "new_version": "2.1.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "@immobiliarelabs/backstage-plugin-gitlab",
+   "old_version": "7.0.1",
+   "new_version": "7.0.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "@vapi-ai/server-sdk",
+   "old_version": "0.11.0",
+   "new_version": "0.11.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-mcp",
+   "old_version": "20.0.0",
+   "new_version": "20.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-subscribers",
+   "old_version": "17.0.0",
+   "new_version": "17.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-terminal",
+   "old_version": "22.0.1",
+   "new_version": "22.0.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "awaitly-visualizer",
+   "old_version": "13.0.0",
+   "new_version": "13.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "ngx-context-menu",
+   "old_version": "0.0.25",
+   "new_version": "0.0.26",
+   "splitGroup": "js-metrics_2018"
+  }
+ ]
+}

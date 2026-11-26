@@ -1,0 +1,11 @@
+cal_seed,fold,val_malicious,val_benign,val_hard_benign,cal_malicious,cal_benign,cal_hard_benign,fit_malicious,fit_benign,fit_hard_benign,M1_fit_mal,M1_fit_normal,M2_fit_mal,M3_fit_mal,M4_mal_w,M2r_mal_w,M4r_mal_w,M2r_mal_row_weight,val_campaigns
+20261109,0,1694,320,48,0,320,48,1805,960,143,903,1103,1805,1717,1805.0,903.0,903.0,0.50028,chaindrop_2026-08:1694
+20261109,1,795,320,48,0,320,48,2704,960,143,596,1103,2704,1404,2704.0,596.0,596.0,0.22041,sha1-hulud-second-coming_2025-11:795
+20261109,2,591,320,48,0,320,48,2908,960,143,664,1103,2908,1541,2908.0,664.0,664.0,0.22834,npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel):591
+20261109,3,210,320,47,0,320,48,3289,960,144,726,1104,3289,1918,3289.0,726.0,726.0,0.22074,shai-hulud-original_2025-09:186;individuals_case:23;axios_2026-03:1
+20261109,4,209,320,48,0,320,48,3290,960,143,823,1103,3290,1932,3290.0,823.0,823.0,0.25015,individuals_case:67;toptal_2025-07:34;weavedb_2026-05:34;react-native-aria-gluestack_2025-06:17;injective_2026-07:12;nx-s1ngularity_2025-08+nx_2025-08:11;pgserve-automagik-openwebconcept_2026-04:10;js-metrics_2018:10;node-gyp-dll_2025-07:9;apt-js-skimmer[from-individuals]:4;solana-web3js_2024-12:1
+20261110,0,1694,320,48,0,320,48,1805,960,143,903,1103,1805,1717,1805.0,903.0,903.0,0.50028,chaindrop_2026-08:1694
+20261110,1,795,320,48,0,320,48,2704,960,143,596,1103,2704,1404,2704.0,596.0,596.0,0.22041,sha1-hulud-second-coming_2025-11:795
+20261110,2,591,320,48,0,320,48,2908,960,143,664,1103,2908,1541,2908.0,664.0,664.0,0.22834,npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel):591
+20261110,3,210,320,47,0,320,48,3289,960,144,726,1104,3289,1918,3289.0,726.0,726.0,0.22074,shai-hulud-original_2025-09:186;individuals_case:23;axios_2026-03:1
+20261110,4,209,320,48,0,320,48,3290,960,143,823,1103,3290,1932,3290.0,823.0,823.0,0.25015,individuals_case:67;toptal_2025-07:34;weavedb_2026-05:34;react-native-aria-gluestack_2025-06:17;injective_2026-07:12;nx-s1ngularity_2025-08+nx_2025-08:11;pgserve-automagik-openwebconcept_2026-04:10;js-metrics_2018:10;node-gyp-dll_2025-07:9;apt-js-skimmer[from-individuals]:4;solana-web3js_2024-12:1

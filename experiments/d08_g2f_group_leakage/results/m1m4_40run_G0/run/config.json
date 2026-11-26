@@ -1,0 +1,84 @@
+{
+ "data_commit": "2c48bd83d23ceb16ba7f6c3989d7fb623dcdd554",
+ "inputs_sha256": {
+  "train.csv": "9237bf7450761ae3e9bcfc716be8efb331875846aec368c0b44da2bb5ed9ae96",
+  "split_assignment.csv": "3599396cde88d7c5cb7da3fbf49074599115b035844edee01f4cbdf2667150d7",
+  "malicious_pair_groups.csv": "f181fa37068ee65d30033acb27fec7d2671dad4900a9a2292e5c6024a4f5fe6f",
+  "baselines.csv": "8b2507178f8914c797678e47e5f1e14f70af8a66efdc5bdae127ab6d2b738213",
+  "d06_train.csv": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+ },
+ "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+ "script_sha256": "6e70c17cdbdefe8b65f64b40d092636cb828b71fc65e593fdc1e0daf3d16abf8",
+ "features_no_interval28": [
+  "installScriptPresent",
+  "installScriptAdded",
+  "scriptEntryAdded",
+  "newDependencyAdded",
+  "newDependencyCount",
+  "updateType",
+  "obfChangedFileCount",
+  "obfHexIdentRatioNew",
+  "obfHexIdentRatioChange",
+  "obfHexIdentRatioChangedCode",
+  "obfHexNumberRatioNew",
+  "obfHexNumberRatioChange",
+  "obfHexNumberRatioChangedCode",
+  "obfBracketAccessRatioNew",
+  "obfBracketAccessRatioChange",
+  "obfBracketAccessRatioChangedCode",
+  "obfEscapeDensityNew",
+  "obfEscapeDensityChange",
+  "obfEscapeDensityChangedCode",
+  "obfShortIdentRatioNew",
+  "obfShortIdentRatioChange",
+  "obfShortIdentRatioChangedCode",
+  "obfMeanIdentLengthNew",
+  "obfMeanIdentLengthChange",
+  "obfMeanIdentLengthChangedCode",
+  "obfWhitespaceRatioNew",
+  "obfWhitespaceRatioChange",
+  "obfWhitespaceRatioChangedCode"
+ ],
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "early_stopping": false,
+ "outer": "PR #13 components(), greedy 5-fold (fixed, seed-free)",
+ "calibration": "normal-only components, 25% of fit benign/hard_benign, rng seed = cal_seed + fold",
+ "cal_seeds": [
+  20261109,
+  20261110
+ ],
+ "folds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "targets": [
+  0.01,
+  0.05
+ ],
+ "threshold_rule": "PR #13 calibrate ML: budget=floor(n*t), threshold=nextafter(boundary,+inf), score>=threshold, ties at boundary negative",
+ "m3": "D06 all + new malicious one per (package, old_version, P, v28) lowest new_version + add-back of missing changedJsSetSha1 (lowest version)",
+ "m4": "malicious w=1/sqrt(n_P) within fit, normalised to fit malicious count; normal w=1",
+ "payload_key": "largestChangedJsSha1 | 'nojs:'+addedInstallHooks+'|'+addedDependencies | 'nojs-empty:'+package",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ },
+ "smoke": false,
+ "test_used": false
+}

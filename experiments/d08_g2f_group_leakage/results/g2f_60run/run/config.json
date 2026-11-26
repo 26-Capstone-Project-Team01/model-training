@@ -1,0 +1,123 @@
+{
+ "data_commit": "2c48bd83d23ceb16ba7f6c3989d7fb623dcdd554",
+ "inputs_sha256": {
+  "train.csv": "9237bf7450761ae3e9bcfc716be8efb331875846aec368c0b44da2bb5ed9ae96",
+  "split_assignment.csv": "3599396cde88d7c5cb7da3fbf49074599115b035844edee01f4cbdf2667150d7",
+  "malicious_pair_groups.csv": "f181fa37068ee65d30033acb27fec7d2671dad4900a9a2292e5c6024a4f5fe6f",
+  "baselines.csv": "8b2507178f8914c797678e47e5f1e14f70af8a66efdc5bdae127ab6d2b738213",
+  "d06_train.csv": "22fbc8752fff5fff90e40b911f6bf7d187769b4566db957d65a37a16be7d2c23"
+ },
+ "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+ "script_sha256": "a517c208d70146401887bf0cd10e230618f88c8196ba56b647e010f1baf286a5",
+ "run_m1m4_sha256": "6e70c17cdbdefe8b65f64b40d092636cb828b71fc65e593fdc1e0daf3d16abf8",
+ "merge_G2f_sha256": "0348d779f165acf4f0686ecb0a68b09cd82546d6da6a1498809dba4870aac036",
+ "dev_exclusion_sha256": "9ef712984f84ed59fd61e85cfd5a00adc294517d491cbbe56bbd8e00c3cf35f4",
+ "excluded_pairs": [
+  [
+   "chalk",
+   "5.6.0",
+   "5.6.1"
+  ],
+  [
+   "color-string",
+   "2.1.0",
+   "2.1.1"
+  ],
+  [
+   "prebid-universal-creative",
+   "1.17.2",
+   "1.17.3"
+  ],
+  [
+   "proto-tinker-wc",
+   "0.1.86",
+   "0.1.87"
+  ],
+  [
+   "strip-ansi",
+   "7.1.0",
+   "7.1.1"
+  ],
+  [
+   "supports-color",
+   "10.2.0",
+   "10.2.1"
+  ]
+ ],
+ "features_no_interval28": [
+  "installScriptPresent",
+  "installScriptAdded",
+  "scriptEntryAdded",
+  "newDependencyAdded",
+  "newDependencyCount",
+  "updateType",
+  "obfChangedFileCount",
+  "obfHexIdentRatioNew",
+  "obfHexIdentRatioChange",
+  "obfHexIdentRatioChangedCode",
+  "obfHexNumberRatioNew",
+  "obfHexNumberRatioChange",
+  "obfHexNumberRatioChangedCode",
+  "obfBracketAccessRatioNew",
+  "obfBracketAccessRatioChange",
+  "obfBracketAccessRatioChangedCode",
+  "obfEscapeDensityNew",
+  "obfEscapeDensityChange",
+  "obfEscapeDensityChangedCode",
+  "obfShortIdentRatioNew",
+  "obfShortIdentRatioChange",
+  "obfShortIdentRatioChangedCode",
+  "obfMeanIdentLengthNew",
+  "obfMeanIdentLengthChange",
+  "obfMeanIdentLengthChangedCode",
+  "obfWhitespaceRatioNew",
+  "obfWhitespaceRatioChange",
+  "obfWhitespaceRatioChangedCode"
+ ],
+ "lightgbm_params": {
+  "objective": "binary",
+  "metric": "binary_logloss",
+  "verbosity": -1,
+  "num_threads": 2,
+  "deterministic": true,
+  "force_col_wise": true,
+  "seed": 20261109
+ },
+ "rounds": 200,
+ "cal_seeds": [
+  20261109,
+  20261110
+ ],
+ "folds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "targets": [
+  0.01,
+  0.05
+ ],
+ "models": [
+  "M1",
+  "M2",
+  "M3",
+  "M4",
+  "M2-r",
+  "M4-r"
+ ],
+ "m2r": "M2 rows; malicious weight = M1_fit_malicious / M2_fit_malicious (uniform); normal 1",
+ "m4r": "M4 weights x (M1_fit_malicious / sum M4 malicious weights); normal 1",
+ "ws_bands": "per seed x fold: fit-normal p5/p95 of obfWhitespaceRatioChangedCode; missing = own band",
+ "plan_only": false,
+ "smoke": false,
+ "test_used": false,
+ "environment": {
+  "python": "3.13.18",
+  "lightgbm": "4.7.0",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1"
+ }
+}
