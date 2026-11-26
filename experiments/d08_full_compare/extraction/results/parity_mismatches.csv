@@ -1,0 +1,4 @@
+source,package,old_version,new_version,feature,extracted,reference,match
+base28(D08 frozen),midi,0.5.0,0.6.0,installScriptPresent,False,True,False
+base28(D08 frozen),midi,0.5.0,0.6.0,installScriptAdded,False,True,False
+base28(D08 frozen),midi,0.5.0,0.6.0,scriptEntryAdded,False,True,False

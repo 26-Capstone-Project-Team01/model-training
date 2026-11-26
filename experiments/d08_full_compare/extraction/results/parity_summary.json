@@ -1,0 +1,15 @@
+{
+ "pairs": 109,
+ "status": {
+  "benign|ok": 25,
+  "hard_benign|ok": 25,
+  "malicious|ok": 59
+ },
+ "values_compared": 5341,
+ "mismatches": 3,
+ "mismatch_by_source_feature": {
+  "base28(D08 frozen)|installScriptAdded": 1,
+  "base28(D08 frozen)|installScriptPresent": 1,
+  "base28(D08 frozen)|scriptEntryAdded": 1
+ }
+}

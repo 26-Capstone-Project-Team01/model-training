@@ -1,0 +1,7 @@
+{
+ "pairs": 2581,
+ "base28_values_compared": 72268,
+ "base28_mismatches": 0,
+ "x1_x3d_reference": "none for new pairs (expected; these are new extractions)",
+ "rows_without_reference": 5162
+}

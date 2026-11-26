@@ -1,0 +1,69 @@
+{
+ "rows": 6028,
+ "coverage": [
+  {
+   "split": "test",
+   "source": "d06_saved",
+   "extract_status": "ok",
+   "pairs": 674
+  },
+  {
+   "split": "test",
+   "source": "d08_new_extraction",
+   "extract_status": "ok",
+   "pairs": 10
+  },
+  {
+   "split": "train",
+   "source": "d06_saved",
+   "extract_status": "error",
+   "pairs": 2
+  },
+  {
+   "split": "train",
+   "source": "d06_saved",
+   "extract_status": "ok",
+   "pairs": 2765
+  },
+  {
+   "split": "train",
+   "source": "d08_new_extraction",
+   "extract_status": "ok",
+   "pairs": 2571
+  },
+  {
+   "split": "train",
+   "source": "excluded_clipper",
+   "extract_status": "excluded_clipper",
+   "pairs": 6
+  }
+ ],
+ "errors_or_missing": 2,
+ "inputs_sha256": {
+  "new_jsonl": "604db91c08ce3186cdbc1640172050d13a2a93e3c1b6aca9643efa77171734b3"
+ },
+ "features": [
+  "installHookNewProgramCount",
+  "installHookArgsChanged",
+  "installHookRefFileChanged",
+  "installHookNewExternalExecCount",
+  "addedProcExecCallCount",
+  "addedNetworkCallCount",
+  "installHookTargetCount",
+  "installHookTargetMaxBytes",
+  "obfHookHexIdentRatio",
+  "obfHookHexNumberRatio",
+  "obfHookBracketAccessRatio",
+  "obfHookEscapeDensity",
+  "obfHookShortIdentRatio",
+  "obfHookMeanIdentLength",
+  "obfHookWhitespaceRatio",
+  "installHookTargetProcExecCallCount",
+  "installHookTargetNetworkCallCount",
+  "addedNetworkCallPer1kAddedTokens",
+  "addedProcExecCallPer1kAddedTokens",
+  "dependencyRangeChangedCount",
+  "dependencyChangedRatio"
+ ],
+ "x1_bool_encoding": "True->1, False->0 (run_test_eval.encode_x1)"
+}

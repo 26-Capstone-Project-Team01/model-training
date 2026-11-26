@@ -1,0 +1,7 @@
+split,source,extract_status,pairs
+test,d06_saved,ok,674
+test,d08_new_extraction,ok,10
+train,d06_saved,error,2
+train,d06_saved,ok,2765
+train,d08_new_extraction,ok,2571
+train,excluded_clipper,excluded_clipper,6

@@ -1,0 +1,41 @@
+{
+ "data_repo": "26-Capstone-Project-Team01/npm-malware-package-pairs",
+ "d06_data_commit": "be87ab4cff66fff1980c4a71be8032b6b47225ba",
+ "d08_data_commit": "2c48bd83d23ceb16ba7f6c3989d7fb623dcdd554",
+ "raw_dir_tree_identity": {
+  "raw_dirs_d06_commit": 2334,
+  "raw_dirs_d08_commit": 8150,
+  "common": 2288,
+  "different_tree_oid": 0
+ },
+ "analyzer": {
+  "repo": "26-Capstone-Project-Team01/depbee-analyzer",
+  "commit": "e45cb4d8d0eeab1f0b73a2605718eabfe83a487c",
+  "branch": "feat/x3-hook-target-context",
+  "note": "code_context/obfuscation/package_json/core identical (git diff empty) to d56738c used for the D06 X1 extraction; e45cb4d was used for D06 X3/D"
+ },
+ "vendored_scripts": {
+  "source": "model-training exp/d06-x3-test-final df491c1",
+  "vendor/d06_x1_extraction/extract_x1.py": "85497f8d02f36f97c984255b8f8e6a9e958fbf06970f6b43ee9b78e490b47ab5",
+  "vendor/d06_x3_extraction/extract_x3.py": "a2e0fb5334f5053fddb4a8f6d386647033a0a269a862f50f565f8d8dbf5a1505",
+  "vendor/d06_alt_models/alt_models.py": "bbaa0c98b2d983187040f0eff32395c705fcfba09bed1e492c4cc29d9e3e6886"
+ },
+ "baseline_and_key_consistency": {
+  "d06_rows_compared": 3441,
+  "old_source_equal": 1.0,
+  "new_source_equal": 1.0,
+  "new_pairs_total": 2587,
+  "clipper_excluded": 6,
+  "to_extract": 2581,
+  "new_pairs_old_source": {
+   "archive": 2488,
+   "registry": 99
+  },
+  "new_pairs_new_source": {
+   "archive": 2587
+  }
+ },
+ "options": "--reuse-x1-calls --file-cache (identical output, verified during D06 extraction)",
+ "python": "3.13.18 (requests 2.34.2, semver 3.1.2)",
+ "execution": "static only; no install, no lifecycle script, no package code execution"
+}
