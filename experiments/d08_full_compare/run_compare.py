@@ -204,6 +204,7 @@ def main():
     pd.DataFrame(log).to_csv(out / "training_log.csv", index=False, lineterminator="\n"); pd.DataFrame(b3_sel).to_csv(out / "b3_selection.csv", index=False, lineterminator="\n")
     # guards: no_interval28 conditions == earlier G2f 60-run (CV) and final 12 models (bitwise scores)
     guards = {}
+    SC = pd.read_csv(out / "scores_dev.csv")  # compare after the same CSV round trip as the reference files
     if not a.smoke:
         g = pd.read_csv(a.guard_g2f / "scores.csv"); mp = {"D06": "M1", "D08": "M2", "M4": "M4", "M2-r": "M2-r"}
         for cond, m in mp.items():
