@@ -1,0 +1,9 @@
+{
+ "phase1_lock_sha256": "98abc772b440aa9ed9b3c9035aa28363e53d333714d4dc45e29c0adfd0805aa1",
+ "test_sha256": "21a7c19ea5b5128f69ee4d253db138726bac3c74eeb92d52f87dde94219e45ea",
+ "test_rows": 684,
+ "script_sha256": "52d7090919921fa24fdaec31c146cdbba7ce0e768310c660214e4ae35ca87398",
+ "disjoint_check": "PR #13 check_disjoint(dev, test) passed on jointly computed components",
+ "thresholds_reestimated": false,
+ "elapsed_s": 1.2
+}
