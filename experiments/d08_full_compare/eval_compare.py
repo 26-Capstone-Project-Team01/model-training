@@ -64,13 +64,14 @@ def combine(frame, models, weights, scale):
 
 def main():
     ap = argparse.ArgumentParser()
-    for k in ["snapshot", "m1m4", "final-train", "run", "features", "test", "out"]: ap.add_argument(f"--{k}", type=Path, required=True)
+    for k in ["snapshot", "m1m4", "final-train", "alt", "run", "features", "test", "out"]: ap.add_argument(f"--{k}", type=Path, required=True)
     a = ap.parse_args()
     R = load(a.m1m4, "run_m1m4"); assert sha(a.snapshot) == R.SNAPSHOT_SHA256
-    snap = load(a.snapshot, "snap"); FT = load(a.final_train, "final_train")
+    snap = load(a.snapshot, "snap"); FT = load(a.final_train, "final_train"); load(a.alt, "alt_models")  # needed to unpickle Prep
     lock_sha = (a.run / "lock.sha256").read_text().split()[0]; assert sha(a.run / "lock.json") == lock_sha, "stage A lock mismatch"
     lock = json.loads((a.run / "lock.json").read_text()); assert lock["test_read"] is False
     for n, h in lock["model_sha256"].items(): assert sha(a.run / "models" / n) == h, n
+    assert lock["inputs_sha256"]["alt_models"] == sha(a.alt)
     assert lock["inputs_sha256"]["features"] == sha(a.features)
     out = a.out; out.mkdir(parents=True, exist_ok=False); t0 = time.time()
     S = lock["feature_sets"]; TH = pd.read_csv(a.run / "thresholds.csv")

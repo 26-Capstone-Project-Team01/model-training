@@ -1,0 +1,9 @@
+{
+ "stage_A_lock_sha256": "1c7897da5401ab9cf2bf41711e4fe5fed43916f0709be76f74b3e04ba5883739",
+ "test_sha256": "21a7c19ea5b5128f69ee4d253db138726bac3c74eeb92d52f87dde94219e45ea",
+ "test_is_development_evaluation": true,
+ "thresholds_reestimated": false,
+ "disjoint_check": "PR #13 check_disjoint passed",
+ "script_sha256": "6d6d7251911c4ab76cdc4d245dbd4c39149e78779d7983cd8017db3c66c5e38f",
+ "elapsed_s": 9.2
+}
