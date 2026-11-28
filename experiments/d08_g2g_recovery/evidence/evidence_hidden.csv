@@ -1,0 +1,51 @@
+row_id,package,old_version,new_version,era,splitGroup_G2f,fold_G2f,hidden_segments,version_tag,version_tag_globalThis,global_V,global_r_require,dollar_underscore_array,max_ws_run,in_added_file,files,skeleton_clusters,hidden_text_hashes,seed_label,member,basis
+802,@gluestack-ui/utils,0.1.15,0.1.17,D06,individuals_case,4,7,1,0,1,1,0,1224,0,accessibilityUtils.js;combineContextAndProps.js;composeEventHandlers.js;findNodeHandle.web.js;index.js;mergeRefs.js;stab,72f852aa,48cf6679,0,1,version_tag+global_V+global_r_require
+1688,@kolbo/mcp,1.57.0,1.57.1,new,individuals_case,4,1,0,0,1,1,0,507,0,auth.js,39b74cdb,fc633102,0,1,global_V+global_r_require
+1689,@lambda-platform/lambda-vue,3.3.23,3.3.24,new,individuals_case,3,1,1,0,0,0,1,507,0,tailwind.config.js,d8b6e4ac,b43eec9e,0,1,version_tag+dollar_underscore_array
+1692,@syncraft-labs/core,0.4.0,0.4.1,new,individuals_case,4,1,0,1,0,0,0,539,0,index.js,d86a2daf,26869907,0,1,version_tag_globalThis
+1693,@syncraft-labs/react,0.4.0,0.4.1,new,individuals_case,3,1,0,1,0,0,0,411,0,index.js,d86a2daf,fdd4da0b,0,1,version_tag_globalThis
+1694,@syncraft-labs/vue,0.4.0,0.4.1,new,individuals_case,4,1,0,1,0,0,0,559,0,index.js,d86a2daf,ff18bba4,0,1,version_tag_globalThis
+1700,fetch-page-assets,1.2.8,1.2.12,new,individuals_case,4,1,0,0,1,1,0,507,1,fa-solid-400.woff2,39b74cdb,9a87c2fc,0,1,global_V+global_r_require
+1701,fetch-page-assets,1.2.8,1.2.13,new,individuals_case,4,2,0,0,1,1,0,507,1,babel.config.cjs;fa-solid-400.woff2,39b74cdb;49d6636b,9a87c2fc;b0390d51,0,1,global_V+global_r_require
+1702,fetch-page-assets,1.2.8,1.2.14,new,individuals_case,4,2,0,0,1,1,0,507,1,babel.config.cjs;fa-solid-400.woff2,39b74cdb;49d6636b,110db13f;9a87c2fc,0,1,global_V+global_r_require
+1703,fetch-page-assets,1.2.8,1.2.15,new,individuals_case,4,2,0,0,1,1,0,507,1,babel.config.cjs;fa-solid-400.woff2,39b74cdb;56ba00d8,9a87c2fc;ab3c9f4e,0,1,global_V+global_r_require
+1704,fetch-page-assets,1.2.8,1.2.16,new,individuals_case,4,2,0,0,1,1,0,507,1,babel.config.cjs;fa-solid-400.woff2,39b74cdb;56ba00d8,9a87c2fc;f36cb5b3,0,1,global_V+global_r_require
+1705,fetch-page-assets,1.2.8,1.2.9,new,individuals_case,4,1,1,0,0,0,1,752,1,fa-solid-400.woff2,d8b6e4ac,274c0bd3,0,1,version_tag+dollar_underscore_array
+1706,html-to-gutenberg,4.2.10,4.2.11,new,individuals_case,4,1,1,0,0,0,1,752,1,fa-solid-400.woff2,d8b6e4ac,274c0bd3,0,1,version_tag+dollar_underscore_array
+1707,html-to-gutenberg,4.2.10,4.2.14,new,individuals_case,4,1,0,0,1,1,0,507,1,fa-solid-400.woff2,39b74cdb,9a87c2fc,0,1,global_V+global_r_require
+1708,html-to-gutenberg,4.2.10,4.2.15,new,individuals_case,4,1,0,0,0,1,0,507,1,fa-solid-400.woff2,49d6636b,87b210a8,0,1,global_r_require
+1709,html-to-gutenberg,4.2.10,4.2.16,new,individuals_case,4,1,0,0,0,1,0,507,1,fa-solid-400.woff2,49d6636b,87b210a8,0,1,global_r_require
+1710,html-to-gutenberg,4.2.10,4.2.17,new,individuals_case,4,1,0,0,0,1,0,273,1,fa-solid-400.woff2,56ba00d8,2a312544,0,1,global_r_require
+1711,html-to-gutenberg,4.2.10,4.2.18,new,individuals_case,4,1,0,0,0,1,0,273,1,fa-solid-400.woff2,56ba00d8,2a312544,0,1,global_r_require
+1712,html-to-gutenberg,4.2.10,4.2.19,new,individuals_case,4,1,0,0,1,1,0,273,1,fa-solid-500.woff2,e6b1fea6,380afd85,0,1,global_V+global_r_require
+1713,html-to-gutenberg,4.2.10,4.2.20,new,individuals_case,4,1,0,0,1,1,0,273,1,fa-solid-500.woff2,e6b1fea6,380afd85,0,1,global_V+global_r_require
+1714,html-to-gutenberg,4.2.10,4.2.21,new,individuals_case,4,1,0,0,0,1,0,273,1,fa-solid-500.woff2,6c49383f,dc9acf3b,0,1,global_r_require
+1715,html-to-gutenberg,4.2.10,4.2.22,new,individuals_case,4,1,0,0,0,1,0,273,1,fa-solid-500.woff2,6c49383f,dc9acf3b,0,1,global_r_require
+1716,html-to-gutenberg,4.2.10,4.2.24,new,individuals_case,4,2,1,0,0,0,0,424,1,api.js;fa-solid-300.llf,2a7d0340;376c42c3,54d99fc0;69570bae,0,1,version_tag
+1717,html-to-gutenberg,4.2.10,4.2.25,new,individuals_case,4,2,1,0,0,0,0,315,1,api.js;fa-solid.lfk,052baccb;c50f5e2c,a2a04ee0;e41784c0,0,1,version_tag
+1718,html-to-gutenberg,4.2.10,4.2.26,new,individuals_case,4,2,1,0,0,0,0,315,1,api.js;fa-solid.lfk,052baccb;c50f5e2c,a2a04ee0;e41784c0,0,1,version_tag
+1726,rand-user-agent,1.0.109,1.0.110,new,individuals_case,4,1,1,0,1,1,0,709,0,index.js,09f634d3,5c5ac19e,0,1,version_tag+global_V+global_r_require
+1727,rand-user-agent,2.0.82,2.0.83,new,individuals_case,4,1,1,0,1,1,0,709,0,index.js,09f634d3,95e5ff0f,0,1,version_tag+global_V+global_r_require
+1728,rand-user-agent,2.0.82,2.0.84,new,individuals_case,4,1,1,0,1,1,0,709,0,index.js,09f634d3,36e75664,0,1,version_tag+global_V+global_r_require
+1729,revine,2.3.5,2.4.0,new,individuals_case,3,1,0,0,0,1,0,941,1,fa-solid-500.woff2,3b474c21,e125e545,0,1,global_r_require
+218,@gluestack-ui/utils,0.1.15,0.1.16,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,794,0,index.js,72f852aa,48cf6679,1,1,version_tag+global_V+global_r_require+seed label
+219,@react-native-aria/button,0.2.10,0.2.11,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,715,0,index.js,72f852aa,a0a480ac,1,1,version_tag+global_V+global_r_require+seed label
+220,@react-native-aria/checkbox,0.2.10,0.2.11,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,749,0,index.js,72f852aa,dc4b099d,1,1,version_tag+global_V+global_r_require+seed label
+221,@react-native-aria/combobox,0.2.7,0.2.8,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,1441,0,index.js,72f852aa,e9afdbe3,1,1,version_tag+global_V+global_r_require+seed label
+222,@react-native-aria/disclosure,0.2.8,0.2.9,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,744,0,index.js,72f852aa,5abd44b7,1,1,version_tag+global_V+global_r_require+seed label
+223,@react-native-aria/focus,0.2.9,0.2.10,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,630,0,index.js,72f852aa,f10e0301,1,1,version_tag+global_V+global_r_require+seed label
+224,@react-native-aria/interactions,0.2.16,0.2.17,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,526,0,index.js,72f852aa,ed35d8e1,1,1,version_tag+global_V+global_r_require+seed label
+225,@react-native-aria/listbox,0.2.9,0.2.10,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,591,0,index.js,72f852aa,6881b8e2,1,1,version_tag+global_V+global_r_require+seed label
+226,@react-native-aria/menu,0.2.15,0.2.16,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,597,0,index.js,72f852aa,0a4fd54b,1,1,version_tag+global_V+global_r_require+seed label
+227,@react-native-aria/overlays,0.3.15,0.3.16,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,897,0,index.js,72f852aa,5057848b,1,1,version_tag+global_V+global_r_require+seed label
+228,@react-native-aria/radio,0.2.13,0.2.14,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,731,0,index.js,72f852aa,c19cad92,1,1,version_tag+global_V+global_r_require+seed label
+229,@react-native-aria/separator,0.2.6,0.2.7,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,1225,0,index.js,72f852aa,1d758023,1,1,version_tag+global_V+global_r_require+seed label
+230,@react-native-aria/slider,0.2.12,0.2.13,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,582,0,index.js,72f852aa,0f91b606,1,1,version_tag+global_V+global_r_require+seed label
+231,@react-native-aria/switch,0.2.4,0.2.5,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,836,0,index.js,72f852aa,dc4b099d,1,1,version_tag+global_V+global_r_require+seed label
+232,@react-native-aria/tabs,0.2.13,0.2.14,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,704,0,index.js,72f852aa,71e7bdd6,1,1,version_tag+global_V+global_r_require+seed label
+233,@react-native-aria/toggle,0.2.11,0.2.12,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,721,0,index.js,72f852aa,8c797713,1,1,version_tag+global_V+global_r_require+seed label
+234,@react-native-aria/utils,0.2.12,0.2.13,D06,react-native-aria-gluestack_2025-06,4,1,1,0,1,1,0,596,0,index.js,72f852aa,068c8b86,1,1,version_tag+global_V+global_r_require+seed label
+745,eslint-config-airbnb-standard,1.6.6,2.0.0,D06,individuals_case,4,77,0,0,0,0,0,667,1,accessible-emoji.js;alt-text.js;anchor-has-content.js;aria-activedescendant-has-tabindex.js;aria-props.js;aria-role.js;a,0788c852;0d9a2ec0;10f94517;1ab07a98;1e25e2cb;1e8636bc;29d4f80a;3460b91d;3b298670,011b58e6;03646db0;050a58d2;073d0aa5;07b5f470;0c6c4974;0dbe7b53;137c92c6;169a7e78,0,0,"hidden whitespace only, no loader marker (vendored/bundled code)"
+812,pm-controls,1.1.7,1.1.8,D06,individuals_case,4,3,0,0,0,0,0,329,0,main.bundle.js,285c3c11;4d5c0cd7;8e26f74b,24b39cb9;99777999;eef2d7ff,0,0,"hidden whitespace only, no loader marker (vendored/bundled code)"
+1906,@everreal/react-charts,1.0.1,2.0.1,new,sha1-hulud-second-coming_2025-11,1,251,0,0,0,0,0,312,1,0fe8e302a03e2b5dbb53f6297246748e6319e2688f70ba73d7a750bdd06601bb7dbe45d029074197d9ba6a58c4c19bef93f2e6c08c7a8d6c05a87963,02b262ee;03f8d83c;04239a69;04388c95;060c3cde;079771db;08494847;0ae4b15f;0b3a375d,00f8161f;0107852f;0254f445;033b9adc;047cfc10;04aca1f4;05b8fa77;05c196e0;07cd334d,0,0,"hidden whitespace only, no loader marker (vendored/bundled code)"
+1907,@everreal/react-charts,1.0.1,2.0.2,new,sha1-hulud-second-coming_2025-11,1,251,0,0,0,0,0,312,1,0fe8e302a03e2b5dbb53f6297246748e6319e2688f70ba73d7a750bdd06601bb7dbe45d029074197d9ba6a58c4c19bef93f2e6c08c7a8d6c05a87963,02b262ee;03f8d83c;04239a69;04388c95;060c3cde;079771db;08494847;0ae4b15f;0b3a375d,00f8161f;0107852f;0254f445;033b9adc;047cfc10;04aca1f4;05b8fa77;05c196e0;07cd334d,0,0,"hidden whitespace only, no loader marker (vendored/bundled code)"

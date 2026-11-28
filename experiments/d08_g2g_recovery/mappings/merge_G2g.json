@@ -1,0 +1,375 @@
+{
+ "group_merge": {
+  "toptal-xene_2025-07": "toptal_2025-07",
+  "autotel-node-env-resolver_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "miasma_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "miasma-leoplatform_2026-06": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "mini-shai-hulud_2026-05": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "sap-maintainer-compromise": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "bitwarden-cli_2026-04": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "js-metrics_2018": "skimmer-family(js-metrics+apt-js+individuals)",
+  "react-native-aria-gluestack_2025-06": "hidden-loader-family(react-native-aria+individuals)"
+ },
+ "row_override": [
+  {
+   "package": "chalk",
+   "old_version": "5.6.0",
+   "new_version": "5.6.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "color-string",
+   "old_version": "2.1.0",
+   "new_version": "2.1.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "prebid-universal-creative",
+   "old_version": "1.17.2",
+   "new_version": "1.17.3",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "proto-tinker-wc",
+   "old_version": "0.1.86",
+   "new_version": "0.1.87",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "strip-ansi",
+   "old_version": "7.1.0",
+   "new_version": "7.1.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "supports-color",
+   "old_version": "10.2.0",
+   "new_version": "10.2.1",
+   "splitGroup": "debug-chalk-clipper_2025-09[train-part]"
+  },
+  {
+   "package": "@immobiliarelabs/backstage-plugin-gitlab",
+   "old_version": "2.1.1",
+   "new_version": "2.1.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "@immobiliarelabs/backstage-plugin-gitlab",
+   "old_version": "7.0.1",
+   "new_version": "7.0.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "@vapi-ai/server-sdk",
+   "old_version": "0.11.0",
+   "new_version": "0.11.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-mcp",
+   "old_version": "20.0.0",
+   "new_version": "20.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-subscribers",
+   "old_version": "17.0.0",
+   "new_version": "17.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "autotel-terminal",
+   "old_version": "22.0.1",
+   "new_version": "22.0.2",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "awaitly-visualizer",
+   "old_version": "13.0.0",
+   "new_version": "13.0.1",
+   "splitGroup": "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)"
+  },
+  {
+   "package": "ngx-context-menu",
+   "old_version": "0.0.25",
+   "new_version": "0.0.26",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "rc-calendar-jhorst",
+   "old_version": "8.4.2",
+   "new_version": "8.4.3",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "sailclothjs",
+   "old_version": "1.2.5",
+   "new_version": "1.2.6",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "uploader-plugin",
+   "old_version": "1.0.1",
+   "new_version": "1.0.2",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "zemen",
+   "old_version": "0.0.4",
+   "new_version": "0.0.5",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "@gluestack-ui/utils",
+   "old_version": "0.1.15",
+   "new_version": "0.1.17",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "@kolbo/mcp",
+   "old_version": "1.57.0",
+   "new_version": "1.57.1",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "@lambda-platform/lambda-vue",
+   "old_version": "3.3.23",
+   "new_version": "3.3.24",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "@syncraft-labs/core",
+   "old_version": "0.4.0",
+   "new_version": "0.4.1",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "@syncraft-labs/react",
+   "old_version": "0.4.0",
+   "new_version": "0.4.1",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "@syncraft-labs/vue",
+   "old_version": "0.4.0",
+   "new_version": "0.4.1",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "angular-location-update",
+   "old_version": "0.0.2",
+   "new_version": "0.0.3",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.12",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.13",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.14",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.15",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.16",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "fetch-page-assets",
+   "old_version": "1.2.8",
+   "new_version": "1.2.9",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "geoheat",
+   "old_version": "1.3.1",
+   "new_version": "1.3.2",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "github-jquery-widgets",
+   "old_version": "0.1.1",
+   "new_version": "0.1.2",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.11",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.14",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.15",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.16",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.17",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.18",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.19",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.20",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.21",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.22",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.24",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.25",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "html-to-gutenberg",
+   "old_version": "4.2.10",
+   "new_version": "4.2.26",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "leaflet-gpx",
+   "old_version": "1.0.0",
+   "new_version": "1.0.1",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "libubx",
+   "old_version": "1.0.2",
+   "new_version": "1.0.3",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "mx-nested-menu",
+   "old_version": "0.1.29",
+   "new_version": "0.1.30",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "nginxbeautifier",
+   "old_version": "1.0.13",
+   "new_version": "1.0.14",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "pensi-scheduler",
+   "old_version": "1.1.2",
+   "new_version": "1.1.3",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "pyramid-proportion",
+   "old_version": "1.0.4",
+   "new_version": "1.0.5",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "radic-util",
+   "old_version": "1.0.1",
+   "new_version": "1.0.2",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "radicjs",
+   "old_version": "0.2.0",
+   "new_version": "0.2.1",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "rand-user-agent",
+   "old_version": "1.0.109",
+   "new_version": "1.0.110",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "rand-user-agent",
+   "old_version": "2.0.82",
+   "new_version": "2.0.83",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "rand-user-agent",
+   "old_version": "2.0.82",
+   "new_version": "2.0.84",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "revine",
+   "old_version": "2.3.5",
+   "new_version": "2.4.0",
+   "splitGroup": "hidden-loader-family(react-native-aria+individuals)"
+  },
+  {
+   "package": "scroool",
+   "old_version": "0.1.6",
+   "new_version": "0.1.7",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  },
+  {
+   "package": "stream-combine",
+   "old_version": "2.0.1",
+   "new_version": "2.0.2",
+   "splitGroup": "skimmer-family(js-metrics+apt-js+individuals)"
+  }
+ ]
+}

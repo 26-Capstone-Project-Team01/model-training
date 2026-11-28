@@ -1,0 +1,90 @@
+{
+ "train_test_assignment_unchanged": true,
+ "rows": 5338,
+ "group_changed_rows": 73,
+ "fold_moved_rows": 32,
+ "fold_moves": {
+  "3->4": 16,
+  "4->3": 16
+ },
+ "fold_moves_by_class": {
+  "malicious": 32
+ },
+ "fold_moves_family_rows": 9,
+ "fold_moves_other_rows": 23,
+ "components_moved": 19,
+ "fold_counts_G2f": {
+  "malicious": [
+   1694,
+   795,
+   591,
+   210,
+   209
+  ],
+  "benign": [
+   320,
+   320,
+   320,
+   320,
+   320
+  ],
+  "hard_benign": [
+   48,
+   48,
+   48,
+   47,
+   48
+  ]
+ },
+ "fold_counts_G2g": {
+  "malicious": [
+   1694,
+   795,
+   591,
+   210,
+   209
+  ],
+  "benign": [
+   320,
+   320,
+   320,
+   320,
+   320
+  ],
+  "hard_benign": [
+   48,
+   48,
+   48,
+   47,
+   48
+  ]
+ },
+ "campaigns_excl_individuals_G2f": 15,
+ "campaigns_excl_individuals_G2g": 14,
+ "campaigns_G2g": [
+  "axios_2026-03",
+  "chaindrop_2026-08",
+  "hidden-loader-family(react-native-aria+individuals)",
+  "injective_2026-07",
+  "node-gyp-dll_2025-07",
+  "npmoidc-family(mini-shai+SAP+bitwarden+miasma-autotel)",
+  "nx-s1ngularity_2025-08+nx_2025-08",
+  "pgserve-automagik-openwebconcept_2026-04",
+  "sha1-hulud-second-coming_2025-11",
+  "shai-hulud-original_2025-09",
+  "skimmer-family(js-metrics+apt-js+individuals)",
+  "solana-web3js_2024-12",
+  "toptal_2025-07",
+  "weavedb_2026-05"
+ ],
+ "family_fold_G2g": {
+  "skimmer": {
+   "4": 27
+  },
+  "hidden_loader": {
+   "4": 46
+  }
+ },
+ "individuals_case_rows_G2f": 90,
+ "individuals_case_rows_G2g": 48
+}

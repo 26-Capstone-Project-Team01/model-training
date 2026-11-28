@@ -1,0 +1,41 @@
+row_id,package,old_version,new_version,era,splitGroup_G2f,fold_G2f,shared_n3_best,shared_n2_best,shared_n1_best,best_seed_package_n3,seed_label,strong_pattern,member,basis
+743,angular-location-update,0.0.2,0.0.3,D06,individuals_case,3,35,43,43,ember-power-timepicker,0,1,1,N3 35 shared lines
+746,geoheat,1.3.1,1.3.2,D06,individuals_case,4,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+747,github-jquery-widgets,0.1.1,0.1.2,D06,individuals_case,4,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+753,leaflet-gpx,1.0.0,1.0.1,D06,individuals_case,3,35,43,43,ember-power-timepicker,0,1,1,N3 35 shared lines
+754,libubx,1.0.2,1.0.3,D06,individuals_case,4,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+756,mx-nested-menu,0.1.29,0.1.30,D06,individuals_case,4,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+761,radic-util,1.0.1,1.0.2,D06,individuals_case,3,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+762,radicjs,0.2.0,0.2.1,D06,individuals_case,4,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+767,scroool,0.1.6,0.1.7,D06,individuals_case,3,35,5,5,ember-power-timepicker,0,1,1,N3 35 shared lines
+828,ember-power-timepicker,1.0.7,1.0.8,D06,js-metrics_2018,4,35,5,5,ngx-pica,1,1,1,seed label+N3 35 shared lines
+832,ngx-pica,1.1.4,1.1.5,D06,js-metrics_2018,4,35,5,5,ember-power-timepicker,1,1,1,seed label+N3 35 shared lines
+757,nginxbeautifier,1.0.13,1.0.14,D06,individuals_case,3,27,36,36,ngx-context-menu,0,1,1,N3 27 shared lines
+758,ngx-context-menu,0.0.25,0.0.26,D06,js-metrics_2018,4,27,36,36,@fangrong/xoc,1,1,1,seed label+N3 27 shared lines
+768,stream-combine,2.0.1,2.0.2,D06,individuals_case,3,27,36,36,ngx-context-menu,0,1,1,N3 27 shared lines
+826,@fangrong/xoc,1.0.5,1.0.6,D06,js-metrics_2018,4,27,36,36,ngx-context-menu,1,1,1,seed label+N3 27 shared lines
+827,device-mqtt,1.0.10,1.0.11,D06,js-metrics_2018,4,27,36,36,ngx-context-menu,1,1,1,seed label+N3 27 shared lines
+759,pensi-scheduler,1.1.2,1.1.3,D06,individuals_case,4,25,34,34,iie-viz,0,1,1,N3 25 shared lines
+760,pyramid-proportion,1.0.4,1.0.5,D06,individuals_case,4,25,34,34,iie-viz,0,1,1,N3 25 shared lines
+764,rc-calendar-jhorst,8.4.2,8.4.3,D06,apt-js-skimmer[from-individuals],4,25,34,34,sailclothjs,1,1,1,seed label+N3 25 shared lines
+766,sailclothjs,1.2.5,1.2.6,D06,apt-js-skimmer[from-individuals],4,25,34,34,rc-calendar-jhorst,1,1,1,seed label+N3 25 shared lines
+769,uploader-plugin,1.0.1,1.0.2,D06,apt-js-skimmer[from-individuals],4,25,34,34,rc-calendar-jhorst,1,1,1,seed label+N3 25 shared lines
+771,zemen,0.0.4,0.0.5,D06,apt-js-skimmer[from-individuals],4,25,34,34,rc-calendar-jhorst,1,1,1,seed label+N3 25 shared lines
+829,iie-viz,1.0.3,1.0.4,D06,js-metrics_2018,4,25,34,34,slush-fullstack-framework,1,1,1,seed label+N3 25 shared lines
+834,slush-fullstack-framework,0.9.1,0.9.2,D06,js-metrics_2018,4,25,34,34,iie-viz,1,1,1,seed label+N3 25 shared lines
+830,motiv.scss,0.4.19,0.4.20,D06,js-metrics_2018,4,0,0,0,,1,0,1,seed label only (G2f js-metrics_2018 dataset campaign); pattern below threshold
+831,ng-ui-library,1.0.986,1.0.987,D06,js-metrics_2018,4,0,0,0,,1,0,1,seed label only (G2f js-metrics_2018 dataset campaign); pattern below threshold
+833,precode.js,1.1.0,1.1.1,D06,js-metrics_2018,4,0,0,0,,1,0,1,seed label only (G2f js-metrics_2018 dataset campaign); pattern below threshold
+745,eslint-config-airbnb-standard,1.6.6,2.0.0,D06,individuals_case,4,6,1,1,iie-viz,0,0,0,
+1906,@everreal/react-charts,1.0.1,2.0.1,new,sha1-hulud-second-coming_2025-11,1,6,2,1,iie-viz,0,0,0,
+1907,@everreal/react-charts,1.0.1,2.0.2,new,sha1-hulud-second-coming_2025-11,1,6,2,1,iie-viz,0,0,0,
+430,@voiceflow/react-chat,1.65.2,1.65.4,D06,sha1-hulud-second-coming_2025-11,1,4,0,0,ngx-context-menu,0,0,0,
+1730,shadowx-fca,9.0.0,10.0.0,new,individuals_case,4,4,1,1,iie-viz,0,0,0,
+1731,shadowx-fca,9.0.0,10.1.0,new,individuals_case,4,4,1,1,iie-viz,0,0,0,
+374,@postman/mcp-ui-client,5.5.0,5.5.1,D06,sha1-hulud-second-coming_2025-11,1,2,0,0,ngx-context-menu,0,0,0,
+918,is,3.3.0,3.3.1,D06,individuals_case,4,2,1,1,iie-viz,0,0,0,
+1697,@tiledesk/tiledesk-server,2.18.5,2.18.11,new,individuals_case,3,2,0,0,iie-viz,0,0,0,
+1698,@tiledesk/tiledesk-server,2.18.5,2.18.12,new,individuals_case,3,2,0,0,iie-viz,0,0,0,
+742,xrpl,2.14.1,2.14.2,D06,individuals_case,4,1,0,0,iie-viz,0,0,0,
+813,xrpl,4.2.0,4.2.2,D06,individuals_case,4,1,0,0,iie-viz,0,0,0,
+919,xrpl,4.2.0,4.2.1,D06,individuals_case,4,1,0,0,iie-viz,0,0,0,

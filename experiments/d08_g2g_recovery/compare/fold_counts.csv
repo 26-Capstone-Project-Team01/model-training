@@ -1,0 +1,8 @@
+,G2f,G2f,G2f,G2g,G2g,G2g
+class,malicious,benign,hard_benign,malicious,benign,hard_benign
+fold,,,,,,
+0,1694,320,48,1694,320,48
+1,795,320,48,795,320,48
+2,591,320,48,591,320,48
+3,210,320,47,210,320,47
+4,209,320,48,209,320,48

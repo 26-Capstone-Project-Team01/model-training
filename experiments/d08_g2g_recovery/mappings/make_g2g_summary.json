@@ -1,0 +1,20 @@
+{
+ "group_merge": 9,
+ "group_merge_added": [
+  "js-metrics_2018",
+  "react-native-aria-gluestack_2025-06"
+ ],
+ "row_override": 60,
+ "row_override_G2f": 18,
+ "new_individuals_override": 42,
+ "family_sizes": {
+  "hidden_loader": 46,
+  "skimmer": 27
+ },
+ "family_era": "{('hidden_loader', 'D06'): 18, ('hidden_loader', 'new'): 28, ('skimmer', 'D06'): 27}",
+ "merged_G2f_groups": {
+  "react-native-aria-gluestack_2025-06": "hidden-loader-family(react-native-aria+individuals)",
+  "apt-js-skimmer[from-individuals]": "skimmer-family(js-metrics+apt-js+individuals)",
+  "js-metrics_2018": "skimmer-family(js-metrics+apt-js+individuals)"
+ }
+}

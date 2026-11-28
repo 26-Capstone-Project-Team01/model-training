@@ -1,0 +1,84 @@
+{
+ "skimmer": {
+  "pairs": 27,
+  "by_era": {
+   "D06": 27
+  },
+  "by_G2f_group": {
+   "individuals_case": 13,
+   "js-metrics_2018": 10,
+   "apt-js-skimmer[from-individuals]": 4
+  },
+  "by_G2f_fold": {
+   "3": 6,
+   "4": 21
+  },
+  "individuals_case": 13
+ },
+ "skimmer_strong_pattern": {
+  "pairs": 24,
+  "by_fold": {
+   "3": 6,
+   "4": 18
+  },
+  "shared_n3_range": [
+   25,
+   35
+  ],
+  "highest_non_member_scores": [
+   2,
+   4,
+   6
+  ]
+ },
+ "hidden_loader": {
+  "pairs": 46,
+  "by_era": {
+   "new": 28,
+   "D06": 18
+  },
+  "by_G2f_group": {
+   "individuals_case": 29,
+   "react-native-aria-gluestack_2025-06": 17
+  },
+  "by_G2f_fold": {
+   "3": 3,
+   "4": 43
+  },
+  "individuals_case": 29
+ },
+ "hidden_non_members": [
+  [
+   "eslint-config-airbnb-standard",
+   "2.0.0",
+   "individuals_case"
+  ],
+  [
+   "pm-controls",
+   "1.1.8",
+   "individuals_case"
+  ],
+  [
+   "@everreal/react-charts",
+   "2.0.1",
+   "sha1-hulud-second-coming_2025-11"
+  ],
+  [
+   "@everreal/react-charts",
+   "2.0.2",
+   "sha1-hulud-second-coming_2025-11"
+  ]
+ ],
+ "overlap_between_families": [],
+ "params": {
+  "GENERIC_GROUPS": 3,
+  "SKIM_MIN": 20,
+  "MARKERS": [
+   "version_tag",
+   "version_tag_globalThis",
+   "global_V",
+   "global_r_require",
+   "dollar_underscore_array"
+  ]
+ }
+}

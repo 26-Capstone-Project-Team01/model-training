@@ -1,0 +1,13 @@
+{
+ "config": "merge_G2g.json",
+ "config_sha256": "d9b24229953487fcaf3884c1135570f8b82bf5eb854cde51b0f4188eb05a86d5",
+ "fold_assignment_sha256": "22b7df50129b8b0c83a246c676442cefb04998c7aab45a45e2939d1529205e33",
+ "stubbed_modules": [
+  "lightgbm",
+  "sklearn",
+  "sklearn.metrics",
+  "sklearn.tree"
+ ],
+ "snapshot_sha256": "049bf00c0269ff9638caad8273f3dc49254ba91cec9da35ebd3c4db87cf62854",
+ "run_m1m4_sha256": "6e70c17cdbdefe8b65f64b40d092636cb828b71fc65e593fdc1e0daf3d16abf8"
+}
